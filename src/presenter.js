@@ -1,15 +1,13 @@
-import sumar from "./sumador";
+import CrearReporte from "./gestionadorbasura.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
 const form = document.querySelector("#sumar-form");
 const div = document.querySelector("#resultado-div");
+const inputMensaje = document.querySelector("#mensaje_reporte");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const mensaje = inputMensaje.value;
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = CrearReporte(mensaje);
 });

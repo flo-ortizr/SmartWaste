@@ -1,0 +1,21 @@
+[
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-04-09T14:19:23.000Z",
+      "message": "feat: ingresar descripcion del reporte basico",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 77,
+      "additions": 56,
+      "deletions": 21,
+      "date": "2026-04-09"
+    },
+    "coverage": 100,
+    "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  }
+]
