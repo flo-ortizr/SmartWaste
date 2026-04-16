@@ -74,9 +74,23 @@
     "testId": 3
   },
   {
-    "commitId": "HEAD",
+    "commitId": "916a1fcf8b1f68ef66ebbc571a022fdd3ca90f6d",
     "commitName": "fix: manejar error cuando la informacion de rutas no carga",
     "commitTimestamp": 1776302956806,
     "testId": 3
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1776303122804,
+    "success": true,
+    "testId": 4
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: conectar la logica de mostrar rutas con la interfaz de usuario",
+    "commitTimestamp": 1776303144778,
+    "testId": 4
   }
 ]
