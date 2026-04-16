@@ -27,3 +27,9 @@ export function crearRuta(nombreRuta, zona, dias, cobertura) {
 
   return "Ruta registrada correctamente";
 }
+
+export function buscarRutaPorZona(zonaABuscar, listaDeRutas) {
+  if (!zonaABuscar || zonaABuscar.trim() === "") {
+    return "Por favor, ingrese una zona para buscar.";
+  }
+}

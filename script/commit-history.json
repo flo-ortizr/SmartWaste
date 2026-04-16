@@ -228,12 +228,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "df11344a1f71e93d468a46d4f92430e35dac4124",
     "author": "Flora",
     "commit": {
       "date": "2026-04-16T13:20:10.000Z",
       "message": "fix: html file names",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/df11344a1f71e93d468a46d4f92430e35dac4124"
     },
     "stats": {
       "total": 0,
@@ -243,6 +243,25 @@
     },
     "coverage": 100,
     "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-04-16T13:43:22.000Z",
+      "message": "feat: crear el buscar ruta por zona, solicitud de texto para la busqueda de rutas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 27,
+      "additions": 27,
+      "deletions": 0,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   }

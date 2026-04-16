@@ -1,0 +1,9 @@
+Criterios de Confirmación:
+1. Búsqueda exitosa: Mostrar la ruta y días si la zona es válida.
+2. Búsqueda sin resultados: Mostrar mensaje si la zona no existe.
+3. Entrada vacía: Solicitar que ingrese un término si no escribe nada.
+
+pruebas:
+Entrada vacía ("") => "Por favor, ingrese una zona para buscar."
+Zona inexistente ("Sur", pero no está en la lista) => "No se encontraron rutas para esa zona." 
+Zona válida ("Norte", está en la lista) => Devuelve los datos de la zona "Norte"

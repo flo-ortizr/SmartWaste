@@ -1,4 +1,5 @@
 import { mostrarRutas, crearRuta } from "./rutas.js";
+import { mostrarRutas, buscarRutaPorZona } from "./rutas.js";
 
 describe("Gestor de Rutas", () => {
   it("debería mostrar un mensaje cuando no hay rutas registradas", () => {
@@ -45,5 +46,16 @@ describe("Gestor de Rutas", () => {
   it("debería registrar la ruta cuando los datos son correctos", () => {
     let resultado = crearRuta("Ruta 1", "Zona Norte", "Lunes", "Cala Cala");
     expect(resultado).toEqual("Ruta registrada correctamente");
+  }); 
+});
+
+describe("Buscador de Rutas por Zona", () => {
+  
+  it("debería pedir que se ingrese una zona si el campo está vacío", () => {
+    let zonaVacia = "";
+    let rutasSimuladas = [{ zona: "Norte", dias: "Lunes" }];
+    let resultado = buscarRutaPorZona(zonaVacia, rutasSimuladas);
+    expect(resultado).toEqual("Por favor, ingrese una zona para buscar.");
   });
+
 });

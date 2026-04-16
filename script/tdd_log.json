@@ -224,9 +224,31 @@
     "testId": 11
   },
   {
-    "commitId": "HEAD",
+    "commitId": "df11344a1f71e93d468a46d4f92430e35dac4124",
     "commitName": "fix: html file names",
     "commitTimestamp": 1776345611916,
     "testId": 12
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1776346779804,
+    "success": false,
+    "testId": 13
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1776346934777,
+    "success": false,
+    "testId": 13
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: crear el buscar ruta por zona, solicitud de texto para la busqueda de rutas",
+    "commitTimestamp": 1776347004241,
+    "testId": 13
   }
 ]
