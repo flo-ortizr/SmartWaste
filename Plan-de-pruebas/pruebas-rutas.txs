@@ -1,0 +1,11 @@
+Criterios:
+1 Mostrar una lista clara de rutas registradas.
+2 Cada ruta debe incluir zona (o recorrido) y días de ejecución.
+3 Si no hay rutas, mostrar "No existen rutas registradas".
+4 Si hay un problema de carga, mostrar mensaje de error.
+
+PLAN DE PRUEBAS
+Base de datos vacía (Arreglo []) => "No existen rutas registradas" [OK]
+Base de datos con 1 ruta => Muestra "Zona" y "Días" de esa ruta [OK]
+Base de datos con múltiples rutas => Muestra "Zona" y "Días" de todas [OK]
+Fallo al cargar información (Datos nulos/indefinidos) => "No fue posible mostrar las rutas" [PENDIENTE]

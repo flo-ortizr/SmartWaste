@@ -8,9 +8,39 @@
     "testId": 0
   },
   {
-    "commitId": "HEAD",
+    "commitId": "c893b3f196e724b3862f5f2ee1cf319b3710385a",
     "commitName": "feat: ingresar descripcion del reporte basico",
     "commitTimestamp": 1775744363476,
     "testId": 0
+  },
+  {
+    "numPassedTests": 0,
+    "failedTests": 0,
+    "numTotalTests": 0,
+    "timestamp": 1776301453171,
+    "success": false,
+    "testId": 1
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 0,
+    "numTotalTests": 3,
+    "timestamp": 1776301722587,
+    "success": true,
+    "testId": 1
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 0,
+    "numTotalTests": 3,
+    "timestamp": 1776302394011,
+    "success": true,
+    "testId": 1
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: implementar mensaje para cuando no existen rutas registradas",
+    "commitTimestamp": 1776302421856,
+    "testId": 1
   }
 ]

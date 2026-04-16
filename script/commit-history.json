@@ -1,17 +1,36 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "c893b3f196e724b3862f5f2ee1cf319b3710385a",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-04-09T14:19:23.000Z",
       "message": "feat: ingresar descripcion del reporte basico",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/c893b3f196e724b3862f5f2ee1cf319b3710385a"
     },
     "stats": {
       "total": 77,
       "additions": 56,
       "deletions": 21,
       "date": "2026-04-09"
+    },
+    "coverage": 100,
+    "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-04-16T01:20:19.000Z",
+      "message": "feat: implementar mensaje para cuando no existen rutas registradas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 80,
+      "additions": 43,
+      "deletions": 37,
+      "date": "2026-04-16"
     },
     "coverage": 100,
     "test_count": 3,
