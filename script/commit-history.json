@@ -190,17 +190,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "f826001b0d9c6107d8aa674daf7e6fcc41151ee7",
     "author": "Flora",
     "commit": {
       "date": "2026-04-16T11:02:52.000Z",
       "message": "fix: mensaje zona sin registrar",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f826001b0d9c6107d8aa674daf7e6fcc41151ee7"
     },
     "stats": {
       "total": 4,
       "additions": 2,
       "deletions": 2,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-16T13:18:54.000Z",
+      "message": "refactor: division de interfaz visual ciudadano y EMSA",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 40,
+      "additions": 26,
+      "deletions": 14,
       "date": "2026-04-16"
     },
     "coverage": 100,

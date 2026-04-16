@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>SmartWaste</title>
+  </head>
+  <body>
+
+    <hr>
+    <h2>Horarios de Recolección</h2>
+    <label for="zona_horario">Zona:</label>
+    <input type="text" id="zona_horario" />
+    <button id="btn-ver-horarios">Ver Horarios</button>
+    
+    <div id="resultado-horarios-div"></div>
+
+    <h1>Reporte</h1>
+    <form id="sumar-form">
+      <label for="mensaje_reporte">Mensaje reporte:</label>
+      <input type="text" id="mensaje_reporte" />
+      <input type="submit" value="Guardar reporte" />
+    </form>
+    <div id="resultado-div"></div>
+
+    <script type="module" src="./src/presenter.js"></script>
+  </body>
+</html>
