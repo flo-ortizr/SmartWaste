@@ -38,9 +38,31 @@
     "testId": 1
   },
   {
-    "commitId": "HEAD",
+    "commitId": "fe0c8a86e10ce621b93a1cd625c4ca8ff4b0e994",
     "commitName": "feat: implementar mensaje para cuando no existen rutas registradas",
     "commitTimestamp": 1776302421856,
     "testId": 1
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 1,
+    "numTotalTests": 4,
+    "timestamp": 1776302563337,
+    "success": false,
+    "testId": 2
+  },
+  {
+    "numPassedTests": 4,
+    "failedTests": 0,
+    "numTotalTests": 4,
+    "timestamp": 1776302612424,
+    "success": true,
+    "testId": 2
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: mostrar lista con zona y dias cuando existen rutas",
+    "commitTimestamp": 1776302631747,
+    "testId": 2
   }
 ]

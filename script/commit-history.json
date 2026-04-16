@@ -19,12 +19,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "fe0c8a86e10ce621b93a1cd625c4ca8ff4b0e994",
     "author": "unknown",
     "commit": {
       "date": "2026-04-16T01:20:19.000Z",
       "message": "feat: implementar mensaje para cuando no existen rutas registradas",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/fe0c8a86e10ce621b93a1cd625c4ca8ff4b0e994"
     },
     "stats": {
       "total": 80,
@@ -34,6 +34,25 @@
     },
     "coverage": 100,
     "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-04-16T01:23:50.000Z",
+      "message": "feat: mostrar lista con zona y dias cuando existen rutas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 15,
+      "deletions": 0,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 4,
     "failed_tests": 0,
     "conclusion": "success"
   }
