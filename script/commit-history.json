@@ -152,12 +152,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "f904b1a550bb8a0eaaa46dd245d8eba0db4dcfba",
     "author": "Flora",
     "commit": {
       "date": "2026-04-16T10:40:32.000Z",
       "message": "feat: mensaje cuando no existen horarios registrados",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f904b1a550bb8a0eaaa46dd245d8eba0db4dcfba"
     },
     "stats": {
       "total": 11,
@@ -167,6 +167,25 @@
     },
     "coverage": 100,
     "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-16T10:57:46.000Z",
+      "message": "feat: implementar mostrarHorarios basado en zona",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 46,
+      "additions": 43,
+      "deletions": 3,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 13,
     "failed_tests": 0,
     "conclusion": "success"
   }

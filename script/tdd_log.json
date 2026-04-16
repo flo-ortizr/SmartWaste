@@ -144,9 +144,71 @@
     "testId": 8
   },
   {
-    "commitId": "HEAD",
+    "commitId": "f904b1a550bb8a0eaaa46dd245d8eba0db4dcfba",
     "commitName": "feat: mensaje cuando no existen horarios registrados",
     "commitTimestamp": 1776336033630,
     "testId": 8
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 1,
+    "numTotalTests": 13,
+    "timestamp": 1776336114212,
+    "success": false,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 1,
+    "numTotalTests": 13,
+    "timestamp": 1776336152387,
+    "success": false,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 1,
+    "numTotalTests": 13,
+    "timestamp": 1776336188532,
+    "success": false,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 13,
+    "failedTests": 0,
+    "numTotalTests": 13,
+    "timestamp": 1776336232994,
+    "success": true,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 13,
+    "failedTests": 0,
+    "numTotalTests": 13,
+    "timestamp": 1776336662725,
+    "success": true,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 1,
+    "numTotalTests": 13,
+    "timestamp": 1776336998761,
+    "success": false,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 13,
+    "failedTests": 0,
+    "numTotalTests": 13,
+    "timestamp": 1776337026995,
+    "success": true,
+    "testId": 9
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: implementar mostrarHorarios basado en zona",
+    "commitTimestamp": 1776337068731,
+    "testId": 9
   }
 ]

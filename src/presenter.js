@@ -1,5 +1,6 @@
 import CrearReporte from "./gestionadorbasura.js";
 import { mostrarRutas, crearRuta } from "./rutas.js";
+import {mostrarHorario} from "./horarios.js";
 
 const formReporte = document.querySelector("#sumar-form");
 const divReporte = document.querySelector("#resultado-div");
@@ -14,6 +15,10 @@ const inputNombreRuta = document.querySelector("#nombre_ruta");
 const inputZonaRuta = document.querySelector("#zona_ruta");
 const inputDiasRuta = document.querySelector("#dias_ruta");
 const inputCoberturaRuta = document.querySelector("#cobertura_ruta");
+
+const inputZonaHorario = document.querySelector("#zona_horario");
+const btnVerHorarios = document.querySelector("#btn-ver-horarios");
+const divHorarios = document.querySelector("#resultado-horarios-div");
 
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
@@ -50,4 +55,19 @@ if (formRuta) {
       coberturaRuta
     );
   });
+
+
+  if (btnVerHorarios) {
+  btnVerHorarios.addEventListener("click", () => {
+
+    const zona = inputZonaHorario.value;
+
+    const horariosSimulados = [
+      { zona: "Zona Norte - Cala Cala", dias: "Lunes a Viernes", horas: "8:00 - 10:00" },
+      { zona: "Zona Sur - La Chimba", dias: "Martes a Sábado", horas: "14:00 - 16:00" }
+    ];
+
+    divHorarios.innerHTML = mostrarHorario(zona, horariosSimulados);
+  });
+}
 }
