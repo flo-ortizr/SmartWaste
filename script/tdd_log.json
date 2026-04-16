@@ -284,9 +284,23 @@
     "testId": 14
   },
   {
-    "commitId": "HEAD",
+    "commitId": "84bf196b3514f5a5582dcf994388c7e72e5a9711",
     "commitName": "feat: muetra un mensaje si es que ninguna ruta ha sido registrada",
     "commitTimestamp": 1776347471843,
     "testId": 14
+  },
+  {
+    "numPassedTests": 16,
+    "failedTests": 0,
+    "numTotalTests": 16,
+    "timestamp": 1776347610975,
+    "success": true,
+    "testId": 15
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: mostrar zona y dias cuando la busqueda es exitosa",
+    "commitTimestamp": 1776347697603,
+    "testId": 15
   }
 ]

@@ -266,12 +266,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "84bf196b3514f5a5582dcf994388c7e72e5a9711",
     "author": "unknown",
     "commit": {
       "date": "2026-04-16T13:51:10.000Z",
       "message": "feat: muetra un mensaje si es que ninguna ruta ha sido registrada",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/84bf196b3514f5a5582dcf994388c7e72e5a9711"
     },
     "stats": {
       "total": 19,
@@ -281,6 +281,25 @@
     },
     "coverage": 100,
     "test_count": 15,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-04-16T13:54:56.000Z",
+      "message": "feat: mostrar zona y dias cuando la busqueda es exitosa",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 14,
+      "deletions": 0,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 16,
     "failed_tests": 0,
     "conclusion": "success"
   }

@@ -67,6 +67,17 @@ describe("Buscador de Rutas por Zona", () => {
     expect(resultado).toEqual("No se encontraron rutas para esa zona.");
   });
 
+  it("debería mostrar la zona y los días si la búsqueda es exitosa", () => {
+    let zonaBuscada = "Norte";
+    let rutasSimuladas = [
+      { zona: "Norte", dias: "Lunes y Miércoles" },
+      { zona: "Sur", dias: "Martes y Jueves" }
+    ];
+    let resultado = buscarRutaPorZona(zonaBuscada, rutasSimuladas);
+    expect(resultado).toContain("Zona: Norte");
+    expect(resultado).toContain("Días: Lunes y Miércoles");
+  });
+
 
 
 });
