@@ -95,12 +95,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4b47c42c37a3b34e041e6ce5bff5ed38644d2bcb",
     "author": "User",
     "commit": {
       "date": "2026-04-16T02:31:24.000Z",
       "message": "merge: integrar rama Oriana-Flores en master",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/4b47c42c37a3b34e041e6ce5bff5ed38644d2bcb"
     },
     "stats": {
       "total": 95,
@@ -110,6 +110,25 @@
     },
     "coverage": 100,
     "test_count": 8,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-16T02:51:40.000Z",
+      "message": "refactor: mover crear ruta a rutas con dias y cobertura",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 110,
+      "additions": 69,
+      "deletions": 41,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 10,
     "failed_tests": 0,
     "conclusion": "success"
   }

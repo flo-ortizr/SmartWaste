@@ -1,6 +1,5 @@
 import CrearReporte from "./gestionadorbasura.js";
-import { mostrarRutas } from "./rutas.js";
-import crearRuta from "./crearRuta.js";
+import { mostrarRutas, crearRuta } from "./rutas.js";
 
 const formReporte = document.querySelector("#sumar-form");
 const divReporte = document.querySelector("#resultado-div");
@@ -13,6 +12,8 @@ const formRuta = document.querySelector("#ruta-form");
 const divRuta = document.querySelector("#resultado-ruta-div");
 const inputNombreRuta = document.querySelector("#nombre_ruta");
 const inputZonaRuta = document.querySelector("#zona_ruta");
+const inputDiasRuta = document.querySelector("#dias_ruta");
+const inputCoberturaRuta = document.querySelector("#cobertura_ruta");
 
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
@@ -28,6 +29,7 @@ if (btnVerRutas) {
       { zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes" },
       { zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados" }
     ];
+
     divListaRutas.innerHTML = mostrarRutas(rutasSimuladas);
   });
 }
@@ -38,7 +40,14 @@ if (formRuta) {
 
     const nombreRuta = inputNombreRuta.value;
     const zonaRuta = inputZonaRuta.value;
+    const diasRuta = inputDiasRuta.value;
+    const coberturaRuta = inputCoberturaRuta.value;
 
-    divRuta.innerHTML = crearRuta(nombreRuta, zonaRuta);
+    divRuta.innerHTML = crearRuta(
+      nombreRuta,
+      zonaRuta,
+      diasRuta,
+      coberturaRuta
+    );
   });
 }

@@ -94,9 +94,15 @@
     "testId": 4
   },
   {
-    "commitId": "HEAD",
+    "commitId": "4b47c42c37a3b34e041e6ce5bff5ed38644d2bcb",
     "commitName": "merge: integrar rama Oriana-Flores en master",
     "commitTimestamp": 1776306685139,
     "testId": 5
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: mover crear ruta a rutas con dias y cobertura",
+    "commitTimestamp": 1776307900977,
+    "testId": 6
   }
 ]
