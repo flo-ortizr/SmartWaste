@@ -1,4 +1,9 @@
 export function mostrarRutas(rutas) {
+
+  if (!rutas) {
+    return "No fue posible mostrar las rutas";
+  }
+
   if (rutas.length === 0) {
     return "No existen rutas registradas";
   }

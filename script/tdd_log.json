@@ -60,9 +60,23 @@
     "testId": 2
   },
   {
-    "commitId": "HEAD",
+    "commitId": "e947d06b1bc5f74c7236a8231c4b3b46d7874f06",
     "commitName": "feat: mostrar lista con zona y dias cuando existen rutas",
     "commitTimestamp": 1776302631747,
     "testId": 2
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1776302912839,
+    "success": true,
+    "testId": 3
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: manejar error cuando la informacion de rutas no carga",
+    "commitTimestamp": 1776302956806,
+    "testId": 3
   }
 ]

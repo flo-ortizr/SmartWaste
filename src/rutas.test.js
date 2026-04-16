@@ -16,4 +16,10 @@ describe("Gestor de Rutas", () => {
     expect(resultado).toContain("Lunes y Miércoles"); 
   });
 
+  it("debería mostrar un mensaje de error si los datos son nulos o no cargan", () => {
+    let datosMalos = null; 
+    let resultado = mostrarRutas(datosMalos); 
+    expect(resultado).toEqual("No fue posible mostrar las rutas"); 
+  });
+
 });

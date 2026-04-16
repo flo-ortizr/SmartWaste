@@ -38,12 +38,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e947d06b1bc5f74c7236a8231c4b3b46d7874f06",
     "author": "unknown",
     "commit": {
       "date": "2026-04-16T01:23:50.000Z",
       "message": "feat: mostrar lista con zona y dias cuando existen rutas",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/e947d06b1bc5f74c7236a8231c4b3b46d7874f06"
     },
     "stats": {
       "total": 15,
@@ -53,6 +53,25 @@
     },
     "coverage": 100,
     "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-04-16T01:29:15.000Z",
+      "message": "fix: manejar error cuando la informacion de rutas no carga",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 11,
+      "deletions": 0,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   }
