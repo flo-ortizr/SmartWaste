@@ -32,4 +32,8 @@ export function buscarRutaPorZona(zonaABuscar, listaDeRutas) {
   if (!zonaABuscar || zonaABuscar.trim() === "") {
     return "Por favor, ingrese una zona para buscar.";
   }
+  let rutaEncontrada = listaDeRutas.find(ruta => ruta.zona === zonaABuscar);
+  if (!rutaEncontrada) {
+    return "No se encontraron rutas para esa zona.";
+  }
 }

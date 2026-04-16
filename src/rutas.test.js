@@ -1,5 +1,4 @@
-import { mostrarRutas, crearRuta } from "./rutas.js";
-import { mostrarRutas, buscarRutaPorZona } from "./rutas.js";
+import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
 
 describe("Gestor de Rutas", () => {
   it("debería mostrar un mensaje cuando no hay rutas registradas", () => {
@@ -57,5 +56,17 @@ describe("Buscador de Rutas por Zona", () => {
     let resultado = buscarRutaPorZona(zonaVacia, rutasSimuladas);
     expect(resultado).toEqual("Por favor, ingrese una zona para buscar.");
   });
+
+  it("debería mostrar un mensaje si la zona buscada no existe en las rutas", () => {
+    let zonaBuscada = "Oeste";
+    let rutasSimuladas = [
+      { zona: "Norte", dias: "Lunes" },
+      { zona: "Sur", dias: "Martes" }
+    ];
+    let resultado = buscarRutaPorZona(zonaBuscada, rutasSimuladas);
+    expect(resultado).toEqual("No se encontraron rutas para esa zona.");
+  });
+
+
 
 });

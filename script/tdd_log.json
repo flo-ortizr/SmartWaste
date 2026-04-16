@@ -246,9 +246,47 @@
     "testId": 13
   },
   {
-    "commitId": "HEAD",
+    "commitId": "9e350f4d8e352faeb74badbdd92164a8a4e05e61",
     "commitName": "feat: crear el buscar ruta por zona, solicitud de texto para la busqueda de rutas",
     "commitTimestamp": 1776347004241,
     "testId": 13
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1776347118639,
+    "success": false,
+    "testId": 14
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1776347206351,
+    "success": false,
+    "testId": 14
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1776347288056,
+    "success": false,
+    "testId": 14
+  },
+  {
+    "numPassedTests": 15,
+    "failedTests": 0,
+    "numTotalTests": 15,
+    "timestamp": 1776347384000,
+    "success": true,
+    "testId": 14
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: muetra un mensaje si es que ninguna ruta ha sido registrada",
+    "commitTimestamp": 1776347471843,
+    "testId": 14
   }
 ]
