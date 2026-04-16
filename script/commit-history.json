@@ -1,11 +1,11 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "c893b3f196e724b3862f5f2ee1cf319b3710385a",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-04-09T14:19:23.000Z",
       "message": "feat: ingresar descripcion del reporte basico",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/c893b3f196e724b3862f5f2ee1cf319b3710385a"
     },
     "stats": {
       "total": 77,
@@ -15,6 +15,25 @@
     },
     "coverage": 100,
     "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-16T01:56:39.000Z",
+      "message": "test: implementar crear rutas con validaciones basicas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 46,
+      "additions": 26,
+      "deletions": 20,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 6,
     "failed_tests": 0,
     "conclusion": "success"
   }

@@ -8,9 +8,55 @@
     "testId": 0
   },
   {
-    "commitId": "HEAD",
+    "commitId": "c893b3f196e724b3862f5f2ee1cf319b3710385a",
     "commitName": "feat: ingresar descripcion del reporte basico",
     "commitTimestamp": 1775744363476,
     "testId": 0
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 1,
+    "numTotalTests": 4,
+    "timestamp": 1776300487603,
+    "success": false,
+    "testId": 1
+  },
+  {
+    "numPassedTests": 4,
+    "failedTests": 0,
+    "numTotalTests": 4,
+    "timestamp": 1776300581500,
+    "success": true,
+    "testId": 1
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 2,
+    "numTotalTests": 5,
+    "timestamp": 1776304283898,
+    "success": false,
+    "testId": 1
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1776304315752,
+    "success": true,
+    "testId": 1
+  },
+  {
+    "numPassedTests": 6,
+    "failedTests": 0,
+    "numTotalTests": 6,
+    "timestamp": 1776304366152,
+    "success": true,
+    "testId": 1
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "test: implementar crear rutas con validaciones basicas",
+    "commitTimestamp": 1776304600903,
+    "testId": 1
   }
 ]
