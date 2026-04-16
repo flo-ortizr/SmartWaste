@@ -209,17 +209,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "715c97e326be1c4e6545934113a2ffe295ee1da5",
     "author": "Flora",
     "commit": {
       "date": "2026-04-16T13:18:54.000Z",
       "message": "refactor: division de interfaz visual ciudadano y EMSA",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/715c97e326be1c4e6545934113a2ffe295ee1da5"
     },
     "stats": {
       "total": 40,
       "additions": 26,
       "deletions": 14,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-16T13:20:10.000Z",
+      "message": "fix: html file names",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 0,
+      "additions": 0,
+      "deletions": 0,
       "date": "2026-04-16"
     },
     "coverage": 100,
