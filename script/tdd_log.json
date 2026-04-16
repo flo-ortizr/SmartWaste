@@ -206,9 +206,15 @@
     "testId": 9
   },
   {
-    "commitId": "HEAD",
+    "commitId": "461df73de84e5f83a064353f0c9c7b714c9decfc",
     "commitName": "feat: implementar mostrarHorarios basado en zona",
     "commitTimestamp": 1776337068731,
     "testId": 9
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: mensaje zona sin registrar",
+    "commitTimestamp": 1776337374138,
+    "testId": 10
   }
 ]

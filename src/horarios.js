@@ -1,6 +1,6 @@
 export function mostrarHorario(zona, horarios) {
   if (!zona || zona.trim() === "") {
-    return "Por favor, ingrese una zona válida";
+    return "Por favor, seleccione una zona para consultar los horarios";
   }
 
   const filtrados = horarios.filter(h => h.zona.includes(zona));

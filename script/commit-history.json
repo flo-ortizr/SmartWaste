@@ -171,17 +171,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "461df73de84e5f83a064353f0c9c7b714c9decfc",
     "author": "Flora",
     "commit": {
       "date": "2026-04-16T10:57:46.000Z",
       "message": "feat: implementar mostrarHorarios basado en zona",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/461df73de84e5f83a064353f0c9c7b714c9decfc"
     },
     "stats": {
       "total": 46,
       "additions": 43,
       "deletions": 3,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-16T11:02:52.000Z",
+      "message": "fix: mensaje zona sin registrar",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
       "date": "2026-04-16"
     },
     "coverage": 100,
