@@ -54,9 +54,23 @@
     "testId": 1
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5d21fa4078558aa1ccd04c94443080a89883d52e",
     "commitName": "test: implementar crear rutas con validaciones basicas",
     "commitTimestamp": 1776304600903,
     "testId": 1
+  },
+  {
+    "numPassedTests": 6,
+    "failedTests": 0,
+    "numTotalTests": 6,
+    "timestamp": 1776305831888,
+    "success": true,
+    "testId": 2
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar formulario y presenter para crear rutas",
+    "commitTimestamp": 1776305853698,
+    "testId": 2
   }
 ]

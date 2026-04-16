@@ -19,17 +19,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5d21fa4078558aa1ccd04c94443080a89883d52e",
     "author": "User",
     "commit": {
       "date": "2026-04-16T01:56:39.000Z",
       "message": "test: implementar crear rutas con validaciones basicas",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/5d21fa4078558aa1ccd04c94443080a89883d52e"
     },
     "stats": {
       "total": 46,
       "additions": 26,
       "deletions": 20,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 6,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-16T02:17:32.000Z",
+      "message": "feat: agregar formulario y presenter para crear rutas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 48,
+      "additions": 40,
+      "deletions": 8,
       "date": "2026-04-16"
     },
     "coverage": 100,
