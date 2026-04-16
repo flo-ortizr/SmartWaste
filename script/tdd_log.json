@@ -100,9 +100,31 @@
     "testId": 5
   },
   {
-    "commitId": "HEAD",
+    "commitId": "b1e928e321aa07c57d297c856d00c8d7fcccf449",
     "commitName": "refactor: mover crear ruta a rutas con dias y cobertura",
     "commitTimestamp": 1776307900977,
     "testId": 6
+  },
+  {
+    "numPassedTests": 10,
+    "failedTests": 1,
+    "numTotalTests": 11,
+    "timestamp": 1776335639800,
+    "success": false,
+    "testId": 7
+  },
+  {
+    "numPassedTests": 11,
+    "failedTests": 0,
+    "numTotalTests": 11,
+    "timestamp": 1776335692643,
+    "success": true,
+    "testId": 7
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: mensaje cuando no ingresa una zona",
+    "commitTimestamp": 1776335770842,
+    "testId": 7
   }
 ]

@@ -114,12 +114,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "b1e928e321aa07c57d297c856d00c8d7fcccf449",
     "author": "User",
     "commit": {
       "date": "2026-04-16T02:51:40.000Z",
       "message": "refactor: mover crear ruta a rutas con dias y cobertura",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/b1e928e321aa07c57d297c856d00c8d7fcccf449"
     },
     "stats": {
       "total": 110,
@@ -129,6 +129,25 @@
     },
     "coverage": 100,
     "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-16T10:36:09.000Z",
+      "message": "feat: mensaje cuando no ingresa una zona",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 32,
+      "deletions": 2,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 11,
     "failed_tests": 0,
     "conclusion": "success"
   }
