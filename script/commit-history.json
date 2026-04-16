@@ -133,12 +133,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "758982f0f26f57a8d896ac83aaab9bc8698715de",
     "author": "Flora",
     "commit": {
       "date": "2026-04-16T10:36:09.000Z",
       "message": "feat: mensaje cuando no ingresa una zona",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/758982f0f26f57a8d896ac83aaab9bc8698715de"
     },
     "stats": {
       "total": 34,
@@ -148,6 +148,25 @@
     },
     "coverage": 100,
     "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-16T10:40:32.000Z",
+      "message": "feat: mensaje cuando no existen horarios registrados",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 11,
+      "deletions": 0,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"
   }

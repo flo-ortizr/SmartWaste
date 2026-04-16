@@ -122,9 +122,31 @@
     "testId": 7
   },
   {
-    "commitId": "HEAD",
+    "commitId": "758982f0f26f57a8d896ac83aaab9bc8698715de",
     "commitName": "feat: mensaje cuando no ingresa una zona",
     "commitTimestamp": 1776335770842,
     "testId": 7
+  },
+  {
+    "numPassedTests": 11,
+    "failedTests": 1,
+    "numTotalTests": 12,
+    "timestamp": 1776335934107,
+    "success": false,
+    "testId": 8
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 0,
+    "numTotalTests": 12,
+    "timestamp": 1776336001140,
+    "success": true,
+    "testId": 8
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: mensaje cuando no existen horarios registrados",
+    "commitTimestamp": 1776336033630,
+    "testId": 8
   }
 ]
