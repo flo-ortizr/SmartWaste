@@ -285,17 +285,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0d3f8400fae81f3f5208fd8f884c5a74d97b5fca",
     "author": "unknown",
     "commit": {
       "date": "2026-04-16T13:54:56.000Z",
       "message": "feat: mostrar zona y dias cuando la busqueda es exitosa",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/0d3f8400fae81f3f5208fd8f884c5a74d97b5fca"
     },
     "stats": {
       "total": 14,
       "additions": 14,
       "deletions": 0,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 16,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-04-16T14:04:11.000Z",
+      "message": "feat: implementacion de la logica de buscar por zona en el presenter y en el html(ciudadanos.html)",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 25,
+      "additions": 22,
+      "deletions": 3,
       "date": "2026-04-16"
     },
     "coverage": 100,

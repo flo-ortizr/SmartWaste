@@ -298,9 +298,15 @@
     "testId": 15
   },
   {
-    "commitId": "HEAD",
+    "commitId": "0d3f8400fae81f3f5208fd8f884c5a74d97b5fca",
     "commitName": "feat: mostrar zona y dias cuando la busqueda es exitosa",
     "commitTimestamp": 1776347697603,
     "testId": 15
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: implementacion de la logica de buscar por zona en el presenter y en el html(ciudadanos.html)",
+    "commitTimestamp": 1776348252706,
+    "testId": 16
   }
 ]

@@ -1,5 +1,5 @@
 import CrearReporte from "./gestionadorbasura.js";
-import { mostrarRutas, crearRuta } from "./rutas.js";
+import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
 import {mostrarHorario} from "./horarios.js";
 
 const formReporte = document.querySelector("#sumar-form");
@@ -19,6 +19,10 @@ const inputCoberturaRuta = document.querySelector("#cobertura_ruta");
 const inputZonaHorario = document.querySelector("#zona_horario");
 const btnVerHorarios = document.querySelector("#btn-ver-horarios");
 const divHorarios = document.querySelector("#resultado-horarios-div");
+
+const inputBuscarZona = document.querySelector("#buscar_zona_ruta");
+const btnBuscarRuta = document.querySelector("#btn-buscar-ruta");
+const divResultadoBusquedaRuta = document.querySelector("#resultado-busqueda-ruta-div");
 
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
@@ -55,6 +59,7 @@ if (formRuta) {
       coberturaRuta
     );
   });
+}
 
 
   if (btnVerHorarios) {
@@ -70,4 +75,14 @@ if (formRuta) {
     divHorarios.innerHTML = mostrarHorario(zona, horariosSimulados);
   });
 }
+
+if (btnBuscarRuta) {
+  btnBuscarRuta.addEventListener("click", () => {
+    const zonaBuscada = inputBuscarZona.value;
+    const rutasSimuladas = [
+      { zona: "Norte", dias: "Lunes y Miércoles" },
+      { zona: "Sur", dias: "Martes y Jueves" }
+    ];
+    divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(zonaBuscada, rutasSimuladas);
+  });
 }
