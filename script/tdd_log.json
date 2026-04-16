@@ -304,9 +304,87 @@
     "testId": 15
   },
   {
-    "commitId": "HEAD",
+    "commitId": "149f88485a2941e1b0e5b227035e2547c4e01d02",
     "commitName": "feat: implementacion de la logica de buscar por zona en el presenter y en el html(ciudadanos.html)",
     "commitTimestamp": 1776348252706,
     "testId": 16
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776371026714,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776371081226,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776371324606,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776371371410,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776371433845,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 5,
+    "numTotalTests": 19,
+    "timestamp": 1776371469968,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 18,
+    "failedTests": 1,
+    "numTotalTests": 19,
+    "timestamp": 1776371486509,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 19,
+    "failedTests": 0,
+    "numTotalTests": 19,
+    "timestamp": 1776371521812,
+    "success": true,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 19,
+    "failedTests": 0,
+    "numTotalTests": 19,
+    "timestamp": 1776372154191,
+    "success": true,
+    "testId": 17
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Crear reporte de texto sobre basura acumulada",
+    "commitTimestamp": 1776372212691,
+    "testId": 17
   }
 ]

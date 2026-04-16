@@ -304,12 +304,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "149f88485a2941e1b0e5b227035e2547c4e01d02",
     "author": "unknown",
     "commit": {
       "date": "2026-04-16T14:04:11.000Z",
       "message": "feat: implementacion de la logica de buscar por zona en el presenter y en el html(ciudadanos.html)",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/149f88485a2941e1b0e5b227035e2547c4e01d02"
     },
     "stats": {
       "total": 25,
@@ -319,6 +319,25 @@
     },
     "coverage": 100,
     "test_count": 16,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-04-16T20:43:32.000Z",
+      "message": "feat: Crear reporte de texto sobre basura acumulada",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 178,
+      "additions": 149,
+      "deletions": 29,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 19,
     "failed_tests": 0,
     "conclusion": "success"
   }

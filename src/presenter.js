@@ -1,10 +1,12 @@
-import CrearReporte from "./gestionadorbasura.js";
+import CrearReporte from "./reportes.js";
 import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
 import {mostrarHorario} from "./horarios.js";
 
-const formReporte = document.querySelector("#sumar-form");
+const formReporte = document.querySelector("#reporte-form");
 const divReporte = document.querySelector("#resultado-div");
 const inputMensaje = document.querySelector("#mensaje_reporte");
+const inputZonaReporte = document.querySelector("#zona_reporte");
+const inputFechaReporte = document.querySelector("#fecha_reporte");
 
 const btnVerRutas = document.querySelector("#btn-ver-rutas");
 const divListaRutas = document.querySelector("#lista-rutas-div");
@@ -27,8 +29,34 @@ const divResultadoBusquedaRuta = document.querySelector("#resultado-busqueda-rut
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const zona = inputZonaReporte.value;
+    const fecha = inputFechaReporte.value;
     const mensaje = inputMensaje.value;
-    divReporte.innerHTML = CrearReporte(mensaje);
+
+    if (!zona) {
+      divReporte.innerHTML = "<span style='color:red'>Por favor, seleccione una zona</span>";
+      return;
+    }
+
+    if (!mensaje || mensaje.trim() === "") {
+      divReporte.innerHTML = "<span style='color:red'>Por favor, ingrese una descripción del reporte</span>";
+      return;
+    }
+
+    if (!fecha) {
+      divReporte.innerHTML = "<span style='color:red'>Por favor, seleccione una fecha</span>";
+      return;
+    }
+
+    const resultado = CrearReporte({ zona, mensaje, fecha });
+
+    if (typeof resultado === "string") {
+      divReporte.innerHTML = `<span style='color:red'>${resultado}</span>`;
+    } else {
+      divReporte.innerHTML = "<span style='color:green'>Reporte enviado correctamente</span>";
+      formReporte.reset();
+    }
   });
 }
 

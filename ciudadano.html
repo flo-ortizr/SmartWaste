@@ -9,20 +9,47 @@
     <input type="text" id="buscar_zona_ruta" />
     <button id="btn-buscar-ruta">Buscar Ruta</button>
     <div id="resultado-busqueda-ruta-div"></div>
-    <hr>
+    <hr />
     <h2>Horarios de Recolección</h2>
     <label for="zona_horario">Zona:</label>
     <input type="text" id="zona_horario" />
     <button id="btn-ver-horarios">Ver Horarios</button>
-    
+
     <div id="resultado-horarios-div"></div>
 
     <h1>Reporte</h1>
-    <form id="sumar-form">
-      <label for="mensaje_reporte">Mensaje reporte:</label>
+
+    <form id="reporte-form">
+      <label for="zona_reporte">Zona:</label>
+      <select id="zona_reporte">
+        <option value="">Seleccione una zona</option>
+        <option>Cala Cala</option>
+        <option>Las Cuadras</option>
+        <option>Tupuraya</option>
+        <option>Queru Queru</option>
+        <option>Alalay</option>
+        <option>Sarco</option>
+        <option>Pacata</option>
+        <option>Villa Busch</option>
+        <option>Temporal</option>
+        <option>Muyurina</option>
+      </select>
+
+      <br /><br />
+
+      <label for="fecha_reporte">Fecha:</label>
+      <input type="date" id="fecha_reporte" />
+
+      <br /><br />
+
+      <label for="mensaje_reporte">Descripción:</label>
       <input type="text" id="mensaje_reporte" />
+
+      <br /><br />
+
       <input type="submit" value="Guardar reporte" />
     </form>
+
     <div id="resultado-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
