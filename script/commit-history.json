@@ -76,12 +76,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "be50624ebcd5f83bd40b641d13c529f4f1172cbe",
     "author": "unknown",
     "commit": {
       "date": "2026-04-16T01:32:23.000Z",
       "message": "feat: conectar la logica de mostrar rutas con la interfaz de usuario",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/be50624ebcd5f83bd40b641d13c529f4f1172cbe"
     },
     "stats": {
       "total": 17,
@@ -91,6 +91,25 @@
     },
     "coverage": 100,
     "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-16T02:31:24.000Z",
+      "message": "merge: integrar rama Oriana-Flores en master",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 95,
+      "additions": 65,
+      "deletions": 30,
+      "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 8,
     "failed_tests": 0,
     "conclusion": "success"
   }

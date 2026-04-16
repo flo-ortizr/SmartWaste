@@ -5,18 +5,32 @@
   </head>
   <body>
     <h1>Reporte</h1>
-    <form id="reporte-form">
+    <form id="sumar-form">
       <label for="mensaje_reporte">Mensaje reporte:</label>
       <input type="text" id="mensaje_reporte" />
       <input type="submit" value="Guardar reporte" />
     </form>
     <div id="resultado-div"></div>
 
-    <hr> <h2>Rutas de Recolección EMSA</h2>
+    <hr>
+    <h2>Rutas de Recolección EMSA</h2>
     <button id="btn-ver-rutas">Ver Rutas Registradas</button>
     <div id="lista-rutas-div"></div>
-  
-    <script type="module" src="./src/presenter.js"></script>
+
     <hr>
+    <h1>Crear rutas de carros basureros</h1>
+    <form id="ruta-form">
+      <label for="nombre_ruta">Nombre de la ruta:</label>
+      <input type="text" id="nombre_ruta" />
+
+      <label for="zona_ruta">Zona:</label>
+      <input type="text" id="zona_ruta" />
+
+      <input type="submit" value="Guardar ruta" />
+    </form>
+
+    <div id="resultado-ruta-div"></div>
+
+    <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>

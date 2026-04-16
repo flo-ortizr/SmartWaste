@@ -88,9 +88,15 @@
     "testId": 4
   },
   {
-    "commitId": "HEAD",
+    "commitId": "be50624ebcd5f83bd40b641d13c529f4f1172cbe",
     "commitName": "feat: conectar la logica de mostrar rutas con la interfaz de usuario",
     "commitTimestamp": 1776303144778,
     "testId": 4
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "merge: integrar rama Oriana-Flores en master",
+    "commitTimestamp": 1776306685139,
+    "testId": 5
   }
 ]
