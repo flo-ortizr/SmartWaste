@@ -1,4 +1,4 @@
-import CrearReporte, { validarFoto } from "./reportes.js";
+import CrearReporte, { validarFoto, obtenerResumenReportes } from "./reportes.js";
 import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
 import {mostrarHorario} from "./horarios.js";
 
@@ -28,6 +28,9 @@ const divResultadoBusquedaRuta = document.querySelector("#resultado-busqueda-rut
 
 const inputFotoReporte = document.querySelector("#foto_reporte");
 const divVistaPreviaFoto = document.querySelector("#vista-previa-foto-div");
+
+const btnVerReportes = document.querySelector("#btn-ver-reportes");
+const divListaReportes = document.querySelector("#lista-reportes-div");
 
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
@@ -125,5 +128,29 @@ if (btnBuscarRuta) {
       { zona: "Sur", dias: "Martes y Jueves" }
     ];
     divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(zonaBuscada, rutasSimuladas);
+  });
+}
+
+if (btnVerReportes) {
+  btnVerReportes.addEventListener("click", () => {
+    const reportesBD = [
+      { zona: "Cala Cala", fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina" },
+      { zona: "Muyurina", fecha: "2026-04-19", estado: "Atendido", mensaje: "Contenedor lleno" }
+    ];
+
+    const resumen = obtenerResumenReportes(reportesBD);
+
+    if (resumen.length === 0) {
+      divListaReportes.innerHTML = "<p>No hay reportes registrados</p>";
+      return;
+    }
+
+    let html = "<ul>";
+    resumen.forEach(reporte => {
+      html += `<li>Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado}</li>`;
+    });
+    html += "</ul>";
+
+    divListaReportes.innerHTML = html;
   });
 }
