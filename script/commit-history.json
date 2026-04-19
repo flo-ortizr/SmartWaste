@@ -380,12 +380,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "eafcfe17a3d9cf625fe082b79ff810e20174545f",
     "author": "User",
     "commit": {
       "date": "2026-04-19T00:38:48.000Z",
       "message": "feat: validar tipo de archivo de foto en reportes",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/eafcfe17a3d9cf625fe082b79ff810e20174545f"
     },
     "stats": {
       "total": 15,
@@ -395,6 +395,25 @@
     },
     "coverage": 100,
     "test_count": 21,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-19T00:53:01.000Z",
+      "message": "featt: aceptar imagen valida en validacion de foto",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 21,
+      "additions": 15,
+      "deletions": 6,
+      "date": "2026-04-19"
+    },
+    "coverage": 100,
+    "test_count": 22,
     "failed_tests": 0,
     "conclusion": "success"
   }

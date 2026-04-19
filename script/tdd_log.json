@@ -456,9 +456,23 @@
     "testId": 20
   },
   {
-    "commitId": "HEAD",
+    "commitId": "eafcfe17a3d9cf625fe082b79ff810e20174545f",
     "commitName": "feat: validar tipo de archivo de foto en reportes",
     "commitTimestamp": 1776559131584,
     "testId": 20
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 0,
+    "numTotalTests": 22,
+    "timestamp": 1776559321952,
+    "success": true,
+    "testId": 21
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "featt: aceptar imagen valida en validacion de foto",
+    "commitTimestamp": 1776559981752,
+    "testId": 21
   }
 ]

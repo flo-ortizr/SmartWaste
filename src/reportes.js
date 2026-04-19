@@ -35,13 +35,16 @@ function CrearReporte({ zona, mensaje, fecha }) {
 }
 
 export function validarFoto(archivo) {
-  if (!archivo) {
+  if (!archivo) 
+  {
     return "Por favor, seleccione una foto";
   }
 
   if (!archivo.type || !archivo.type.startsWith("image/")) {
     return "El archivo seleccionado no es una imagen válida";
   }
+
+  return "Foto válida";
 }
 
 export default CrearReporte;
