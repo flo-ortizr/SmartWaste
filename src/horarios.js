@@ -10,5 +10,5 @@ export function mostrarHorario(zona, horarios) {
   }
 
   const h = filtrados[0];
-  return `Zona ${h.zona}: ${h.dias} de ${h.horas}`;
+  return `Zona ${h.zona}: ${h.dias} de ${h.horas}`; // Devuelve el primer horario encontrado para la zona seleccionada
 }
