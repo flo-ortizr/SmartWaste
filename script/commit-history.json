@@ -437,17 +437,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c3a77da3fa6672d160bdd75ae783f445e90bd5f4",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-04-19T21:52:05.000Z",
       "message": "fix: (rutas) correcion de creacion, visualizacion, y busqueda con datos reales",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/c3a77da3fa6672d160bdd75ae783f445e90bd5f4"
     },
     "stats": {
       "total": 119,
       "additions": 102,
       "deletions": 17,
+      "date": "2026-04-19"
+    },
+    "coverage": 93.33,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-04-19T21:52:46.000Z",
+      "message": "feat(rutas): implementar eliminación de rutas por zona",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 16,
+      "additions": 16,
+      "deletions": 0,
       "date": "2026-04-19"
     },
     "coverage": 93.33,

@@ -192,3 +192,19 @@ if (divListaReportes) {
     }
   });
 }
+
+if (btnEliminarRuta) {
+  btnEliminarRuta.addEventListener("click", () => {
+    const zona = inputZonaEliminar.value;
+
+    const confirmacion = confirm("¿Está seguro de eliminar esta ruta?");
+
+    const resultado = eliminarRuta(zona, rutasBD, confirmacion);
+
+    divResultadoEliminar.innerHTML = resultado;
+
+    if (resultado === "Ruta eliminada correctamente") {
+      divListaRutas.innerHTML = mostrarRutas(rutasBD);
+    }
+  });
+}

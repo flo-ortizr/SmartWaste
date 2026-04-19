@@ -514,9 +514,15 @@
     "testId": 23
   },
   {
-    "commitId": "HEAD",
+    "commitId": "c3a77da3fa6672d160bdd75ae783f445e90bd5f4",
     "commitName": "fix: (rutas) correcion de creacion, visualizacion, y busqueda con datos reales",
     "commitTimestamp": 1776635525818,
     "testId": 23
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(rutas): implementar eliminación de rutas por zona",
+    "commitTimestamp": 1776635566273,
+    "testId": 24
   }
 ]
