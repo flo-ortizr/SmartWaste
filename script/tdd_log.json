@@ -442,9 +442,23 @@
     "testId": 19
   },
   {
-    "commitId": "HEAD",
+    "commitId": "6ab557f5b2294cab0a67024e623e1f8b43db4fb1",
     "commitName": "feat: agregar validacion inicial para foto en reportes",
     "commitTimestamp": 1776558458616,
     "testId": 19
+  },
+  {
+    "numPassedTests": 21,
+    "failedTests": 0,
+    "numTotalTests": 21,
+    "timestamp": 1776558600962,
+    "success": true,
+    "testId": 20
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: validar tipo de archivo de foto en reportes",
+    "commitTimestamp": 1776559131584,
+    "testId": 20
   }
 ]

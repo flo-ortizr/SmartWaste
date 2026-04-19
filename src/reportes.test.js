@@ -52,4 +52,10 @@ describe("CrearReporte", () => {
   expect(resultado).toBe("Por favor, seleccione una foto");
   });
 
+  test("debería mostrar error si el archivo no es una imagen válida", () => {
+  const archivoFalso = { type: "text/plain" };
+  const resultado = validarFoto(archivoFalso);
+  expect(resultado).toBe("El archivo seleccionado no es una imagen válida");
+  });
+
 });

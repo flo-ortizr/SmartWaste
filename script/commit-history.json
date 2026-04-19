@@ -361,12 +361,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6ab557f5b2294cab0a67024e623e1f8b43db4fb1",
     "author": "User",
     "commit": {
       "date": "2026-04-19T00:27:37.000Z",
       "message": "feat: agregar validacion inicial para foto en reportes",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/6ab557f5b2294cab0a67024e623e1f8b43db4fb1"
     },
     "stats": {
       "total": 15,
@@ -376,6 +376,25 @@
     },
     "coverage": 100,
     "test_count": 20,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-19T00:38:48.000Z",
+      "message": "feat: validar tipo de archivo de foto en reportes",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 12,
+      "deletions": 3,
+      "date": "2026-04-19"
+    },
+    "coverage": 100,
+    "test_count": 21,
     "failed_tests": 0,
     "conclusion": "success"
   }
