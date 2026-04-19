@@ -1,12 +1,14 @@
-import CrearReporte, { validarFoto, obtenerResumenReportes } from "./reportes.js";
+import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
-import {mostrarHorario} from "./horarios.js";
+import { mostrarHorario } from "./horarios.js";
 
 const formReporte = document.querySelector("#reporte-form");
 const divReporte = document.querySelector("#resultado-div");
 const inputMensaje = document.querySelector("#mensaje_reporte");
 const inputZonaReporte = document.querySelector("#zona_reporte");
 const inputFechaReporte = document.querySelector("#fecha_reporte");
+const inputFotoReporte = document.querySelector("#foto_reporte");
+const divVistaPreviaFoto = document.querySelector("#vista-previa-foto-div");
 
 const btnVerRutas = document.querySelector("#btn-ver-rutas");
 const divListaRutas = document.querySelector("#lista-rutas-div");
@@ -18,24 +20,26 @@ const inputZonaRuta = document.querySelector("#zona_ruta");
 const inputDiasRuta = document.querySelector("#dias_ruta");
 const inputCoberturaRuta = document.querySelector("#cobertura_ruta");
 
-const inputZonaHorario = document.querySelector("#zona_horario");
 const btnVerHorarios = document.querySelector("#btn-ver-horarios");
+const inputZonaHorario = document.querySelector("#zona_horario");
 const divHorarios = document.querySelector("#resultado-horarios-div");
 
-const inputBuscarZona = document.querySelector("#buscar_zona_ruta");
 const btnBuscarRuta = document.querySelector("#btn-buscar-ruta");
+const inputBuscarZona = document.querySelector("#buscar_zona_ruta");
 const divResultadoBusquedaRuta = document.querySelector("#resultado-busqueda-ruta-div");
-
-const inputFotoReporte = document.querySelector("#foto_reporte");
-const divVistaPreviaFoto = document.querySelector("#vista-previa-foto-div");
 
 const btnVerReportes = document.querySelector("#btn-ver-reportes");
 const divListaReportes = document.querySelector("#lista-reportes-div");
+const divDetalleReporte = document.querySelector("#detalle-reporte-div");
+
+const reportesBD = [
+  { id: "1", zona: "Cala Cala", fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina", usuario: "Juan" },
+  { id: "2", zona: "Muyurina", fecha: "2026-04-19", estado: "Atendido", mensaje: "Contenedor lleno", usuario: "Ana" }
+];
 
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
     event.preventDefault();
-
     const zona = inputZonaReporte.value;
     const fecha = inputFechaReporte.value;
     const mensaje = inputMensaje.value;
@@ -45,26 +49,22 @@ if (formReporte) {
       divReporte.innerHTML = "<span style='color:red'>Por favor, seleccione una zona</span>";
       return;
     }
-
     if (!mensaje || mensaje.trim() === "") {
       divReporte.innerHTML = "<span style='color:red'>Por favor, ingrese una descripción del reporte</span>";
       return;
     }
-
     if (!fecha) {
       divReporte.innerHTML = "<span style='color:red'>Por favor, seleccione una fecha</span>";
       return;
     }
 
-     const resultadoFoto = validarFoto(archivoFoto);
-
+    const resultadoFoto = validarFoto(archivoFoto);
     if (resultadoFoto !== "Foto válida") {
       divReporte.innerHTML = `<span style='color:red'>${resultadoFoto}</span>`;
       return;
     }
 
     const resultado = CrearReporte({ zona, mensaje, fecha });
-
     if (typeof resultado === "string") {
       divReporte.innerHTML = `<span style='color:red'>${resultado}</span>`;
     } else {
@@ -82,7 +82,6 @@ if (btnVerRutas) {
       { zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes" },
       { zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados" }
     ];
-
     divListaRutas.innerHTML = mostrarRutas(rutasSimuladas);
   });
 }
@@ -90,67 +89,64 @@ if (btnVerRutas) {
 if (formRuta) {
   formRuta.addEventListener("submit", (event) => {
     event.preventDefault();
-
-    const nombreRuta = inputNombreRuta.value;
-    const zonaRuta = inputZonaRuta.value;
-    const diasRuta = inputDiasRuta.value;
-    const coberturaRuta = inputCoberturaRuta.value;
-
-    divRuta.innerHTML = crearRuta(
-      nombreRuta,
-      zonaRuta,
-      diasRuta,
-      coberturaRuta
-    );
+    divRuta.innerHTML = crearRuta(inputNombreRuta.value, inputZonaRuta.value, inputDiasRuta.value, inputCoberturaRuta.value);
   });
 }
 
-
-  if (btnVerHorarios) {
+if (btnVerHorarios) {
   btnVerHorarios.addEventListener("click", () => {
-
-    const zona = inputZonaHorario.value;
-
     const horariosSimulados = [
       { zona: "Zona Norte - Cala Cala", dias: "Lunes a Viernes", horas: "8:00 - 10:00" },
       { zona: "Zona Sur - La Chimba", dias: "Martes a Sábado", horas: "14:00 - 16:00" }
     ];
-
-    divHorarios.innerHTML = mostrarHorario(zona, horariosSimulados);
+    divHorarios.innerHTML = mostrarHorario(inputZonaHorario.value, horariosSimulados);
   });
 }
 
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
-    const zonaBuscada = inputBuscarZona.value;
-    const rutasSimuladas = [
-      { zona: "Norte", dias: "Lunes y Miércoles" },
-      { zona: "Sur", dias: "Martes y Jueves" }
-    ];
-    divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(zonaBuscada, rutasSimuladas);
+    const rutasSimuladas = [{ zona: "Norte", dias: "Lunes" }, { zona: "Sur", dias: "Martes" }];
+    divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(inputBuscarZona.value, rutasSimuladas);
   });
 }
 
 if (btnVerReportes) {
   btnVerReportes.addEventListener("click", () => {
-    const reportesBD = [
-      { zona: "Cala Cala", fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina" },
-      { zona: "Muyurina", fecha: "2026-04-19", estado: "Atendido", mensaje: "Contenedor lleno" }
-    ];
-
     const resumen = obtenerResumenReportes(reportesBD);
-
     if (resumen.length === 0) {
       divListaReportes.innerHTML = "<p>No existen reportes registrados</p>";
       return;
     }
-
     let html = "<ul>";
     resumen.forEach(reporte => {
-      html += `<li>Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado}</li>`;
+      html += `<li>
+        Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado}
+        <button class="btn-detalle" data-id="${reporte.id}">Ver Detalle</button>
+      </li>`;
     });
     html += "</ul>";
-
     divListaReportes.innerHTML = html;
+    if (divDetalleReporte) divDetalleReporte.innerHTML = "";
+  });
+}
+
+if (divListaReportes) {
+  divListaReportes.addEventListener("click", (event) => {
+    if (event.target.classList.contains("btn-detalle")) {
+      const id = event.target.getAttribute("data-id");
+      const detalle = obtenerDetalleReporte(id, reportesBD);
+      if (detalle && divDetalleReporte) {
+        divDetalleReporte.innerHTML = `
+          <hr>
+          <h3>Detalle del Reporte</h3>
+          <p><strong>ID:</strong> ${detalle.id}</p>
+          <p><strong>Zona:</strong> ${detalle.zona}</p>
+          <p><strong>Fecha:</strong> ${detalle.fecha}</p>
+          <p><strong>Estado:</strong> ${detalle.estado}</p>
+          <p><strong>Usuario:</strong> ${detalle.usuario}</p>
+          <p><strong>Descripción:</strong> ${detalle.mensaje}</p>
+        `;
+      }
+    }
   });
 }
