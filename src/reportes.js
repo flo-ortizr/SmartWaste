@@ -47,4 +47,18 @@ export function validarFoto(archivo) {
   return "Foto válida";
 }
 
+export function obtenerResumenReportes(listaReportes) {
+  if (!listaReportes || listaReportes.length === 0) {
+    return []; 
+  }
+  
+  return listaReportes.map(reporte => {
+    return {
+      zona: reporte.zona,
+      fecha: reporte.fecha,
+      estado: reporte.estado
+    };
+  });
+}
+
 export default CrearReporte;

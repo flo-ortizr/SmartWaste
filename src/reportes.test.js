@@ -65,3 +65,27 @@ describe("CrearReporte", () => {
   });
 
 });
+
+describe("Obtener Reportes Resumidos", () => {
+  test("debería devolver un arreglo vacío si no hay reportes", () => {
+    const resultado = obtenerResumenReportes([]);
+    expect(resultado).toEqual([]);
+  });
+
+  test("debería devolver solo zona, fecha y estado, omitiendo otros datos", () => {
+    const reportesSimulados = [
+      { zona: "Cala Cala", fecha: "2026-04-19", estado: "Pendiente", mensaje: "Mucha basura", usuario: "Juan" }
+    ];
+    
+    const resultado = obtenerResumenReportes(reportesSimulados);
+    
+    expect(resultado[0]).toEqual({
+      zona: "Cala Cala",
+      fecha: "2026-04-19",
+      estado: "Pendiente"
+    });
+    
+    expect(resultado[0].mensaje).toBeUndefined();
+    expect(resultado[0].usuario).toBeUndefined();
+  });
+});
