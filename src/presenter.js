@@ -1,4 +1,4 @@
-import CrearReporte from "./reportes.js";
+import CrearReporte, { validarFoto } from "./reportes.js";
 import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
 import {mostrarHorario} from "./horarios.js";
 
@@ -26,6 +26,9 @@ const inputBuscarZona = document.querySelector("#buscar_zona_ruta");
 const btnBuscarRuta = document.querySelector("#btn-buscar-ruta");
 const divResultadoBusquedaRuta = document.querySelector("#resultado-busqueda-ruta-div");
 
+const inputFotoReporte = document.querySelector("#foto_reporte");
+const divVistaPreviaFoto = document.querySelector("#vista-previa-foto-div");
+
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -33,6 +36,7 @@ if (formReporte) {
     const zona = inputZonaReporte.value;
     const fecha = inputFechaReporte.value;
     const mensaje = inputMensaje.value;
+    const archivoFoto = inputFotoReporte.files[0];
 
     if (!zona) {
       divReporte.innerHTML = "<span style='color:red'>Por favor, seleccione una zona</span>";
@@ -49,11 +53,20 @@ if (formReporte) {
       return;
     }
 
+     const resultadoFoto = validarFoto(archivoFoto);
+
+    if (resultadoFoto !== "Foto válida") {
+      divReporte.innerHTML = `<span style='color:red'>${resultadoFoto}</span>`;
+      return;
+    }
+
     const resultado = CrearReporte({ zona, mensaje, fecha });
 
     if (typeof resultado === "string") {
       divReporte.innerHTML = `<span style='color:red'>${resultado}</span>`;
     } else {
+      const urlImagen = URL.createObjectURL(archivoFoto);
+      divVistaPreviaFoto.innerHTML = `<img src="${urlImagen}" alt="Vista previa" width="200">`;
       divReporte.innerHTML = "<span style='color:green'>Reporte enviado correctamente</span>";
       formReporte.reset();
     }

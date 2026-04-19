@@ -470,9 +470,15 @@
     "testId": 21
   },
   {
-    "commitId": "HEAD",
+    "commitId": "f0e496160947794ae191818313acd3917f5e2503",
     "commitName": "featt: aceptar imagen valida en validacion de foto",
     "commitTimestamp": 1776559981752,
     "testId": 21
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar validacion y vista previa de foto en reportes",
+    "commitTimestamp": 1776560495999,
+    "testId": 22
   }
 ]

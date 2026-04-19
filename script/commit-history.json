@@ -399,17 +399,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "f0e496160947794ae191818313acd3917f5e2503",
     "author": "User",
     "commit": {
       "date": "2026-04-19T00:53:01.000Z",
       "message": "featt: aceptar imagen valida en validacion de foto",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f0e496160947794ae191818313acd3917f5e2503"
     },
     "stats": {
       "total": 21,
       "additions": 15,
       "deletions": 6,
+      "date": "2026-04-19"
+    },
+    "coverage": 100,
+    "test_count": 22,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-19T01:01:35.000Z",
+      "message": "feat: agregar validacion y vista previa de foto en reportes",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 14,
+      "deletions": 1,
       "date": "2026-04-19"
     },
     "coverage": 100,
