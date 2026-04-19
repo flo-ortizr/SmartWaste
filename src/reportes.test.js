@@ -1,4 +1,4 @@
-import CrearReporte, { validarFoto } from "./reportes.js";
+import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 
 describe("CrearReporte", () => {
 
@@ -72,14 +72,15 @@ describe("Obtener Reportes Resumidos", () => {
     expect(resultado).toEqual([]);
   });
 
-  test("debería devolver solo zona, fecha y estado, omitiendo otros datos", () => {
+  test("debería devolver solo id, zona, fecha y estado, omitiendo otros datos", () => {
     const reportesSimulados = [
-      { zona: "Cala Cala", fecha: "2026-04-19", estado: "Pendiente", mensaje: "Mucha basura", usuario: "Juan" }
+      { id: "1", zona: "Cala Cala", fecha: "2026-04-19", estado: "Pendiente", mensaje: "Mucha basura", usuario: "Juan" }
     ];
     
     const resultado = obtenerResumenReportes(reportesSimulados);
     
     expect(resultado[0]).toEqual({
+      id: "1",
       zona: "Cala Cala",
       fecha: "2026-04-19",
       estado: "Pendiente"
@@ -87,5 +88,17 @@ describe("Obtener Reportes Resumidos", () => {
     
     expect(resultado[0].mensaje).toBeUndefined();
     expect(resultado[0].usuario).toBeUndefined();
+  });
+});
+
+describe("Obtener Detalle de Reporte", () => {
+  test("debería devolver null si el id no existe", () => {
+    const reportes = [{ id: "1", zona: "Norte", mensaje: "Basura" }];
+    expect(obtenerDetalleReporte("2", reportes)).toBeNull();
+  });
+
+  test("debería devolver el reporte completo", () => {
+    const reportes = [{ id: "1", zona: "Norte", mensaje: "Basura" }];
+    expect(obtenerDetalleReporte("1", reportes)).toEqual({ id: "1", zona: "Norte", mensaje: "Basura" });
   });
 });

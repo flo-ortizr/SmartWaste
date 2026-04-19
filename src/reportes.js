@@ -51,14 +51,22 @@ export function obtenerResumenReportes(listaReportes) {
   if (!listaReportes || listaReportes.length === 0) {
     return []; 
   }
-  
+
   return listaReportes.map(reporte => {
     return {
+      id: reporte.id,
       zona: reporte.zona,
       fecha: reporte.fecha,
       estado: reporte.estado
     };
   });
+}
+
+export function obtenerDetalleReporte(idBuscado, listaReportes) {
+  if (!idBuscado || !listaReportes) return null;
+  
+  const reporteEncontrado = listaReportes.find(r => String(r.id) === String(idBuscado));
+  return reporteEncontrado || null;
 }
 
 export default CrearReporte;
