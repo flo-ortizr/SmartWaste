@@ -98,11 +98,6 @@ if (formReporte) {
 
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
-    //const rutasSimuladas = [
-    //  { zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes" },
-    //  { zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados" }
-    //];
-    //divListaRutas.innerHTML = mostrarRutas(rutasSimuladas);
     divListaRutas.innerHTML = mostrarRutas(rutasBD);
   });
 }
@@ -110,7 +105,6 @@ if (btnVerRutas) {
 if (formRuta) {
   formRuta.addEventListener("submit", (event) => {
     event.preventDefault();
-    //divRuta.innerHTML = crearRuta(inputNombreRuta.value, inputZonaRuta.value, inputDiasRuta.value, inputCoberturaRuta.value);
     if (formRuta) {
     formRuta.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -146,8 +140,6 @@ if (btnVerHorarios) {
 
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
-    //const rutasSimuladas = [{ zona: "Norte", dias: "Lunes" }, { zona: "Sur", dias: "Martes" }];
-    //divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(inputBuscarZona.value, rutasSimuladas);
     buscarRutaPorZona(inputBuscarZona.value, rutasBD);
   });
 }

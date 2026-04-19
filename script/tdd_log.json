@@ -520,9 +520,15 @@
     "testId": 23
   },
   {
-    "commitId": "HEAD",
+    "commitId": "48daa7da8dad50d4b4554bfa46ab53db104831b3",
     "commitName": "feat(rutas): implementar eliminación de rutas por zona",
     "commitTimestamp": 1776635566273,
     "testId": 24
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: limpieza codigo presenter eliminando codigo innecesario",
+    "commitTimestamp": 1776635694123,
+    "testId": 25
   }
 ]

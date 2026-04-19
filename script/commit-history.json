@@ -456,17 +456,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "48daa7da8dad50d4b4554bfa46ab53db104831b3",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-04-19T21:52:46.000Z",
       "message": "feat(rutas): implementar eliminación de rutas por zona",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/48daa7da8dad50d4b4554bfa46ab53db104831b3"
     },
     "stats": {
       "total": 16,
       "additions": 16,
       "deletions": 0,
+      "date": "2026-04-19"
+    },
+    "coverage": 93.33,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-04-19T21:54:53.000Z",
+      "message": "refactor: limpieza codigo presenter eliminando codigo innecesario",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 8,
+      "additions": 0,
+      "deletions": 8,
       "date": "2026-04-19"
     },
     "coverage": 93.33,
