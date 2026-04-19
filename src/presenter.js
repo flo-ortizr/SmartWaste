@@ -141,7 +141,7 @@ if (btnVerReportes) {
     const resumen = obtenerResumenReportes(reportesBD);
 
     if (resumen.length === 0) {
-      divListaReportes.innerHTML = "<p>No hay reportes registrados</p>";
+      divListaReportes.innerHTML = "<p>No existen reportes registrados</p>";
       return;
     }
 
