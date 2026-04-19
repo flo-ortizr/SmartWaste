@@ -105,26 +105,22 @@ if (btnVerRutas) {
 if (formRuta) {
   formRuta.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (formRuta) {
-    formRuta.addEventListener("submit", (event) => {
-      event.preventDefault();
 
-      const nuevaRuta = crearRuta(
-        inputNombreRuta.value,
-        inputZonaRuta.value,
-        inputDiasRuta.value,
-        inputCoberturaRuta.value
-      );
+    const resultado = crearRuta(
+      inputNombreRuta.value,
+      inputZonaRuta.value,
+      inputDiasRuta.value,
+      inputCoberturaRuta.value
+    );
 
-      if (typeof nuevaRuta === "string") {
-        divRuta.innerHTML = nuevaRuta;
-      } else {
-        rutasBD.push(nuevaRuta);
-        divRuta.innerHTML = "Ruta registrada correctamente";
-        formRuta.reset();
-      }
-    });
-  }
+    if (typeof resultado === "string") {
+      divRuta.innerHTML = `<span style='color:red'>${resultado}</span>`;
+    } else {
+      rutasBD.push(resultado);
+      divRuta.innerHTML = "<span style='color:green'>Ruta registrada correctamente</span>";
+      formRuta.reset();
+      divListaRutas.innerHTML = mostrarRutas(rutasBD);
+    }
   });
 }
 

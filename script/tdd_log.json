@@ -526,9 +526,31 @@
     "testId": 24
   },
   {
-    "commitId": "HEAD",
+    "commitId": "6f21ed21d7423e2c88f9b1cb7ad8af1a4119c725",
     "commitName": "refactor: limpieza codigo presenter eliminando codigo innecesario",
     "commitTimestamp": 1776635694123,
     "testId": 25
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1776637663907,
+    "success": true,
+    "testId": 26
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1776638221965,
+    "success": true,
+    "testId": 26
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: actualizar crear rutas de carros basureros",
+    "commitTimestamp": 1776638483572,
+    "testId": 26
   }
 ]

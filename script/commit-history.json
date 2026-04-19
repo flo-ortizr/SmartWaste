@@ -475,17 +475,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6f21ed21d7423e2c88f9b1cb7ad8af1a4119c725",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-04-19T21:54:53.000Z",
       "message": "refactor: limpieza codigo presenter eliminando codigo innecesario",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/6f21ed21d7423e2c88f9b1cb7ad8af1a4119c725"
     },
     "stats": {
       "total": 8,
       "additions": 0,
       "deletions": 8,
+      "date": "2026-04-19"
+    },
+    "coverage": 93.33,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-19T22:41:23.000Z",
+      "message": "refactor: actualizar crear rutas de carros basureros",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 54,
+      "additions": 30,
+      "deletions": 24,
       "date": "2026-04-19"
     },
     "coverage": 93.33,

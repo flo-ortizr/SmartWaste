@@ -25,7 +25,12 @@ export function crearRuta(nombreRuta, zona, dias, cobertura) {
     return "Por favor, complete los campos requeridos";
   }
 
-  return "Ruta registrada correctamente";
+  return {
+    nombreRuta: nombreRuta.trim(),
+    zona: zona.trim(),
+    dias: dias.trim(),
+    cobertura: cobertura.trim()
+  };
 }
 
 export function buscarRutaPorZona(zonaABuscar, listaDeRutas) {

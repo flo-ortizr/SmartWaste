@@ -43,9 +43,14 @@ describe("Gestor de Rutas", () => {
   });
 
   it("debería registrar la ruta cuando los datos son correctos", () => {
-    let resultado = crearRuta("Ruta 1", "Zona Norte", "Lunes", "Cala Cala");
-    expect(resultado).toEqual("Ruta registrada correctamente");
-  }); 
+  let resultado = crearRuta("Ruta 1", "Zona Norte", "Lunes", "Cala Cala");
+  expect(resultado).toEqual({
+    nombreRuta: "Ruta 1",
+    zona: "Zona Norte",
+    dias: "Lunes",
+    cobertura: "Cala Cala"
+   });
+  });
 });
 
 describe("Buscador de Rutas por Zona", () => {
