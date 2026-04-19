@@ -342,12 +342,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2afd3e31929ead9fcae76c38d3be072106754c1d",
     "author": "User",
     "commit": {
       "date": "2026-04-19T00:06:56.000Z",
       "message": "feat: actualizar formulario de reporte en ciudadano con añadir fotos al reporte",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/2afd3e31929ead9fcae76c38d3be072106754c1d"
     },
     "stats": {
       "total": 7,
@@ -357,6 +357,25 @@
     },
     "coverage": 100,
     "test_count": 19,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-19T00:27:37.000Z",
+      "message": "feat: agregar validacion inicial para foto en reportes",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 14,
+      "deletions": 1,
+      "date": "2026-04-19"
+    },
+    "coverage": 100,
+    "test_count": 20,
     "failed_tests": 0,
     "conclusion": "success"
   }

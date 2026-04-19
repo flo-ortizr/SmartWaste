@@ -1,4 +1,4 @@
-import CrearReporte from "./reportes.js";
+import CrearReporte, { validarFoto } from "./reportes.js";
 
 describe("CrearReporte", () => {
 
@@ -45,6 +45,11 @@ describe("CrearReporte", () => {
     });
 
     expect(resultado).toBe("Error: zona inválida");
+  });
+
+  test("debería mostrar error si no se selecciona ninguna foto", () => {
+  const resultado = validarFoto(null);
+  expect(resultado).toBe("Por favor, seleccione una foto");
   });
 
 });

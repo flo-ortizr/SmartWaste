@@ -31,6 +31,14 @@ function CrearReporte({ zona, mensaje, fecha }) {
   };
 
   return reporte;
+
 }
+
+export function validarFoto(archivo) {
+  if (!archivo)
+   {
+    return "Por favor, seleccione una foto";
+    }
+  }
 
 export default CrearReporte;

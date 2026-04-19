@@ -388,9 +388,63 @@
     "testId": 17
   },
   {
-    "commitId": "HEAD",
+    "commitId": "2afd3e31929ead9fcae76c38d3be072106754c1d",
     "commitName": "feat: actualizar formulario de reporte en ciudadano con añadir fotos al reporte",
     "commitTimestamp": 1776557217556,
     "testId": 18
+  },
+  {
+    "numPassedTests": 19,
+    "failedTests": 1,
+    "numTotalTests": 20,
+    "timestamp": 1776557413340,
+    "success": false,
+    "testId": 19
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776557529067,
+    "success": false,
+    "testId": 19
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776557946360,
+    "success": false,
+    "testId": 19
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776558139271,
+    "success": false,
+    "testId": 19
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1776558252348,
+    "success": false,
+    "testId": 19
+  },
+  {
+    "numPassedTests": 20,
+    "failedTests": 0,
+    "numTotalTests": 20,
+    "timestamp": 1776558329078,
+    "success": true,
+    "testId": 19
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar validacion inicial para foto en reportes",
+    "commitTimestamp": 1776558458616,
+    "testId": 19
   }
 ]
