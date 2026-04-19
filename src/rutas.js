@@ -40,3 +40,23 @@ export function buscarRutaPorZona(zonaABuscar, listaDeRutas) {
   }
   return `Zona: ${rutaEncontrada.zona} - Días: ${rutaEncontrada.dias}`;
 }
+
+export function eliminarRuta(zona, listaDeRutas, confirmacion) {
+  if (!zona || zona.trim() === "") {
+    return "Por favor, seleccione una ruta para eliminar.";
+  }
+
+  const index = listaDeRutas.findIndex(r => r.zona === zona);
+
+  if (index === -1) {
+    return "No se encontró la ruta a eliminar.";
+  }
+
+  if (!confirmacion) {
+    return "¿Está seguro de eliminar esta ruta?";
+  }
+
+  listaDeRutas.splice(index, 1);
+
+  return "Ruta eliminada correctamente";
+}

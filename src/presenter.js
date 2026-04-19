@@ -1,5 +1,6 @@
 import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
+import { eliminarRuta } from "./rutas.js";
 import { mostrarHorario } from "./horarios.js";
 
 const formReporte = document.querySelector("#reporte-form");
@@ -32,9 +33,28 @@ const btnVerReportes = document.querySelector("#btn-ver-reportes");
 const divListaReportes = document.querySelector("#lista-reportes-div");
 const divDetalleReporte = document.querySelector("#detalle-reporte-div");
 
+const btnEliminarRuta = document.querySelector("#btn-eliminar-ruta");
+const inputZonaEliminar = document.querySelector("#zona_eliminar");
+const divResultadoEliminar = document.querySelector("#resultado-eliminar-div");
+
 const reportesBD = [
   { id: "1", zona: "Cala Cala", fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina", usuario: "Juan" },
   { id: "2", zona: "Muyurina", fecha: "2026-04-19", estado: "Atendido", mensaje: "Contenedor lleno", usuario: "Ana" }
+];
+
+const rutasBD = [
+  {
+    nombreRuta: "Ruta 1",
+    zona: "Zona Norte - Cala Cala",
+    dias: "Lunes, Miércoles y Viernes",
+    cobertura: "Cala Cala"
+  },
+  {
+    nombreRuta: "Ruta 2",
+    zona: "Zona Sur - La Chimba",
+    dias: "Martes, Jueves y Sábados",
+    cobertura: "La Chimba"
+  }
 ];
 
 if (formReporte) {
@@ -78,18 +98,39 @@ if (formReporte) {
 
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
-    const rutasSimuladas = [
-      { zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes" },
-      { zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados" }
-    ];
-    divListaRutas.innerHTML = mostrarRutas(rutasSimuladas);
+    //const rutasSimuladas = [
+    //  { zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes" },
+    //  { zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados" }
+    //];
+    //divListaRutas.innerHTML = mostrarRutas(rutasSimuladas);
+    divListaRutas.innerHTML = mostrarRutas(rutasBD);
   });
 }
 
 if (formRuta) {
   formRuta.addEventListener("submit", (event) => {
     event.preventDefault();
-    divRuta.innerHTML = crearRuta(inputNombreRuta.value, inputZonaRuta.value, inputDiasRuta.value, inputCoberturaRuta.value);
+    //divRuta.innerHTML = crearRuta(inputNombreRuta.value, inputZonaRuta.value, inputDiasRuta.value, inputCoberturaRuta.value);
+    if (formRuta) {
+    formRuta.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const nuevaRuta = crearRuta(
+        inputNombreRuta.value,
+        inputZonaRuta.value,
+        inputDiasRuta.value,
+        inputCoberturaRuta.value
+      );
+
+      if (typeof nuevaRuta === "string") {
+        divRuta.innerHTML = nuevaRuta;
+      } else {
+        rutasBD.push(nuevaRuta);
+        divRuta.innerHTML = "Ruta registrada correctamente";
+        formRuta.reset();
+      }
+    });
+  }
   });
 }
 
@@ -105,8 +146,9 @@ if (btnVerHorarios) {
 
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
-    const rutasSimuladas = [{ zona: "Norte", dias: "Lunes" }, { zona: "Sur", dias: "Martes" }];
-    divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(inputBuscarZona.value, rutasSimuladas);
+    //const rutasSimuladas = [{ zona: "Norte", dias: "Lunes" }, { zona: "Sur", dias: "Martes" }];
+    //divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(inputBuscarZona.value, rutasSimuladas);
+    buscarRutaPorZona(inputBuscarZona.value, rutasBD);
   });
 }
 

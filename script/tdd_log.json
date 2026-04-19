@@ -476,9 +476,47 @@
     "testId": 21
   },
   {
-    "commitId": "HEAD",
+    "commitId": "9cd2053bbf7e2e3aaa0a19d2141c17e54ead3235",
     "commitName": "feat: agregar validacion y vista previa de foto en reportes",
     "commitTimestamp": 1776560495999,
     "testId": 22
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 0,
+    "numTotalTests": 26,
+    "timestamp": 1776633983655,
+    "success": true,
+    "testId": 23
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 4,
+    "numTotalTests": 30,
+    "timestamp": 1776634126708,
+    "success": false,
+    "testId": 23
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 1,
+    "numTotalTests": 27,
+    "timestamp": 1776634344994,
+    "success": false,
+    "testId": 23
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1776634374579,
+    "success": true,
+    "testId": 23
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: (rutas) correcion de creacion, visualizacion, y busqueda con datos reales",
+    "commitTimestamp": 1776635525818,
+    "testId": 23
   }
 ]

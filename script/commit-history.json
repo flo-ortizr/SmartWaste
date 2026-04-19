@@ -418,12 +418,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "9cd2053bbf7e2e3aaa0a19d2141c17e54ead3235",
     "author": "User",
     "commit": {
       "date": "2026-04-19T01:01:35.000Z",
       "message": "feat: agregar validacion y vista previa de foto en reportes",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/9cd2053bbf7e2e3aaa0a19d2141c17e54ead3235"
     },
     "stats": {
       "total": 15,
@@ -433,6 +433,25 @@
     },
     "coverage": 100,
     "test_count": 22,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-04-19T21:52:05.000Z",
+      "message": "fix: (rutas) correcion de creacion, visualizacion, y busqueda con datos reales",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 119,
+      "additions": 102,
+      "deletions": 17,
+      "date": "2026-04-19"
+    },
+    "coverage": 93.33,
+    "test_count": 27,
     "failed_tests": 0,
     "conclusion": "success"
   }

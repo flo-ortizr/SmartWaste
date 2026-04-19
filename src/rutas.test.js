@@ -1,4 +1,4 @@
-import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
+import { mostrarRutas, crearRuta, buscarRutaPorZona, eliminarRuta } from "./rutas.js";
 
 describe("Gestor de Rutas", () => {
   it("debería mostrar un mensaje cuando no hay rutas registradas", () => {
@@ -78,6 +78,21 @@ describe("Buscador de Rutas por Zona", () => {
     expect(resultado).toContain("Días: Lunes y Miércoles");
   });
 
+});
 
+describe("Eliminar Ruta por Zona", () => {
+
+  it("debería eliminar la ruta si se confirma", () => {
+    let rutas = [
+      { zona: "Norte", dias: "Lunes" },
+      { zona: "Sur", dias: "Martes" }
+    ];
+
+    let resultado = eliminarRuta("Norte", rutas, true);
+
+    expect(resultado).toEqual("Ruta eliminada correctamente");
+    expect(rutas.length).toBe(1);
+    expect(rutas[0].zona).toBe("Sur");
+  });
 
 });

@@ -4,19 +4,18 @@
     <title>SmartWaste</title>
   </head>
   <body>
-
-    <hr>
+    <hr />
     <h2>Rutas de Recolección EMSA</h2>
     <button id="btn-ver-rutas">Ver Rutas Registradas</button>
     <div id="lista-rutas-div"></div>
 
-    <hr>
+    <hr />
     <h2>Resumen de Reportes Ciudadanos</h2>
     <button id="btn-ver-reportes">Ver Reportes</button>
     <div id="lista-reportes-div"></div>
     <div id="detalle-reporte-div"></div>
-    
-    <hr>
+
+    <hr />
     <h1>Crear rutas de carros basureros</h1>
     <form id="ruta-form">
       <label for="nombre_ruta">Nombre de la ruta:</label>
@@ -33,9 +32,18 @@
 
       <input type="submit" value="Guardar ruta" />
     </form>
-    
+
     <div id="resultado-ruta-div"></div>
 
+    <hr />
+    <h2>Eliminar ruta</h2>
+
+    <label for="zona_eliminar">Zona:</label>
+    <input type="text" id="zona_eliminar" />
+
+    <button id="btn-eliminar-ruta">Eliminar ruta</button>
+
+    <div id="resultado-eliminar-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
