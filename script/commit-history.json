@@ -323,18 +323,37 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e43ba2f8fa0ed8bdb9bdf164bb1710497f3870b6",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-04-16T20:43:32.000Z",
       "message": "feat: Crear reporte de texto sobre basura acumulada",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/e43ba2f8fa0ed8bdb9bdf164bb1710497f3870b6"
     },
     "stats": {
       "total": 178,
       "additions": 149,
       "deletions": 29,
       "date": "2026-04-16"
+    },
+    "coverage": 100,
+    "test_count": 19,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-04-19T00:06:56.000Z",
+      "message": "feat: actualizar formulario de reporte en ciudadano con añadir fotos al reporte",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 7,
+      "additions": 6,
+      "deletions": 1,
+      "date": "2026-04-19"
     },
     "coverage": 100,
     "test_count": 19,
