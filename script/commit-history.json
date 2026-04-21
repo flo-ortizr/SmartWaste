@@ -570,17 +570,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "cb9f267a134bc9dfb202c8666b30fdeab09f4ea6",
     "author": "Flora",
     "commit": {
       "date": "2026-04-21T03:34:56.000Z",
       "message": "feat: integracion presenter js e interfaz html",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/cb9f267a134bc9dfb202c8666b30fdeab09f4ea6"
     },
     "stats": {
       "total": 32,
       "additions": 31,
       "deletions": 1,
+      "date": "2026-04-21"
+    },
+    "coverage": 93.65,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-21T04:02:22.000Z",
+      "message": "feat: merge commit",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 0,
+      "additions": 0,
+      "deletions": 0,
       "date": "2026-04-21"
     },
     "coverage": 93.65,

@@ -644,9 +644,23 @@
     "testId": 29
   },
   {
-    "commitId": "HEAD",
+    "commitId": "cb9f267a134bc9dfb202c8666b30fdeab09f4ea6",
     "commitName": "feat: integracion presenter js e interfaz html",
     "commitTimestamp": 1776742498284,
     "testId": 30
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1776743934611,
+    "success": true,
+    "testId": 31
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: merge commit",
+    "commitTimestamp": 1776744144150,
+    "testId": 31
   }
 ]
