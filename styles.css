@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin: 25px 0;
+}
+
+form,
+#resultado-div,
+#resultado-horarios-div,
+#resultado-busqueda-ruta-div {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button,
+input[type="submit"] {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+#resultado-div {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="file"] {
+  border: none;
+}
+
+#vista-previa-foto-div {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#vista-previa-foto-div img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+h2 {
+  border-left: 5px solid #2ecc71;
+  padding-left: 10px;
+}
+
+#btn-ver-rutas,
+#btn-ver-reportes,
+#btn-registrar-horario,
+#btn-eliminar-ruta {
+  background-color: #3498db;
+}
+
+#btn-ver-rutas:hover,
+#btn-ver-reportes:hover,
+#btn-registrar-horario:hover,
+#btn-eliminar-ruta:hover {
+  background-color: #2980b9;
+}
+
+#lista-rutas-div,
+#lista-reportes-div,
+#detalle-reporte-div,
+#resultado-ruta-div,
+#resultado-registrar-horario,
+#resultado-eliminar-div {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#ruta-form input {
+  margin-bottom: 10px;
+}
+
+#btn-eliminar-ruta {
+  background-color: #e74c3c;
+}
+
+#btn-eliminar-ruta:hover {
+  background-color: #c0392b;
+}
+
+#resultado-ruta-div,
+#resultado-registrar-horario,
+#resultado-eliminar-div {
+  font-weight: bold;
+}
+
+#detalle-reporte-div {
+  border-left: 4px solid #f39c12;
+}

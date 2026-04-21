@@ -676,9 +676,15 @@
     "testId": 33
   },
   {
-    "commitId": "HEAD",
+    "commitId": "65c437c2b4edd14a5a267e1fbdbd8e786cc8d402",
     "commitName": "fix: update build html file names",
     "commitTimestamp": 1776745286573,
     "testId": 34
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar estilos CSS para vistas ciudadano y EMSA",
+    "commitTimestamp": 1776746343113,
+    "testId": 35
   }
 ]
