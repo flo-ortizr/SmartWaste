@@ -5,8 +5,8 @@
   "default": "index.html",
   "type": "module",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build emsa.html, ciudadano.html",
+    "start": "parcel emsa.html ciudadano.html",
+    "build": "parcel build emsa.html ciudadano.html",
     "test": "node ./script/tddScript.js",
     "cypress": "cypress open",
     "cypress-run": "cypress run",
