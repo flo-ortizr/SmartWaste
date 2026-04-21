@@ -20,7 +20,12 @@ describe("Gestor de Horarios", () => {
     });
 
     it("debería mostrar error si faltan campos", () => {
-    const resultado = registrarHorario("", "");
-    expect(resultado).toEqual("Por favor, complete los campos requeridos");
-  });
+        const resultado = registrarHorario("", "");
+        expect(resultado).toEqual("Por favor, complete los campos requeridos");
+    });
+
+    it("debería registrar el horario correctamente", () => {
+        const resultado = registrarHorario("Zona Norte", "8:00 - 10:00");
+        expect(resultado).toEqual("Horario registrado correctamente");
+    });
 });

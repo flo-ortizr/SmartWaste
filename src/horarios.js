@@ -17,4 +17,5 @@ export function registrarHorario(ruta, horario) {
   if (!ruta || ruta.trim() === "" || !horario || horario.trim() === "") {
     return "Por favor, complete los campos requeridos";
   }
+  return "Horario registrado correctamente";
 }

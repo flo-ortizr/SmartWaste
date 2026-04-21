@@ -570,9 +570,39 @@
     "testId": 27
   },
   {
-    "commitId": "HEAD",
+    "commitId": "4124fdc343e5813568c382f37118c0844fa3fda5",
     "commitName": "feat: validacion de campos registrarHorario",
     "commitTimestamp": 1776739739393,
     "testId": 27
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 1,
+    "numTotalTests": 28,
+    "timestamp": 1776740511346,
+    "success": false,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 1,
+    "numTotalTests": 28,
+    "timestamp": 1776740675250,
+    "success": false,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 0,
+    "numTotalTests": 29,
+    "timestamp": 1776740752652,
+    "success": true,
+    "testId": 28
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: registro exitoso de horarios",
+    "commitTimestamp": 1776740784601,
+    "testId": 28
   }
 ]

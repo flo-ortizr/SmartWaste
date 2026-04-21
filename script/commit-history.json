@@ -513,12 +513,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4124fdc343e5813568c382f37118c0844fa3fda5",
     "author": "Flora",
     "commit": {
       "date": "2026-04-21T02:48:57.000Z",
       "message": "feat: validacion de campos registrarHorario",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/4124fdc343e5813568c382f37118c0844fa3fda5"
     },
     "stats": {
       "total": 13,
@@ -528,6 +528,25 @@
     },
     "coverage": 93.55,
     "test_count": 28,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-21T03:06:23.000Z",
+      "message": "feat: registro exitoso de horarios",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 9,
+      "deletions": 3,
+      "date": "2026-04-21"
+    },
+    "coverage": 93.65,
+    "test_count": 29,
     "failed_tests": 0,
     "conclusion": "success"
   }
