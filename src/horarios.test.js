@@ -26,6 +26,18 @@ describe("Gestor de Horarios", () => {
 
     it("debería registrar el horario correctamente", () => {
         const resultado = registrarHorario("Zona Norte", "8:00 - 10:00");
-        expect(resultado).toEqual("Horario registrado correctamente");
+        expect(resultado).toEqual({
+            ruta: "Zona Norte",
+            horario: "8:00 - 10:00"
+  });
     });
+
+    it("debería devolver objeto con ruta y horario", () => {
+         const resultado = registrarHorario("Zona Norte", "8:00 - 10:00");
+
+        expect(resultado).toEqual({
+                ruta: "Zona Norte",
+    horario: "8:00 - 10:00"
+  });
+});
 });

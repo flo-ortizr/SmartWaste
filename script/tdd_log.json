@@ -600,9 +600,47 @@
     "testId": 28
   },
   {
-    "commitId": "HEAD",
+    "commitId": "2a38f5d65846b952683993b65a829f5a4a7504af",
     "commitName": "feat: registro exitoso de horarios",
     "commitTimestamp": 1776740784601,
     "testId": 28
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 0,
+    "numTotalTests": 29,
+    "timestamp": 1776741092212,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 1,
+    "numTotalTests": 30,
+    "timestamp": 1776741112000,
+    "success": false,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 1,
+    "numTotalTests": 30,
+    "timestamp": 1776741241310,
+    "success": false,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1776741329153,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Registro horario como objeto push",
+    "commitTimestamp": 1776741487645,
+    "testId": 29
   }
 ]

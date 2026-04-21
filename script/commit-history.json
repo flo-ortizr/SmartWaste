@@ -532,12 +532,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2a38f5d65846b952683993b65a829f5a4a7504af",
     "author": "Flora",
     "commit": {
       "date": "2026-04-21T03:06:23.000Z",
       "message": "feat: registro exitoso de horarios",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/2a38f5d65846b952683993b65a829f5a4a7504af"
     },
     "stats": {
       "total": 12,
@@ -547,6 +547,25 @@
     },
     "coverage": 93.65,
     "test_count": 29,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-21T03:18:06.000Z",
+      "message": "feat: Registro horario como objeto push",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 18,
+      "deletions": 2,
+      "date": "2026-04-21"
+    },
+    "coverage": 93.65,
+    "test_count": 30,
     "failed_tests": 0,
     "conclusion": "success"
   }
