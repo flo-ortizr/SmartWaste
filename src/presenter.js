@@ -156,7 +156,8 @@ if (btnRegistrarHorario) {
 
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
-    buscarRutaPorZona(inputBuscarZona.value, rutasBD);
+    const resultado = buscarRutaPorZona(inputBuscarZona.value, rutasBD);
+    divResultadoBusquedaRuta.innerHTML = resultado;
   });
 }
 

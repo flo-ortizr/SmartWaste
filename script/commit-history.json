@@ -665,17 +665,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "f4c9015933f591a83b3fe243f445acab5b058ca1",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-04-21T04:39:02.000Z",
       "message": "feat: agregar estilos CSS para vistas ciudadano y EMSA",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f4c9015933f591a83b3fe243f445acab5b058ca1"
     },
     "stats": {
       "total": 154,
       "additions": 151,
       "deletions": 3,
+      "date": "2026-04-21"
+    },
+    "coverage": 93.65,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-21T06:09:52.000Z",
+      "message": "fix: presenter buscarRuta",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 3,
+      "additions": 2,
+      "deletions": 1,
       "date": "2026-04-21"
     },
     "coverage": 93.65,

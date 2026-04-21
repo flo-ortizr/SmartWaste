@@ -682,9 +682,15 @@
     "testId": 34
   },
   {
-    "commitId": "HEAD",
+    "commitId": "f4c9015933f591a83b3fe243f445acab5b058ca1",
     "commitName": "feat: agregar estilos CSS para vistas ciudadano y EMSA",
     "commitTimestamp": 1776746343113,
     "testId": 35
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: presenter buscarRuta",
+    "commitTimestamp": 1776751793687,
+    "testId": 36
   }
 ]
