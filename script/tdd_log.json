@@ -688,9 +688,15 @@
     "testId": 35
   },
   {
-    "commitId": "HEAD",
+    "commitId": "e4a6c833ed7459b3f1007eb2f17870385e9d5be1",
     "commitName": "fix: presenter buscarRuta",
     "commitTimestamp": 1776751793687,
     "testId": 36
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: funcion buscarRuta",
+    "commitTimestamp": 1776752598348,
+    "testId": 37
   }
 ]

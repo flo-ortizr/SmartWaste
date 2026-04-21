@@ -50,13 +50,13 @@ const reportesBD = [
 const rutasBD = [
   {
     nombreRuta: "Ruta 1",
-    zona: "Zona Norte - Cala Cala",
+    zona: "Norte - Cala Cala",
     dias: "Lunes, Miércoles y Viernes",
     cobertura: "Cala Cala"
   },
   {
     nombreRuta: "Ruta 2",
-    zona: "Zona Sur - La Chimba",
+    zona: "Sur - La Chimba",
     dias: "Martes, Jueves y Sábados",
     cobertura: "La Chimba"
   }

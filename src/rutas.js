@@ -38,7 +38,9 @@ export function buscarRutaPorZona(zonaABuscar, listaDeRutas) {
     return "Por favor, ingrese una zona para buscar.";
   }
 
-  let rutaEncontrada = listaDeRutas.find(ruta => ruta.zona === zonaABuscar);
+  let rutaEncontrada = listaDeRutas.find(ruta => 
+  ruta.zona.toLowerCase().includes(zonaABuscar.toLowerCase())
+);
 
   if (!rutaEncontrada) {
     return "No se encontraron rutas para esa zona.";

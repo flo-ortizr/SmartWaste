@@ -684,17 +684,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e4a6c833ed7459b3f1007eb2f17870385e9d5be1",
     "author": "Flora",
     "commit": {
       "date": "2026-04-21T06:09:52.000Z",
       "message": "fix: presenter buscarRuta",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/e4a6c833ed7459b3f1007eb2f17870385e9d5be1"
     },
     "stats": {
       "total": 3,
       "additions": 2,
       "deletions": 1,
+      "date": "2026-04-21"
+    },
+    "coverage": 93.65,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-21T06:23:16.000Z",
+      "message": "fix: funcion buscarRuta",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 8,
+      "additions": 5,
+      "deletions": 3,
       "date": "2026-04-21"
     },
     "coverage": 93.65,
