@@ -1,4 +1,4 @@
-import {mostrarHorario} from './horarios.js';
+import {mostrarHorario, registrarHorario} from './horarios.js';
 
 describe("Gestor de Horarios", () => {
     it("deberia mostrar error si no se ingresa zona", () => {
@@ -18,4 +18,9 @@ describe("Gestor de Horarios", () => {
         expect(mostrarHorario("Norte", horarios)).toEqual("Zona Norte: Lunes a Viernes de 8:00 a 10:00");
         
     });
+
+    it("debería mostrar error si faltan campos", () => {
+    const resultado = registrarHorario("", "");
+    expect(resultado).toEqual("Por favor, complete los campos requeridos");
+  });
 });

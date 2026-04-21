@@ -548,9 +548,31 @@
     "testId": 26
   },
   {
-    "commitId": "HEAD",
+    "commitId": "8b873479d3c56987a83ab734a7ffb28f9a490636",
     "commitName": "refactor: actualizar crear rutas de carros basureros",
     "commitTimestamp": 1776638483572,
     "testId": 26
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 1,
+    "numTotalTests": 28,
+    "timestamp": 1776739606824,
+    "success": false,
+    "testId": 27
+  },
+  {
+    "numPassedTests": 28,
+    "failedTests": 0,
+    "numTotalTests": 28,
+    "timestamp": 1776739643603,
+    "success": true,
+    "testId": 27
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: validacion de campos registrarHorario",
+    "commitTimestamp": 1776739739393,
+    "testId": 27
   }
 ]
