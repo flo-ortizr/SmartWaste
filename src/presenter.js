@@ -1,7 +1,7 @@
 import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
 import { eliminarRuta } from "./rutas.js";
-import { mostrarHorario } from "./horarios.js";
+import { mostrarHorario, registrarHorario } from "./horarios.js";
 
 const formReporte = document.querySelector("#reporte-form");
 const divReporte = document.querySelector("#resultado-div");
@@ -24,6 +24,11 @@ const inputCoberturaRuta = document.querySelector("#cobertura_ruta");
 const btnVerHorarios = document.querySelector("#btn-ver-horarios");
 const inputZonaHorario = document.querySelector("#zona_horario");
 const divHorarios = document.querySelector("#resultado-horarios-div");
+
+const inputRutaHorario = document.querySelector("#ruta_horario");
+const inputHorario = document.querySelector("#horario");
+const btnRegistrarHorario = document.querySelector("#btn-registrar-horario");
+const divResultadoHorario = document.querySelector("#resultado-registrar-horario");
 
 const btnBuscarRuta = document.querySelector("#btn-buscar-ruta");
 const inputBuscarZona = document.querySelector("#buscar_zona_ruta");
@@ -131,6 +136,21 @@ if (btnVerHorarios) {
       { zona: "Zona Sur - La Chimba", dias: "Martes a Sábado", horas: "14:00 - 16:00" }
     ];
     divHorarios.innerHTML = mostrarHorario(inputZonaHorario.value, horariosSimulados);
+  });
+}
+
+if (btnRegistrarHorario) {
+  btnRegistrarHorario.addEventListener("click", () => {
+    const resultado = registrarHorario(
+      inputRutaHorario.value,
+      inputHorario.value
+    );
+
+    if (typeof resultado === "string") {
+      divResultadoHorario.innerHTML = `<span style='color:red'>${resultado}</span>`;
+    } else {
+      divResultadoHorario.innerHTML = `<span style='color:green'>Horario registrado correctamente</span>`;
+    }
   });
 }
 
