@@ -608,11 +608,30 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "d9b45c11efe03b83d8cc8aab54a7ac45c2a4142b",
     "author": "Flora",
     "commit": {
       "date": "2026-04-21T04:11:52.000Z",
       "message": "fix: build html",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d9b45c11efe03b83d8cc8aab54a7ac45c2a4142b"
+    },
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1,
+      "date": "2026-04-21"
+    },
+    "coverage": 93.65,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-04-21T04:12:30.000Z",
+      "message": "fix: html name",
       "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
     },
     "stats": {

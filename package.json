@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build emsa.html, ciudadanos.html",
+    "build": "parcel build emsa.html, ciudadano.html",
     "test": "node ./script/tddScript.js",
     "cypress": "cypress open",
     "cypress-run": "cypress run",
