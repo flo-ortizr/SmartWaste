@@ -658,9 +658,23 @@
     "testId": 31
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5cf1e995d8bb695ec52e8173ebd2d3335871565a",
     "commitName": "feat: merge commit",
     "commitTimestamp": 1776744144150,
     "testId": 31
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778278893468,
+    "success": true,
+    "testId": 32
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: separar presenter en ciudadano y emsa",
+    "commitTimestamp": 1778280480771,
+    "testId": 32
   }
 ]
