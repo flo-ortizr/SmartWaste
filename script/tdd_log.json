@@ -672,9 +672,23 @@
     "testId": 32
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5bfb27dbb142e9cac3d870562b8a420d15161ced",
     "commitName": "refactor: separar presenter en ciudadano y emsa",
     "commitTimestamp": 1778280480771,
     "testId": 32
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778280625239,
+    "success": true,
+    "testId": 33
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: separar lógica de eventos, renderizado y validaciones en presenterCiudadano y presenterEMSA",
+    "commitTimestamp": 1778430967137,
+    "testId": 33
   }
 ]
