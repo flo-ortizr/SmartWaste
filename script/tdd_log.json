@@ -716,9 +716,15 @@
     "testId": 34
   },
   {
-    "commitId": "HEAD",
+    "commitId": "e14eb164b83d3f5da2fe795f8704e8b725a19ea9",
     "commitName": "refactor: eliminacion de codigo duplicado",
     "commitTimestamp": 1778592983975,
     "testId": 34
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: externalizar datos hardcodeados a data.js",
+    "commitTimestamp": 1778593404574,
+    "testId": 35
   }
 ]

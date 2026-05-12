@@ -646,17 +646,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e14eb164b83d3f5da2fe795f8704e8b725a19ea9",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-12T13:36:23.000Z",
       "message": "refactor: eliminacion de codigo duplicado",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/e14eb164b83d3f5da2fe795f8704e8b725a19ea9"
     },
     "stats": {
       "total": 38,
       "additions": 28,
       "deletions": 10,
+      "date": "2026-05-12"
+    },
+    "coverage": 93.85,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-12T13:43:24.000Z",
+      "message": "refactor: externalizar datos hardcodeados a data.js",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 16,
+      "additions": 16,
+      "deletions": 0,
       "date": "2026-05-12"
     },
     "coverage": 93.85,
