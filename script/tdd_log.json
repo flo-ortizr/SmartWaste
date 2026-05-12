@@ -722,9 +722,15 @@
     "testId": 34
   },
   {
-    "commitId": "HEAD",
+    "commitId": "fa92f9e900a82f90e2f5a9524555dd9114eae2c4",
     "commitName": "refactor: externalizar datos hardcodeados a data.js",
     "commitTimestamp": 1778593404574,
     "testId": 35
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: importar zonasCochabamba desde data.js",
+    "commitTimestamp": 1778593570300,
+    "testId": 36
   }
 ]

@@ -1,17 +1,6 @@
-function CrearReporte({ zona, mensaje, fecha }) {
+import { zonasCochabamba } from "./data/data.js";
 
-  const zonasCochabamba = [
-    "Cala Cala",
-    "Las Cuadras",
-    "Tupuraya",
-    "Queru Queru",
-    "Alalay",
-    "Sarco",
-    "Pacata",
-    "Villa Busch",
-    "Temporal",
-    "Muyurina"
-  ];
+function CrearReporte({ zona, mensaje, fecha }) {
 
   if (mensaje === null || mensaje?.trim() === "") {
     return "Advertencia: vacío";

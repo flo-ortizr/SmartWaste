@@ -665,12 +665,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "fa92f9e900a82f90e2f5a9524555dd9114eae2c4",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-12T13:43:24.000Z",
       "message": "refactor: externalizar datos hardcodeados a data.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/fa92f9e900a82f90e2f5a9524555dd9114eae2c4"
     },
     "stats": {
       "total": 16,
@@ -679,6 +679,25 @@
       "date": "2026-05-12"
     },
     "coverage": 93.85,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-12T13:46:10.000Z",
+      "message": "refactor: importar zonasCochabamba desde data.js",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 2,
+      "deletions": 13,
+      "date": "2026-05-12"
+    },
+    "coverage": 94.03,
     "test_count": 30,
     "failed_tests": 0,
     "conclusion": "success"
