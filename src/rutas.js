@@ -1,3 +1,7 @@
+export function esCampoValido(campo) {
+  return campo && campo.trim() !== "";
+}
+
 export function mostrarRutas(rutas) {
   if (!rutas) {
     return "No fue posible mostrar las rutas";
@@ -8,19 +12,22 @@ export function mostrarRutas(rutas) {
   }
 
   let html = "<ul>";
+
   for (let i = 0; i < rutas.length; i++) {
     html += `<li>Zona: ${rutas[i].zona} - Días: ${rutas[i].dias}</li>`;
   }
+
   html += "</ul>";
+
   return html;
 }
 
 export function crearRuta(nombreRuta, zona, dias, cobertura) {
   if (
-    !nombreRuta || nombreRuta.trim() === "" ||
-    !zona || zona.trim() === "" ||
-    !dias || dias.trim() === "" ||
-    !cobertura || cobertura.trim() === ""
+    !esCampoValido(nombreRuta) ||
+    !esCampoValido(zona) ||
+    !esCampoValido(dias) ||
+    !esCampoValido(cobertura)
   ) {
     return "Por favor, complete los campos requeridos";
   }
@@ -34,20 +41,23 @@ export function crearRuta(nombreRuta, zona, dias, cobertura) {
 }
 
 export function buscarRutaPorZona(zonaABuscar, listaDeRutas) {
-  if (!zonaABuscar || zonaABuscar.trim() === "") {
+  if (!esCampoValido(zonaABuscar)) {
     return "Por favor, ingrese una zona para buscar.";
   }
 
-  let rutaEncontrada = listaDeRutas.find(ruta => ruta.zona === zonaABuscar);
+  let rutaEncontrada = listaDeRutas.find(
+    ruta => ruta.zona === zonaABuscar
+  );
 
   if (!rutaEncontrada) {
     return "No se encontraron rutas para esa zona.";
   }
+
   return `Zona: ${rutaEncontrada.zona} - Días: ${rutaEncontrada.dias}`;
 }
 
 export function eliminarRuta(zona, listaDeRutas, confirmacion) {
-  if (!zona || zona.trim() === "") {
+  if (!esCampoValido(zona)) {
     return "Por favor, seleccione una ruta para eliminar.";
   }
 

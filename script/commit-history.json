@@ -627,12 +627,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "343c1b626a9f4cc83fb5b8b762c428cb3b9c4023",
     "author": "User",
     "commit": {
       "date": "2026-05-10T16:36:06.000Z",
       "message": "refactor: separar lógica de eventos, renderizado y validaciones en presenterCiudadano y presenterEMSA",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/343c1b626a9f4cc83fb5b8b762c428cb3b9c4023"
     },
     "stats": {
       "total": 187,
@@ -641,6 +641,25 @@
       "date": "2026-05-10"
     },
     "coverage": 93.65,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-12T13:36:23.000Z",
+      "message": "refactor: eliminacion de codigo duplicado",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 38,
+      "additions": 28,
+      "deletions": 10,
+      "date": "2026-05-12"
+    },
+    "coverage": 93.85,
     "test_count": 30,
     "failed_tests": 0,
     "conclusion": "success"

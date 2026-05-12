@@ -686,9 +686,39 @@
     "testId": 33
   },
   {
-    "commitId": "HEAD",
+    "commitId": "343c1b626a9f4cc83fb5b8b762c428cb3b9c4023",
     "commitName": "refactor: separar lógica de eventos, renderizado y validaciones en presenterCiudadano y presenterEMSA",
     "commitTimestamp": 1778430967137,
     "testId": 33
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778592210260,
+    "success": true,
+    "testId": 34
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778592751359,
+    "success": true,
+    "testId": 34
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778592896818,
+    "success": true,
+    "testId": 34
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: eliminacion de codigo duplicado",
+    "commitTimestamp": 1778592983975,
+    "testId": 34
   }
 ]
