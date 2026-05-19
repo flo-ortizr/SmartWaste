@@ -12,8 +12,8 @@ describe("Gestor de Rutas", () => {
       { zona: "Norte", dias: "Lunes y Miércoles" }
     ];
     let resultado = mostrarRutas(rutasSimuladas);
-    expect(resultado).toContain("Norte");
-    expect(resultado).toContain("Lunes y Miércoles");
+    expect(resultado[0].zona).toEqual("Norte");
+    expect(resultado[0].dias).toEqual("Lunes y Miércoles");
   });
 
   it("debería mostrar un mensaje de error si los datos son nulos o no cargan", () => {

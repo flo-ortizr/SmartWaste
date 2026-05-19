@@ -836,12 +836,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "ee33fbffaa7a33140c79ddbc203a62fea2f66954",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-19T21:53:43.000Z",
       "message": "fix: separando renderizado HTML de la logica de negocio para presenterEMSA.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/ee33fbffaa7a33140c79ddbc203a62fea2f66954"
     },
     "stats": {
       "total": 118,
@@ -853,5 +853,24 @@
     "test_count": 30,
     "failed_tests": 1,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-19T22:00:09.000Z",
+      "message": "fix: errores para las pruebas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
+      "date": "2026-05-19"
+    },
+    "coverage": 93.55,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]

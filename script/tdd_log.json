@@ -776,9 +776,31 @@
     "testId": 43
   },
   {
-    "commitId": "HEAD",
+    "commitId": "ee33fbffaa7a33140c79ddbc203a62fea2f66954",
     "commitName": "fix: separando renderizado HTML de la logica de negocio para presenterEMSA.js",
     "commitTimestamp": 1779227624255,
     "testId": 44
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 1,
+    "numTotalTests": 30,
+    "timestamp": 1779227717847,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1779227981156,
+    "success": true,
+    "testId": 45
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: errores para las pruebas",
+    "commitTimestamp": 1779228010456,
+    "testId": 45
   }
 ]
