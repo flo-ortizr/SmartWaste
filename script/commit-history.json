@@ -817,17 +817,36 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "73de7c88035cc827aa4b781a791964d96ad90e23",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-19T21:49:18.000Z",
       "message": "fix: separando renderizado HTML de la logica de negocio para presenterCiudadano.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/73de7c88035cc827aa4b781a791964d96ad90e23"
     },
     "stats": {
       "total": 18,
       "additions": 13,
       "deletions": 5,
+      "date": "2026-05-19"
+    },
+    "coverage": 93.55,
+    "test_count": 30,
+    "failed_tests": 1,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-19T21:53:43.000Z",
+      "message": "fix: separando renderizado HTML de la logica de negocio para presenterEMSA.js",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 118,
+      "additions": 81,
+      "deletions": 37,
       "date": "2026-05-19"
     },
     "coverage": 93.55,

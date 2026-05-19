@@ -770,9 +770,15 @@
     "testId": 42
   },
   {
-    "commitId": "HEAD",
+    "commitId": "73de7c88035cc827aa4b781a791964d96ad90e23",
     "commitName": "fix: separando renderizado HTML de la logica de negocio para presenterCiudadano.js",
     "commitTimestamp": 1779227359425,
     "testId": 43
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: separando renderizado HTML de la logica de negocio para presenterEMSA.js",
+    "commitTimestamp": 1779227624255,
+    "testId": 44
   }
 ]

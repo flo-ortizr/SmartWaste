@@ -37,44 +37,36 @@ function validarFormRuta(nombre, zona, dias, cobertura) {
 }
 
 // RENDERIZADO 
-function mostrarError(div, mensaje) {
-  div.innerHTML = `<span class='mensaje-error'>${mensaje}</span>`;
+function mostrarMensaje(elemento, texto, claseCSS) {
+  elemento.textContent = texto;
+  elemento.className = claseCSS;
 }
 
-function mostrarExito(div, mensaje) {
-  div.innerHTML = `<span class='mensaje-exito'>${mensaje}</span>`;
-}
+function renderizarListaRutas(resultado, contenedor) {
+  contenedor.innerHTML = "";
 
-function renderizarListaReportes(reportes) {
-  if (reportes.length === 0) return "<p>No existen reportes registrados</p>";
-  let html = "<ul>";
-  reportes.forEach((reporte) => {
-    html += `<li>
-      Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado}
-      <button class="btn-detalle" data-id="${reporte.id}">Ver Detalle</button>
-    </li>`;
+  if (typeof resultado === "string") {
+    const p = document.createElement("p");
+    p.textContent = resultado;
+    contenedor.appendChild(p);
+    return;
+  }
+
+  const ul = document.createElement("ul");
+  resultado.forEach(ruta => {
+    const li = document.createElement("li");
+    li.textContent = `Zona: ${ruta.zona} - Días: ${ruta.dias}`;
+    ul.appendChild(li);
   });
-  html += "</ul>";
-  return html;
-}
-
-function renderizarDetalleReporte(detalle) {
-  return `
-    <hr>
-    <h3>Detalle del Reporte</h3>
-    <p><strong>ID:</strong> ${detalle.id}</p>
-    <p><strong>Zona:</strong> ${detalle.zona}</p>
-    <p><strong>Fecha:</strong> ${detalle.fecha}</p>
-    <p><strong>Estado:</strong> ${detalle.estado}</p>
-    <p><strong>Usuario:</strong> ${detalle.usuario}</p>
-    <p><strong>Descripción:</strong> ${detalle.mensaje}</p>
-  `;
+  
+  contenedor.appendChild(ul);
 }
 
 // EVENTOS 
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
-    divListaRutas.innerHTML = mostrarRutas(rutasBD);
+    const resultado = mostrarRutas(rutasBD);
+    renderizarListaRutas(resultado, divListaRutas);
   });
 }
 
@@ -88,18 +80,19 @@ if (formRuta) {
 
     const error = validarFormRuta(nombre, zona, dias, cobertura);
     if (error) {
-      mostrarError(divRuta, error);
+      mostrarMensaje(divRuta, error, "mensaje-error");
       return;
     }
 
     const resultado = crearRuta(nombre, zona, dias, cobertura);
     if (typeof resultado === "string") {
-      mostrarError(divRuta, resultado);
+      mostrarMensaje(divRuta, resultado, "mensaje-error");
     } else {
       rutasBD.push(resultado);
-      mostrarExito(divRuta, "Ruta registrada correctamente");
+      mostrarMensaje(divRuta, "Ruta registrada correctamente", "mensaje-exito");
       formRuta.reset();
-      divListaRutas.innerHTML = mostrarRutas(rutasBD);
+      const resultadoRutas = mostrarRutas(rutasBD);
+      renderizarListaRutas(resultadoRutas, divListaRutas);
     }
   });
 }
@@ -107,7 +100,30 @@ if (formRuta) {
 if (btnVerReportes) {
   btnVerReportes.addEventListener("click", () => {
     const resumen = obtenerResumenReportes(reportesBD);
-    divListaReportes.innerHTML = renderizarListaReportes(resumen);
+    divListaReportes.innerHTML = "";
+
+    if (resumen.length === 0) {
+      const p = document.createElement("p");
+      p.textContent = "No existen reportes registrados";
+      divListaReportes.appendChild(p);
+      return;
+    }
+
+    const ul = document.createElement("ul");
+    resumen.forEach(reporte => {
+      const li = document.createElement("li");
+      li.textContent = `Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado} `;
+      
+      const btn = document.createElement("button");
+      btn.className = "btn-detalle";
+      btn.setAttribute("data-id", reporte.id);
+      btn.textContent = "Ver Detalle";
+      
+      li.appendChild(btn);
+      ul.appendChild(li);
+    });
+
+    divListaReportes.appendChild(ul);
     if (divDetalleReporte) divDetalleReporte.innerHTML = "";
   });
 }
@@ -117,8 +133,33 @@ if (divListaReportes) {
     if (event.target.classList.contains("btn-detalle")) {
       const id = event.target.getAttribute("data-id");
       const detalle = obtenerDetalleReporte(id, reportesBD);
+      
       if (detalle && divDetalleReporte) {
-        divDetalleReporte.innerHTML = renderizarDetalleReporte(detalle);
+        divDetalleReporte.innerHTML = ""; 
+
+        const hr = document.createElement("hr");
+        const h3 = document.createElement("h3");
+        h3.textContent = "Detalle del Reporte";
+
+        const crearParrafo = (etiqueta, valor) => {
+          const p = document.createElement("p");
+          const strong = document.createElement("strong");
+          strong.textContent = etiqueta + ": ";
+          p.appendChild(strong);
+          p.appendChild(document.createTextNode(valor));
+          return p;
+        };
+
+        divDetalleReporte.append(
+          hr,
+          h3,
+          crearParrafo("ID", detalle.id),
+          crearParrafo("Zona", detalle.zona),
+          crearParrafo("Fecha", detalle.fecha),
+          crearParrafo("Estado", detalle.estado),
+          crearParrafo("Usuario", detalle.usuario),
+          crearParrafo("Descripción", detalle.mensaje)
+        );
       }
     }
   });
@@ -129,9 +170,12 @@ if (btnEliminarRuta) {
     const zona = inputZonaEliminar.value;
     const confirmacion = confirm("¿Está seguro de eliminar esta ruta?");
     const resultado = eliminarRuta(zona, rutasBD, confirmacion);
-    divResultadoEliminar.innerHTML = resultado;
+    
+    divResultadoEliminar.textContent = resultado;
+    
     if (resultado === "Ruta eliminada correctamente") {
-      divListaRutas.innerHTML = mostrarRutas(rutasBD);
+      const resultadoRutas = mostrarRutas(rutasBD);
+      renderizarListaRutas(resultadoRutas, divListaRutas);
     }
   });
 }
