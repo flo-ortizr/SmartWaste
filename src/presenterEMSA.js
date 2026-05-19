@@ -1,7 +1,7 @@
 import { mostrarRutas, crearRuta, eliminarRuta } from "./rutas.js";
 import { obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 
-//  DOM 
+// DOM 
 const btnVerRutas = document.querySelector("#btn-ver-rutas");
 const divListaRutas = document.querySelector("#lista-rutas-div");
 const formRuta = document.querySelector("#ruta-form");
@@ -27,7 +27,7 @@ const rutasBD = [
   { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados", cobertura: "La Chimba" }
 ];
 
-//  VALIDACIONES
+// VALIDACIONES
 function validarFormRuta(nombre, zona, dias, cobertura) {
   if (!nombre || nombre.trim() === "") return "Por favor, ingrese un nombre de ruta";
   if (!zona || zona.trim() === "") return "Por favor, ingrese una zona";
@@ -36,13 +36,13 @@ function validarFormRuta(nombre, zona, dias, cobertura) {
   return null;
 }
 
-//  RENDERIZADO 
+// RENDERIZADO 
 function mostrarError(div, mensaje) {
-  div.innerHTML = `<span style='color:red'>${mensaje}</span>`;
+  div.innerHTML = `<span class='mensaje-error'>${mensaje}</span>`;
 }
 
 function mostrarExito(div, mensaje) {
-  div.innerHTML = `<span style='color:green'>${mensaje}</span>`;
+  div.innerHTML = `<span class='mensaje-exito'>${mensaje}</span>`;
 }
 
 function renderizarListaReportes(reportes) {
@@ -71,7 +71,7 @@ function renderizarDetalleReporte(detalle) {
   `;
 }
 
-//  EVENTOS 
+// EVENTOS 
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
     divListaRutas.innerHTML = mostrarRutas(rutasBD);

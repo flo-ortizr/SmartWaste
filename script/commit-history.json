@@ -703,17 +703,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3c1b952589ade897b0cd7ccdd3c4bda6c0bddd6e",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-19T21:18:15.000Z",
       "message": "fix: separando styles de presenter.js a un archivo css",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/3c1b952589ade897b0cd7ccdd3c4bda6c0bddd6e"
     },
     "stats": {
       "total": 41,
       "additions": 27,
       "deletions": 14,
+      "date": "2026-05-19"
+    },
+    "coverage": 94.03,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-19T21:21:43.000Z",
+      "message": "fix: separando styles de presenterEMSA.js a un archivo css",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 6,
+      "deletions": 6,
       "date": "2026-05-19"
     },
     "coverage": 94.03,
