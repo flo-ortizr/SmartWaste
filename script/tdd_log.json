@@ -746,9 +746,15 @@
     "testId": 38
   },
   {
-    "commitId": "HEAD",
+    "commitId": "fe0d1a2ece3ab10a30d4cb4885afc6f5916902a6",
     "commitName": "fix: separando styles de presenterCiudadano.js a un archivo css",
     "commitTimestamp": 1779225868497,
     "testId": 39
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: rename al archivo css",
+    "commitTimestamp": 1779226023747,
+    "testId": 40
   }
 ]
