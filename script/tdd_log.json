@@ -740,9 +740,15 @@
     "testId": 37
   },
   {
-    "commitId": "HEAD",
+    "commitId": "f4d405765cde989d16694f8c2bf75a5ef68e8eba",
     "commitName": "fix: separando styles de presenterEMSA.js a un archivo css",
     "commitTimestamp": 1779225704545,
     "testId": 38
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: separando styles de presenterCiudadano.js a un archivo css",
+    "commitTimestamp": 1779225868497,
+    "testId": 39
   }
 ]

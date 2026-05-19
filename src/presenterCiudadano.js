@@ -22,7 +22,7 @@ const rutasBD = [
   { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados", cobertura: "La Chimba" }
 ];
 
-//  VALIDACIONES
+// VALIDACIONES
 function validarFormReporte(zona, mensaje, fecha, archivoFoto) {
   if (!zona) return "Por favor, seleccione una zona";
   if (!mensaje || mensaje.trim() === "") return "Por favor, ingrese una descripción del reporte";
@@ -32,21 +32,21 @@ function validarFormReporte(zona, mensaje, fecha, archivoFoto) {
   return null;
 }
 
-//  RENDERIZADO 
+// RENDERIZADO 
 function mostrarError(div, mensaje) {
-  div.innerHTML = `<span style='color:red'>${mensaje}</span>`;
+  div.innerHTML = `<span class='mensaje-error'>${mensaje}</span>`;
 }
 
 function mostrarExito(div, mensaje) {
-  div.innerHTML = `<span style='color:green'>${mensaje}</span>`;
+  div.innerHTML = `<span class='mensaje-exito'>${mensaje}</span>`;
 }
 
 function mostrarVistaPreviaFoto(archivo) {
   const url = URL.createObjectURL(archivo);
-  divVistaPreviaFoto.innerHTML = `<img src="${url}" alt="Vista previa" width="200">`;
+  divVistaPreviaFoto.innerHTML = `<img src="${url}" alt="Vista previa" class="img-vista-previa">`;
 }
 
-//  EVENTOS
+// EVENTOS
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
     event.preventDefault();
