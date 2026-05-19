@@ -752,9 +752,15 @@
     "testId": 39
   },
   {
-    "commitId": "HEAD",
+    "commitId": "37ddbdc7537d8a0cc78e0844552f334b559b5fcc",
     "commitName": "fix: rename al archivo css",
     "commitTimestamp": 1779226023747,
     "testId": 40
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: separando renderizado HTML de la logica de negocio para presenter.js",
+    "commitTimestamp": 1779226713283,
+    "testId": 41
   }
 ]

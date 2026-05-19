@@ -62,6 +62,12 @@ const rutasBD = [
   }
 ];
 
+// FUNCION AUXILIAR PARA MENSAJES
+function mostrarMensaje(elemento, texto, claseCSS) {
+  elemento.textContent = texto;
+  elemento.className = claseCSS;
+}
+
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -71,31 +77,38 @@ if (formReporte) {
     const archivoFoto = inputFotoReporte.files[0];
 
     if (!zona) {
-      divReporte.innerHTML = "<span class='mensaje-error'>Por favor, seleccione una zona</span>";
+      mostrarMensaje(divReporte, "Por favor, seleccione una zona", "mensaje-error");
       return;
     }
     if (!mensaje || mensaje.trim() === "") {
-      divReporte.innerHTML = "<span class='mensaje-error'>Por favor, ingrese una descripción del reporte</span>";
+      mostrarMensaje(divReporte, "Por favor, ingrese una descripción del reporte", "mensaje-error");
       return;
     }
     if (!fecha) {
-      divReporte.innerHTML = "<span class='mensaje-error'>Por favor, seleccione una fecha</span>";
+      mostrarMensaje(divReporte, "Por favor, seleccione una fecha", "mensaje-error");
       return;
     }
 
     const resultadoFoto = validarFoto(archivoFoto);
     if (resultadoFoto !== "Foto válida") {
-      divReporte.innerHTML = `<span class='mensaje-error'>${resultadoFoto}</span>`;
+      mostrarMensaje(divReporte, resultadoFoto, "mensaje-error");
       return;
     }
 
     const resultado = CrearReporte({ zona, mensaje, fecha });
     if (typeof resultado === "string") {
-      divReporte.innerHTML = `<span class='mensaje-error'>${resultado}</span>`;
+      mostrarMensaje(divReporte, resultado, "mensaje-error");
     } else {
       const urlImagen = URL.createObjectURL(archivoFoto);
-      divVistaPreviaFoto.innerHTML = `<img src="${urlImagen}" alt="Vista previa" class="img-vista-previa">`;
-      divReporte.innerHTML = "<span class='mensaje-exito'>Reporte enviado correctamente</span>";
+      const img = document.createElement("img");
+      img.src = urlImagen;
+      img.alt = "Vista previa";
+      img.className = "img-vista-previa";
+      
+      divVistaPreviaFoto.innerHTML = ""; 
+      divVistaPreviaFoto.appendChild(img);
+
+      mostrarMensaje(divReporte, "Reporte enviado correctamente", "mensaje-exito");
       formReporte.reset();
     }
   });
@@ -119,10 +132,10 @@ if (formRuta) {
     );
 
     if (typeof resultado === "string") {
-      divRuta.innerHTML = `<span class='mensaje-error'>${resultado}</span>`;
+      mostrarMensaje(divRuta, resultado, "mensaje-error");
     } else {
       rutasBD.push(resultado);
-      divRuta.innerHTML = "<span class='mensaje-exito'>Ruta registrada correctamente</span>";
+      mostrarMensaje(divRuta, "Ruta registrada correctamente", "mensaje-exito");
       formRuta.reset();
       divListaRutas.innerHTML = mostrarRutas(rutasBD);
     }
@@ -141,41 +154,49 @@ if (btnVerHorarios) {
 
 if (btnRegistrarHorario) {
   btnRegistrarHorario.addEventListener("click", () => {
-    const resultado = registrarHorario(
-      inputRutaHorario.value,
-      inputHorario.value
-    );
+    const resultado = registrarHorario(inputRutaHorario.value, inputHorario.value);
 
     if (typeof resultado === "string") {
-      divResultadoHorario.innerHTML = `<span class='mensaje-error'>${resultado}</span>`;
+      mostrarMensaje(divResultadoHorario, resultado, "mensaje-error");
     } else {
-      divResultadoHorario.innerHTML = `<span class='mensaje-exito'>Horario registrado correctamente</span>`;
+      mostrarMensaje(divResultadoHorario, "Horario registrado correctamente", "mensaje-exito");
     }
   });
 }
 
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
-    buscarRutaPorZona(inputBuscarZona.value, rutasBD);
+    divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(inputBuscarZona.value, rutasBD);
   });
 }
 
 if (btnVerReportes) {
   btnVerReportes.addEventListener("click", () => {
     const resumen = obtenerResumenReportes(reportesBD);
+    divListaReportes.innerHTML = "";
+
     if (resumen.length === 0) {
-      divListaReportes.innerHTML = "<p>No existen reportes registrados</p>";
+      const p = document.createElement("p");
+      p.textContent = "No existen reportes registrados";
+      divListaReportes.appendChild(p);
       return;
     }
-    let html = "<ul>";
+
+    const ul = document.createElement("ul");
     resumen.forEach(reporte => {
-      html += `<li>
-        Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado}
-        <button class="btn-detalle" data-id="${reporte.id}">Ver Detalle</button>
-      </li>`;
+      const li = document.createElement("li");
+      li.textContent = `Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado} `;
+      
+      const btn = document.createElement("button");
+      btn.className = "btn-detalle";
+      btn.setAttribute("data-id", reporte.id);
+      btn.textContent = "Ver Detalle";
+      
+      li.appendChild(btn);
+      ul.appendChild(li);
     });
-    html += "</ul>";
-    divListaReportes.innerHTML = html;
+
+    divListaReportes.appendChild(ul);
     if (divDetalleReporte) divDetalleReporte.innerHTML = "";
   });
 }
@@ -185,17 +206,34 @@ if (divListaReportes) {
     if (event.target.classList.contains("btn-detalle")) {
       const id = event.target.getAttribute("data-id");
       const detalle = obtenerDetalleReporte(id, reportesBD);
+      
       if (detalle && divDetalleReporte) {
-        divDetalleReporte.innerHTML = `
-          <hr>
-          <h3>Detalle del Reporte</h3>
-          <p><strong>ID:</strong> ${detalle.id}</p>
-          <p><strong>Zona:</strong> ${detalle.zona}</p>
-          <p><strong>Fecha:</strong> ${detalle.fecha}</p>
-          <p><strong>Estado:</strong> ${detalle.estado}</p>
-          <p><strong>Usuario:</strong> ${detalle.usuario}</p>
-          <p><strong>Descripción:</strong> ${detalle.mensaje}</p>
-        `;
+        divDetalleReporte.innerHTML = ""; 
+
+        const hr = document.createElement("hr");
+        const h3 = document.createElement("h3");
+        h3.textContent = "Detalle del Reporte";
+
+        // Función para crear cada línea de detalle
+        const crearParrafo = (etiqueta, valor) => {
+          const p = document.createElement("p");
+          const strong = document.createElement("strong");
+          strong.textContent = etiqueta + ": ";
+          p.appendChild(strong);
+          p.appendChild(document.createTextNode(valor));
+          return p;
+        };
+
+        divDetalleReporte.append(
+          hr,
+          h3,
+          crearParrafo("ID", detalle.id),
+          crearParrafo("Zona", detalle.zona),
+          crearParrafo("Fecha", detalle.fecha),
+          crearParrafo("Estado", detalle.estado),
+          crearParrafo("Usuario", detalle.usuario),
+          crearParrafo("Descripción", detalle.mensaje)
+        );
       }
     }
   });
@@ -204,12 +242,10 @@ if (divListaReportes) {
 if (btnEliminarRuta) {
   btnEliminarRuta.addEventListener("click", () => {
     const zona = inputZonaEliminar.value;
-
     const confirmacion = confirm("¿Está seguro de eliminar esta ruta?");
-
     const resultado = eliminarRuta(zona, rutasBD, confirmacion);
 
-    divResultadoEliminar.innerHTML = resultado;
+    divResultadoEliminar.textContent = resultado;
 
     if (resultado === "Ruta eliminada correctamente") {
       divListaRutas.innerHTML = mostrarRutas(rutasBD);
