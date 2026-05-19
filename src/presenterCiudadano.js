@@ -34,16 +34,24 @@ function validarFormReporte(zona, mensaje, fecha, archivoFoto) {
 
 // RENDERIZADO 
 function mostrarError(div, mensaje) {
-  div.innerHTML = `<span class='mensaje-error'>${mensaje}</span>`;
+  div.textContent = mensaje;
+  div.className = "mensaje-error";
 }
 
 function mostrarExito(div, mensaje) {
-  div.innerHTML = `<span class='mensaje-exito'>${mensaje}</span>`;
+  div.textContent = mensaje;
+  div.className = "mensaje-exito";
 }
 
 function mostrarVistaPreviaFoto(archivo) {
   const url = URL.createObjectURL(archivo);
-  divVistaPreviaFoto.innerHTML = `<img src="${url}" alt="Vista previa" class="img-vista-previa">`;
+  const img = document.createElement("img");
+  img.src = url;
+  img.alt = "Vista previa";
+  img.className = "img-vista-previa";
+  
+  divVistaPreviaFoto.innerHTML = "";
+  divVistaPreviaFoto.appendChild(img);
 }
 
 // EVENTOS
@@ -78,12 +86,12 @@ if (btnVerHorarios) {
       { zona: "Zona Norte - Cala Cala", dias: "Lunes a Viernes", horas: "8:00 - 10:00" },
       { zona: "Zona Sur - La Chimba", dias: "Martes a Sábado", horas: "14:00 - 16:00" }
     ];
-    divHorarios.innerHTML = mostrarHorario(inputZonaHorario.value, horariosSimulados);
+    divHorarios.textContent = mostrarHorario(inputZonaHorario.value, horariosSimulados);
   });
 }
 
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
-    divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(inputBuscarZona.value, rutasBD);
+    divResultadoBusquedaRuta.textContent = buscarRutaPorZona(inputBuscarZona.value, rutasBD);
   });
 }
