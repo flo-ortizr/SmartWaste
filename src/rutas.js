@@ -11,15 +11,7 @@ export function mostrarRutas(rutas) {
     return "No existen rutas registradas";
   }
 
-  let html = "<ul>";
-
-  for (let i = 0; i < rutas.length; i++) {
-    html += `<li>Zona: ${rutas[i].zona} - Días: ${rutas[i].dias}</li>`;
-  }
-
-  html += "</ul>";
-
-  return html;
+  return rutas;
 }
 
 export function crearRuta(nombreRuta, zona, dias, cobertura) {

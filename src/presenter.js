@@ -68,6 +68,26 @@ function mostrarMensaje(elemento, texto, claseCSS) {
   elemento.className = claseCSS;
 }
 
+function renderizarListaRutas(resultado, contenedor) {
+  contenedor.innerHTML = "";
+
+  if (typeof resultado === "string") {
+    const p = document.createElement("p");
+    p.textContent = resultado;
+    contenedor.appendChild(p);
+    return;
+  }
+
+  const ul = document.createElement("ul");
+  resultado.forEach(ruta => {
+    const li = document.createElement("li");
+    li.textContent = `Zona: ${ruta.zona} - Días: ${ruta.dias}`;
+    ul.appendChild(li);
+  });
+  
+  contenedor.appendChild(ul);
+}
+
 if (formReporte) {
   formReporte.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -116,7 +136,8 @@ if (formReporte) {
 
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
-    divListaRutas.innerHTML = mostrarRutas(rutasBD);
+    const resultado = mostrarRutas(rutasBD);
+    renderizarListaRutas(resultado, divListaRutas);
   });
 }
 
@@ -137,7 +158,8 @@ if (formRuta) {
       rutasBD.push(resultado);
       mostrarMensaje(divRuta, "Ruta registrada correctamente", "mensaje-exito");
       formRuta.reset();
-      divListaRutas.innerHTML = mostrarRutas(rutasBD);
+      const resultadoRutas = mostrarRutas(rutasBD);
+      renderizarListaRutas(resultadoRutas, divListaRutas);
     }
   });
 }
@@ -148,7 +170,7 @@ if (btnVerHorarios) {
       { zona: "Zona Norte - Cala Cala", dias: "Lunes a Viernes", horas: "8:00 - 10:00" },
       { zona: "Zona Sur - La Chimba", dias: "Martes a Sábado", horas: "14:00 - 16:00" }
     ];
-    divHorarios.innerHTML = mostrarHorario(inputZonaHorario.value, horariosSimulados);
+    divHorarios.textContent = mostrarHorario(inputZonaHorario.value, horariosSimulados);
   });
 }
 
@@ -166,7 +188,7 @@ if (btnRegistrarHorario) {
 
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
-    divResultadoBusquedaRuta.innerHTML = buscarRutaPorZona(inputBuscarZona.value, rutasBD);
+    divResultadoBusquedaRuta.textContent = buscarRutaPorZona(inputBuscarZona.value, rutasBD);
   });
 }
 
@@ -214,7 +236,6 @@ if (divListaReportes) {
         const h3 = document.createElement("h3");
         h3.textContent = "Detalle del Reporte";
 
-        // Función para crear cada línea de detalle
         const crearParrafo = (etiqueta, valor) => {
           const p = document.createElement("p");
           const strong = document.createElement("strong");
@@ -248,7 +269,8 @@ if (btnEliminarRuta) {
     divResultadoEliminar.textContent = resultado;
 
     if (resultado === "Ruta eliminada correctamente") {
-      divListaRutas.innerHTML = mostrarRutas(rutasBD);
+      const resultadoRutas = mostrarRutas(rutasBD);
+      renderizarListaRutas(resultadoRutas, divListaRutas);
     }
   });
 }

@@ -758,9 +758,15 @@
     "testId": 40
   },
   {
-    "commitId": "HEAD",
+    "commitId": "cfbf0d9c57f00b9710b4ef7630cf7ae6ecd90cb4",
     "commitName": "fix: separando renderizado HTML de la logica de negocio para presenter.js",
     "commitTimestamp": 1779226713283,
     "testId": 41
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: quitando renderizado html de rutas.js",
+    "commitTimestamp": 1779227158284,
+    "testId": 42
   }
 ]

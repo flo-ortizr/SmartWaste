@@ -779,12 +779,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "cfbf0d9c57f00b9710b4ef7630cf7ae6ecd90cb4",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-19T21:38:32.000Z",
       "message": "fix: separando renderizado HTML de la logica de negocio para presenter.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/cfbf0d9c57f00b9710b4ef7630cf7ae6ecd90cb4"
     },
     "stats": {
       "total": 110,
@@ -796,5 +796,24 @@
     "test_count": 30,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-19T21:45:57.000Z",
+      "message": "fix: quitando renderizado html de rutas.js",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 44,
+      "additions": 29,
+      "deletions": 15,
+      "date": "2026-05-19"
+    },
+    "coverage": 93.55,
+    "test_count": 30,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]
