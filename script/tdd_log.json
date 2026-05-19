@@ -728,9 +728,15 @@
     "testId": 35
   },
   {
-    "commitId": "HEAD",
+    "commitId": "94729b8483f722ca2fff1323dd9af3bd6d80f2f0",
     "commitName": "refactor: importar zonasCochabamba desde data.js",
     "commitTimestamp": 1778593570300,
     "testId": 36
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: separando styles de presenter.js a un archivo css",
+    "commitTimestamp": 1779225497119,
+    "testId": 37
   }
 ]

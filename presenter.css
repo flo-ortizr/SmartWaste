@@ -1,0 +1,11 @@
+.mensaje-error {
+  color: red;
+}
+
+.mensaje-exito {
+  color: green;
+}
+
+.img-vista-previa {
+  width: 200px;
+}

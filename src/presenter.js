@@ -71,31 +71,31 @@ if (formReporte) {
     const archivoFoto = inputFotoReporte.files[0];
 
     if (!zona) {
-      divReporte.innerHTML = "<span style='color:red'>Por favor, seleccione una zona</span>";
+      divReporte.innerHTML = "<span class='mensaje-error'>Por favor, seleccione una zona</span>";
       return;
     }
     if (!mensaje || mensaje.trim() === "") {
-      divReporte.innerHTML = "<span style='color:red'>Por favor, ingrese una descripción del reporte</span>";
+      divReporte.innerHTML = "<span class='mensaje-error'>Por favor, ingrese una descripción del reporte</span>";
       return;
     }
     if (!fecha) {
-      divReporte.innerHTML = "<span style='color:red'>Por favor, seleccione una fecha</span>";
+      divReporte.innerHTML = "<span class='mensaje-error'>Por favor, seleccione una fecha</span>";
       return;
     }
 
     const resultadoFoto = validarFoto(archivoFoto);
     if (resultadoFoto !== "Foto válida") {
-      divReporte.innerHTML = `<span style='color:red'>${resultadoFoto}</span>`;
+      divReporte.innerHTML = `<span class='mensaje-error'>${resultadoFoto}</span>`;
       return;
     }
 
     const resultado = CrearReporte({ zona, mensaje, fecha });
     if (typeof resultado === "string") {
-      divReporte.innerHTML = `<span style='color:red'>${resultado}</span>`;
+      divReporte.innerHTML = `<span class='mensaje-error'>${resultado}</span>`;
     } else {
       const urlImagen = URL.createObjectURL(archivoFoto);
-      divVistaPreviaFoto.innerHTML = `<img src="${urlImagen}" alt="Vista previa" width="200">`;
-      divReporte.innerHTML = "<span style='color:green'>Reporte enviado correctamente</span>";
+      divVistaPreviaFoto.innerHTML = `<img src="${urlImagen}" alt="Vista previa" class="img-vista-previa">`;
+      divReporte.innerHTML = "<span class='mensaje-exito'>Reporte enviado correctamente</span>";
       formReporte.reset();
     }
   });
@@ -119,10 +119,10 @@ if (formRuta) {
     );
 
     if (typeof resultado === "string") {
-      divRuta.innerHTML = `<span style='color:red'>${resultado}</span>`;
+      divRuta.innerHTML = `<span class='mensaje-error'>${resultado}</span>`;
     } else {
       rutasBD.push(resultado);
-      divRuta.innerHTML = "<span style='color:green'>Ruta registrada correctamente</span>";
+      divRuta.innerHTML = "<span class='mensaje-exito'>Ruta registrada correctamente</span>";
       formRuta.reset();
       divListaRutas.innerHTML = mostrarRutas(rutasBD);
     }
@@ -147,9 +147,9 @@ if (btnRegistrarHorario) {
     );
 
     if (typeof resultado === "string") {
-      divResultadoHorario.innerHTML = `<span style='color:red'>${resultado}</span>`;
+      divResultadoHorario.innerHTML = `<span class='mensaje-error'>${resultado}</span>`;
     } else {
-      divResultadoHorario.innerHTML = `<span style='color:green'>Horario registrado correctamente</span>`;
+      divResultadoHorario.innerHTML = `<span class='mensaje-exito'>Horario registrado correctamente</span>`;
     }
   });
 }
