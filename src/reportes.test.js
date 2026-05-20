@@ -1,23 +1,19 @@
-import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
+import crearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 
-describe("CrearReporte", () => {
+describe("crearReporte", () => {
 
-  test("debería devolver advertencia si el mensaje está vacío", () => {
-    const resultado = CrearReporte({
-      mensaje: ""
-    });
-    expect(resultado).toBe("Advertencia: vacío");
-  });
+  test("debería lanzar advertencia si el mensaje está vacío", () => {
+  expect(() => crearReporte({ mensaje: "" }))
+    .toThrow("Advertencia: vacío");
+});
 
-  test("debería devolver advertencia si el mensaje es null", () => {
-    const resultado = CrearReporte({
-      mensaje: null
-    });
-    expect(resultado).toBe("Advertencia: vacío");
+  test("debería lanzar advertencia si el mensaje es null", () => {
+    expect(() => crearReporte({ mensaje: null }))
+    .toThrow("Advertencia: vacío");
   });
 
   test("debería crear reporte con datos válidos", () => {
-    const resultado = CrearReporte({
+    const resultado = crearReporte({
       zona: "Cala Cala",
       mensaje: "Basura acumulada",
     });
@@ -29,7 +25,7 @@ describe("CrearReporte", () => {
   });
 
   test("debería usar fecha proporcionada si existe", () => {
-    const resultado = CrearReporte({
+    const resultado = crearReporte({
       zona: "Las Cuadras",
       mensaje: "Contenedor lleno",
       fecha: "2026-04-16"
@@ -38,13 +34,9 @@ describe("CrearReporte", () => {
     expect(resultado.fecha).toBe("2026-04-16");
   });
 
-  test("debería rechazar zona inválida", () => {
-    const resultado = CrearReporte({
-      zona: "Zona inventada",
-      mensaje: "Algo pasa"
-    });
-
-    expect(resultado).toBe("Error: zona inválida");
+  test("debería rechazar zona inválida lanzando un error", () => {
+    expect(() => crearReporte({ zona: "Zona inventada", mensaje: "Algo pasa" }))
+    .toThrow("Error: zona inválida");
   });
 
   test("debería mostrar error si no se selecciona ninguna foto", () => {

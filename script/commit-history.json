@@ -703,173 +703,116 @@
     "conclusion": "success"
   },
   {
-    "sha": "3c1b952589ade897b0cd7ccdd3c4bda6c0bddd6e",
-    "author": "dahbner",
+    "sha": "7f434fbba5bc9d6d231919c9280608a40f2099fd",
+    "author": "Flora",
     "commit": {
-      "date": "2026-05-19T21:18:15.000Z",
-      "message": "fix: separando styles de presenter.js a un archivo css",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/3c1b952589ade897b0cd7ccdd3c4bda6c0bddd6e"
+      "date": "2026-05-20T02:12:02.000Z",
+      "message": "refactor: unificacion de retorno en funcion crearRuta",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/7f434fbba5bc9d6d231919c9280608a40f2099fd"
     },
     "stats": {
-      "total": 41,
-      "additions": 27,
-      "deletions": 14,
-      "date": "2026-05-19"
+      "total": 88,
+      "additions": 38,
+      "deletions": 50,
+      "date": "2026-05-20"
     },
-    "coverage": 94.03,
-    "test_count": 30,
+    "coverage": 77.94,
+    "test_count": 27,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "f4d405765cde989d16694f8c2bf75a5ef68e8eba",
-    "author": "dahbner",
+    "sha": "be190b7b4f5a85293d8b46b0149be4eecbdb7c98",
+    "author": "Flora",
     "commit": {
-      "date": "2026-05-19T21:21:43.000Z",
-      "message": "fix: separando styles de presenterEMSA.js a un archivo css",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f4d405765cde989d16694f8c2bf75a5ef68e8eba"
+      "date": "2026-05-20T02:18:21.000Z",
+      "message": "refactor: unificacion de retorno en funcion CrearReporte",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/be190b7b4f5a85293d8b46b0149be4eecbdb7c98"
     },
     "stats": {
-      "total": 12,
-      "additions": 6,
-      "deletions": 6,
-      "date": "2026-05-19"
+      "total": 42,
+      "additions": 18,
+      "deletions": 24,
+      "date": "2026-05-20"
     },
-    "coverage": 94.03,
-    "test_count": 30,
+    "coverage": 77.94,
+    "test_count": 27,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "fe0d1a2ece3ab10a30d4cb4885afc6f5916902a6",
-    "author": "dahbner",
+    "sha": "0f28e1791a17b49b046190cda3ce3eccfcf2710b",
+    "author": "Flora",
     "commit": {
-      "date": "2026-05-19T21:24:27.000Z",
-      "message": "fix: separando styles de presenterCiudadano.js a un archivo css",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/fe0d1a2ece3ab10a30d4cb4885afc6f5916902a6"
+      "date": "2026-05-20T02:21:14.000Z",
+      "message": "refactor: unificacion de retorno en funcion registrarHorario",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/0f28e1791a17b49b046190cda3ce3eccfcf2710b"
     },
     "stats": {
-      "total": 12,
-      "additions": 6,
-      "deletions": 6,
-      "date": "2026-05-19"
+      "total": 30,
+      "additions": 14,
+      "deletions": 16,
+      "date": "2026-05-20"
     },
-    "coverage": 94.03,
-    "test_count": 30,
+    "coverage": 77.94,
+    "test_count": 27,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "37ddbdc7537d8a0cc78e0844552f334b559b5fcc",
-    "author": "dahbner",
+    "sha": "5436f5fa75399ce90e7647b484000e7b5a8b34b6",
+    "author": "Flora",
     "commit": {
-      "date": "2026-05-19T21:27:02.000Z",
-      "message": "fix: rename al archivo css",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/37ddbdc7537d8a0cc78e0844552f334b559b5fcc"
+      "date": "2026-05-20T02:45:56.000Z",
+      "message": "refactor: correcion de nomenclatura",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/5436f5fa75399ce90e7647b484000e7b5a8b34b6"
     },
     "stats": {
-      "total": 4,
-      "additions": 2,
-      "deletions": 2,
-      "date": "2026-05-19"
+      "total": 20,
+      "additions": 10,
+      "deletions": 10,
+      "date": "2026-05-20"
     },
-    "coverage": 94.03,
-    "test_count": 30,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "cfbf0d9c57f00b9710b4ef7630cf7ae6ecd90cb4",
-    "author": "dahbner",
-    "commit": {
-      "date": "2026-05-19T21:38:32.000Z",
-      "message": "fix: separando renderizado HTML de la logica de negocio para presenter.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/cfbf0d9c57f00b9710b4ef7630cf7ae6ecd90cb4"
-    },
-    "stats": {
-      "total": 110,
-      "additions": 73,
-      "deletions": 37,
-      "date": "2026-05-19"
-    },
-    "coverage": 94.03,
-    "test_count": 30,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "d301b23b2a80797eb5e83e9b02d6805650a72ab2",
-    "author": "dahbner",
-    "commit": {
-      "date": "2026-05-19T21:45:57.000Z",
-      "message": "fix: quitando renderizado html de rutas.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d301b23b2a80797eb5e83e9b02d6805650a72ab2"
-    },
-    "stats": {
-      "total": 44,
-      "additions": 29,
-      "deletions": 15,
-      "date": "2026-05-19"
-    },
-    "coverage": 93.55,
-    "test_count": 30,
-    "failed_tests": 1,
+    "coverage": 67.65,
+    "test_count": 27,
+    "failed_tests": 5,
     "conclusion": "failure"
   },
   {
-    "sha": "73de7c88035cc827aa4b781a791964d96ad90e23",
-    "author": "dahbner",
+    "sha": "5ea330eec9fdaa17967925e120479964a6b89b1b",
+    "author": "Flora",
     "commit": {
-      "date": "2026-05-19T21:49:18.000Z",
-      "message": "fix: separando renderizado HTML de la logica de negocio para presenterCiudadano.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/73de7c88035cc827aa4b781a791964d96ad90e23"
+      "date": "2026-05-20T02:47:40.000Z",
+      "message": "fix: function imports",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/5ea330eec9fdaa17967925e120479964a6b89b1b"
     },
     "stats": {
-      "total": 18,
-      "additions": 13,
-      "deletions": 5,
-      "date": "2026-05-19"
+      "total": 6,
+      "additions": 3,
+      "deletions": 3,
+      "date": "2026-05-20"
     },
-    "coverage": 93.55,
-    "test_count": 30,
-    "failed_tests": 1,
-    "conclusion": "failure"
-  },
-  {
-    "sha": "ee33fbffaa7a33140c79ddbc203a62fea2f66954",
-    "author": "dahbner",
-    "commit": {
-      "date": "2026-05-19T21:53:43.000Z",
-      "message": "fix: separando renderizado HTML de la logica de negocio para presenterEMSA.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/ee33fbffaa7a33140c79ddbc203a62fea2f66954"
-    },
-    "stats": {
-      "total": 118,
-      "additions": 81,
-      "deletions": 37,
-      "date": "2026-05-19"
-    },
-    "coverage": 93.55,
-    "test_count": 30,
-    "failed_tests": 1,
-    "conclusion": "failure"
+    "coverage": 77.94,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
   },
   {
     "sha": "HEAD",
-    "author": "dahbner",
+    "author": "Flora",
     "commit": {
-      "date": "2026-05-19T22:00:09.000Z",
-      "message": "fix: errores para las pruebas",
+      "date": "2026-05-20T02:55:09.000Z",
+      "message": "Merge branch 'Flora-Ortiz'",
       "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
     },
     "stats": {
-      "total": 4,
-      "additions": 2,
-      "deletions": 2,
-      "date": "2026-05-19"
+      "total": 182,
+      "additions": 82,
+      "deletions": 100,
+      "date": "2026-05-20"
     },
-    "coverage": 93.55,
-    "test_count": 30,
+    "coverage": 84.13,
+    "test_count": 27,
     "failed_tests": 0,
     "conclusion": "success"
   }

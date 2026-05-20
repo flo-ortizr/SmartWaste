@@ -1,4 +1,4 @@
-import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
+import crearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 import { mostrarRutas, crearRuta, buscarRutaPorZona } from "./rutas.js";
 import { eliminarRuta } from "./rutas.js";
 import { mostrarHorario, registrarHorario } from "./horarios.js";
@@ -115,7 +115,7 @@ if (formReporte) {
       return;
     }
 
-    const resultado = CrearReporte({ zona, mensaje, fecha });
+    const resultado = crearReporte({ zona, mensaje, fecha });
     if (typeof resultado === "string") {
       mostrarMensaje(divReporte, resultado, "mensaje-error");
     } else {
@@ -176,12 +176,16 @@ if (btnVerHorarios) {
 
 if (btnRegistrarHorario) {
   btnRegistrarHorario.addEventListener("click", () => {
-    const resultado = registrarHorario(inputRutaHorario.value, inputHorario.value);
-
-    if (typeof resultado === "string") {
-      mostrarMensaje(divResultadoHorario, resultado, "mensaje-error");
-    } else {
-      mostrarMensaje(divResultadoHorario, "Horario registrado correctamente", "mensaje-exito");
+    try {
+      const nuevoHorario = registrarHorario(
+        inputRutaHorario.value,
+        inputHorario.value
+      );
+      
+      divResultadoHorario.innerHTML = `<span style='color:green'>Horario registrado correctamente</span>`;
+      
+    } catch (error) {
+      divResultadoHorario.innerHTML = `<span style='color:red'>${error.message}</span>`;
     }
   });
 }

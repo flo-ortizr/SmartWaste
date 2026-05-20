@@ -21,7 +21,14 @@ export function crearRuta(nombreRuta, zona, dias, cobertura) {
     !esCampoValido(dias) ||
     !esCampoValido(cobertura)
   ) {
-    return "Por favor, complete los campos requeridos";
+    throw new Error("Por favor, complete los campos requeridos");
+
+    return {
+    nombreRuta: nombreRuta.trim(),
+    zona: zona.trim(),
+    dias: dias.trim(),
+    cobertura: cobertura.trim()
+  };
   }
 
   return {

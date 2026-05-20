@@ -78,21 +78,22 @@ if (formRuta) {
     const dias = inputDiasRuta.value;
     const cobertura = inputCoberturaRuta.value;
 
-    const error = validarFormRuta(nombre, zona, dias, cobertura);
-    if (error) {
-      mostrarMensaje(divRuta, error, "mensaje-error");
+    const errorVista = validarFormRuta(nombre, zona, dias, cobertura);
+    if (errorVista) {
+      mostrarError(divRuta, errorVista);
       return;
     }
 
-    const resultado = crearRuta(nombre, zona, dias, cobertura);
-    if (typeof resultado === "string") {
-      mostrarMensaje(divRuta, resultado, "mensaje-error");
-    } else {
-      rutasBD.push(resultado);
-      mostrarMensaje(divRuta, "Ruta registrada correctamente", "mensaje-exito");
+    try {
+      const nuevaRuta = crearRuta(nombre, zona, dias, cobertura);
+      
+      rutasBD.push(nuevaRuta);
+      mostrarExito(divRuta, "Ruta registrada correctamente");
       formRuta.reset();
-      const resultadoRutas = mostrarRutas(rutasBD);
-      renderizarListaRutas(resultadoRutas, divListaRutas);
+      divListaRutas.innerHTML = mostrarRutas(rutasBD);
+      
+    } catch (error) {
+      mostrarError(divRuta, error.message);
     }
   });
 }

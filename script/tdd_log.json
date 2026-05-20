@@ -734,73 +734,175 @@
     "testId": 36
   },
   {
-    "commitId": "3c1b952589ade897b0cd7ccdd3c4bda6c0bddd6e",
-    "commitName": "fix: separando styles de presenter.js a un archivo css",
-    "commitTimestamp": 1779225497119,
+    "numPassedTests": 29,
+    "failedTests": 1,
+    "numTotalTests": 30,
+    "timestamp": 1779200631123,
+    "success": false,
     "testId": 37
-  },
-  {
-    "commitId": "f4d405765cde989d16694f8c2bf75a5ef68e8eba",
-    "commitName": "fix: separando styles de presenterEMSA.js a un archivo css",
-    "commitTimestamp": 1779225704545,
-    "testId": 38
-  },
-  {
-    "commitId": "fe0d1a2ece3ab10a30d4cb4885afc6f5916902a6",
-    "commitName": "fix: separando styles de presenterCiudadano.js a un archivo css",
-    "commitTimestamp": 1779225868497,
-    "testId": 39
-  },
-  {
-    "commitId": "37ddbdc7537d8a0cc78e0844552f334b559b5fcc",
-    "commitName": "fix: rename al archivo css",
-    "commitTimestamp": 1779226023747,
-    "testId": 40
-  },
-  {
-    "commitId": "cfbf0d9c57f00b9710b4ef7630cf7ae6ecd90cb4",
-    "commitName": "fix: separando renderizado HTML de la logica de negocio para presenter.js",
-    "commitTimestamp": 1779226713283,
-    "testId": 41
-  },
-  {
-    "commitId": "d301b23b2a80797eb5e83e9b02d6805650a72ab2",
-    "commitName": "fix: quitando renderizado html de rutas.js",
-    "commitTimestamp": 1779227158284,
-    "testId": 42
-  },
-  {
-    "commitId": "73de7c88035cc827aa4b781a791964d96ad90e23",
-    "commitName": "fix: separando renderizado HTML de la logica de negocio para presenterCiudadano.js",
-    "commitTimestamp": 1779227359425,
-    "testId": 43
-  },
-  {
-    "commitId": "ee33fbffaa7a33140c79ddbc203a62fea2f66954",
-    "commitName": "fix: separando renderizado HTML de la logica de negocio para presenterEMSA.js",
-    "commitTimestamp": 1779227624255,
-    "testId": 44
   },
   {
     "numPassedTests": 29,
     "failedTests": 1,
     "numTotalTests": 30,
-    "timestamp": 1779227717847,
+    "timestamp": 1779242651900,
     "success": false,
-    "testId": 45
+    "testId": 37
   },
   {
-    "numPassedTests": 30,
-    "failedTests": 0,
+    "numPassedTests": 26,
+    "failedTests": 4,
     "numTotalTests": 30,
-    "timestamp": 1779227981156,
+    "timestamp": 1779242728108,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 4,
+    "numTotalTests": 30,
+    "timestamp": 1779242786628,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 4,
+    "numTotalTests": 31,
+    "timestamp": 1779242834160,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779242955322,
     "success": true,
-    "testId": 45
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243031292,
+    "success": true,
+    "testId": 37
+  },
+  {
+    "commitId": "7f434fbba5bc9d6d231919c9280608a40f2099fd",
+    "commitName": "refactor: unificacion de retorno en funcion crearRuta",
+    "commitTimestamp": 1779243126560,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 24,
+    "failedTests": 3,
+    "numTotalTests": 27,
+    "timestamp": 1779243291319,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243345197,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243396181,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "commitId": "be190b7b4f5a85293d8b46b0149be4eecbdb7c98",
+    "commitName": "refactor: unificacion de retorno en funcion CrearReporte",
+    "commitTimestamp": 1779243504409,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 1,
+    "numTotalTests": 27,
+    "timestamp": 1779243566016,
+    "success": false,
+    "testId": 39
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243603608,
+    "success": true,
+    "testId": 39
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243644590,
+    "success": true,
+    "testId": 39
+  },
+  {
+    "commitId": "0f28e1791a17b49b046190cda3ce3eccfcf2710b",
+    "commitName": "refactor: unificacion de retorno en funcion registrarHorario",
+    "commitTimestamp": 1779243676093,
+    "testId": 39
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779244893593,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779244965089,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "commitId": "5436f5fa75399ce90e7647b484000e7b5a8b34b6",
+    "commitName": "refactor: correcion de nomenclatura",
+    "commitTimestamp": 1779245158591,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779245193251,
+    "success": false,
+    "testId": 41
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779245230956,
+    "success": true,
+    "testId": 41
+  },
+  {
+    "commitId": "5ea330eec9fdaa17967925e120479964a6b89b1b",
+    "commitName": "fix: function imports",
+    "commitTimestamp": 1779245262773,
+    "testId": 41
   },
   {
     "commitId": "HEAD",
-    "commitName": "fix: errores para las pruebas",
-    "commitTimestamp": 1779228010456,
-    "testId": 45
+    "commitName": "Merge branch 'Flora-Ortiz'",
+    "commitTimestamp": 1779245710840,
+    "testId": 42
   }
 ]

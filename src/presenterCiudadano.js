@@ -1,4 +1,4 @@
-import CrearReporte, { validarFoto } from "./reportes.js";
+import crearReporte, { validarFoto } from "./reportes.js";
 import { buscarRutaPorZona } from "./rutas.js";
 import { mostrarHorario } from "./horarios.js";
 
@@ -69,13 +69,15 @@ if (formReporte) {
       return;
     }
 
-    const resultado = CrearReporte({ zona, mensaje, fecha });
-    if (typeof resultado === "string") {
-      mostrarError(divReporte, resultado);
-    } else {
+    try {
+      const nuevoReporte = crearReporte({ zona, mensaje, fecha });
+      
       mostrarVistaPreviaFoto(archivoFoto);
       mostrarExito(divReporte, "Reporte enviado correctamente");
       formReporte.reset();
+      
+    } catch (error) {
+      mostrarError(divReporte, error.message);
     }
   });
 }
