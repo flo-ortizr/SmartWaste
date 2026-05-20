@@ -790,9 +790,39 @@
     "testId": 37
   },
   {
-    "commitId": "HEAD",
+    "commitId": "7f434fbba5bc9d6d231919c9280608a40f2099fd",
     "commitName": "refactor: unificacion de retorno en funcion crearRuta",
     "commitTimestamp": 1779243126560,
     "testId": 37
+  },
+  {
+    "numPassedTests": 24,
+    "failedTests": 3,
+    "numTotalTests": 27,
+    "timestamp": 1779243291319,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243345197,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243396181,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: unificacion de retorno en funcion CrearReporte",
+    "commitTimestamp": 1779243504409,
+    "testId": 38
   }
 ]

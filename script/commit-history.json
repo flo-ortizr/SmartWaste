@@ -703,17 +703,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "7f434fbba5bc9d6d231919c9280608a40f2099fd",
     "author": "Flora",
     "commit": {
       "date": "2026-05-20T02:12:02.000Z",
       "message": "refactor: unificacion de retorno en funcion crearRuta",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/7f434fbba5bc9d6d231919c9280608a40f2099fd"
     },
     "stats": {
       "total": 88,
       "additions": 38,
       "deletions": 50,
+      "date": "2026-05-20"
+    },
+    "coverage": 77.94,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:18:21.000Z",
+      "message": "refactor: unificacion de retorno en funcion CrearReporte",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 42,
+      "additions": 18,
+      "deletions": 24,
       "date": "2026-05-20"
     },
     "coverage": 77.94,

@@ -2,18 +2,14 @@ import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReport
 
 describe("CrearReporte", () => {
 
-  test("debería devolver advertencia si el mensaje está vacío", () => {
-    const resultado = CrearReporte({
-      mensaje: ""
-    });
-    expect(resultado).toBe("Advertencia: vacío");
-  });
+  test("debería lanzar advertencia si el mensaje está vacío", () => {
+  expect(() => CrearReporte({ mensaje: "" }))
+    .toThrow("Advertencia: vacío");
+});
 
-  test("debería devolver advertencia si el mensaje es null", () => {
-    const resultado = CrearReporte({
-      mensaje: null
-    });
-    expect(resultado).toBe("Advertencia: vacío");
+  test("debería lanzar advertencia si el mensaje es null", () => {
+    expect(() => CrearReporte({ mensaje: null }))
+    .toThrow("Advertencia: vacío");
   });
 
   test("debería crear reporte con datos válidos", () => {
@@ -38,13 +34,9 @@ describe("CrearReporte", () => {
     expect(resultado.fecha).toBe("2026-04-16");
   });
 
-  test("debería rechazar zona inválida", () => {
-    const resultado = CrearReporte({
-      zona: "Zona inventada",
-      mensaje: "Algo pasa"
-    });
-
-    expect(resultado).toBe("Error: zona inválida");
+  test("debería rechazar zona inválida lanzando un error", () => {
+    expect(() => CrearReporte({ zona: "Zona inventada", mensaje: "Algo pasa" }))
+    .toThrow("Error: zona inválida");
   });
 
   test("debería mostrar error si no se selecciona ninguna foto", () => {

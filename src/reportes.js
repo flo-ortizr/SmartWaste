@@ -3,11 +3,11 @@ import { zonasCochabamba } from "./data/data.js";
 function CrearReporte({ zona, mensaje, fecha }) {
 
   if (mensaje === null || mensaje?.trim() === "") {
-    return "Advertencia: vacío";
+    throw new Error("Advertencia: vacío");
   }
 
   if (!zonasCochabamba.includes(zona)) {
-    return "Error: zona inválida";
+    throw new Error("Error: zona inválida");
   }
 
   const fechaFinal = fecha || new Date().toISOString().split("T")[0];

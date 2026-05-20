@@ -61,13 +61,15 @@ if (formReporte) {
       return;
     }
 
-    const resultado = CrearReporte({ zona, mensaje, fecha });
-    if (typeof resultado === "string") {
-      mostrarError(divReporte, resultado);
-    } else {
+    try {
+      const nuevoReporte = CrearReporte({ zona, mensaje, fecha });
+      
       mostrarVistaPreviaFoto(archivoFoto);
       mostrarExito(divReporte, "Reporte enviado correctamente");
       formReporte.reset();
+      
+    } catch (error) {
+      mostrarError(divReporte, error.message);
     }
   });
 }
