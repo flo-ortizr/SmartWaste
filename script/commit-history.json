@@ -760,12 +760,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5436f5fa75399ce90e7647b484000e7b5a8b34b6",
     "author": "Flora",
     "commit": {
       "date": "2026-05-20T02:45:56.000Z",
       "message": "refactor: correcion de nomenclatura",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/5436f5fa75399ce90e7647b484000e7b5a8b34b6"
     },
     "stats": {
       "total": 20,
@@ -777,5 +777,24 @@
     "test_count": 27,
     "failed_tests": 5,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:47:40.000Z",
+      "message": "fix: function imports",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 6,
+      "additions": 3,
+      "deletions": 3,
+      "date": "2026-05-20"
+    },
+    "coverage": 77.94,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]

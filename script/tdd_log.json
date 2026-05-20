@@ -872,9 +872,31 @@
     "testId": 40
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5436f5fa75399ce90e7647b484000e7b5a8b34b6",
     "commitName": "refactor: correcion de nomenclatura",
     "commitTimestamp": 1779245158591,
     "testId": 40
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779245193251,
+    "success": false,
+    "testId": 41
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779245230956,
+    "success": true,
+    "testId": 41
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: function imports",
+    "commitTimestamp": 1779245262773,
+    "testId": 41
   }
 ]

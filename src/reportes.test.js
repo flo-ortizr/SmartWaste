@@ -1,4 +1,4 @@
-import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
+import crearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 
 describe("crearReporte", () => {
 

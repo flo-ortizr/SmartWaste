@@ -1,4 +1,4 @@
-import CrearReporte, { validarFoto } from "./reportes.js";
+import crearReporte, { validarFoto } from "./reportes.js";
 import { buscarRutaPorZona } from "./rutas.js";
 import { mostrarHorario } from "./horarios.js";
 
