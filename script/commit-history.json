@@ -722,17 +722,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "be190b7b4f5a85293d8b46b0149be4eecbdb7c98",
     "author": "Flora",
     "commit": {
       "date": "2026-05-20T02:18:21.000Z",
       "message": "refactor: unificacion de retorno en funcion CrearReporte",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/be190b7b4f5a85293d8b46b0149be4eecbdb7c98"
     },
     "stats": {
       "total": 42,
       "additions": 18,
       "deletions": 24,
+      "date": "2026-05-20"
+    },
+    "coverage": 77.94,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:21:14.000Z",
+      "message": "refactor: unificacion de retorno en funcion registrarHorario",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 30,
+      "additions": 14,
+      "deletions": 16,
       "date": "2026-05-20"
     },
     "coverage": 77.94,

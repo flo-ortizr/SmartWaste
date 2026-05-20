@@ -141,15 +141,16 @@ if (btnVerHorarios) {
 
 if (btnRegistrarHorario) {
   btnRegistrarHorario.addEventListener("click", () => {
-    const resultado = registrarHorario(
-      inputRutaHorario.value,
-      inputHorario.value
-    );
-
-    if (typeof resultado === "string") {
-      divResultadoHorario.innerHTML = `<span style='color:red'>${resultado}</span>`;
-    } else {
+    try {
+      const nuevoHorario = registrarHorario(
+        inputRutaHorario.value,
+        inputHorario.value
+      );
+      
       divResultadoHorario.innerHTML = `<span style='color:green'>Horario registrado correctamente</span>`;
+      
+    } catch (error) {
+      divResultadoHorario.innerHTML = `<span style='color:red'>${error.message}</span>`;
     }
   });
 }

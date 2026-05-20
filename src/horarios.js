@@ -19,11 +19,8 @@ export function mostrarHorario(zona, horarios) {
 }
 
 export function registrarHorario(ruta, horario) {
-  if (
-    !esCampoValido(ruta) ||
-    !esCampoValido(horario)
-  ) {
-    return "Por favor, complete los campos requeridos";
+  if (!esCampoValido(ruta) || !esCampoValido(horario)) {
+    throw new Error("Por favor, complete los campos requeridos");
   }
 
   return {

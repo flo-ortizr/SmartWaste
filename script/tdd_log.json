@@ -820,9 +820,39 @@
     "testId": 38
   },
   {
-    "commitId": "HEAD",
+    "commitId": "be190b7b4f5a85293d8b46b0149be4eecbdb7c98",
     "commitName": "refactor: unificacion de retorno en funcion CrearReporte",
     "commitTimestamp": 1779243504409,
     "testId": 38
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 1,
+    "numTotalTests": 27,
+    "timestamp": 1779243566016,
+    "success": false,
+    "testId": 39
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243603608,
+    "success": true,
+    "testId": 39
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243644590,
+    "success": true,
+    "testId": 39
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: unificacion de retorno en funcion registrarHorario",
+    "commitTimestamp": 1779243676093,
+    "testId": 39
   }
 ]

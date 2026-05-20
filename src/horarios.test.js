@@ -19,9 +19,9 @@ describe("Gestor de Horarios", () => {
         
     });
 
-    it("debería mostrar error si faltan campos", () => {
-        const resultado = registrarHorario("", "");
-        expect(resultado).toEqual("Por favor, complete los campos requeridos");
+    it("debería lanzar un error si faltan campos", () => {
+        expect(() => registrarHorario("", ""))
+        .toThrow("Por favor, complete los campos requeridos");
     });
 
     it("debería registrar el horario correctamente", () => {
