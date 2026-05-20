@@ -900,9 +900,23 @@
     "testId": 41
   },
   {
-    "commitId": "HEAD",
+    "commitId": "58073122bac2c5eaccd797b97b046a272e3ca196",
     "commitName": "Merge branch 'Flora-Ortiz'",
     "commitTimestamp": 1779245710840,
     "testId": 42
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779310426009,
+    "success": true,
+    "testId": 43
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar cantidad de basura al detalle de reportes",
+    "commitTimestamp": 1779310657731,
+    "testId": 43
   }
 ]

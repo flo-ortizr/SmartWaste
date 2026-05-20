@@ -18,8 +18,24 @@ const inputZonaEliminar = document.querySelector("#zona_eliminar");
 const divResultadoEliminar = document.querySelector("#resultado-eliminar-div");
 
 const reportesBD = [
-  { id: "1", zona: "Cala Cala", fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina", usuario: "Juan" },
-  { id: "2", zona: "Muyurina", fecha: "2026-04-19", estado: "Atendido", mensaje: "Contenedor lleno", usuario: "Ana" }
+  {
+    id: "1",
+    zona: "Cala Cala",
+    fecha: "2026-04-18",
+    estado: "Pendiente",
+    mensaje: "Basura en la esquina",
+    usuario: "Juan",
+    cantidadBasura: "Alta"
+  },
+  {
+    id: "2",
+    zona: "Muyurina",
+    fecha: "2026-04-19",
+    estado: "Atendido",
+    mensaje: "Contenedor lleno",
+    usuario: "Ana",
+    cantidadBasura: "Media"
+  }
 ];
 
 const rutasBD = [
@@ -156,10 +172,11 @@ if (divListaReportes) {
           h3,
           crearParrafo("ID", detalle.id),
           crearParrafo("Zona", detalle.zona),
-          crearParrafo("Fecha", detalle.fecha),
-          crearParrafo("Estado", detalle.estado),
-          crearParrafo("Usuario", detalle.usuario),
-          crearParrafo("Descripción", detalle.mensaje)
+          crearParrafo("Descripción de referencia", detalle.mensaje),
+          crearParrafo("Cantidad aproximada de basura", detalle.cantidadBasura),
+          crearParrafo("Fecha de creación", detalle.fecha),
+          crearParrafo("Estado actual", detalle.estado),
+          crearParrafo("Usuario", detalle.usuario)
         );
       }
     }

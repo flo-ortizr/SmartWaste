@@ -89,8 +89,23 @@ describe("Obtener Detalle de Reporte", () => {
     expect(obtenerDetalleReporte("2", reportes)).toBeNull();
   });
 
-  test("debería devolver el reporte completo", () => {
-    const reportes = [{ id: "1", zona: "Norte", mensaje: "Basura" }];
-    expect(obtenerDetalleReporte("1", reportes)).toEqual({ id: "1", zona: "Norte", mensaje: "Basura" });
+ test("debería devolver el reporte completo con todos sus datos", () => {
+  const reportes = [{
+    id: "1",
+    zona: "Norte",
+    mensaje: "Basura",
+    fecha: "2026-04-20",
+    estado: "Pendiente",
+    cantidadBasura: "Alta"
+  }];
+
+  expect(obtenerDetalleReporte("1", reportes)).toEqual({
+    id: "1",
+    zona: "Norte",
+    mensaje: "Basura",
+    fecha: "2026-04-20",
+    estado: "Pendiente",
+    cantidadBasura: "Alta"
+  });
   });
 });
