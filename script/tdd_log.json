@@ -728,9 +728,71 @@
     "testId": 35
   },
   {
-    "commitId": "HEAD",
+    "commitId": "94729b8483f722ca2fff1323dd9af3bd6d80f2f0",
     "commitName": "refactor: importar zonasCochabamba desde data.js",
     "commitTimestamp": 1778593570300,
     "testId": 36
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 1,
+    "numTotalTests": 30,
+    "timestamp": 1779200631123,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 1,
+    "numTotalTests": 30,
+    "timestamp": 1779242651900,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 4,
+    "numTotalTests": 30,
+    "timestamp": 1779242728108,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 4,
+    "numTotalTests": 30,
+    "timestamp": 1779242786628,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 4,
+    "numTotalTests": 31,
+    "timestamp": 1779242834160,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779242955322,
+    "success": true,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243031292,
+    "success": true,
+    "testId": 37
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: unificacion de retorno en funcion crearRuta",
+    "commitTimestamp": 1779243126560,
+    "testId": 37
   }
 ]

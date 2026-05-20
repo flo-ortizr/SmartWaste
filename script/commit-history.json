@@ -684,12 +684,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "94729b8483f722ca2fff1323dd9af3bd6d80f2f0",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-12T13:46:10.000Z",
       "message": "refactor: importar zonasCochabamba desde data.js",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/94729b8483f722ca2fff1323dd9af3bd6d80f2f0"
     },
     "stats": {
       "total": 15,
@@ -699,6 +699,25 @@
     },
     "coverage": 94.03,
     "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:12:02.000Z",
+      "message": "refactor: unificacion de retorno en funcion crearRuta",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 88,
+      "additions": 38,
+      "deletions": 50,
+      "date": "2026-05-20"
+    },
+    "coverage": 77.94,
+    "test_count": 27,
     "failed_tests": 0,
     "conclusion": "success"
   }
