@@ -1,19 +1,19 @@
 import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 
-describe("CrearReporte", () => {
+describe("crearReporte", () => {
 
   test("debería lanzar advertencia si el mensaje está vacío", () => {
-  expect(() => CrearReporte({ mensaje: "" }))
+  expect(() => crearReporte({ mensaje: "" }))
     .toThrow("Advertencia: vacío");
 });
 
   test("debería lanzar advertencia si el mensaje es null", () => {
-    expect(() => CrearReporte({ mensaje: null }))
+    expect(() => crearReporte({ mensaje: null }))
     .toThrow("Advertencia: vacío");
   });
 
   test("debería crear reporte con datos válidos", () => {
-    const resultado = CrearReporte({
+    const resultado = crearReporte({
       zona: "Cala Cala",
       mensaje: "Basura acumulada",
     });
@@ -25,7 +25,7 @@ describe("CrearReporte", () => {
   });
 
   test("debería usar fecha proporcionada si existe", () => {
-    const resultado = CrearReporte({
+    const resultado = crearReporte({
       zona: "Las Cuadras",
       mensaje: "Contenedor lleno",
       fecha: "2026-04-16"
@@ -35,7 +35,7 @@ describe("CrearReporte", () => {
   });
 
   test("debería rechazar zona inválida lanzando un error", () => {
-    expect(() => CrearReporte({ zona: "Zona inventada", mensaje: "Algo pasa" }))
+    expect(() => crearReporte({ zona: "Zona inventada", mensaje: "Algo pasa" }))
     .toThrow("Error: zona inválida");
   });
 

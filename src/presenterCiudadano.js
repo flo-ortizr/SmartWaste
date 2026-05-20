@@ -62,7 +62,7 @@ if (formReporte) {
     }
 
     try {
-      const nuevoReporte = CrearReporte({ zona, mensaje, fecha });
+      const nuevoReporte = crearReporte({ zona, mensaje, fecha });
       
       mostrarVistaPreviaFoto(archivoFoto);
       mostrarExito(divReporte, "Reporte enviado correctamente");

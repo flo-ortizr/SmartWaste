@@ -850,9 +850,31 @@
     "testId": 39
   },
   {
-    "commitId": "HEAD",
+    "commitId": "0f28e1791a17b49b046190cda3ce3eccfcf2710b",
     "commitName": "refactor: unificacion de retorno en funcion registrarHorario",
     "commitTimestamp": 1779243676093,
     "testId": 39
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779244893593,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779244965089,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: correcion de nomenclatura",
+    "commitTimestamp": 1779245158591,
+    "testId": 40
   }
 ]

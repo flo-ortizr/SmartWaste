@@ -741,12 +741,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0f28e1791a17b49b046190cda3ce3eccfcf2710b",
     "author": "Flora",
     "commit": {
       "date": "2026-05-20T02:21:14.000Z",
       "message": "refactor: unificacion de retorno en funcion registrarHorario",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/0f28e1791a17b49b046190cda3ce3eccfcf2710b"
     },
     "stats": {
       "total": 30,
@@ -758,5 +758,24 @@
     "test_count": 27,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:45:56.000Z",
+      "message": "refactor: correcion de nomenclatura",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 10,
+      "deletions": 10,
+      "date": "2026-05-20"
+    },
+    "coverage": 67.65,
+    "test_count": 27,
+    "failed_tests": 5,
+    "conclusion": "failure"
   }
 ]

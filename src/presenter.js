@@ -89,7 +89,7 @@ if (formReporte) {
       return;
     }
 
-    const resultado = CrearReporte({ zona, mensaje, fecha });
+    const resultado = crearReporte({ zona, mensaje, fecha });
     if (typeof resultado === "string") {
       divReporte.innerHTML = `<span style='color:red'>${resultado}</span>`;
     } else {

@@ -1,6 +1,6 @@
 import { zonasCochabamba } from "./data/data.js";
 
-function CrearReporte({ zona, mensaje, fecha }) {
+function crearReporte({ zona, mensaje, fecha }) {
 
   if (mensaje === null || mensaje?.trim() === "") {
     throw new Error("Advertencia: vacío");
@@ -58,4 +58,4 @@ export function obtenerDetalleReporte(idBuscado, listaReportes) {
   return reporteEncontrado || null;
 }
 
-export default CrearReporte;
+export default crearReporte;
