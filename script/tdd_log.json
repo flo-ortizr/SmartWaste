@@ -1240,7 +1240,7 @@
     "testId": 55
   },
   {
-    "commitId": "HEAD",
+    "commitId": "0f3f85709395c0089f7a12751f37558edec10506",
     "commitName": "feat: registrarUsuario asigna rol: ciudadano automáticamente",
     "commitTimestamp": 1779357243024,
     "testId": 55
@@ -1250,5 +1250,11 @@
     "commitName": "feat: proteccion de rutas para ciudadano y trabajador emsa",
     "commitTimestamp": 1779357570834,
     "testId": 56
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: manejo de login de usuarios",
+    "commitTimestamp": 1779357862422,
+    "testId": 57
   }
 ]

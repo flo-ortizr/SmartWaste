@@ -1273,12 +1273,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0f3f85709395c0089f7a12751f37558edec10506",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T09:54:02.000Z",
       "message": "feat: registrarUsuario asigna rol: ciudadano automáticamente",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/0f3f85709395c0089f7a12751f37558edec10506"
     },
     "stats": {
       "total": 54,
@@ -1303,6 +1303,25 @@
       "total": 284,
       "additions": 150,
       "deletions": 134,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T10:04:22.000Z",
+      "message": "refactor: manejo de login de usuarios",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 250,
+      "additions": 203,
+      "deletions": 47,
       "date": "2026-05-21"
     },
     "coverage": 71.19,
