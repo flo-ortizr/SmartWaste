@@ -2,10 +2,35 @@ import { mostrarRutas, crearRuta, eliminarRuta } from "./rutas.js";
 import { ReporteService, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 import { ZonaService } from "./zonas.js";
 
+<<<<<<< HEAD
 const _token = localStorage.getItem("jwt_token");
 const _rol   = localStorage.getItem("smartwaste_rol");
 if (!_token)         window.location.href = "./index.html";
 if (_rol !== "emsa") window.location.href = "./ciudadano.html";
+=======
+// DOM
+const btnVerRutas = document.querySelector("#btn-ver-rutas");
+const divListaRutas = document.querySelector("#lista-rutas-div");
+const formRuta = document.querySelector("#ruta-form");
+const divRuta = document.querySelector("#resultado-ruta-div");
+const inputNombreRuta = document.querySelector("#nombre_ruta");
+const inputZonaRuta = document.querySelector("#zona_ruta");
+const inputDiasRuta = document.querySelector("#dias_ruta");
+const inputCoberturaRuta = document.querySelector("#cobertura_ruta");
+const btnVerReportes = document.querySelector("#btn-ver-reportes");
+const divListaReportes = document.querySelector("#lista-reportes-div");
+const divDetalleReporte = document.querySelector("#detalle-reporte-div");
+const btnEliminarRuta = document.querySelector("#btn-eliminar-ruta");
+const inputZonaEliminar = document.querySelector("#zona_eliminar");
+const divResultadoEliminar = document.querySelector("#resultado-eliminar-div");
+const formularioModificarRutaEmsa = document.querySelector("#formulario-modificar-ruta");
+const entradaIdentificadorRutaModificar = document.querySelector("#identificador_ruta_modificar");
+const entradaNombreRutaModificar = document.querySelector("#nombre_ruta_modificar");
+const entradaZonaRutaModificar = document.querySelector("#zona_ruta_modificar");
+const entradaDiasRutaModificar = document.querySelector("#dias_ruta_modificar");
+const entradaCoberturaRutaModificar = document.querySelector("#cobertura_ruta_modificar");
+const contenedorResultadoModificacionRuta = document.querySelector("#resultado-modificacion-ruta-div");
+>>>>>>> Andres-andrade2
 
 // ── Datos ─────────────────────────────────────────────────────────────────────
 const reportesBD = [
@@ -63,6 +88,7 @@ function crearParrafo(etiqueta, valor) {
   return p;
 }
 
+<<<<<<< HEAD
 function validarFormRuta(nombre, zona, dias, cobertura) {
   if (!nombre || nombre.trim() === "") return "Por favor, ingrese un nombre de ruta";
   if (!zona   || zona.trim()   === "") return "Por favor, ingrese una zona";
@@ -144,6 +170,34 @@ function renderizarListaRutas(resultado, contenedor) {
     ul.appendChild(li);
   });
   contenedor.appendChild(ul);
+=======
+function renderizarListaRutas(resultadoRutasObtenidas, contenedorListadoRutas) {
+  contenedorListadoRutas.textContent = "";
+
+  if (typeof resultadoRutasObtenidas === "string") {
+    const parrafoMensajeCadena = document.createElement("p");
+    parrafoMensajeCadena.textContent = resultadoRutasObtenidas;
+    contenedorListadoRutas.appendChild(parrafoMensajeCadena);
+    return;
+  }
+
+  const listaDesordenadaRutas = document.createElement("ul");
+  
+  resultadoRutasObtenidas.forEach((rutaIndividualRecuperada, indiceDeArregloRuta) => {
+    const elementoListaRuta = document.createElement("li");
+    elementoListaRuta.textContent = `Zona: ${rutaIndividualRecuperada.zona} - Días: ${rutaIndividualRecuperada.dias} `;
+    
+    const botonSeleccionarModificarRuta = document.createElement("button");
+    botonSeleccionarModificarRuta.textContent = "Editar";
+    botonSeleccionarModificarRuta.className = "btn-editar-ruta";
+    botonSeleccionarModificarRuta.setAttribute("data-indice-ruta", indiceDeArregloRuta);
+
+    elementoListaRuta.appendChild(botonSeleccionarModificarRuta);
+    listaDesordenadaRutas.appendChild(elementoListaRuta);
+  });
+  
+  contenedorListadoRutas.appendChild(listaDesordenadaRutas);
+>>>>>>> Andres-andrade2
 }
 
 function crearVisorFoto(foto) {
@@ -223,17 +277,44 @@ function crearBotonAtender(detalle) {
 }
 
 function renderizarDetalleReporte(detalle) {
+<<<<<<< HEAD
   divDetalleReporte.innerHTML = "";
   const card = document.createElement("div");
   card.className = "detalle-card";
+=======
+  divDetalleReporte.textContent = "";
+
+  const hr = document.createElement("hr");
+>>>>>>> Andres-andrade2
   const h3 = document.createElement("h3");
   h3.textContent = "Detalle del Reporte";
   const { titulo: tituloMapa, mapa, enlace } = crearSeccionMapa(detalle);
   const btnVolver = document.createElement("button");
+<<<<<<< HEAD
   btnVolver.textContent = "← Volver";
   btnVolver.className = "btn btn-secundario";
   btnVolver.addEventListener("click", () => { divDetalleReporte.innerHTML = ""; });
   card.append(
+=======
+  btnVolver.textContent = "Volver";
+  btnVolver.addEventListener("click", () => {
+    divDetalleReporte.textContent = "";
+  });
+
+  const accionesDetalle = document.createElement("div");
+  accionesDetalle.style.marginTop = "12px";
+
+  enlaceMapa.style.display = "inline-block";
+  enlaceMapa.style.marginRight = "10px";
+  btnVolver.style.marginRight = "10px";
+
+  accionesDetalle.appendChild(enlaceMapa);
+  accionesDetalle.appendChild(btnVolver);
+  accionesDetalle.appendChild(btnAtender);
+
+  divDetalleReporte.append(
+    hr,
+>>>>>>> Andres-andrade2
     h3,
     crearParrafo("ID", detalle.id),
     crearParrafo("Zona", detalle.zona),
@@ -326,8 +407,36 @@ if (formRuta) {
 if (btnVerReportes) {
   btnVerReportes.addEventListener("click", () => {
     const resumen = obtenerResumenReportes(reportesBD);
+<<<<<<< HEAD
     renderizarListaReportes(resumen, divListaReportes);
     if (divDetalleReporte) divDetalleReporte.innerHTML = "";
+=======
+    divListaReportes.textContent = "";
+
+    if (resumen.length === 0) {
+      const p = document.createElement("p");
+      p.textContent = "No existen reportes registrados";
+      divListaReportes.appendChild(p);
+      return;
+    }
+
+    const ul = document.createElement("ul");
+    resumen.forEach((reporte) => {
+      const li = document.createElement("li");
+      li.textContent = `Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado} `;
+
+      const btn = document.createElement("button");
+      btn.className = "btn-detalle";
+      btn.setAttribute("data-id", reporte.id);
+      btn.textContent = "Ver Detalle";
+
+      li.appendChild(btn);
+      ul.appendChild(li);
+    });
+
+    divListaReportes.appendChild(ul);
+    if (divDetalleReporte) divDetalleReporte.textContent = "";
+>>>>>>> Andres-andrade2
   });
 }
 
@@ -352,6 +461,7 @@ if (btnEliminarRuta) {
     }
   });
 }
+<<<<<<< HEAD
 
 const btnCerrarSesionEMSA = document.querySelector("#btn-cerrar-sesion");
 if (btnCerrarSesionEMSA) {
@@ -361,3 +471,57 @@ if (btnCerrarSesionEMSA) {
     window.location.href = "./index.html?logout=true";
   });
 }
+=======
+if (divListaRutas) {
+  divListaRutas.addEventListener("click", (eventoInteraccionUsuarioEdicion) => {
+    if (eventoInteraccionUsuarioEdicion.target.classList.contains("btn-editar-ruta")) {
+      const indiceRutaSeleccionada = eventoInteraccionUsuarioEdicion.target.getAttribute("data-indice-ruta");
+      const rutaRecuperadaParaEdicion = rutasBD[indiceRutaSeleccionada];
+
+      entradaIdentificadorRutaModificar.value = indiceRutaSeleccionada;
+      entradaNombreRutaModificar.value = rutaRecuperadaParaEdicion.nombreRuta;
+      entradaZonaRutaModificar.value = rutaRecuperadaParaEdicion.zona;
+      entradaDiasRutaModificar.value = rutaRecuperadaParaEdicion.dias;
+      entradaCoberturaRutaModificar.value = rutaRecuperadaParaEdicion.cobertura;
+    }
+  });
+}
+
+if (formularioModificarRutaEmsa) {
+  formularioModificarRutaEmsa.addEventListener("submit", (eventoEnvioFormularioEdicion) => {
+    eventoEnvioFormularioEdicion.preventDefault();
+
+    const indiceRutaModificada = entradaIdentificadorRutaModificar.value;
+    const nombreRutaModificada = entradaNombreRutaModificar.value.trim();
+    const zonaRutaModificada = entradaZonaRutaModificar.value.trim();
+    const diasRutaModificada = entradaDiasRutaModificar.value.trim();
+    const coberturaRutaModificada = entradaCoberturaRutaModificar.value.trim();
+
+    contenedorResultadoModificacionRuta.textContent = "";
+
+    if (nombreRutaModificada === "" || zonaRutaModificada === "" || diasRutaModificada === "" || coberturaRutaModificada === "") {
+      const parrafoErrorCamposVacios = document.createElement("p");
+      parrafoErrorCamposVacios.textContent = "Por favor, complete los campos requeridos";
+      parrafoErrorCamposVacios.className = "mensaje-error";
+      contenedorResultadoModificacionRuta.appendChild(parrafoErrorCamposVacios);
+      return;
+    }
+
+    rutasBD[indiceRutaModificada].nombreRuta = nombreRutaModificada;
+    rutasBD[indiceRutaModificada].zona = zonaRutaModificada;
+    rutasBD[indiceRutaModificada].dias = diasRutaModificada;
+    rutasBD[indiceRutaModificada].cobertura = coberturaRutaModificada;
+
+    const parrafoExitoModificacion = document.createElement("p");
+    parrafoExitoModificacion.textContent = "Ruta modificada correctamente";
+    parrafoExitoModificacion.className = "mensaje-exito";
+    contenedorResultadoModificacionRuta.appendChild(parrafoExitoModificacion);
+
+    formularioModificarRutaEmsa.reset();
+    entradaIdentificadorRutaModificar.value = "";
+
+    const resultadoRutasActualizadasVisualmente = mostrarRutas(rutasBD);
+    renderizarListaRutas(resultadoRutasActualizadasVisualmente, divListaRutas);
+  });
+}
+>>>>>>> Andres-andrade2

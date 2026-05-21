@@ -81,7 +81,6 @@
 
     <main class="main-content" style="max-width: 440px">
       <section class="seccion" style="padding: 0; overflow: hidden">
-        <!-- Tabs -->
         <div class="tabs">
           <button class="tab-btn activo" data-tab="login">
             Iniciar sesión
@@ -90,7 +89,6 @@
         </div>
 
         <div style="padding: 24px">
-          <!-- Panel Login -->
           <div id="tab-login" class="tab-panel activo">
             <form id="login-form">
               <div class="form-group" style="margin-bottom: 14px">
@@ -119,7 +117,6 @@
             </form>
             <div id="resultado-login-div" style="margin-top: 12px"></div>
 
-            <!-- Credenciales EMSA visibles para el magíster -->
             <div class="credenciales-emsa">
               <h4>Usuarios de prueba EMSA</h4>
               <div class="credencial-row">
@@ -141,7 +138,6 @@
             </div>
           </div>
 
-          <!-- Panel Registro -->
           <div id="tab-registro" class="tab-panel">
             <p style="font-size: 0.88rem; color: #546e7a; margin-bottom: 16px">
               Crea tu cuenta como ciudadano para reportar acumulación de basura
@@ -182,7 +178,6 @@
     </main>
 
     <script>
-      // Lógica de tabs (sin módulo, simple y directa)
       document.querySelectorAll(".tab-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
           document
