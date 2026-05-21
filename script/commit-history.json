@@ -1178,12 +1178,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "b93c3a6770ec72db8eac9498a587ae2cf2009ba0",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T09:20:11.000Z",
       "message": "refactor: convertir lógica de zonas en clase ZonaService",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/b93c3a6770ec72db8eac9498a587ae2cf2009ba0"
     },
     "stats": {
       "total": 80,
@@ -1211,6 +1211,25 @@
       "date": "2026-05-21"
     },
     "coverage": 82.89,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:25:17.000Z",
+      "message": "refactor: convertir lógica de rutas en clase RutaService",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 102,
+      "additions": 53,
+      "deletions": 49,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
     "test_count": 60,
     "failed_tests": 0,
     "conclusion": "success"

@@ -1170,7 +1170,7 @@
     "testId": 50
   },
   {
-    "commitId": "HEAD",
+    "commitId": "b93c3a6770ec72db8eac9498a587ae2cf2009ba0",
     "commitName": "refactor: convertir lógica de zonas en clase ZonaService",
     "commitTimestamp": 1779355211932,
     "testId": 50
@@ -1196,5 +1196,19 @@
     "commitName": "refactor: convertir lógica de reportes en clase ReporteService",
     "commitTimestamp": 1779355407245,
     "testId": 51
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779355482867,
+    "success": true,
+    "testId": 52
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: convertir lógica de rutas en clase RutaService",
+    "commitTimestamp": 1779355517483,
+    "testId": 52
   }
 ]
