@@ -1144,7 +1144,7 @@
     "testId": 47
   },
   {
-    "commitId": "HEAD",
+    "commitId": "9ecd8d78602eb209ee8487786ecd2a095fdab4cc",
     "commitName": "feat: implementar lógica de detección de zonas críticas y ordenamiento",
     "commitTimestamp": 1779337409344,
     "testId": 47
@@ -1154,5 +1154,11 @@
     "commitName": "feat: integrar zonas críticas y ordenamiento en la interfaz EMSA",
     "commitTimestamp": 1779337889215,
     "testId": 48
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar estilos visuales para zonas críticas y normales",
+    "commitTimestamp": 1779337934543,
+    "testId": 49
   }
 ]
