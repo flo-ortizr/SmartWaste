@@ -1,4 +1,4 @@
-import crearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
+import crearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte, obtenerReportesCercanos } from "./reportes.js";
 
 describe("crearReporte", () => {
 
@@ -92,5 +92,53 @@ describe("Obtener Detalle de Reporte", () => {
   test("debería devolver el reporte completo", () => {
     const reportes = [{ id: "1", zona: "Norte", mensaje: "Basura" }];
     expect(obtenerDetalleReporte("1", reportes)).toEqual({ id: "1", zona: "Norte", mensaje: "Basura" });
+  });
+});
+
+
+
+describe("Obtener Reportes Cercanos", () => {
+  const ubicacionUsuario = { lat: -17.3935, lng: -66.1570 }; // Plaza 14 de Septiembre
+
+  test("debería retornar una lista vacía si no hay reportes en el sistema", () => {
+    const resultado = obtenerReportesCercanos(ubicacionUsuario, []);
+    expect(resultado).toEqual([]);
+  });
+
+  test("debería filtrar y retornar solo los reportes dentro del radio (ej. 1.5 km)", () => {
+    const reportesBD = [
+      { 
+        id: "1", 
+        zona: "Las Cuadras", 
+        fecha: "2026-05-20", 
+        estado: "Pendiente", 
+        lat: -17.3950, lng: -66.1500 // ~0.77 km (Cercano)
+      }, 
+      { 
+        id: "2", 
+        zona: "Pacata Baja", 
+        fecha: "2026-05-19", 
+        estado: "Atendido", 
+        lat: -17.3680, lng: -66.1210 // ~4.70 km (Lejano)
+      }
+    ];
+
+    const resultado = obtenerReportesCercanos(ubicacionUsuario, reportesBD, 1.5);
+    
+    expect(resultado.length).toBe(1);
+    expect(resultado[0].id).toBe("1");
+    expect(resultado[0].distancia).toBeCloseTo(0.77, 1);
+  });
+
+  test("debería incluir distancia aproximada, fecha y estado en los elementos retornados", () => {
+    const reportesBD = [
+      { id: "1", zona: "Cala Cala", fecha: "2026-05-20", estado: "Pendiente", lat: -17.3900, lng: -66.1550 }
+    ];
+
+    const resultado = obtenerReportesCercanos(ubicacionUsuario, reportesBD, 2.0);
+
+    expect(resultado[0]).toHaveProperty("distancia");
+    expect(resultado[0]).toHaveProperty("fecha");
+    expect(resultado[0]).toHaveProperty("estado");
   });
 });

@@ -1012,9 +1012,45 @@
     "testId": 53
   },
   {
-    "commitId": "HEAD",
+    "commitId": "d5eb4e6c434fe02bef660233ed4ad52147187b67",
     "commitName": "Merge branch Dabner-Orozco",
     "commitTimestamp": 1779333059842,
     "testId": 54
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 3,
+    "numTotalTests": 30,
+    "timestamp": 1779333454451,
+    "success": false,
+    "testId": 43
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1779333528406,
+    "success": true,
+    "testId": 43
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1779333672094,
+    "success": true,
+    "testId": 43
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: ver reportes de basura acumulado cercanos",
+    "commitTimestamp": 1779333712997,
+    "testId": 43
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "Merge branch 'Flora-Ortiz'",
+    "commitTimestamp": 1779334215035,
+    "testId": 44
   }
 ]
