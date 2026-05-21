@@ -798,12 +798,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "58073122bac2c5eaccd797b97b046a272e3ca196",
     "author": "Flora",
     "commit": {
       "date": "2026-05-20T02:55:09.000Z",
       "message": "Merge branch 'Flora-Ortiz'",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/58073122bac2c5eaccd797b97b046a272e3ca196"
     },
     "stats": {
       "total": 182,
@@ -813,6 +813,25 @@
     },
     "coverage": 84.13,
     "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:13:41.000Z",
+      "message": "feat: registro del usuario ciudadano",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 19,
+      "additions": 19,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.62,
+    "test_count": 28,
     "failed_tests": 0,
     "conclusion": "success"
   }
