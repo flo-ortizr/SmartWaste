@@ -1140,12 +1140,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "d315d5cfbeba6854c541efdcf3cc5f6132cd3d6e",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T04:31:28.000Z",
       "message": "feat: integrar zonas críticas y ordenamiento en la interfaz EMSA",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d315d5cfbeba6854c541efdcf3cc5f6132cd3d6e"
     },
     "stats": {
       "total": 111,
@@ -1173,6 +1173,25 @@
       "date": "2026-05-21"
     },
     "coverage": 91.27,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:20:11.000Z",
+      "message": "refactor: convertir lógica de zonas en clase ZonaService",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 80,
+      "additions": 52,
+      "deletions": 28,
+      "date": "2026-05-21"
+    },
+    "coverage": 89.21,
     "test_count": 60,
     "failed_tests": 0,
     "conclusion": "success"

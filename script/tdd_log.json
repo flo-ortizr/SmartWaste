@@ -1150,7 +1150,7 @@
     "testId": 47
   },
   {
-    "commitId": "HEAD",
+    "commitId": "d315d5cfbeba6854c541efdcf3cc5f6132cd3d6e",
     "commitName": "feat: integrar zonas críticas y ordenamiento en la interfaz EMSA",
     "commitTimestamp": 1779337889215,
     "testId": 48
@@ -1160,5 +1160,19 @@
     "commitName": "feat: agregar estilos visuales para zonas críticas y normales",
     "commitTimestamp": 1779337934543,
     "testId": 49
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779355158919,
+    "success": true,
+    "testId": 50
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: convertir lógica de zonas en clase ZonaService",
+    "commitTimestamp": 1779355211932,
+    "testId": 50
   }
 ]
