@@ -1000,9 +1000,15 @@
     "testId": 51
   },
   {
-    "commitId": "HEAD",
+    "commitId": "82253ded00150ab21a194a33de4525646e370f7b",
     "commitName": "feat: Al tocar el boton cerrar sesion, el sistema quita el indicador de sesion activa",
     "commitTimestamp": 1779332423318,
     "testId": 52
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Indicar que la sesion fue cerrada correctamente",
+    "commitTimestamp": 1779332924510,
+    "testId": 53
   }
 ]

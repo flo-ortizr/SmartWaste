@@ -14,6 +14,16 @@ function mostrarError(div, mensaje) {
   div.className = "mensaje-error";
 }
 
+function mostrarExito(div, mensaje) {
+  div.textContent = mensaje;
+  div.className = "mensaje-exito";
+}
+
+const parametrosURL = new URLSearchParams(window.location.search);
+if (parametrosURL.get("logout") === "true") {
+  mostrarExito(divResultadoLogin, "Sesión cerrada correctamente");
+}
+
 if (formLogin) {
   formLogin.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -23,6 +33,7 @@ if (formLogin) {
     const resultado = iniciarSesion(username, password, usuariosBD);
 
     if (resultado === "Inicio de sesión exitoso") {
+      localStorage.setItem("jwt_token", "token-simulado-emsa-12345");
       window.location.href = "./ciudadano.html";
     } else {
       mostrarError(divResultadoLogin, resultado);

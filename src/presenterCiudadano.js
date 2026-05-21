@@ -3,6 +3,10 @@ import { buscarRutaPorZona } from "./rutas.js";
 import { mostrarHorario } from "./horarios.js";
 import { registrarUsuario } from "./usuarios.js";
 
+if (!localStorage.getItem("jwt_token")) {
+  window.location.href = "./index.html";
+}
+
 // DOM 
 const formReporte = document.querySelector("#reporte-form");
 const divReporte = document.querySelector("#resultado-div");
@@ -126,6 +130,6 @@ if (formRegistroCiudadano) {
 if (btnCerrarSesion) {
   btnCerrarSesion.addEventListener("click", () => {
     localStorage.removeItem("jwt_token");
-    window.location.href = "./index.html";
+    window.location.href = "./index.html?logout=true";
   });
 }

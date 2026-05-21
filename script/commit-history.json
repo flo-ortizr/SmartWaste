@@ -988,17 +988,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "82253ded00150ab21a194a33de4525646e370f7b",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T03:00:22.000Z",
       "message": "feat: Al tocar el boton cerrar sesion, el sistema quita el indicador de sesion activa",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/82253ded00150ab21a194a33de4525646e370f7b"
     },
     "stats": {
       "total": 11,
       "additions": 11,
       "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 87.5,
+    "test_count": 35,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T03:08:43.000Z",
+      "message": "feat: Indicar que la sesion fue cerrada correctamente",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 16,
+      "deletions": 1,
       "date": "2026-05-21"
     },
     "coverage": 87.5,
