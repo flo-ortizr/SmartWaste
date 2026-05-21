@@ -928,9 +928,15 @@
     "testId": 44
   },
   {
-    "commitId": "HEAD",
+    "commitId": "6cf57982c1e987c599bed1edf59a51aecde4e6f2",
     "commitName": "feat: completar detalle de reportes con datos y fotos adjuntas",
     "commitTimestamp": 1779328348636,
     "testId": 44
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar mapa interactivo",
+    "commitTimestamp": 1779329092656,
+    "testId": 45
   }
 ]

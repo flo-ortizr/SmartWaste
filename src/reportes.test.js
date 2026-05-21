@@ -93,19 +93,33 @@ describe("Obtener Detalle de Reporte", () => {
   const reportes = [{
     id: "1",
     zona: "Norte",
-    mensaje: "Basura",
+    mensaje: "Basura en esquina",
     fecha: "2026-04-20",
     estado: "Pendiente",
-    cantidadBasura: "Alta"
+    usuario: "Juan",
+    cantidadBasura: "Alta",
+    fotos: ["img1.jpg", "img2.jpg"],
+    ubicacion: {
+      direccion: "Av. Principal #123",
+      lat: -17.37,
+      lng: -66.15
+    }
   }];
 
   expect(obtenerDetalleReporte("1", reportes)).toEqual({
     id: "1",
     zona: "Norte",
-    mensaje: "Basura",
+    mensaje: "Basura en esquina",
     fecha: "2026-04-20",
     estado: "Pendiente",
-    cantidadBasura: "Alta"
+    usuario: "Juan",
+    cantidadBasura: "Alta",
+    fotos: ["img1.jpg", "img2.jpg"],
+    ubicacion: {
+      direccion: "Av. Principal #123",
+      lat: -17.37,
+      lng: -66.15
+    }
   });
-  });
+});
 });

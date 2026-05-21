@@ -27,7 +27,9 @@ const reportesBD = [
     usuario: "Juan",
     cantidadBasura: "Alta",
     fotos: ["img/basura1.jpg", "img/basura2.jpg"],
-    ubicacion: "Cala Cala Cochabamba Bolivia"
+    ubicacion: "Cala Cala Cochabamba Bolivia",
+    lat: -17.3700,
+    lng: -66.1590
   },
   {
     id: "2",
@@ -38,7 +40,9 @@ const reportesBD = [
     usuario: "Ana",
     cantidadBasura: "Media",
     fotos: ["img/basura3.jpg"],
-    ubicacion: "Muyurina Cochabamba Bolivia"
+    ubicacion: "Muyurina Cochabamba Bolivia",
+    lat: -17.3795,
+    lng: -66.1430
   }
 ];
 
@@ -56,7 +60,7 @@ function validarFormRuta(nombre, zona, dias, cobertura) {
   return null;
 }
 
-// RENDERIZADO 
+// RENDERIZADO
 function mostrarMensaje(elemento, texto, claseCSS) {
   elemento.textContent = texto;
   elemento.className = claseCSS;
@@ -73,16 +77,16 @@ function renderizarListaRutas(resultado, contenedor) {
   }
 
   const ul = document.createElement("ul");
-  resultado.forEach(ruta => {
+  resultado.forEach((ruta) => {
     const li = document.createElement("li");
     li.textContent = `Zona: ${ruta.zona} - Días: ${ruta.dias}`;
     ul.appendChild(li);
   });
-  
+
   contenedor.appendChild(ul);
 }
 
-// EVENTOS 
+// EVENTOS
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
     const resultado = mostrarRutas(rutasBD);
@@ -100,18 +104,18 @@ if (formRuta) {
 
     const errorVista = validarFormRuta(nombre, zona, dias, cobertura);
     if (errorVista) {
-      mostrarMensaje(divRuta, errorVista, "error"); 
+      mostrarMensaje(divRuta, errorVista, "error");
       return;
     }
 
     try {
       const nuevaRuta = crearRuta(nombre, zona, dias, cobertura);
       rutasBD.push(nuevaRuta);
-      mostrarMensaje(divRuta, "Ruta registrada correctamente", "exito"); 
+      mostrarMensaje(divRuta, "Ruta registrada correctamente", "exito");
       formRuta.reset();
-      renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas); 
+      renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
     } catch (error) {
-      mostrarMensaje(divRuta, error.message, "error"); 
+      mostrarMensaje(divRuta, error.message, "error");
     }
   });
 }
@@ -129,15 +133,15 @@ if (btnVerReportes) {
     }
 
     const ul = document.createElement("ul");
-    resumen.forEach(reporte => {
+    resumen.forEach((reporte) => {
       const li = document.createElement("li");
       li.textContent = `Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado} `;
-      
+
       const btn = document.createElement("button");
       btn.className = "btn-detalle";
       btn.setAttribute("data-id", reporte.id);
       btn.textContent = "Ver Detalle";
-      
+
       li.appendChild(btn);
       ul.appendChild(li);
     });
@@ -177,13 +181,12 @@ if (divListaReportes) {
         if (detalle.fotos && detalle.fotos.length > 0) {
           detalle.fotos.forEach((foto) => {
             const img = document.createElement("img");
-            img.src = foto; 
+            img.src = foto;
             img.alt = "Foto del reporte";
             img.width = 120;
             img.style.marginRight = "10px";
             img.style.cursor = "pointer";
 
-            
             img.addEventListener("click", () => {
               const visor = document.createElement("div");
               visor.style.position = "fixed";
@@ -217,13 +220,30 @@ if (divListaReportes) {
           contenedorFotos.appendChild(pSinFotos);
         }
 
+        const tituloMapa = document.createElement("h4");
+        tituloMapa.textContent = "Ubicación del reporte";
+
         const mapa = document.createElement("iframe");
-            mapa.width = "400";
-            mapa.height = "250";
-            mapa.style.border = "0";
-            mapa.loading = "lazy";
-            mapa.referrerPolicy = "no-referrer-when-downgrade";
-            mapa.src = `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}&output=embed`;
+        mapa.width = "400";
+        mapa.height = "250";
+        mapa.style.border = "0";
+        mapa.loading = "lazy";
+        mapa.referrerPolicy = "no-referrer-when-downgrade";
+
+        if (detalle.lat && detalle.lng) {
+          mapa.src = `https://www.google.com/maps?q=${detalle.lat},${detalle.lng}&z=17&output=embed`;
+        } else {
+          mapa.src = `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}&output=embed`;
+        }
+
+        const enlaceMapa = document.createElement("a");
+        if (detalle.lat && detalle.lng) {
+          enlaceMapa.href = `https://www.google.com/maps?q=${detalle.lat},${detalle.lng}`;
+        } else {
+          enlaceMapa.href = `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}`;
+        }
+        enlaceMapa.target = "_blank";
+        enlaceMapa.textContent = "Abrir en Google Maps";
 
         divDetalleReporte.append(
           hr,
@@ -234,10 +254,12 @@ if (divListaReportes) {
           crearParrafo("Cantidad aproximada de basura", detalle.cantidadBasura),
           crearParrafo("Fecha de creación", detalle.fecha),
           crearParrafo("Estado actual", detalle.estado),
-          crearParrafo("Usuario", detalle.usuario),
+          crearParrafo("Nombre del ciudadano", detalle.usuario),
           crearParrafo("Ubicación", detalle.ubicacion),
           contenedorFotos,
-          mapa
+          tituloMapa,
+          mapa,
+          enlaceMapa
         );
       }
     }
@@ -249,11 +271,11 @@ if (btnEliminarRuta) {
     const zona = inputZonaEliminar.value;
     const confirmacion = confirm("¿Está seguro de eliminar esta ruta?");
     const resultado = eliminarRuta(zona, rutasBD, confirmacion);
-    
+
     divResultadoEliminar.textContent = resultado;
-    
+
     if (resultado === "Ruta eliminada correctamente") {
-      renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas); 
+      renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
     }
   });
 }

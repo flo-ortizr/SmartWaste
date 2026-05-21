@@ -836,17 +836,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6cf57982c1e987c599bed1edf59a51aecde4e6f2",
     "author": "User",
     "commit": {
       "date": "2026-05-21T01:52:24.000Z",
       "message": "feat: completar detalle de reportes con datos y fotos adjuntas",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/6cf57982c1e987c599bed1edf59a51aecde4e6f2"
     },
     "stats": {
       "total": 88,
       "additions": 74,
       "deletions": 14,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T02:04:52.000Z",
+      "message": "feat: agregar mapa interactivo",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 98,
+      "additions": 67,
+      "deletions": 31,
       "date": "2026-05-21"
     },
     "coverage": 84.13,
