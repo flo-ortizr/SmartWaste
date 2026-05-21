@@ -25,7 +25,9 @@ const reportesBD = [
     estado: "Pendiente",
     mensaje: "Basura en la esquina",
     usuario: "Juan",
-    cantidadBasura: "Alta"
+    cantidadBasura: "Alta",
+    fotos: ["img/basura1.jpg", "img/basura2.jpg"],
+    ubicacion: "Cala Cala Cochabamba Bolivia"
   },
   {
     id: "2",
@@ -34,7 +36,9 @@ const reportesBD = [
     estado: "Atendido",
     mensaje: "Contenedor lleno",
     usuario: "Ana",
-    cantidadBasura: "Media"
+    cantidadBasura: "Media",
+    fotos: ["img/basura3.jpg"],
+    ubicacion: "Muyurina Cochabamba Bolivia"
   }
 ];
 
@@ -96,20 +100,18 @@ if (formRuta) {
 
     const errorVista = validarFormRuta(nombre, zona, dias, cobertura);
     if (errorVista) {
-      mostrarError(divRuta, errorVista);
+      mostrarMensaje(divRuta, errorVista, "error"); 
       return;
     }
 
     try {
       const nuevaRuta = crearRuta(nombre, zona, dias, cobertura);
-      
       rutasBD.push(nuevaRuta);
-      mostrarExito(divRuta, "Ruta registrada correctamente");
+      mostrarMensaje(divRuta, "Ruta registrada correctamente", "exito"); 
       formRuta.reset();
-      divListaRutas.innerHTML = mostrarRutas(rutasBD);
-      
+      renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas); 
     } catch (error) {
-      mostrarError(divRuta, error.message);
+      mostrarMensaje(divRuta, error.message, "error"); 
     }
   });
 }
@@ -150,9 +152,9 @@ if (divListaReportes) {
     if (event.target.classList.contains("btn-detalle")) {
       const id = event.target.getAttribute("data-id");
       const detalle = obtenerDetalleReporte(id, reportesBD);
-      
+
       if (detalle && divDetalleReporte) {
-        divDetalleReporte.innerHTML = ""; 
+        divDetalleReporte.innerHTML = "";
 
         const hr = document.createElement("hr");
         const h3 = document.createElement("h3");
@@ -163,9 +165,65 @@ if (divListaReportes) {
           const strong = document.createElement("strong");
           strong.textContent = etiqueta + ": ";
           p.appendChild(strong);
-          p.appendChild(document.createTextNode(valor));
+          p.appendChild(document.createTextNode(valor || "No disponible"));
           return p;
         };
+
+        const contenedorFotos = document.createElement("div");
+        const tituloFotos = document.createElement("h4");
+        tituloFotos.textContent = "Fotos adjuntas";
+        contenedorFotos.appendChild(tituloFotos);
+
+        if (detalle.fotos && detalle.fotos.length > 0) {
+          detalle.fotos.forEach((foto) => {
+            const img = document.createElement("img");
+            img.src = foto; 
+            img.alt = "Foto del reporte";
+            img.width = 120;
+            img.style.marginRight = "10px";
+            img.style.cursor = "pointer";
+
+            
+            img.addEventListener("click", () => {
+              const visor = document.createElement("div");
+              visor.style.position = "fixed";
+              visor.style.top = "0";
+              visor.style.left = "0";
+              visor.style.width = "100%";
+              visor.style.height = "100%";
+              visor.style.backgroundColor = "rgba(0,0,0,0.8)";
+              visor.style.display = "flex";
+              visor.style.justifyContent = "center";
+              visor.style.alignItems = "center";
+              visor.style.zIndex = "9999";
+
+              const imagenGrande = document.createElement("img");
+              imagenGrande.src = foto;
+              imagenGrande.alt = "Foto ampliada";
+              imagenGrande.style.maxWidth = "80%";
+              imagenGrande.style.maxHeight = "80%";
+              imagenGrande.style.border = "3px solid white";
+
+              visor.appendChild(imagenGrande);
+              visor.addEventListener("click", () => visor.remove());
+              document.body.appendChild(visor);
+            });
+
+            contenedorFotos.appendChild(img);
+          });
+        } else {
+          const pSinFotos = document.createElement("p");
+          pSinFotos.textContent = "No existen fotos adjuntas";
+          contenedorFotos.appendChild(pSinFotos);
+        }
+
+        const mapa = document.createElement("iframe");
+            mapa.width = "400";
+            mapa.height = "250";
+            mapa.style.border = "0";
+            mapa.loading = "lazy";
+            mapa.referrerPolicy = "no-referrer-when-downgrade";
+            mapa.src = `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}&output=embed`;
 
         divDetalleReporte.append(
           hr,
@@ -176,7 +234,10 @@ if (divListaReportes) {
           crearParrafo("Cantidad aproximada de basura", detalle.cantidadBasura),
           crearParrafo("Fecha de creación", detalle.fecha),
           crearParrafo("Estado actual", detalle.estado),
-          crearParrafo("Usuario", detalle.usuario)
+          crearParrafo("Usuario", detalle.usuario),
+          crearParrafo("Ubicación", detalle.ubicacion),
+          contenedorFotos,
+          mapa
         );
       }
     }
@@ -192,8 +253,7 @@ if (btnEliminarRuta) {
     divResultadoEliminar.textContent = resultado;
     
     if (resultado === "Ruta eliminada correctamente") {
-      const resultadoRutas = mostrarRutas(rutasBD);
-      renderizarListaRutas(resultadoRutas, divListaRutas);
+      renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas); 
     }
   });
 }

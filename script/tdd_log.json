@@ -914,9 +914,23 @@
     "testId": 43
   },
   {
-    "commitId": "HEAD",
+    "commitId": "697f77c797e51c2ad3995aff464fc9883f7e4eb3",
     "commitName": "feat: agregar cantidad de basura al detalle de reportes",
     "commitTimestamp": 1779310657731,
     "testId": 43
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779310966764,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: completar detalle de reportes con datos y fotos adjuntas",
+    "commitTimestamp": 1779328348636,
+    "testId": 44
   }
 ]

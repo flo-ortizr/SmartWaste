@@ -817,18 +817,37 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "697f77c797e51c2ad3995aff464fc9883f7e4eb3",
     "author": "User",
     "commit": {
       "date": "2026-05-20T20:57:37.000Z",
       "message": "feat: agregar cantidad de basura al detalle de reportes",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/697f77c797e51c2ad3995aff464fc9883f7e4eb3"
     },
     "stats": {
       "total": 50,
       "additions": 41,
       "deletions": 9,
       "date": "2026-05-20"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T01:52:24.000Z",
+      "message": "feat: completar detalle de reportes con datos y fotos adjuntas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 88,
+      "additions": 74,
+      "deletions": 14,
+      "date": "2026-05-21"
     },
     "coverage": 84.13,
     "test_count": 27,
