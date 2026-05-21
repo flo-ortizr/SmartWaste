@@ -932,9 +932,23 @@
     "testId": 46
   },
   {
-    "commitId": "HEAD",
+    "commitId": "d8dc6bb226cfb7ca4f4c5d9f75a9b8691874e160",
     "commitName": "feat: Añadiendo mensaje de campos requeridos",
     "commitTimestamp": 1779330328287,
     "testId": 46
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1779330502852,
+    "success": true,
+    "testId": 47
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Añadiendo mensaje y validacion para no poder usar el mismo nombre de usuario si es que ya existe",
+    "commitTimestamp": 1779330544210,
+    "testId": 47
   }
 ]

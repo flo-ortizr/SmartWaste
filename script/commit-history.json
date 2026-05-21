@@ -874,12 +874,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "d8dc6bb226cfb7ca4f4c5d9f75a9b8691874e160",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T02:25:27.000Z",
       "message": "feat: Añadiendo mensaje de campos requeridos",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d8dc6bb226cfb7ca4f4c5d9f75a9b8691874e160"
     },
     "stats": {
       "total": 14,
@@ -889,6 +889,25 @@
     },
     "coverage": 85.07,
     "test_count": 29,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:29:03.000Z",
+      "message": "feat: Añadiendo mensaje y validacion para no poder usar el mismo nombre de usuario si es que ya existe",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 12,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 85.92,
+    "test_count": 30,
     "failed_tests": 0,
     "conclusion": "success"
   }

@@ -14,4 +14,10 @@ describe("Registro de Usuarios", () => {
     let resultado = registrarUsuario("", "", usuariosBD);
     expect(resultado).toEqual("Por favor, complete los campos requeridos");
   });
+
+  it("debería mostrar un mensaje de error si el usuario ya existe", () => {
+    let usuariosBD = [{ username: "samuel", password: "oldpassword" }];
+    let resultado = registrarUsuario("samuel", "newpassword123", usuariosBD);
+    expect(resultado).toEqual("Este usuario ya se encuentra registrado");
+  });
 });
