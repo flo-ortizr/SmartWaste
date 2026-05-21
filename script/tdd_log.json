@@ -1266,7 +1266,7 @@
     "testId": 58
   },
   {
-    "commitId": "HEAD",
+    "commitId": "38df754cb513d25cfbaa2de94ea0a48b9b0a4529",
     "commitName": "fix: login de usuario",
     "commitTimestamp": 1779358128256,
     "testId": 58
@@ -1276,5 +1276,11 @@
     "commitName": "Merge master into main aceptando master",
     "commitTimestamp": 1779358397589,
     "testId": 59
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar configuración de deploy para Netlify",
+    "commitTimestamp": 1779359680443,
+    "testId": 60
   }
 ]

@@ -1330,12 +1330,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "38df754cb513d25cfbaa2de94ea0a48b9b0a4529",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T10:08:47.000Z",
       "message": "fix: login de usuario",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/38df754cb513d25cfbaa2de94ea0a48b9b0a4529"
     },
     "stats": {
       "total": 0,
@@ -1360,6 +1360,25 @@
       "total": 2399,
       "additions": 1977,
       "deletions": 422,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T10:34:39.000Z",
+      "message": "feat: agregar configuración de deploy para Netlify",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 31,
+      "additions": 27,
+      "deletions": 4,
       "date": "2026-05-21"
     },
     "coverage": 71.19,

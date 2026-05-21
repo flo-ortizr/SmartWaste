@@ -1,0 +1,17 @@
+[build]
+  command   = "npm run build"
+  publish   = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirige rutas directas a los HTML compilados
+[[redirects]]
+  from   = "/emsa"
+  to     = "/emsa.html"
+  status = 200
+
+[[redirects]]
+  from   = "/ciudadano"
+  to     = "/ciudadano.html"
+  status = 200
