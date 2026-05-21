@@ -972,9 +972,31 @@
     "testId": 49
   },
   {
-    "commitId": "HEAD",
+    "commitId": "ce8157238dd46b832f9f9dc39fae785e31ff5825",
     "commitName": "feat: mensaje de error si los campos estan vacios",
     "commitTimestamp": 1779331295448,
     "testId": 50
+  },
+  {
+    "numPassedTests": 31,
+    "failedTests": 4,
+    "numTotalTests": 35,
+    "timestamp": 1779331420267,
+    "success": false,
+    "testId": 51
+  },
+  {
+    "numPassedTests": 35,
+    "failedTests": 0,
+    "numTotalTests": 35,
+    "timestamp": 1779331494010,
+    "success": true,
+    "testId": 51
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: mensaje de error si la contrasena o el usuario es incorrecto",
+    "commitTimestamp": 1779331521914,
+    "testId": 51
   }
 ]

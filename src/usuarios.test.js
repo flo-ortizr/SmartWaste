@@ -1,4 +1,4 @@
-import { registrarUsuario } from "./usuarios.js";
+import { registrarUsuario, iniciarSesion } from "./usuarios.js";
 
 describe("Registro de Usuarios", () => {
   it("deberia registrar un usuario correctamente con datos validos", () => {
@@ -39,5 +39,17 @@ describe("Inicio de Sesión", () => {
     let usuariosBD = [{ username: "samuel", password: "password123" }];
     let resultado = iniciarSesion("", "password123", usuariosBD);
     expect(resultado).toEqual("Por favor, complete los campos requeridos");
+  });
+
+  it("debería mostrar un mensaje de error si el usuario no existe", () => {
+    let usuariosBD = [{ username: "samuel", password: "password123" }];
+    let resultado = iniciarSesion("carlos", "password123", usuariosBD);
+    expect(resultado).toEqual("Usuario o contraseña incorrectos");
+  });
+
+  it("debería mostrar un mensaje de error si la contraseña es incorrecta", () => {
+    let usuariosBD = [{ username: "samuel", password: "password123" }];
+    let resultado = iniciarSesion("samuel", "wrongpassword", usuariosBD);
+    expect(resultado).toEqual("Usuario o contraseña incorrectos");
   });
 });

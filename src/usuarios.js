@@ -33,4 +33,6 @@ export function iniciarSesion(username, password, listaDeUsuarios) {
   if (usuarioEncontrado) {
     return "Inicio de sesión exitoso";
   }
+
+  return "Usuario o contraseña incorrectos";
 }

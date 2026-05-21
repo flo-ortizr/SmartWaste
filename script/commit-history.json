@@ -950,12 +950,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "ce8157238dd46b832f9f9dc39fae785e31ff5825",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T02:41:34.000Z",
       "message": "feat: mensaje de error si los campos estan vacios",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/ce8157238dd46b832f9f9dc39fae785e31ff5825"
     },
     "stats": {
       "total": 17,
@@ -967,5 +967,24 @@
     "test_count": 33,
     "failed_tests": 2,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:45:20.000Z",
+      "message": "feat: mensaje de error si la contrasena o el usuario es incorrecto",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 16,
+      "additions": 15,
+      "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 87.5,
+    "test_count": 35,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
