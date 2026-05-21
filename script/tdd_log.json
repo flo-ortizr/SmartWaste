@@ -900,9 +900,39 @@
     "testId": 41
   },
   {
-    "commitId": "HEAD",
+    "commitId": "58073122bac2c5eaccd797b97b046a272e3ca196",
     "commitName": "Merge branch 'Flora-Ortiz'",
     "commitTimestamp": 1779245710840,
     "testId": 42
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 3,
+    "numTotalTests": 30,
+    "timestamp": 1779333454451,
+    "success": false,
+    "testId": 43
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1779333528406,
+    "success": true,
+    "testId": 43
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1779333672094,
+    "success": true,
+    "testId": 43
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: ver reportes de basura acumulado cercanos",
+    "commitTimestamp": 1779333712997,
+    "testId": 43
   }
 ]

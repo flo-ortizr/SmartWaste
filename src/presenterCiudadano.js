@@ -1,4 +1,4 @@
-import crearReporte, { validarFoto } from "./reportes.js";
+import crearReporte, { validarFoto, obtenerReportesCercanos } from "./reportes.js";
 import { buscarRutaPorZona } from "./rutas.js";
 import { mostrarHorario } from "./horarios.js";
 
@@ -16,6 +16,14 @@ const divHorarios = document.querySelector("#resultado-horarios-div");
 const btnBuscarRuta = document.querySelector("#btn-buscar-ruta");
 const inputBuscarZona = document.querySelector("#buscar_zona_ruta");
 const divResultadoBusquedaRuta = document.querySelector("#resultado-busqueda-ruta-div");
+const btnReportesCercanos = document.querySelector("#btn-reportes-cercanos");
+const divReportesCercanos = document.querySelector("#resultado-reportes-cercanos-div");
+
+const reportesGlobalesBD = [
+  { id: "1", zona: "Las Cuadras", fecha: "2026-05-20", estado: "Pendiente", lat: -17.3950, lng: -66.1500 }, // Cerca de la plaza
+  { id: "2", zona: "Pacata", fecha: "2026-05-19", estado: "Atendido", lat: -17.3680, lng: -66.1210 },     // Lejos
+  { id: "3", zona: "Centro", fecha: "2026-05-18", estado: "Pendiente", lat: -17.3920, lng: -66.1560 }     // Muy cerca
+];
 
 const rutasBD = [
   { nombreRuta: "Ruta 1", zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes", cobertura: "Cala Cala" },
@@ -95,5 +103,48 @@ if (btnVerHorarios) {
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
     divResultadoBusquedaRuta.textContent = buscarRutaPorZona(inputBuscarZona.value, rutasBD);
+  });
+}
+
+if (btnReportesCercanos) {
+  btnReportesCercanos.addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      divReportesCercanos.innerHTML = "<p style='color:red'>Tu navegador no soporta geolocalización.</p>";
+      return;
+    }
+
+    divReportesCercanos.innerHTML = "<p>Identificando su ubicación...</p>";
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const ubicacionUsuario = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+
+        const cercanos = obtenerReportesCercanos(ubicacionUsuario, reportesGlobalesBD, 2.0);
+
+        if (cercanos.length === 0) {
+          divReportesCercanos.innerHTML = "<p><strong>No existen reportes de basura acumulada cercanos a su ubicación.</strong></p>";
+          return;
+        }
+
+        let html = "<h4>Reportes detectados en tu radio (2 km):</h4><ul>";
+        cercanos.forEach(rep => {
+          html += `
+            <li>
+              <strong>Zona:</strong> ${rep.zona} | 
+              <strong>Fecha:</strong> ${rep.fecha} | 
+              <strong>Estado:</strong> ${rep.estado} | 
+              <strong>Distancia:</strong> a ${rep.distancia} km de ti
+            </li>`;
+        });
+        html += "</ul>";
+        divReportesCercanos.innerHTML = html;
+      },
+      () => {
+        divReportesCercanos.innerHTML = "<p style='color:red'>No se pudo acceder a tu ubicación actual.</p>";
+      }
+    );
   });
 }

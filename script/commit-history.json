@@ -798,12 +798,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "58073122bac2c5eaccd797b97b046a272e3ca196",
     "author": "Flora",
     "commit": {
       "date": "2026-05-20T02:55:09.000Z",
       "message": "Merge branch 'Flora-Ortiz'",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/58073122bac2c5eaccd797b97b046a272e3ca196"
     },
     "stats": {
       "total": 182,
@@ -813,6 +813,25 @@
     },
     "coverage": 84.13,
     "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-21T03:21:51.000Z",
+      "message": "feat: ver reportes de basura acumulado cercanos",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 145,
+      "additions": 143,
+      "deletions": 2,
+      "date": "2026-05-21"
+    },
+    "coverage": 85.53,
+    "test_count": 30,
     "failed_tests": 0,
     "conclusion": "success"
   }
