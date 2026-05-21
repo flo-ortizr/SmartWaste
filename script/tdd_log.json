@@ -1156,7 +1156,7 @@
     "testId": 48
   },
   {
-    "commitId": "HEAD",
+    "commitId": "7c425c5110477deedeaa363b81205bb0518ab8e6",
     "commitName": "feat: agregar estilos visuales para zonas críticas y normales",
     "commitTimestamp": 1779337934543,
     "testId": 49
@@ -1174,5 +1174,27 @@
     "commitName": "refactor: convertir lógica de zonas en clase ZonaService",
     "commitTimestamp": 1779355211932,
     "testId": 50
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779355226997,
+    "success": true,
+    "testId": 51
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779355377316,
+    "success": true,
+    "testId": 51
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: convertir lógica de reportes en clase ReporteService",
+    "commitTimestamp": 1779355407245,
+    "testId": 51
   }
 ]

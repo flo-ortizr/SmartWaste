@@ -1159,12 +1159,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "7c425c5110477deedeaa363b81205bb0518ab8e6",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T04:32:14.000Z",
       "message": "feat: agregar estilos visuales para zonas críticas y normales",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/7c425c5110477deedeaa363b81205bb0518ab8e6"
     },
     "stats": {
       "total": 14,
@@ -1192,6 +1192,25 @@
       "date": "2026-05-21"
     },
     "coverage": 89.21,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:23:26.000Z",
+      "message": "refactor: convertir lógica de reportes en clase ReporteService",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 165,
+      "additions": 86,
+      "deletions": 79,
+      "date": "2026-05-21"
+    },
+    "coverage": 82.89,
     "test_count": 60,
     "failed_tests": 0,
     "conclusion": "success"
