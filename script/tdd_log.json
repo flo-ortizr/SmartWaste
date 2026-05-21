@@ -906,79 +906,121 @@
     "testId": 42
   },
   {
-    "numPassedTests": 27,
-    "failedTests": 0,
-    "numTotalTests": 27,
-    "timestamp": 1779310426009,
-    "success": true,
+    "commitId": "af2448c83818b8f2a101500356d964842c09cbb8",
+    "commitName": "feat: registro del usuario ciudadano",
+    "commitTimestamp": 1779329622564,
     "testId": 43
   },
   {
-    "commitId": "697f77c797e51c2ad3995aff464fc9883f7e4eb3",
-    "commitName": "feat: agregar cantidad de basura al detalle de reportes",
-    "commitTimestamp": 1779310657731,
-    "testId": 43
-  },
-  {
-    "numPassedTests": 27,
-    "failedTests": 0,
-    "numTotalTests": 27,
-    "timestamp": 1779310966764,
-    "success": true,
+    "commitId": "41ab44ec1d3089066d008c52bec7ea972d0475bc",
+    "commitName": "feat: Actualizando html para el registro de ciudadano",
+    "commitTimestamp": 1779329839729,
     "testId": 44
   },
   {
-    "commitId": "6cf57982c1e987c599bed1edf59a51aecde4e6f2",
-    "commitName": "feat: completar detalle de reportes con datos y fotos adjuntas",
-    "commitTimestamp": 1779328348636,
-    "testId": 44
-  },
-  {
-    "commitId": "840c22c095010dbe030da9c1eb6aa6da1dda9082",
-    "commitName": "feat: agregar mapa interactivo",
-    "commitTimestamp": 1779329092656,
+    "commitId": "94866868b284e54890c0394bde8125eb0d1e558e",
+    "commitName": "feat: actualizando presenter para el registro de ciudadano",
+    "commitTimestamp": 1779330057324,
     "testId": 45
   },
   {
-    "commitId": "2d070f21db302e14ead71000dd67363b7df49124",
-    "commitName": "feat: agregar boton volver en detalle de reportes",
-    "commitTimestamp": 1779330010795,
+    "numPassedTests": 29,
+    "failedTests": 0,
+    "numTotalTests": 29,
+    "timestamp": 1779330249302,
+    "success": true,
     "testId": 46
   },
   {
-    "commitId": "d24b10178ee5b955820ea7b0fa4bce9fa1e14122",
-    "commitName": "feat: agregar boton para marcar reporte como atendido",
-    "commitTimestamp": 1779332145621,
+    "commitId": "d8dc6bb226cfb7ca4f4c5d9f75a9b8691874e160",
+    "commitName": "feat: Añadiendo mensaje de campos requeridos",
+    "commitTimestamp": 1779330328287,
+    "testId": 46
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1779330502852,
+    "success": true,
     "testId": 47
   },
   {
-    "commitId": "96e2e82888512be4fe1fa594a7af2452adca2967",
-    "commitName": "feat: guardar usuario y fecha al marcar reporte como atendido",
-    "commitTimestamp": 1779332451621,
+    "commitId": "1290cf254d2df957bdef2fed1b4b0c3ccc4c1675",
+    "commitName": "feat: Añadiendo mensaje y validacion para no poder usar el mismo nombre de usuario si es que ya existe",
+    "commitTimestamp": 1779330544210,
+    "testId": 47
+  },
+  {
+    "numPassedTests": 31,
+    "failedTests": 0,
+    "numTotalTests": 31,
+    "timestamp": 1779330645280,
+    "success": true,
     "testId": 48
   },
   {
-    "commitId": "a30d1a3b1dd38838462023a680d957b2d33425b7",
-    "commitName": "feat: bloquear cambio de estado en reportes ya atendidos",
-    "commitTimestamp": 1779332758595,
+    "commitId": "96a30c3b8bfb465dff8b54a2daf93a9b87dc3023",
+    "commitName": "feat: Añadiendo mensaje y validacion para que la contrasena supere los 8 caracteres",
+    "commitTimestamp": 1779330677050,
+    "testId": 48
+  },
+  {
+    "commitId": "144386e09a798943348ec403bc1af89b02e0ced7",
+    "commitName": "feat: el sistema autentica al usuario c on credenciales validas",
+    "commitTimestamp": 1779331149944,
     "testId": 49
   },
   {
-    "commitId": "168474867865cbe93388dfb5a99dfb47b36a60d7",
-    "commitName": "feat: mostrar confirmacion visual al actualizar estado del reporte",
-    "commitTimestamp": 1779333068399,
+    "commitId": "ce8157238dd46b832f9f9dc39fae785e31ff5825",
+    "commitName": "feat: mensaje de error si los campos estan vacios",
+    "commitTimestamp": 1779331295448,
     "testId": 50
   },
   {
-    "commitId": "867ea00b514d125e76c10c0a738f7d75ff3c23ac",
-    "commitName": "fix: corregir orden de reset en mensajeeStadoreporte y refactorizar presenterEmsa",
-    "commitTimestamp": 1779333384028,
+    "numPassedTests": 31,
+    "failedTests": 4,
+    "numTotalTests": 35,
+    "timestamp": 1779331420267,
+    "success": false,
     "testId": 51
   },
   {
-    "commitId": "HEAD",
-    "commitName": "refactor : ordenar  acciones del detalle de reportes emsa",
-    "commitTimestamp": 1779333896339,
+    "numPassedTests": 35,
+    "failedTests": 0,
+    "numTotalTests": 35,
+    "timestamp": 1779331494010,
+    "success": true,
+    "testId": 51
+  },
+  {
+    "commitId": "f50a3ee7fd4b125aa8ce579aa4274e7f693f662f",
+    "commitName": "feat: mensaje de error si la contrasena o el usuario es incorrecto",
+    "commitTimestamp": 1779331521914,
+    "testId": 51
+  },
+  {
+    "commitId": "82253ded00150ab21a194a33de4525646e370f7b",
+    "commitName": "feat: Al tocar el boton cerrar sesion, el sistema quita el indicador de sesion activa",
+    "commitTimestamp": 1779332423318,
     "testId": 52
+  },
+  {
+    "commitId": "c4249be23d814ee419f6d3a673aa4938370d10ac",
+    "commitName": "feat: Indicar que la sesion fue cerrada correctamente",
+    "commitTimestamp": 1779332924510,
+    "testId": 53
+  },
+  {
+    "commitId": "2f8b3958f397cc906b388ddfdcac4e54bf6069a5",
+    "commitName": "Merge branch Dabner-Orozco",
+    "commitTimestamp": 1779333059842,
+    "testId": 54
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "merge master",
+    "commitTimestamp": 1779334351888,
+    "testId": 55
   }
 ]

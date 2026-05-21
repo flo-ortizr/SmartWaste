@@ -5,11 +5,14 @@
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <button id="btn-cerrar-sesion">Cerrar sesión</button>
+    <hr />
+    
     <h2>Buscar Ruta de Recolección</h2>
     <label for="buscar_zona_ruta">Ingresa tu zona:</label>
     <input type="text" id="buscar_zona_ruta" />
     <button id="btn-buscar-ruta">Buscar Ruta</button>
-    <div id="resultado-busqueda-ruta-div"></div>
+    <div id="resultado-busqueda-ruta-div"></div> //
     <hr />
     <h2>Horarios de Recolección</h2>
     <label for="zona_horario">Zona:</label>
@@ -57,6 +60,19 @@
     </form>
 
     <div id="resultado-div"></div>
+
+    <hr />
+    <h2>Registro de Ciudadano</h2>
+    <form id="registro-ciudadano-form">
+      <label for="username_registro">Usuario:</label>
+      <input type="text" id="username_registro" />
+      <br /><br />
+      <label for="password_registro">Contraseña:</label>
+      <input type="password" id="password_registro" />
+      <br /><br />
+      <input type="submit" value="Registrarme" />
+    </form>
+    <div id="resultado-registro-div"></div>
 
     <script type="module" src="./src/presenterCiudadano.js"></script>
   </body>
