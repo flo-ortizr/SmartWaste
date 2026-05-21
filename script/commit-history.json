@@ -931,12 +931,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "144386e09a798943348ec403bc1af89b02e0ced7",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T02:39:08.000Z",
       "message": "feat: el sistema autentica al usuario c on credenciales validas",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/144386e09a798943348ec403bc1af89b02e0ced7"
     },
     "stats": {
       "total": 69,
@@ -947,6 +947,25 @@
     "coverage": 81.82,
     "test_count": 32,
     "failed_tests": 1,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:41:34.000Z",
+      "message": "feat: mensaje de error si los campos estan vacios",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 17,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 79.75,
+    "test_count": 33,
+    "failed_tests": 2,
     "conclusion": "failure"
   }
 ]

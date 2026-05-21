@@ -9,6 +9,11 @@ const usuariosBD = [
   { username: "samuel", password: "password123" }
 ];
 
+function mostrarError(div, mensaje) {
+  div.textContent = mensaje;
+  div.className = "mensaje-error";
+}
+
 if (formLogin) {
   formLogin.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -19,6 +24,8 @@ if (formLogin) {
 
     if (resultado === "Inicio de sesión exitoso") {
       window.location.href = "./ciudadano.html";
+    } else {
+      mostrarError(divResultadoLogin, resultado);
     }
   });
 }

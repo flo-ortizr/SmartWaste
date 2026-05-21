@@ -966,9 +966,15 @@
     "testId": 48
   },
   {
-    "commitId": "HEAD",
+    "commitId": "144386e09a798943348ec403bc1af89b02e0ced7",
     "commitName": "feat: el sistema autentica al usuario c on credenciales validas",
     "commitTimestamp": 1779331149944,
     "testId": 49
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: mensaje de error si los campos estan vacios",
+    "commitTimestamp": 1779331295448,
+    "testId": 50
   }
 ]

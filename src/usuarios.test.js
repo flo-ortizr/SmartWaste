@@ -34,4 +34,10 @@ describe("Inicio de Sesión", () => {
     let resultado = iniciarSesion("samuel", "password123", usuariosBD);
     expect(resultado).toEqual("Inicio de sesión exitoso");
   });
+
+  it("debería mostrar un mensaje de error si los campos están vacíos", () => {
+    let usuariosBD = [{ username: "samuel", password: "password123" }];
+    let resultado = iniciarSesion("", "password123", usuariosBD);
+    expect(resultado).toEqual("Por favor, complete los campos requeridos");
+  });
 });

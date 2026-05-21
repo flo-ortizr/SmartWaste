@@ -22,6 +22,10 @@ export function registrarUsuario(username, password, listaDeUsuarios) {
 }
 
 export function iniciarSesion(username, password, listaDeUsuarios) {
+  if (!username || username.trim() === "" || !password || password.trim() === "") {
+    return "Por favor, complete los campos requeridos";
+  }
+
   const usuarioEncontrado = listaDeUsuarios.find(
     u => u.username === username && u.password === password
   );
