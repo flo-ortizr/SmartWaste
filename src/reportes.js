@@ -23,19 +23,6 @@ function crearReporte({ zona, mensaje, fecha }) {
 
 }
 
-export function validarFoto(archivo) {
-  if (!archivo) 
-  {
-    return "Por favor, seleccione una foto";
-  }
-
-  if (!archivo.type || !archivo.type.startsWith("image/")) {
-    return "El archivo seleccionado no es una imagen válida";
-  }
-
-  return "Foto válida";
-}
-
 export function obtenerResumenReportes(listaReportes) {
   if (!listaReportes || listaReportes.length === 0) {
     return []; 
@@ -94,5 +81,24 @@ export function obtenerReportesCercanos(ubicacionUsuario, listaReportes, radioMa
       distancia: parseFloat(reporte.distancia.toFixed(2))
     }));
 }
+
+export function validarFoto(archivo) {
+  if (!archivo) {
+    return "Por favor, seleccione una foto";
+  }
+
+  const formatosValidos = ["image/jpeg", "image/jpg", "image/png"];
+  if (!archivo.type || !formatosValidos.includes(archivo.type)) {
+    return "El archivo seleccionado no es una imagen válida";
+  }
+
+  const TAMANO_MAXIMO_BYTES = 5 * 1024 * 1024;
+  if (archivo.size > TAMANO_MAXIMO_BYTES) {
+    return "El tamaño del archivo excede el límite permitido";
+  }
+
+  return "Foto válida";
+}
+
 
 export default crearReporte;

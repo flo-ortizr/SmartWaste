@@ -184,3 +184,24 @@ if (btnReportesCercanos) {
     );
   });
 }
+
+if (inputFotoReporte) {
+  inputFotoReporte.addEventListener("change", () => {
+    const archivo = inputFotoReporte.files[0];
+
+    divVistaPreviaFoto.innerHTML = "";
+    divReporte.innerHTML = "";
+
+    if (!archivo) return;
+
+    const validacion = validarFoto(archivo);
+
+    if (validacion !== "Foto válida") {
+      mostrarError(divReporte, validacion);
+      inputFotoReporte.value = "";
+      return;
+    }
+
+    mostrarVistaPreviaFoto(archivo);
+  });
+}

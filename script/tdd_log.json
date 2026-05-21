@@ -1024,9 +1024,99 @@
     "testId": 55
   },
   {
+    "commitId": "65649cc5c570bb7edf8234e62bc833b3ac620fec",
+    "commitName": "feat: ver reportes de basura acumulado cercanos",
+    "commitTimestamp": 1779333712997,
+    "testId": 43
+  },
+  {
+    "commitId": "8ed31beea51737f347c9df4c08e20d7437286b24",
+    "commitName": "Merge branch 'Flora-Ortiz'",
+    "commitTimestamp": 1779334215035,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 39,
+    "failedTests": 2,
+    "numTotalTests": 41,
+    "timestamp": 1779334707958,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 23,
+    "failedTests": 0,
+    "numTotalTests": 23,
+    "timestamp": 1779334738840,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779334782297,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779334841071,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779335108312,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779335189834,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779335215464,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779335258979,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 41,
+    "failedTests": 0,
+    "numTotalTests": 41,
+    "timestamp": 1779335284496,
+    "success": true,
+    "testId": 45
+  },
+  {
     "commitId": "HEAD",
-    "commitName": "fix: resolver conflictos de merge con rama Oriana-Flores",
-    "commitTimestamp": 1779335507902,
-    "testId": 56
+    "commitName": "feat: importar foto",
+    "commitTimestamp": 1779335440484,
+    "testId": 45
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: resolver conflictos tras pull de master",
+    "commitTimestamp": 1779335700702,
+    "testId": 46
   }
 ]
