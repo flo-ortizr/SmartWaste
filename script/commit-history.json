@@ -1045,12 +1045,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "65649cc5c570bb7edf8234e62bc833b3ac620fec",
     "author": "Flora",
     "commit": {
       "date": "2026-05-21T03:21:51.000Z",
       "message": "feat: ver reportes de basura acumulado cercanos",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/65649cc5c570bb7edf8234e62bc833b3ac620fec"
     },
     "stats": {
       "total": 145,
@@ -1079,6 +1079,25 @@
     },
     "coverage": 88.17,
     "test_count": 38,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-21T03:50:38.000Z",
+      "message": "feat: importar foto",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 80,
+      "additions": 66,
+      "deletions": 14,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
     "failed_tests": 0,
     "conclusion": "success"
   }

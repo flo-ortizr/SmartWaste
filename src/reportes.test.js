@@ -142,3 +142,28 @@ describe("Obtener Reportes Cercanos", () => {
     expect(resultado[0]).toHaveProperty("estado");
   });
 });
+
+
+
+describe(" Validación de Foto Importada", () => {
+  test("debería aceptar un formato válido como JPG o PNG", () => {
+    const imagenJpg = { type: "image/jpeg", size: 1024 * 1024 }; // 1mb
+    const imagenPng = { type: "image/png", size: 1024 * 1024 };  
+    
+    expect(validarFoto(imagenJpg)).toBe("Foto válida");
+    expect(validarFoto(imagenPng)).toBe("Foto válida");
+  });
+
+  test("debería rechazar formatos no permitidos aunque sean imágenes (ej: GIF o WEBP)", () => {
+    const imagenGif = { type: "image/gif", size: 1024 * 1024 };
+    const resultado = validarFoto(imagenGif);
+    expect(resultado).toBe("El archivo seleccionado no es una imagen válida");
+  });
+
+  test("debería rechazar la imagen si excede el tamaño máximo permitido (5MB)", () => {
+    const archivoPesado = { type: "image/jpeg", size: 6 * 1024 * 1024 }; 
+    const resultado = validarFoto(archivoPesado);
+    
+    expect(resultado).toBe("El tamaño del archivo excede el límite permitido");
+  });
+});
