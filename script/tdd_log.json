@@ -918,9 +918,23 @@
     "testId": 44
   },
   {
-    "commitId": "HEAD",
+    "commitId": "94866868b284e54890c0394bde8125eb0d1e558e",
     "commitName": "feat: actualizando presenter para el registro de ciudadano",
     "commitTimestamp": 1779330057324,
     "testId": 45
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 0,
+    "numTotalTests": 29,
+    "timestamp": 1779330249302,
+    "success": true,
+    "testId": 46
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Añadiendo mensaje de campos requeridos",
+    "commitTimestamp": 1779330328287,
+    "testId": 46
   }
 ]

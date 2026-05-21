@@ -855,12 +855,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "94866868b284e54890c0394bde8125eb0d1e558e",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T02:20:56.000Z",
       "message": "feat: actualizando presenter para el registro de ciudadano",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/94866868b284e54890c0394bde8125eb0d1e558e"
     },
     "stats": {
       "total": 24,
@@ -870,6 +870,25 @@
     },
     "coverage": 84.62,
     "test_count": 28,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:25:27.000Z",
+      "message": "feat: Añadiendo mensaje de campos requeridos",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 12,
+      "deletions": 2,
+      "date": "2026-05-21"
+    },
+    "coverage": 85.07,
+    "test_count": 29,
     "failed_tests": 0,
     "conclusion": "success"
   }
