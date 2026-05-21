@@ -1026,12 +1026,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "d5eb4e6c434fe02bef660233ed4ad52147187b67",
+    "sha": "2f8b3958f397cc906b388ddfdcac4e54bf6069a5",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T03:10:59.000Z",
       "message": "Merge branch Dabner-Orozco",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d5eb4e6c434fe02bef660233ed4ad52147187b67"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/2f8b3958f397cc906b388ddfdcac4e54bf6069a5"
     },
     "stats": {
       "total": 2,
@@ -1045,36 +1045,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
-    "author": "Flora",
+    "sha": "65649cc5c570bb7edf8234e62bc833b3ac620fec",
+    "author": "User",
     "commit": {
-      "date": "2026-05-21T03:21:51.000Z",
-      "message": "feat: ver reportes de basura acumulado cercanos",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "date": "2026-05-21T03:32:31.000Z",
+      "message": "merge master",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/65649cc5c570bb7edf8234e62bc833b3ac620fec"
     },
     "stats": {
-      "total": 145,
-      "additions": 143,
+      "total": 216,
+      "additions": 214,
       "deletions": 2,
       "date": "2026-05-21"
     },
-    "coverage": 85.53,
-    "test_count": 30,
+    "coverage": 87.5,
+    "test_count": 35,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
     "sha": "HEAD",
-    "author": "Flora",
+    "author": "User",
     "commit": {
-      "date": "2026-05-21T03:30:13.000Z",
-      "message": "Merge branch 'Flora-Ortiz'",
+      "date": "2026-05-21T03:51:47.000Z",
+      "message": "fix: resolver conflictos de merge con rama Oriana-Flores",
       "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
     },
     "stats": {
-      "total": 145,
-      "additions": 143,
-      "deletions": 2,
+      "total": 272,
+      "additions": 224,
+      "deletions": 48,
       "date": "2026-05-21"
     },
     "coverage": 88.17,
