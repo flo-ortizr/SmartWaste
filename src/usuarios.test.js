@@ -27,3 +27,11 @@ describe("Registro de Usuarios", () => {
     expect(resultado).toEqual("La contraseña debe tener al menos 8 caracteres");
   });
 });
+
+describe("Inicio de Sesión", () => {
+  it("debería autenticar correctamente con credenciales válidas", () => {
+    let usuariosBD = [{ username: "samuel", password: "password123" }];
+    let resultado = iniciarSesion("samuel", "password123", usuariosBD);
+    expect(resultado).toEqual("Inicio de sesión exitoso");
+  });
+});

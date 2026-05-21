@@ -960,9 +960,15 @@
     "testId": 48
   },
   {
-    "commitId": "HEAD",
+    "commitId": "96a30c3b8bfb465dff8b54a2daf93a9b87dc3023",
     "commitName": "feat: Añadiendo mensaje y validacion para que la contrasena supere los 8 caracteres",
     "commitTimestamp": 1779330677050,
     "testId": 48
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: el sistema autentica al usuario c on credenciales validas",
+    "commitTimestamp": 1779331149944,
+    "testId": 49
   }
 ]

@@ -912,12 +912,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "96a30c3b8bfb465dff8b54a2daf93a9b87dc3023",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T02:31:15.000Z",
       "message": "feat: Añadiendo mensaje y validacion para que la contrasena supere los 8 caracteres",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/96a30c3b8bfb465dff8b54a2daf93a9b87dc3023"
     },
     "stats": {
       "total": 10,
@@ -929,5 +929,24 @@
     "test_count": 31,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:39:08.000Z",
+      "message": "feat: el sistema autentica al usuario c on credenciales validas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 69,
+      "additions": 68,
+      "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 81.82,
+    "test_count": 32,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]

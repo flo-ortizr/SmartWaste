@@ -20,3 +20,13 @@ export function registrarUsuario(username, password, listaDeUsuarios) {
 
   return "Usuario registrado correctamente";
 }
+
+export function iniciarSesion(username, password, listaDeUsuarios) {
+  const usuarioEncontrado = listaDeUsuarios.find(
+    u => u.username === username && u.password === password
+  );
+
+  if (usuarioEncontrado) {
+    return "Inicio de sesión exitoso";
+  }
+}
