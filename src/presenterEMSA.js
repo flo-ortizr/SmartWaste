@@ -2,46 +2,21 @@ import { mostrarRutas, crearRuta, eliminarRuta } from "./rutas.js";
 import { ReporteService, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 import { ZonaService } from "./zonas.js";
 
-<<<<<<< HEAD
 const _token = localStorage.getItem("jwt_token");
 const _rol   = localStorage.getItem("smartwaste_rol");
 if (!_token)         window.location.href = "./index.html";
 if (_rol !== "emsa") window.location.href = "./ciudadano.html";
-=======
-// DOM
-const btnVerRutas = document.querySelector("#btn-ver-rutas");
-const divListaRutas = document.querySelector("#lista-rutas-div");
-const formRuta = document.querySelector("#ruta-form");
-const divRuta = document.querySelector("#resultado-ruta-div");
-const inputNombreRuta = document.querySelector("#nombre_ruta");
-const inputZonaRuta = document.querySelector("#zona_ruta");
-const inputDiasRuta = document.querySelector("#dias_ruta");
-const inputCoberturaRuta = document.querySelector("#cobertura_ruta");
-const btnVerReportes = document.querySelector("#btn-ver-reportes");
-const divListaReportes = document.querySelector("#lista-reportes-div");
-const divDetalleReporte = document.querySelector("#detalle-reporte-div");
-const btnEliminarRuta = document.querySelector("#btn-eliminar-ruta");
-const inputZonaEliminar = document.querySelector("#zona_eliminar");
-const divResultadoEliminar = document.querySelector("#resultado-eliminar-div");
-const formularioModificarRutaEmsa = document.querySelector("#formulario-modificar-ruta");
-const entradaIdentificadorRutaModificar = document.querySelector("#identificador_ruta_modificar");
-const entradaNombreRutaModificar = document.querySelector("#nombre_ruta_modificar");
-const entradaZonaRutaModificar = document.querySelector("#zona_ruta_modificar");
-const entradaDiasRutaModificar = document.querySelector("#dias_ruta_modificar");
-const entradaCoberturaRutaModificar = document.querySelector("#cobertura_ruta_modificar");
-const contenedorResultadoModificacionRuta = document.querySelector("#resultado-modificacion-ruta-div");
->>>>>>> Andres-andrade2
 
-// ── Datos ─────────────────────────────────────────────────────────────────────
+// Datos
 const reportesBD = [
-  { id: "1", zona: "Cala Cala",  fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina",             usuario: "Juan",  cantidadBasura: "Alta",  fotos: ["img/basura1.jpg", "img/basura2.jpg"], ubicacion: "Cala Cala Cochabamba", lat: -17.3700, lng: -66.1590, atendidoPor: "", fechaAtencion: "" },
-  { id: "2", zona: "Muyurina",   fecha: "2026-04-19", estado: "Atendido",  mensaje: "Contenedor lleno",                 usuario: "Ana",   cantidadBasura: "Media", fotos: ["img/basura3.jpg"],                    ubicacion: "Muyurina Cochabamba",   lat: -17.3795, lng: -66.1430, atendidoPor: "Personal EMSA", fechaAtencion: "2026-04-19 14:30" },
-  { id: "3", zona: "Cala Cala",  fecha: "2026-04-20", estado: "Pendiente", mensaje: "Acumulación frente al mercado",    usuario: "Luis",  cantidadBasura: "Alta",  fotos: [],                                     ubicacion: "Cala Cala Cochabamba", lat: -17.3710, lng: -66.1600, atendidoPor: "", fechaAtencion: "" },
-  { id: "4", zona: "Cala Cala",  fecha: "2026-04-21", estado: "Pendiente", mensaje: "Desmonte sin recoger",             usuario: "María", cantidadBasura: "Baja",  fotos: [],                                     ubicacion: "Cala Cala Cochabamba", lat: -17.3720, lng: -66.1580, atendidoPor: "", fechaAtencion: "" },
-  { id: "5", zona: "Tupuraya",   fecha: "2026-04-22", estado: "Pendiente", mensaje: "Basura en la calle principal",     usuario: "Pedro", cantidadBasura: "Alta",  fotos: [],                                     ubicacion: "Tupuraya Cochabamba",   lat: -17.3800, lng: -66.1700, atendidoPor: "", fechaAtencion: "" },
-  { id: "6", zona: "Tupuraya",   fecha: "2026-04-23", estado: "Pendiente", mensaje: "Contenedor desbordado",            usuario: "Sofía", cantidadBasura: "Media", fotos: [],                                     ubicacion: "Tupuraya Cochabamba",   lat: -17.3810, lng: -66.1710, atendidoPor: "", fechaAtencion: "" },
-  { id: "7", zona: "Tupuraya",   fecha: "2026-04-24", estado: "Pendiente", mensaje: "Sin recolección hace 3 días",      usuario: "Carlos",cantidadBasura: "Alta",  fotos: [],                                     ubicacion: "Tupuraya Cochabamba",   lat: -17.3820, lng: -66.1720, atendidoPor: "", fechaAtencion: "" },
-  { id: "8", zona: "Muyurina",   fecha: "2026-04-25", estado: "Pendiente", mensaje: "Bolsas en la vereda",              usuario: "Elena", cantidadBasura: "Baja",  fotos: [],                                     ubicacion: "Muyurina Cochabamba",   lat: -17.3790, lng: -66.1440, atendidoPor: "", fechaAtencion: "" }
+  { id: "1", zona: "Cala Cala",  fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina",            usuario: "Juan",  cantidadBasura: "Alta",  fotos: ["img/basura1.jpg", "img/basura2.jpg"], ubicacion: "Cala Cala Cochabamba", lat: -17.3700, lng: -66.1590, atendidoPor: "", fechaAtencion: "" },
+  { id: "2", zona: "Muyurina",   fecha: "2026-04-19", estado: "Atendido",  mensaje: "Contenedor lleno",                usuario: "Ana",   cantidadBasura: "Media", fotos: ["img/basura3.jpg"],                    ubicacion: "Muyurina Cochabamba",   lat: -17.3795, lng: -66.1430, atendidoPor: "Personal EMSA", fechaAtencion: "2026-04-19 14:30" },
+  { id: "3", zona: "Cala Cala",  fecha: "2026-04-20", estado: "Pendiente", mensaje: "Acumulación frente al mercado",    usuario: "Luis",  cantidadBasura: "Alta",  fotos: [],                                      ubicacion: "Cala Cala Cochabamba", lat: -17.3710, lng: -66.1600, atendidoPor: "", fechaAtencion: "" },
+  { id: "4", zona: "Cala Cala",  fecha: "2026-04-21", estado: "Pendiente", mensaje: "Desmonte sin recoger",             usuario: "María", cantidadBasura: "Baja",  fotos: [],                                      ubicacion: "Cala Cala Cochabamba", lat: -17.3720, lng: -66.1580, atendidoPor: "", fechaAtencion: "" },
+  { id: "5", zona: "Tupuraya",   fecha: "2026-04-22", estado: "Pendiente", mensaje: "Basura en la calle principal",     usuario: "Pedro", cantidadBasura: "Alta",  fotos: [],                                      ubicacion: "Tupuraya Cochabamba",   lat: -17.3800, lng: -66.1700, atendidoPor: "", fechaAtencion: "" },
+  { id: "6", zona: "Tupuraya",   fecha: "2026-04-23", estado: "Pendiente", mensaje: "Contenedor desbordado",            usuario: "Sofía", cantidadBasura: "Media", fotos: [],                                      ubicacion: "Tupuraya Cochabamba",   lat: -17.3810, lng: -66.1710, atendidoPor: "", fechaAtencion: "" },
+  { id: "7", zona: "Tupuraya",   fecha: "2026-04-24", estado: "Pendiente", mensaje: "Sin recolección hace 3 días",      usuario: "Carlos",cantidadBasura: "Alta",  fotos: [],                                      ubicacion: "Tupuraya Cochabamba",   lat: -17.3820, lng: -66.1720, atendidoPor: "", fechaAtencion: "" },
+  { id: "8", zona: "Muyurina",   fecha: "2026-04-25", estado: "Pendiente", mensaje: "Bolsas en la vereda",              usuario: "Elena", cantidadBasura: "Baja",  fotos: [],                                      ubicacion: "Muyurina Cochabamba",   lat: -17.3790, lng: -66.1440, atendidoPor: "", fechaAtencion: "" }
 ];
 
 const rutasBD = [
@@ -54,6 +29,8 @@ const reporteService = new ReporteService(reportesBD);
 const zonaService = new ZonaService(reportesBD);
 
 const $ = id => document.querySelector(id);
+
+// DOM
 const btnVerRutas       = $("#btn-ver-rutas");
 const divListaRutas     = $("#lista-rutas-div");
 const formRuta          = $("#ruta-form");
@@ -73,6 +50,14 @@ const selectOrdenZonas  = $("#orden-zonas");
 const divListaZonas     = $("#lista-zonas-div");
 const divReportesZona   = $("#reportes-zona-div");
 
+const formularioModificarRutaEmsa = $("#formulario-modificar-ruta");
+const entradaIdentificadorRutaModificar = $("#identificador_ruta_modificar");
+const entradaNombreRutaModificar = $("#nombre_ruta_modificar");
+const entradaZonaRutaModificar = $("#zona_ruta_modificar");
+const entradaDiasRutaModificar = $("#dias_ruta_modificar");
+const entradaCoberturaRutaModificar = $("#cobertura_ruta_modificar");
+const contenedorResultadoModificacionRuta = $("#resultado-modificacion-ruta-div");
+const btnCerrarSesionEMSA = $("#btn-cerrar-sesion");
 
 function mostrarMensaje(elemento, texto, tipo) {
   elemento.textContent = texto;
@@ -88,7 +73,6 @@ function crearParrafo(etiqueta, valor) {
   return p;
 }
 
-<<<<<<< HEAD
 function validarFormRuta(nombre, zona, dias, cobertura) {
   if (!nombre || nombre.trim() === "") return "Por favor, ingrese un nombre de ruta";
   if (!zona   || zona.trim()   === "") return "Por favor, ingrese una zona";
@@ -154,7 +138,7 @@ function renderizarReportesDeZona(zona, contenedor) {
   contenedor.appendChild(ul);
 }
 
-// ── Renderizado de Rutas ──────────────────────────────────────────────────────
+// Renderizar Rutas
 function renderizarListaRutas(resultado, contenedor) {
   contenedor.innerHTML = "";
   if (typeof resultado === "string") {
@@ -163,41 +147,21 @@ function renderizarListaRutas(resultado, contenedor) {
   }
   const ul = document.createElement("ul");
   ul.className = "lista-rutas";
-  resultado.forEach(ruta => {
+  resultado.forEach((ruta, indiceDeArregloRuta) => {
     const li = document.createElement("li");
     li.className = "ruta-item";
     li.innerHTML = `<strong>${ruta.nombreRuta}</strong> — Zona: ${ruta.zona} | Días: ${ruta.dias}`;
-    ul.appendChild(li);
-  });
-  contenedor.appendChild(ul);
-=======
-function renderizarListaRutas(resultadoRutasObtenidas, contenedorListadoRutas) {
-  contenedorListadoRutas.textContent = "";
-
-  if (typeof resultadoRutasObtenidas === "string") {
-    const parrafoMensajeCadena = document.createElement("p");
-    parrafoMensajeCadena.textContent = resultadoRutasObtenidas;
-    contenedorListadoRutas.appendChild(parrafoMensajeCadena);
-    return;
-  }
-
-  const listaDesordenadaRutas = document.createElement("ul");
-  
-  resultadoRutasObtenidas.forEach((rutaIndividualRecuperada, indiceDeArregloRuta) => {
-    const elementoListaRuta = document.createElement("li");
-    elementoListaRuta.textContent = `Zona: ${rutaIndividualRecuperada.zona} - Días: ${rutaIndividualRecuperada.dias} `;
     
     const botonSeleccionarModificarRuta = document.createElement("button");
     botonSeleccionarModificarRuta.textContent = "Editar";
-    botonSeleccionarModificarRuta.className = "btn-editar-ruta";
+    botonSeleccionarModificarRuta.className = "btn btn-secundario btn-editar-ruta";
+    botonSeleccionarModificarRuta.style.marginLeft = "12px";
     botonSeleccionarModificarRuta.setAttribute("data-indice-ruta", indiceDeArregloRuta);
 
-    elementoListaRuta.appendChild(botonSeleccionarModificarRuta);
-    listaDesordenadaRutas.appendChild(elementoListaRuta);
+    li.appendChild(botonSeleccionarModificarRuta);
+    ul.appendChild(li);
   });
-  
-  contenedorListadoRutas.appendChild(listaDesordenadaRutas);
->>>>>>> Andres-andrade2
+  contenedor.appendChild(ul);
 }
 
 function crearVisorFoto(foto) {
@@ -277,44 +241,17 @@ function crearBotonAtender(detalle) {
 }
 
 function renderizarDetalleReporte(detalle) {
-<<<<<<< HEAD
   divDetalleReporte.innerHTML = "";
   const card = document.createElement("div");
   card.className = "detalle-card";
-=======
-  divDetalleReporte.textContent = "";
-
-  const hr = document.createElement("hr");
->>>>>>> Andres-andrade2
   const h3 = document.createElement("h3");
   h3.textContent = "Detalle del Reporte";
   const { titulo: tituloMapa, mapa, enlace } = crearSeccionMapa(detalle);
   const btnVolver = document.createElement("button");
-<<<<<<< HEAD
   btnVolver.textContent = "← Volver";
   btnVolver.className = "btn btn-secundario";
   btnVolver.addEventListener("click", () => { divDetalleReporte.innerHTML = ""; });
   card.append(
-=======
-  btnVolver.textContent = "Volver";
-  btnVolver.addEventListener("click", () => {
-    divDetalleReporte.textContent = "";
-  });
-
-  const accionesDetalle = document.createElement("div");
-  accionesDetalle.style.marginTop = "12px";
-
-  enlaceMapa.style.display = "inline-block";
-  enlaceMapa.style.marginRight = "10px";
-  btnVolver.style.marginRight = "10px";
-
-  accionesDetalle.appendChild(enlaceMapa);
-  accionesDetalle.appendChild(btnVolver);
-  accionesDetalle.appendChild(btnAtender);
-
-  divDetalleReporte.append(
-    hr,
->>>>>>> Andres-andrade2
     h3,
     crearParrafo("ID", detalle.id),
     crearParrafo("Zona", detalle.zona),
@@ -335,7 +272,6 @@ function renderizarDetalleReporte(detalle) {
   );
   divDetalleReporte.appendChild(card);
 }
-
 
 function renderizarListaReportes(resumen, contenedor) {
   contenedor.innerHTML = "";
@@ -359,7 +295,7 @@ function renderizarListaReportes(resumen, contenedor) {
   contenedor.appendChild(ul);
 }
 
-// ── Eventos ───────────────────────────────────────────────────────────────────
+// Eventos
 if (btnVerZonas) {
   btnVerZonas.addEventListener("click", mostrarZonasOrdenadas);
 }
@@ -407,36 +343,8 @@ if (formRuta) {
 if (btnVerReportes) {
   btnVerReportes.addEventListener("click", () => {
     const resumen = obtenerResumenReportes(reportesBD);
-<<<<<<< HEAD
     renderizarListaReportes(resumen, divListaReportes);
     if (divDetalleReporte) divDetalleReporte.innerHTML = "";
-=======
-    divListaReportes.textContent = "";
-
-    if (resumen.length === 0) {
-      const p = document.createElement("p");
-      p.textContent = "No existen reportes registrados";
-      divListaReportes.appendChild(p);
-      return;
-    }
-
-    const ul = document.createElement("ul");
-    resumen.forEach((reporte) => {
-      const li = document.createElement("li");
-      li.textContent = `Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado} `;
-
-      const btn = document.createElement("button");
-      btn.className = "btn-detalle";
-      btn.setAttribute("data-id", reporte.id);
-      btn.textContent = "Ver Detalle";
-
-      li.appendChild(btn);
-      ul.appendChild(li);
-    });
-
-    divListaReportes.appendChild(ul);
-    if (divDetalleReporte) divDetalleReporte.textContent = "";
->>>>>>> Andres-andrade2
   });
 }
 
@@ -461,9 +369,7 @@ if (btnEliminarRuta) {
     }
   });
 }
-<<<<<<< HEAD
 
-const btnCerrarSesionEMSA = document.querySelector("#btn-cerrar-sesion");
 if (btnCerrarSesionEMSA) {
   btnCerrarSesionEMSA.addEventListener("click", () => {
     localStorage.removeItem("jwt_token");
@@ -471,7 +377,7 @@ if (btnCerrarSesionEMSA) {
     window.location.href = "./index.html?logout=true";
   });
 }
-=======
+
 if (divListaRutas) {
   divListaRutas.addEventListener("click", (eventoInteraccionUsuarioEdicion) => {
     if (eventoInteraccionUsuarioEdicion.target.classList.contains("btn-editar-ruta")) {
@@ -497,13 +403,10 @@ if (formularioModificarRutaEmsa) {
     const diasRutaModificada = entradaDiasRutaModificar.value.trim();
     const coberturaRutaModificada = entradaCoberturaRutaModificar.value.trim();
 
-    contenedorResultadoModificacionRuta.textContent = "";
+    contenedorResultadoModificacionRuta.innerHTML = "";
 
     if (nombreRutaModificada === "" || zonaRutaModificada === "" || diasRutaModificada === "" || coberturaRutaModificada === "") {
-      const parrafoErrorCamposVacios = document.createElement("p");
-      parrafoErrorCamposVacios.textContent = "Por favor, complete los campos requeridos";
-      parrafoErrorCamposVacios.className = "mensaje-error";
-      contenedorResultadoModificacionRuta.appendChild(parrafoErrorCamposVacios);
+      mostrarMensaje(contenedorResultadoModificacionRuta, "Por favor, complete los campos requeridos", "error");
       return;
     }
 
@@ -512,10 +415,7 @@ if (formularioModificarRutaEmsa) {
     rutasBD[indiceRutaModificada].dias = diasRutaModificada;
     rutasBD[indiceRutaModificada].cobertura = coberturaRutaModificada;
 
-    const parrafoExitoModificacion = document.createElement("p");
-    parrafoExitoModificacion.textContent = "Ruta modificada correctamente";
-    parrafoExitoModificacion.className = "mensaje-exito";
-    contenedorResultadoModificacionRuta.appendChild(parrafoExitoModificacion);
+    mostrarMensaje(contenedorResultadoModificacionRuta, "Ruta modificada correctamente", "exito");
 
     formularioModificarRutaEmsa.reset();
     entradaIdentificadorRutaModificar.value = "";
@@ -524,4 +424,3 @@ if (formularioModificarRutaEmsa) {
     renderizarListaRutas(resultadoRutasActualizadasVisualmente, divListaRutas);
   });
 }
->>>>>>> Andres-andrade2
