@@ -817,16 +817,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "af2448c83818b8f2a101500356d964842c09cbb8",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T02:13:41.000Z",
       "message": "feat: registro del usuario ciudadano",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/af2448c83818b8f2a101500356d964842c09cbb8"
     },
     "stats": {
       "total": 19,
       "additions": 19,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.62,
+    "test_count": 28,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:17:18.000Z",
+      "message": "feat: Actualizando html para el registro de ciudadano",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 13,
       "deletions": 0,
       "date": "2026-05-21"
     },
