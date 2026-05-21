@@ -1,61 +1,137 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>SmartWaste</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartWaste — Panel EMSA</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <hr />
-    <h2>Rutas de Recolección EMSA</h2>
-    <button id="btn-ver-rutas">Ver Rutas Registradas</button>
-    <div id="lista-rutas-div"></div>
+    <header class="topbar" style="justify-content: space-between">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <span class="logo">🗑️</span>
+        <h1>SmartWaste — Panel EMSA</h1>
+      </div>
+      <button id="btn-cerrar-sesion" class="btn btn-secundario">
+        Cerrar sesión
+      </button>
+    </header>
 
-    <hr />
-    <h2>Resumen de Reportes Ciudadanos</h2>
-    <button id="btn-ver-reportes">Ver Reportes</button>
-    <div id="lista-reportes-div"></div>
-    <div id="detalle-reporte-div"></div>
+    <main class="main-content">
+      <!-- Zonas Críticas -->
+      <section class="seccion">
+        <h2>Zonas Críticas de Acumulación</h2>
+        <div class="controles-zonas">
+          <button id="btn-ver-zonas" class="btn btn-primario">
+            Ver Zonas con Reportes
+          </button>
+          <label for="orden-zonas">Ordenar por:</label>
+          <select id="orden-zonas">
+            <option value="descendente">Mayor cantidad primero</option>
+            <option value="ascendente">Menor cantidad primero</option>
+          </select>
+        </div>
+        <div id="lista-zonas-div"></div>
+        <div id="reportes-zona-div"></div>
+      </section>
 
-    <hr />
-    <h1>Crear rutas de carros basureros</h1>
-    <form id="ruta-form">
-      <label for="nombre_ruta">Nombre de la ruta:</label>
-      <input type="text" id="nombre_ruta" />
+      <!-- Rutas -->
+      <section class="seccion">
+        <h2>Rutas de Recolección</h2>
+        <button id="btn-ver-rutas" class="btn btn-primario">
+          Ver Rutas Registradas
+        </button>
+        <div id="lista-rutas-div" style="margin-top: 14px"></div>
+      </section>
 
-      <label for="zona_ruta">Zona:</label>
-      <input type="text" id="zona_ruta" />
+      <!-- Reportes ciudadanos -->
+      <section class="seccion">
+        <h2>Reportes Ciudadanos</h2>
+        <button id="btn-ver-reportes" class="btn btn-primario">
+          Ver Reportes
+        </button>
+        <div id="lista-reportes-div" style="margin-top: 14px"></div>
+        <div id="detalle-reporte-div"></div>
+      </section>
 
-      <label for="dias_ruta">Días de recolección:</label>
-      <input type="text" id="dias_ruta" />
+      <!-- Crear ruta -->
+      <section class="seccion">
+        <h2>Crear Ruta de Recolección</h2>
+        <form id="ruta-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nombre_ruta">Nombre de la ruta</label>
+              <input type="text" id="nombre_ruta" placeholder="Ej: Ruta 3" />
+            </div>
+            <div class="form-group">
+              <label for="zona_ruta">Zona</label>
+              <input type="text" id="zona_ruta" placeholder="Ej: Zona Este" />
+            </div>
+            <div class="form-group">
+              <label for="dias_ruta">Días de recolección</label>
+              <input
+                type="text"
+                id="dias_ruta"
+                placeholder="Ej: Lunes y Viernes"
+              />
+            </div>
+            <div class="form-group">
+              <label for="cobertura_ruta">Zonas que cubre</label>
+              <input
+                type="text"
+                id="cobertura_ruta"
+                placeholder="Ej: Cala Cala"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primario">Guardar ruta</button>
+        </form>
+        <div id="resultado-ruta-div" style="margin-top: 10px"></div>
+      </section>
 
-      <label for="cobertura_ruta">Zonas que cubre:</label>
-      <input type="text" id="cobertura_ruta" />
+      <!-- Registrar horario -->
+      <section class="seccion">
+        <h2>Registrar Horario de Ruta</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="ruta_horario">Ruta</label>
+            <input
+              type="text"
+              id="ruta_horario"
+              placeholder="Nombre de la ruta"
+            />
+          </div>
+          <div class="form-group">
+            <label for="horario">Horario</label>
+            <input type="text" id="horario" placeholder="Ej: 08:00 - 10:00" />
+          </div>
+        </div>
+        <button id="btn-registrar-horario" class="btn btn-primario">
+          Registrar Horario
+        </button>
+        <div id="resultado-registrar-horario" style="margin-top: 10px"></div>
+      </section>
 
-      <input type="submit" value="Guardar ruta" />
-    </form>
+      <!-- Eliminar ruta -->
+      <section class="seccion">
+        <h2>Eliminar Ruta</h2>
+        <div class="form-grid" style="max-width: 400px">
+          <div class="form-group">
+            <label for="zona_eliminar">Zona de la ruta</label>
+            <input
+              type="text"
+              id="zona_eliminar"
+              placeholder="Nombre exacto de la zona"
+            />
+          </div>
+        </div>
+        <button id="btn-eliminar-ruta" class="btn btn-peligro">
+          Eliminar ruta
+        </button>
+        <div id="resultado-eliminar-div" style="margin-top: 10px"></div>
+      </section>
+    </main>
 
-    <div id="resultado-ruta-div"></div>
-
-    <hr />
-    <h2>Registrar Horario de Ruta</h2>
-    <label for="ruta_horario">Ruta:</label>
-    <input type="text" id="ruta_horario" />
-    <label for="horario">Horario:</label>
-    <input type="text" id="horario" />
-    <button id="btn-registrar-horario">Registrar Horario</button>
-
-    <div id="resultado-registrar-horario"></div>
-
-    <hr />
-    <h2>Eliminar ruta</h2>
-
-    <label for="zona_eliminar">Zona:</label>
-    <input type="text" id="zona_eliminar" />
-
-    <button id="btn-eliminar-ruta">Eliminar ruta</button>
-
-    <div id="resultado-eliminar-div"></div>
-
-    <script type="module" src="./src/presenter.js"></script>
+    <script type="module" src="./src/presenterEMSA.js"></script>
   </body>
 </html>

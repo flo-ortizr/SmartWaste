@@ -608,56 +608,18 @@
     "conclusion": "success"
   },
   {
-    "sha": "d9b45c11efe03b83d8cc8aab54a7ac45c2a4142b",
-    "author": "Flora",
+    "sha": "5bfb27dbb142e9cac3d870562b8a420d15161ced",
+    "author": "User",
     "commit": {
-      "date": "2026-04-21T04:11:52.000Z",
-      "message": "fix: build html",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d9b45c11efe03b83d8cc8aab54a7ac45c2a4142b"
+      "date": "2026-05-08T22:48:00.000Z",
+      "message": "refactor: separar presenter en ciudadano y emsa",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/5bfb27dbb142e9cac3d870562b8a420d15161ced"
     },
     "stats": {
-      "total": 2,
-      "additions": 1,
-      "deletions": 1,
-      "date": "2026-04-21"
-    },
-    "coverage": 93.65,
-    "test_count": 30,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "fdb82150406187cef9e2c0adcc1b6d9358cbdd41",
-    "author": "Flora",
-    "commit": {
-      "date": "2026-04-21T04:12:30.000Z",
-      "message": "fix: html name",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/fdb82150406187cef9e2c0adcc1b6d9358cbdd41"
-    },
-    "stats": {
-      "total": 2,
-      "additions": 1,
-      "deletions": 1,
-      "date": "2026-04-21"
-    },
-    "coverage": 93.65,
-    "test_count": 30,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "65c437c2b4edd14a5a267e1fbdbd8e786cc8d402",
-    "author": "Flora",
-    "commit": {
-      "date": "2026-04-21T04:21:25.000Z",
-      "message": "fix: update build html file names",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/65c437c2b4edd14a5a267e1fbdbd8e786cc8d402"
-    },
-    "stats": {
-      "total": 4,
-      "additions": 2,
+      "total": 221,
+      "additions": 219,
       "deletions": 2,
-      "date": "2026-04-21"
+      "date": "2026-05-08"
     },
     "coverage": 93.65,
     "test_count": 30,
@@ -665,59 +627,743 @@
     "conclusion": "success"
   },
   {
-    "sha": "f4c9015933f591a83b3fe243f445acab5b058ca1",
+    "sha": "343c1b626a9f4cc83fb5b8b762c428cb3b9c4023",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-10T16:36:06.000Z",
+      "message": "refactor: separar lógica de eventos, renderizado y validaciones en presenterCiudadano y presenterEMSA",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/343c1b626a9f4cc83fb5b8b762c428cb3b9c4023"
+    },
+    "stats": {
+      "total": 187,
+      "additions": 98,
+      "deletions": 89,
+      "date": "2026-05-10"
+    },
+    "coverage": 93.65,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "e14eb164b83d3f5da2fe795f8704e8b725a19ea9",
     "author": "ArianaPita-0102",
     "commit": {
-      "date": "2026-04-21T04:39:02.000Z",
-      "message": "feat: agregar estilos CSS para vistas ciudadano y EMSA",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f4c9015933f591a83b3fe243f445acab5b058ca1"
+      "date": "2026-05-12T13:36:23.000Z",
+      "message": "refactor: eliminacion de codigo duplicado",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/e14eb164b83d3f5da2fe795f8704e8b725a19ea9"
     },
     "stats": {
-      "total": 154,
-      "additions": 151,
-      "deletions": 3,
-      "date": "2026-04-21"
+      "total": 38,
+      "additions": 28,
+      "deletions": 10,
+      "date": "2026-05-12"
     },
-    "coverage": 93.65,
+    "coverage": 93.85,
     "test_count": 30,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "e4a6c833ed7459b3f1007eb2f17870385e9d5be1",
-    "author": "Flora",
+    "sha": "fa92f9e900a82f90e2f5a9524555dd9114eae2c4",
+    "author": "ArianaPita-0102",
     "commit": {
-      "date": "2026-04-21T06:09:52.000Z",
-      "message": "fix: presenter buscarRuta",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/e4a6c833ed7459b3f1007eb2f17870385e9d5be1"
+      "date": "2026-05-12T13:43:24.000Z",
+      "message": "refactor: externalizar datos hardcodeados a data.js",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/fa92f9e900a82f90e2f5a9524555dd9114eae2c4"
     },
     "stats": {
-      "total": 3,
-      "additions": 2,
-      "deletions": 1,
-      "date": "2026-04-21"
+      "total": 16,
+      "additions": 16,
+      "deletions": 0,
+      "date": "2026-05-12"
     },
-    "coverage": 93.65,
+    "coverage": 93.85,
     "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "94729b8483f722ca2fff1323dd9af3bd6d80f2f0",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-12T13:46:10.000Z",
+      "message": "refactor: importar zonasCochabamba desde data.js",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/94729b8483f722ca2fff1323dd9af3bd6d80f2f0"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 2,
+      "deletions": 13,
+      "date": "2026-05-12"
+    },
+    "coverage": 94.03,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "7f434fbba5bc9d6d231919c9280608a40f2099fd",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:12:02.000Z",
+      "message": "refactor: unificacion de retorno en funcion crearRuta",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/7f434fbba5bc9d6d231919c9280608a40f2099fd"
+    },
+    "stats": {
+      "total": 88,
+      "additions": 38,
+      "deletions": 50,
+      "date": "2026-05-20"
+    },
+    "coverage": 77.94,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "be190b7b4f5a85293d8b46b0149be4eecbdb7c98",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:18:21.000Z",
+      "message": "refactor: unificacion de retorno en funcion CrearReporte",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/be190b7b4f5a85293d8b46b0149be4eecbdb7c98"
+    },
+    "stats": {
+      "total": 42,
+      "additions": 18,
+      "deletions": 24,
+      "date": "2026-05-20"
+    },
+    "coverage": 77.94,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "0f28e1791a17b49b046190cda3ce3eccfcf2710b",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:21:14.000Z",
+      "message": "refactor: unificacion de retorno en funcion registrarHorario",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/0f28e1791a17b49b046190cda3ce3eccfcf2710b"
+    },
+    "stats": {
+      "total": 30,
+      "additions": 14,
+      "deletions": 16,
+      "date": "2026-05-20"
+    },
+    "coverage": 77.94,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "5436f5fa75399ce90e7647b484000e7b5a8b34b6",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:45:56.000Z",
+      "message": "refactor: correcion de nomenclatura",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/5436f5fa75399ce90e7647b484000e7b5a8b34b6"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 10,
+      "deletions": 10,
+      "date": "2026-05-20"
+    },
+    "coverage": 67.65,
+    "test_count": 27,
+    "failed_tests": 5,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "5ea330eec9fdaa17967925e120479964a6b89b1b",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:47:40.000Z",
+      "message": "fix: function imports",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/5ea330eec9fdaa17967925e120479964a6b89b1b"
+    },
+    "stats": {
+      "total": 6,
+      "additions": 3,
+      "deletions": 3,
+      "date": "2026-05-20"
+    },
+    "coverage": 77.94,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "58073122bac2c5eaccd797b97b046a272e3ca196",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-20T02:55:09.000Z",
+      "message": "Merge branch 'Flora-Ortiz'",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/58073122bac2c5eaccd797b97b046a272e3ca196"
+    },
+    "stats": {
+      "total": 182,
+      "additions": 82,
+      "deletions": 100,
+      "date": "2026-05-20"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "af2448c83818b8f2a101500356d964842c09cbb8",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:13:41.000Z",
+      "message": "feat: registro del usuario ciudadano",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/af2448c83818b8f2a101500356d964842c09cbb8"
+    },
+    "stats": {
+      "total": 19,
+      "additions": 19,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.62,
+    "test_count": 28,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "41ab44ec1d3089066d008c52bec7ea972d0475bc",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:17:18.000Z",
+      "message": "feat: Actualizando html para el registro de ciudadano",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/41ab44ec1d3089066d008c52bec7ea972d0475bc"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 13,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.62,
+    "test_count": 28,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "94866868b284e54890c0394bde8125eb0d1e558e",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:20:56.000Z",
+      "message": "feat: actualizando presenter para el registro de ciudadano",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/94866868b284e54890c0394bde8125eb0d1e558e"
+    },
+    "stats": {
+      "total": 24,
+      "additions": 24,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.62,
+    "test_count": 28,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "d8dc6bb226cfb7ca4f4c5d9f75a9b8691874e160",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:25:27.000Z",
+      "message": "feat: Añadiendo mensaje de campos requeridos",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d8dc6bb226cfb7ca4f4c5d9f75a9b8691874e160"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 12,
+      "deletions": 2,
+      "date": "2026-05-21"
+    },
+    "coverage": 85.07,
+    "test_count": 29,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "1290cf254d2df957bdef2fed1b4b0c3ccc4c1675",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:29:03.000Z",
+      "message": "feat: Añadiendo mensaje y validacion para no poder usar el mismo nombre de usuario si es que ya existe",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/1290cf254d2df957bdef2fed1b4b0c3ccc4c1675"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 12,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 85.92,
+    "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "96a30c3b8bfb465dff8b54a2daf93a9b87dc3023",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:31:15.000Z",
+      "message": "feat: Añadiendo mensaje y validacion para que la contrasena supere los 8 caracteres",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/96a30c3b8bfb465dff8b54a2daf93a9b87dc3023"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 10,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 86.3,
+    "test_count": 31,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "144386e09a798943348ec403bc1af89b02e0ced7",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:39:08.000Z",
+      "message": "feat: el sistema autentica al usuario c on credenciales validas",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/144386e09a798943348ec403bc1af89b02e0ced7"
+    },
+    "stats": {
+      "total": 69,
+      "additions": 68,
+      "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 81.82,
+    "test_count": 32,
+    "failed_tests": 1,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "ce8157238dd46b832f9f9dc39fae785e31ff5825",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:41:34.000Z",
+      "message": "feat: mensaje de error si los campos estan vacios",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/ce8157238dd46b832f9f9dc39fae785e31ff5825"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 17,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 79.75,
+    "test_count": 33,
+    "failed_tests": 2,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "f50a3ee7fd4b125aa8ce579aa4274e7f693f662f",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:45:20.000Z",
+      "message": "feat: mensaje de error si la contrasena o el usuario es incorrecto",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f50a3ee7fd4b125aa8ce579aa4274e7f693f662f"
+    },
+    "stats": {
+      "total": 16,
+      "additions": 15,
+      "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 87.5,
+    "test_count": 35,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "82253ded00150ab21a194a33de4525646e370f7b",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T03:00:22.000Z",
+      "message": "feat: Al tocar el boton cerrar sesion, el sistema quita el indicador de sesion activa",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/82253ded00150ab21a194a33de4525646e370f7b"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 11,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 87.5,
+    "test_count": 35,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "c4249be23d814ee419f6d3a673aa4938370d10ac",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T03:08:43.000Z",
+      "message": "feat: Indicar que la sesion fue cerrada correctamente",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/c4249be23d814ee419f6d3a673aa4938370d10ac"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 16,
+      "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 87.5,
+    "test_count": 35,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "2f8b3958f397cc906b388ddfdcac4e54bf6069a5",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T03:10:59.000Z",
+      "message": "Merge branch Dabner-Orozco",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/2f8b3958f397cc906b388ddfdcac4e54bf6069a5"
+    },
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 87.5,
+    "test_count": 35,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "65649cc5c570bb7edf8234e62bc833b3ac620fec",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-21T03:21:51.000Z",
+      "message": "feat: ver reportes de basura acumulado cercanos",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/65649cc5c570bb7edf8234e62bc833b3ac620fec"
+    },
+    "stats": {
+      "total": 216,
+      "additions": 214,
+      "deletions": 2,
+      "date": "2026-05-21"
+    },
+    "coverage": 87.5,
+    "test_count": 35,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "15ae4b750cae51688d6bd7e795b7905bc4fadda3",
+    "author": "Flora",
+    "commit": {
+      "date": "2026-05-21T03:50:38.000Z",
+      "message": "feat: importar foto",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/15ae4b750cae51688d6bd7e795b7905bc4fadda3"
+    },
+    "stats": {
+      "total": 80,
+      "additions": 66,
+      "deletions": 14,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "8ed31beea51737f347c9df4c08e20d7437286b24",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T03:51:47.000Z",
+      "message": "fix: resolver conflictos de merge con rama Oriana-Flores",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/8ed31beea51737f347c9df4c08e20d7437286b24"
+    },
+    "stats": {
+      "total": 272,
+      "additions": 224,
+      "deletions": 48,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.17,
+    "test_count": 38,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "da36613dfbfb2ab499b8d3193124b446fc41defb",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T03:54:56.000Z",
+      "message": "fix: resolver conflictos tras pull de master",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/da36613dfbfb2ab499b8d3193124b446fc41defb"
+    },
+    "stats": {
+      "total": 80,
+      "additions": 66,
+      "deletions": 14,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "9ecd8d78602eb209ee8487786ecd2a095fdab4cc",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T04:23:29.000Z",
+      "message": "feat: implementar lógica de detección de zonas críticas y ordenamiento",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/9ecd8d78602eb209ee8487786ecd2a095fdab4cc"
+    },
+    "stats": {
+      "total": 180,
+      "additions": 180,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 91.27,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "d315d5cfbeba6854c541efdcf3cc5f6132cd3d6e",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T04:31:28.000Z",
+      "message": "feat: integrar zonas críticas y ordenamiento en la interfaz EMSA",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d315d5cfbeba6854c541efdcf3cc5f6132cd3d6e"
+    },
+    "stats": {
+      "total": 111,
+      "additions": 109,
+      "deletions": 2,
+      "date": "2026-05-21"
+    },
+    "coverage": 91.27,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "7c425c5110477deedeaa363b81205bb0518ab8e6",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T04:32:14.000Z",
+      "message": "feat: agregar estilos visuales para zonas críticas y normales",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/7c425c5110477deedeaa363b81205bb0518ab8e6"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 14,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 91.27,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "b93c3a6770ec72db8eac9498a587ae2cf2009ba0",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:20:11.000Z",
+      "message": "refactor: convertir lógica de zonas en clase ZonaService",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/b93c3a6770ec72db8eac9498a587ae2cf2009ba0"
+    },
+    "stats": {
+      "total": 80,
+      "additions": 52,
+      "deletions": 28,
+      "date": "2026-05-21"
+    },
+    "coverage": 89.21,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "f1443003cbc58e26affa69394ddf7ed62f38db73",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:23:26.000Z",
+      "message": "refactor: convertir lógica de reportes en clase ReporteService",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f1443003cbc58e26affa69394ddf7ed62f38db73"
+    },
+    "stats": {
+      "total": 165,
+      "additions": 86,
+      "deletions": 79,
+      "date": "2026-05-21"
+    },
+    "coverage": 82.89,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "9c00126c80b8f0ec4eb805b993bbf8885604c360",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:25:17.000Z",
+      "message": "refactor: convertir lógica de rutas en clase RutaService",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/9c00126c80b8f0ec4eb805b993bbf8885604c360"
+    },
+    "stats": {
+      "total": 102,
+      "additions": 53,
+      "deletions": 49,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "91db8b053d188de5f81beef558bc4b99d9f4a6ae",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:29:31.000Z",
+      "message": "refactor: reorganizar presenterEMSA usando clases de servicio",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/91db8b053d188de5f81beef558bc4b99d9f4a6ae"
+    },
+    "stats": {
+      "total": 513,
+      "additions": 207,
+      "deletions": 306,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "d6d6ef3f5d501da7cf12902a41be952a9184b4cd",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:35:44.000Z",
+      "message": "style: mejorar interfaz de ciudadano.html",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d6d6ef3f5d501da7cf12902a41be952a9184b4cd"
+    },
+    "stats": {
+      "total": 642,
+      "additions": 495,
+      "deletions": 147,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "0f3f85709395c0089f7a12751f37558edec10506",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:54:02.000Z",
+      "message": "feat: registrarUsuario asigna rol: ciudadano automáticamente",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/0f3f85709395c0089f7a12751f37558edec10506"
+    },
+    "stats": {
+      "total": 54,
+      "additions": 38,
+      "deletions": 16,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "b3b0a9540520973773cd28d8ff0b7829b89b2f20",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:59:30.000Z",
+      "message": "feat: proteccion de rutas para ciudadano y trabajador emsa",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/b3b0a9540520973773cd28d8ff0b7829b89b2f20"
+    },
+    "stats": {
+      "total": 284,
+      "additions": 150,
+      "deletions": 134,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "11e15a5800d9cee02b921c2b073e146a0a824b18",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T10:04:22.000Z",
+      "message": "refactor: manejo de login de usuarios",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/11e15a5800d9cee02b921c2b073e146a0a824b18"
+    },
+    "stats": {
+      "total": 250,
+      "additions": 203,
+      "deletions": 47,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
     "sha": "HEAD",
-    "author": "Flora",
+    "author": "ArianaPita-0102",
     "commit": {
-      "date": "2026-04-21T06:23:16.000Z",
-      "message": "fix: funcion buscarRuta",
+      "date": "2026-05-21T10:08:47.000Z",
+      "message": "fix: login de usuario",
       "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
     },
     "stats": {
-      "total": 8,
-      "additions": 5,
-      "deletions": 3,
-      "date": "2026-04-21"
+      "total": 0,
+      "additions": 0,
+      "deletions": 0,
+      "date": "2026-05-21"
     },
-    "coverage": 93.65,
-    "test_count": 30,
+    "coverage": 71.19,
+    "test_count": 63,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T10:13:17.000Z",
+      "message": "Merge master into main aceptando master",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 2399,
+      "additions": 1977,
+      "deletions": 422,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
     "failed_tests": 0,
     "conclusion": "success"
   }

@@ -664,39 +664,617 @@
     "testId": 31
   },
   {
-    "commitId": "d9b45c11efe03b83d8cc8aab54a7ac45c2a4142b",
-    "commitName": "fix: build html",
-    "commitTimestamp": 1776744713771,
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778278893468,
+    "success": true,
     "testId": 32
   },
   {
-    "commitId": "fdb82150406187cef9e2c0adcc1b6d9358cbdd41",
-    "commitName": "fix: html name",
-    "commitTimestamp": 1776744751866,
+    "commitId": "5bfb27dbb142e9cac3d870562b8a420d15161ced",
+    "commitName": "refactor: separar presenter en ciudadano y emsa",
+    "commitTimestamp": 1778280480771,
+    "testId": 32
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778280625239,
+    "success": true,
     "testId": 33
   },
   {
-    "commitId": "65c437c2b4edd14a5a267e1fbdbd8e786cc8d402",
-    "commitName": "fix: update build html file names",
-    "commitTimestamp": 1776745286573,
+    "commitId": "343c1b626a9f4cc83fb5b8b762c428cb3b9c4023",
+    "commitName": "refactor: separar lógica de eventos, renderizado y validaciones en presenterCiudadano y presenterEMSA",
+    "commitTimestamp": 1778430967137,
+    "testId": 33
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778592210260,
+    "success": true,
     "testId": 34
   },
   {
-    "commitId": "f4c9015933f591a83b3fe243f445acab5b058ca1",
-    "commitName": "feat: agregar estilos CSS para vistas ciudadano y EMSA",
-    "commitTimestamp": 1776746343113,
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778592751359,
+    "success": true,
+    "testId": 34
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1778592896818,
+    "success": true,
+    "testId": 34
+  },
+  {
+    "commitId": "e14eb164b83d3f5da2fe795f8704e8b725a19ea9",
+    "commitName": "refactor: eliminacion de codigo duplicado",
+    "commitTimestamp": 1778592983975,
+    "testId": 34
+  },
+  {
+    "commitId": "fa92f9e900a82f90e2f5a9524555dd9114eae2c4",
+    "commitName": "refactor: externalizar datos hardcodeados a data.js",
+    "commitTimestamp": 1778593404574,
     "testId": 35
   },
   {
-    "commitId": "e4a6c833ed7459b3f1007eb2f17870385e9d5be1",
-    "commitName": "fix: presenter buscarRuta",
-    "commitTimestamp": 1776751793687,
+    "commitId": "94729b8483f722ca2fff1323dd9af3bd6d80f2f0",
+    "commitName": "refactor: importar zonasCochabamba desde data.js",
+    "commitTimestamp": 1778593570300,
     "testId": 36
   },
   {
-    "commitId": "HEAD",
-    "commitName": "fix: funcion buscarRuta",
-    "commitTimestamp": 1776752598348,
+    "numPassedTests": 29,
+    "failedTests": 1,
+    "numTotalTests": 30,
+    "timestamp": 1779200631123,
+    "success": false,
     "testId": 37
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 1,
+    "numTotalTests": 30,
+    "timestamp": 1779242651900,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 4,
+    "numTotalTests": 30,
+    "timestamp": 1779242728108,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 4,
+    "numTotalTests": 30,
+    "timestamp": 1779242786628,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 4,
+    "numTotalTests": 31,
+    "timestamp": 1779242834160,
+    "success": false,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779242955322,
+    "success": true,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243031292,
+    "success": true,
+    "testId": 37
+  },
+  {
+    "commitId": "7f434fbba5bc9d6d231919c9280608a40f2099fd",
+    "commitName": "refactor: unificacion de retorno en funcion crearRuta",
+    "commitTimestamp": 1779243126560,
+    "testId": 37
+  },
+  {
+    "numPassedTests": 24,
+    "failedTests": 3,
+    "numTotalTests": 27,
+    "timestamp": 1779243291319,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243345197,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243396181,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "commitId": "be190b7b4f5a85293d8b46b0149be4eecbdb7c98",
+    "commitName": "refactor: unificacion de retorno en funcion CrearReporte",
+    "commitTimestamp": 1779243504409,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 26,
+    "failedTests": 1,
+    "numTotalTests": 27,
+    "timestamp": 1779243566016,
+    "success": false,
+    "testId": 39
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243603608,
+    "success": true,
+    "testId": 39
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779243644590,
+    "success": true,
+    "testId": 39
+  },
+  {
+    "commitId": "0f28e1791a17b49b046190cda3ce3eccfcf2710b",
+    "commitName": "refactor: unificacion de retorno en funcion registrarHorario",
+    "commitTimestamp": 1779243676093,
+    "testId": 39
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779244893593,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779244965089,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "commitId": "5436f5fa75399ce90e7647b484000e7b5a8b34b6",
+    "commitName": "refactor: correcion de nomenclatura",
+    "commitTimestamp": 1779245158591,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 22,
+    "failedTests": 5,
+    "numTotalTests": 27,
+    "timestamp": 1779245193251,
+    "success": false,
+    "testId": 41
+  },
+  {
+    "numPassedTests": 27,
+    "failedTests": 0,
+    "numTotalTests": 27,
+    "timestamp": 1779245230956,
+    "success": true,
+    "testId": 41
+  },
+  {
+    "commitId": "5ea330eec9fdaa17967925e120479964a6b89b1b",
+    "commitName": "fix: function imports",
+    "commitTimestamp": 1779245262773,
+    "testId": 41
+  },
+  {
+    "commitId": "58073122bac2c5eaccd797b97b046a272e3ca196",
+    "commitName": "Merge branch 'Flora-Ortiz'",
+    "commitTimestamp": 1779245710840,
+    "testId": 42
+  },
+  {
+    "commitId": "af2448c83818b8f2a101500356d964842c09cbb8",
+    "commitName": "feat: registro del usuario ciudadano",
+    "commitTimestamp": 1779329622564,
+    "testId": 43
+  },
+  {
+    "commitId": "41ab44ec1d3089066d008c52bec7ea972d0475bc",
+    "commitName": "feat: Actualizando html para el registro de ciudadano",
+    "commitTimestamp": 1779329839729,
+    "testId": 44
+  },
+  {
+    "commitId": "94866868b284e54890c0394bde8125eb0d1e558e",
+    "commitName": "feat: actualizando presenter para el registro de ciudadano",
+    "commitTimestamp": 1779330057324,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 29,
+    "failedTests": 0,
+    "numTotalTests": 29,
+    "timestamp": 1779330249302,
+    "success": true,
+    "testId": 46
+  },
+  {
+    "commitId": "d8dc6bb226cfb7ca4f4c5d9f75a9b8691874e160",
+    "commitName": "feat: Añadiendo mensaje de campos requeridos",
+    "commitTimestamp": 1779330328287,
+    "testId": 46
+  },
+  {
+    "numPassedTests": 30,
+    "failedTests": 0,
+    "numTotalTests": 30,
+    "timestamp": 1779330502852,
+    "success": true,
+    "testId": 47
+  },
+  {
+    "commitId": "1290cf254d2df957bdef2fed1b4b0c3ccc4c1675",
+    "commitName": "feat: Añadiendo mensaje y validacion para no poder usar el mismo nombre de usuario si es que ya existe",
+    "commitTimestamp": 1779330544210,
+    "testId": 47
+  },
+  {
+    "numPassedTests": 31,
+    "failedTests": 0,
+    "numTotalTests": 31,
+    "timestamp": 1779330645280,
+    "success": true,
+    "testId": 48
+  },
+  {
+    "commitId": "96a30c3b8bfb465dff8b54a2daf93a9b87dc3023",
+    "commitName": "feat: Añadiendo mensaje y validacion para que la contrasena supere los 8 caracteres",
+    "commitTimestamp": 1779330677050,
+    "testId": 48
+  },
+  {
+    "commitId": "144386e09a798943348ec403bc1af89b02e0ced7",
+    "commitName": "feat: el sistema autentica al usuario c on credenciales validas",
+    "commitTimestamp": 1779331149944,
+    "testId": 49
+  },
+  {
+    "commitId": "ce8157238dd46b832f9f9dc39fae785e31ff5825",
+    "commitName": "feat: mensaje de error si los campos estan vacios",
+    "commitTimestamp": 1779331295448,
+    "testId": 50
+  },
+  {
+    "numPassedTests": 31,
+    "failedTests": 4,
+    "numTotalTests": 35,
+    "timestamp": 1779331420267,
+    "success": false,
+    "testId": 51
+  },
+  {
+    "numPassedTests": 35,
+    "failedTests": 0,
+    "numTotalTests": 35,
+    "timestamp": 1779331494010,
+    "success": true,
+    "testId": 51
+  },
+  {
+    "commitId": "f50a3ee7fd4b125aa8ce579aa4274e7f693f662f",
+    "commitName": "feat: mensaje de error si la contrasena o el usuario es incorrecto",
+    "commitTimestamp": 1779331521914,
+    "testId": 51
+  },
+  {
+    "commitId": "82253ded00150ab21a194a33de4525646e370f7b",
+    "commitName": "feat: Al tocar el boton cerrar sesion, el sistema quita el indicador de sesion activa",
+    "commitTimestamp": 1779332423318,
+    "testId": 52
+  },
+  {
+    "commitId": "c4249be23d814ee419f6d3a673aa4938370d10ac",
+    "commitName": "feat: Indicar que la sesion fue cerrada correctamente",
+    "commitTimestamp": 1779332924510,
+    "testId": 53
+  },
+  {
+    "commitId": "2f8b3958f397cc906b388ddfdcac4e54bf6069a5",
+    "commitName": "Merge branch Dabner-Orozco",
+    "commitTimestamp": 1779333059842,
+    "testId": 54
+  },
+  {
+    "commitId": "65649cc5c570bb7edf8234e62bc833b3ac620fec",
+    "commitName": "merge master",
+    "commitTimestamp": 1779334351888,
+    "testId": 55
+  },
+  {
+    "commitId": "65649cc5c570bb7edf8234e62bc833b3ac620fec",
+    "commitName": "feat: ver reportes de basura acumulado cercanos",
+    "commitTimestamp": 1779333712997,
+    "testId": 43
+  },
+  {
+    "commitId": "8ed31beea51737f347c9df4c08e20d7437286b24",
+    "commitName": "Merge branch 'Flora-Ortiz'",
+    "commitTimestamp": 1779334215035,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 39,
+    "failedTests": 2,
+    "numTotalTests": 41,
+    "timestamp": 1779334707958,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 23,
+    "failedTests": 0,
+    "numTotalTests": 23,
+    "timestamp": 1779334738840,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779334782297,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779334841071,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779335108312,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779335189834,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779335215464,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 40,
+    "failedTests": 1,
+    "numTotalTests": 41,
+    "timestamp": 1779335258979,
+    "success": false,
+    "testId": 45
+  },
+  {
+    "numPassedTests": 41,
+    "failedTests": 0,
+    "numTotalTests": 41,
+    "timestamp": 1779335284496,
+    "success": true,
+    "testId": 45
+  },
+  {
+    "commitId": "15ae4b750cae51688d6bd7e795b7905bc4fadda3",
+    "commitName": "feat: importar foto",
+    "commitTimestamp": 1779335440484,
+    "testId": 45
+  },
+  {
+    "commitId": "da36613dfbfb2ab499b8d3193124b446fc41defb",
+    "commitName": "fix: resolver conflictos tras pull de master",
+    "commitTimestamp": 1779335700702,
+    "testId": 46
+  },
+  {
+    "numPassedTests": 41,
+    "failedTests": 0,
+    "numTotalTests": 41,
+    "timestamp": 1779337320445,
+    "success": false,
+    "testId": 47
+  },
+  {
+    "numPassedTests": 41,
+    "failedTests": 19,
+    "numTotalTests": 60,
+    "timestamp": 1779337366984,
+    "success": false,
+    "testId": 47
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779337379980,
+    "success": true,
+    "testId": 47
+  },
+  {
+    "commitId": "9ecd8d78602eb209ee8487786ecd2a095fdab4cc",
+    "commitName": "feat: implementar lógica de detección de zonas críticas y ordenamiento",
+    "commitTimestamp": 1779337409344,
+    "testId": 47
+  },
+  {
+    "commitId": "d315d5cfbeba6854c541efdcf3cc5f6132cd3d6e",
+    "commitName": "feat: integrar zonas críticas y ordenamiento en la interfaz EMSA",
+    "commitTimestamp": 1779337889215,
+    "testId": 48
+  },
+  {
+    "commitId": "7c425c5110477deedeaa363b81205bb0518ab8e6",
+    "commitName": "feat: agregar estilos visuales para zonas críticas y normales",
+    "commitTimestamp": 1779337934543,
+    "testId": 49
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779355158919,
+    "success": true,
+    "testId": 50
+  },
+  {
+    "commitId": "b93c3a6770ec72db8eac9498a587ae2cf2009ba0",
+    "commitName": "refactor: convertir lógica de zonas en clase ZonaService",
+    "commitTimestamp": 1779355211932,
+    "testId": 50
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779355226997,
+    "success": true,
+    "testId": 51
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779355377316,
+    "success": true,
+    "testId": 51
+  },
+  {
+    "commitId": "f1443003cbc58e26affa69394ddf7ed62f38db73",
+    "commitName": "refactor: convertir lógica de reportes en clase ReporteService",
+    "commitTimestamp": 1779355407245,
+    "testId": 51
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779355482867,
+    "success": true,
+    "testId": 52
+  },
+  {
+    "commitId": "9c00126c80b8f0ec4eb805b993bbf8885604c360",
+    "commitName": "refactor: convertir lógica de rutas en clase RutaService",
+    "commitTimestamp": 1779355517483,
+    "testId": 52
+  },
+  {
+    "commitId": "91db8b053d188de5f81beef558bc4b99d9f4a6ae",
+    "commitName": "refactor: reorganizar presenterEMSA usando clases de servicio",
+    "commitTimestamp": 1779355772197,
+    "testId": 53
+  },
+  {
+    "commitId": "d6d6ef3f5d501da7cf12902a41be952a9184b4cd",
+    "commitName": "style: mejorar interfaz de ciudadano.html",
+    "commitTimestamp": 1779356145172,
+    "testId": 54
+  },
+  {
+    "numPassedTests": 56,
+    "failedTests": 4,
+    "numTotalTests": 60,
+    "timestamp": 1779357151674,
+    "success": false,
+    "testId": 55
+  },
+  {
+    "numPassedTests": 63,
+    "failedTests": 0,
+    "numTotalTests": 63,
+    "timestamp": 1779357197693,
+    "success": true,
+    "testId": 55
+  },
+  {
+    "commitId": "0f3f85709395c0089f7a12751f37558edec10506",
+    "commitName": "feat: registrarUsuario asigna rol: ciudadano automáticamente",
+    "commitTimestamp": 1779357243024,
+    "testId": 55
+  },
+  {
+    "commitId": "b3b0a9540520973773cd28d8ff0b7829b89b2f20",
+    "commitName": "feat: proteccion de rutas para ciudadano y trabajador emsa",
+    "commitTimestamp": 1779357570834,
+    "testId": 56
+  },
+  {
+    "commitId": "11e15a5800d9cee02b921c2b073e146a0a824b18",
+    "commitName": "refactor: manejo de login de usuarios",
+    "commitTimestamp": 1779357862422,
+    "testId": 57
+  },
+  {
+    "numPassedTests": 63,
+    "failedTests": 0,
+    "numTotalTests": 63,
+    "timestamp": 1779357880946,
+    "success": true,
+    "testId": 58
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: login de usuario",
+    "commitTimestamp": 1779358128256,
+    "testId": 58
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "Merge master into main aceptando master",
+    "commitTimestamp": 1779358397589,
+    "testId": 59
   }
 ]

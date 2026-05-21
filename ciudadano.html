@@ -1,62 +1,134 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>SmartWaste</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartWaste — Portal Ciudadano</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h2>Buscar Ruta de Recolección</h2>
-    <label for="buscar_zona_ruta">Ingresa tu zona:</label>
-    <input type="text" id="buscar_zona_ruta" />
-    <button id="btn-buscar-ruta">Buscar Ruta</button>
-    <div id="resultado-busqueda-ruta-div"></div>
-    <hr />
-    <h2>Horarios de Recolección</h2>
-    <label for="zona_horario">Zona:</label>
-    <input type="text" id="zona_horario" />
-    <button id="btn-ver-horarios">Ver Horarios</button>
+    <header class="topbar" style="justify-content: space-between">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <span class="logo">🗑️</span>
+        <h1>SmartWaste — Portal Ciudadano</h1>
+      </div>
+      <button id="btn-cerrar-sesion" class="btn btn-secundario">
+        Cerrar sesión
+      </button>
+    </header>
 
-    <div id="resultado-horarios-div"></div>
+    <main class="main-content">
+      <!-- Buscar ruta -->
+      <section class="seccion">
+        <h2>Buscar Ruta de Recolección</h2>
+        <div class="form-grid" style="max-width: 500px">
+          <div class="form-group">
+            <label for="buscar_zona_ruta">Tu zona</label>
+            <input
+              type="text"
+              id="buscar_zona_ruta"
+              placeholder="Ej: Cala Cala"
+            />
+          </div>
+        </div>
+        <button id="btn-buscar-ruta" class="btn btn-primario">
+          Buscar Ruta
+        </button>
+        <div id="resultado-busqueda-ruta-div" style="margin-top: 12px"></div>
+      </section>
 
-    <h1>Reporte</h1>
+      <!-- Horarios -->
+      <section class="seccion">
+        <h2>Horarios de Recolección</h2>
+        <div class="form-grid" style="max-width: 500px">
+          <div class="form-group">
+            <label for="zona_horario">Zona</label>
+            <input
+              type="text"
+              id="zona_horario"
+              placeholder="Ej: Zona Norte - Cala Cala"
+            />
+          </div>
+        </div>
+        <button id="btn-ver-horarios" class="btn btn-primario">
+          Ver Horarios
+        </button>
+        <div id="resultado-horarios-div" style="margin-top: 12px"></div>
+      </section>
 
-    <form id="reporte-form">
-      <label for="zona_reporte">Zona:</label>
-      <select id="zona_reporte">
-        <option value="">Seleccione una zona</option>
-        <option>Cala Cala</option>
-        <option>Las Cuadras</option>
-        <option>Tupuraya</option>
-        <option>Queru Queru</option>
-        <option>Alalay</option>
-        <option>Sarco</option>
-        <option>Pacata</option>
-        <option>Villa Busch</option>
-        <option>Temporal</option>
-        <option>Muyurina</option>
-      </select>
+      <!-- Crear reporte -->
+      <section class="seccion">
+        <h2>Crear Reporte de Basura</h2>
+        <form id="reporte-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="zona_reporte">Zona</label>
+              <select
+                id="zona_reporte"
+                style="
+                  padding: 9px 14px;
+                  border: 1.5px solid #cfd8dc;
+                  border-radius: 8px;
+                  font-size: 0.9rem;
+                "
+              >
+                <option value="">Seleccione una zona</option>
+                <option>Cala Cala</option>
+                <option>Las Cuadras</option>
+                <option>Tupuraya</option>
+                <option>Queru Queru</option>
+                <option>Alalay</option>
+                <option>Sarco</option>
+                <option>Pacata</option>
+                <option>Villa Busch</option>
+                <option>Temporal</option>
+                <option>Muyurina</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fecha_reporte">Fecha</label>
+              <input type="date" id="fecha_reporte" />
+            </div>
+            <div class="form-group" style="grid-column: 1/-1">
+              <label for="mensaje_reporte">Descripción</label>
+              <input
+                type="text"
+                id="mensaje_reporte"
+                placeholder="Describe el problema"
+              />
+            </div>
+            <div class="form-group" style="grid-column: 1/-1">
+              <label for="foto_reporte">Foto del reporte</label>
+              <input
+                type="file"
+                id="foto_reporte"
+                accept="image/jpeg, image/png, image/jpg"
+              />
+            </div>
+          </div>
+          <div id="vista-previa-foto-div" style="margin-bottom: 12px"></div>
+          <button type="submit" class="btn btn-primario">Enviar Reporte</button>
+        </form>
+        <div id="resultado-div" style="margin-top: 10px"></div>
+      </section>
 
-      <br /><br />
+      <!-- Reportes cercanos -->
+      <section class="seccion">
+        <h2>Focos de Contaminación Cercanos</h2>
+        <p style="font-size: 0.9rem; color: #546e7a; margin-bottom: 12px">
+          Detecta reportes de basura acumulada cerca de tu ubicación actual
+          (radio 2 km).
+        </p>
+        <button id="btn-reportes-cercanos" class="btn btn-primario">
+          Ver Reportes Cercanos
+        </button>
+        <div
+          id="resultado-reportes-cercanos-div"
+          style="margin-top: 12px"
+        ></div>
+      </section>
+    </main>
 
-      <label for="fecha_reporte">Fecha:</label>
-      <input type="date" id="fecha_reporte" />
-
-      <br /><br />
-
-      <label for="mensaje_reporte">Descripción:</label>
-
-      <input type="text" id="mensaje_reporte" />
-      <br /><br />
-      <label for="foto_reporte">Foto del reporte:</label>
-      <input type="file" id="foto_reporte" accept="image/*" multiple />
-      <br /><br />
-      <div id="vista-previa-foto-div"></div>
-
-      <input type="submit" value="Guardar reporte" />
-    </form>
-
-    <div id="resultado-div"></div>
-
-    <script type="module" src="./src/presenter.js"></script>
+    <script type="module" src="./src/presenterCiudadano.js"></script>
   </body>
 </html>

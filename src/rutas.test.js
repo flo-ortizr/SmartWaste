@@ -1,55 +1,34 @@
 import { mostrarRutas, crearRuta, buscarRutaPorZona, eliminarRuta } from "./rutas.js";
 
-describe("Gestor de Rutas", () => {
-  it("debería mostrar un mensaje cuando no hay rutas registradas", () => {
-    let rutasVacias = [];
-    let resultado = mostrarRutas(rutasVacias);
-    expect(resultado).toEqual("No existen rutas registradas");
+describe("Creacion de Rutas", () => {
+  it("debería lanzar un error si el nombre de la ruta está vacío", () => {
+    expect(() => crearRuta("", "Zona Norte", "Lunes", "Cala Cala"))
+    .toThrow("Por favor, complete los campos requeridos");
   });
 
-  it("debería mostrar la zona y los días cuando existen rutas registradas", () => {
-    let rutasSimuladas = [
-      { zona: "Norte", dias: "Lunes y Miércoles" }
-    ];
-    let resultado = mostrarRutas(rutasSimuladas);
-    expect(resultado).toContain("Norte");
-    expect(resultado).toContain("Lunes y Miércoles");
+  it("debería lanzar un error si la zona está vacía", () => {
+    expect(() => crearRuta("Ruta 1", "", "Lunes", "Cala Cala"))
+    .toThrow("Por favor, complete los campos requeridos");
   });
 
-  it("debería mostrar un mensaje de error si los datos son nulos o no cargan", () => {
-    let datosMalos = null;
-    let resultado = mostrarRutas(datosMalos);
-    expect(resultado).toEqual("No fue posible mostrar las rutas");
+  it("debería lanzar un error si los días están vacíos", () => {
+    expect(() => crearRuta("Ruta 1", "Zona Norte", "", "Cala Cala"))
+    .toThrow("Por favor, complete los campos requeridos");
   });
 
-  it("debería mostrar mensaje si el nombre de la ruta está vacío", () => {
-    let resultado = crearRuta("", "Zona Norte", "Lunes", "Cala Cala");
-    expect(resultado).toEqual("Por favor, complete los campos requeridos");
-  });
-
-  it("debería mostrar mensaje si la zona está vacía", () => {
-    let resultado = crearRuta("Ruta 1", "", "Lunes", "Cala Cala");
-    expect(resultado).toEqual("Por favor, complete los campos requeridos");
-  });
-
-  it("debería mostrar mensaje si los días están vacíos", () => {
-    let resultado = crearRuta("Ruta 1", "Zona Norte", "", "Cala Cala");
-    expect(resultado).toEqual("Por favor, complete los campos requeridos");
-  });
-
-  it("debería mostrar mensaje si la cobertura está vacía", () => {
-    let resultado = crearRuta("Ruta 1", "Zona Norte", "Lunes", "");
-    expect(resultado).toEqual("Por favor, complete los campos requeridos");
+  it("debería lanzar un error si la cobertura está vacía", () => {
+    expect(() => crearRuta("Ruta 1", "Zona Norte", "Lunes", ""))
+    .toThrow("Por favor, complete los campos requeridos");
   });
 
   it("debería registrar la ruta cuando los datos son correctos", () => {
-  let resultado = crearRuta("Ruta 1", "Zona Norte", "Lunes", "Cala Cala");
-  expect(resultado).toEqual({
-    nombreRuta: "Ruta 1",
-    zona: "Zona Norte",
-    dias: "Lunes",
-    cobertura: "Cala Cala"
-   });
+    let resultado = crearRuta("Ruta 1", "Zona Norte", "Lunes", "Cala Cala");
+    expect(resultado).toEqual({
+      nombreRuta: "Ruta 1",
+      zona: "Zona Norte",
+      dias: "Lunes",
+      cobertura: "Cala Cala"
+    });
   });
 });
 

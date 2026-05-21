@@ -1,5 +1,9 @@
+export function esCampoValido(campo) {
+  return campo && campo.trim() !== "";
+}
+
 export function mostrarHorario(zona, horarios) {
-  if (!zona || zona.trim() === "") {
+  if (!esCampoValido(zona)) {
     return "Por favor, seleccione una zona para consultar los horarios";
   }
 
@@ -10,12 +14,13 @@ export function mostrarHorario(zona, horarios) {
   }
 
   const h = filtrados[0];
-  return `Zona ${h.zona}: ${h.dias} de ${h.horas}`; 
+
+  return `Zona ${h.zona}: ${h.dias} de ${h.horas}`;
 }
 
 export function registrarHorario(ruta, horario) {
-  if (!ruta || ruta.trim() === "" || !horario || horario.trim() === "") {
-    return "Por favor, complete los campos requeridos";
+  if (!esCampoValido(ruta) || !esCampoValido(horario)) {
+    throw new Error("Por favor, complete los campos requeridos");
   }
 
   return {

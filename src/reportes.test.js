@@ -1,23 +1,19 @@
-import CrearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
+import crearReporte, { validarFoto, obtenerResumenReportes, obtenerDetalleReporte, obtenerReportesCercanos } from "./reportes.js";
 
-describe("CrearReporte", () => {
+describe("crearReporte", () => {
 
-  test("debería devolver advertencia si el mensaje está vacío", () => {
-    const resultado = CrearReporte({
-      mensaje: ""
-    });
-    expect(resultado).toBe("Advertencia: vacío");
-  });
+  test("debería lanzar advertencia si el mensaje está vacío", () => {
+  expect(() => crearReporte({ mensaje: "" }))
+    .toThrow("Advertencia: vacío");
+});
 
-  test("debería devolver advertencia si el mensaje es null", () => {
-    const resultado = CrearReporte({
-      mensaje: null
-    });
-    expect(resultado).toBe("Advertencia: vacío");
+  test("debería lanzar advertencia si el mensaje es null", () => {
+    expect(() => crearReporte({ mensaje: null }))
+    .toThrow("Advertencia: vacío");
   });
 
   test("debería crear reporte con datos válidos", () => {
-    const resultado = CrearReporte({
+    const resultado = crearReporte({
       zona: "Cala Cala",
       mensaje: "Basura acumulada",
     });
@@ -29,7 +25,7 @@ describe("CrearReporte", () => {
   });
 
   test("debería usar fecha proporcionada si existe", () => {
-    const resultado = CrearReporte({
+    const resultado = crearReporte({
       zona: "Las Cuadras",
       mensaje: "Contenedor lleno",
       fecha: "2026-04-16"
@@ -38,13 +34,9 @@ describe("CrearReporte", () => {
     expect(resultado.fecha).toBe("2026-04-16");
   });
 
-  test("debería rechazar zona inválida", () => {
-    const resultado = CrearReporte({
-      zona: "Zona inventada",
-      mensaje: "Algo pasa"
-    });
-
-    expect(resultado).toBe("Error: zona inválida");
+  test("debería rechazar zona inválida lanzando un error", () => {
+    expect(() => crearReporte({ zona: "Zona inventada", mensaje: "Algo pasa" }))
+    .toThrow("Error: zona inválida");
   });
 
   test("debería mostrar error si no se selecciona ninguna foto", () => {
@@ -100,5 +92,78 @@ describe("Obtener Detalle de Reporte", () => {
   test("debería devolver el reporte completo", () => {
     const reportes = [{ id: "1", zona: "Norte", mensaje: "Basura" }];
     expect(obtenerDetalleReporte("1", reportes)).toEqual({ id: "1", zona: "Norte", mensaje: "Basura" });
+  });
+});
+
+
+
+describe("Obtener Reportes Cercanos", () => {
+  const ubicacionUsuario = { lat: -17.3935, lng: -66.1570 }; // Plaza 14 de Septiembre
+
+  test("debería retornar una lista vacía si no hay reportes en el sistema", () => {
+    const resultado = obtenerReportesCercanos(ubicacionUsuario, []);
+    expect(resultado).toEqual([]);
+  });
+
+  test("debería filtrar y retornar solo los reportes dentro del radio (ej. 1.5 km)", () => {
+    const reportesBD = [
+      { 
+        id: "1", 
+        zona: "Las Cuadras", 
+        fecha: "2026-05-20", 
+        estado: "Pendiente", 
+        lat: -17.3950, lng: -66.1500 // ~0.77 km (Cercano)
+      }, 
+      { 
+        id: "2", 
+        zona: "Pacata Baja", 
+        fecha: "2026-05-19", 
+        estado: "Atendido", 
+        lat: -17.3680, lng: -66.1210 // ~4.70 km (Lejano)
+      }
+    ];
+
+    const resultado = obtenerReportesCercanos(ubicacionUsuario, reportesBD, 1.5);
+    
+    expect(resultado.length).toBe(1);
+    expect(resultado[0].id).toBe("1");
+    expect(resultado[0].distancia).toBeCloseTo(0.77, 1);
+  });
+
+  test("debería incluir distancia aproximada, fecha y estado en los elementos retornados", () => {
+    const reportesBD = [
+      { id: "1", zona: "Cala Cala", fecha: "2026-05-20", estado: "Pendiente", lat: -17.3900, lng: -66.1550 }
+    ];
+
+    const resultado = obtenerReportesCercanos(ubicacionUsuario, reportesBD, 2.0);
+
+    expect(resultado[0]).toHaveProperty("distancia");
+    expect(resultado[0]).toHaveProperty("fecha");
+    expect(resultado[0]).toHaveProperty("estado");
+  });
+});
+
+
+
+describe(" Validación de Foto Importada", () => {
+  test("debería aceptar un formato válido como JPG o PNG", () => {
+    const imagenJpg = { type: "image/jpeg", size: 1024 * 1024 }; // 1mb
+    const imagenPng = { type: "image/png", size: 1024 * 1024 };  
+    
+    expect(validarFoto(imagenJpg)).toBe("Foto válida");
+    expect(validarFoto(imagenPng)).toBe("Foto válida");
+  });
+
+  test("debería rechazar formatos no permitidos aunque sean imágenes (ej: GIF o WEBP)", () => {
+    const imagenGif = { type: "image/gif", size: 1024 * 1024 };
+    const resultado = validarFoto(imagenGif);
+    expect(resultado).toBe("El archivo seleccionado no es una imagen válida");
+  });
+
+  test("debería rechazar la imagen si excede el tamaño máximo permitido (5MB)", () => {
+    const archivoPesado = { type: "image/jpeg", size: 6 * 1024 * 1024 }; 
+    const resultado = validarFoto(archivoPesado);
+    
+    expect(resultado).toBe("El tamaño del archivo excede el límite permitido");
   });
 });
