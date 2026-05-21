@@ -1138,7 +1138,7 @@
     "testId": 49
   },
   {
-    "commitId": "HEAD",
+    "commitId": "8582c3297015fd7e076c3aebd2cf265a3646a67b",
     "commitName": "implementacion de logica de modificacion de presenterte",
     "commitTimestamp": 1779359633480,
     "testId": 50
@@ -1148,5 +1148,11 @@
     "commitName": "fix: correccion login",
     "commitTimestamp": 1779360272954,
     "testId": 51
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: correccion html final",
+    "commitTimestamp": 1779360498820,
+    "testId": 52
   }
 ]

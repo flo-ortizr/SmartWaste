@@ -1178,12 +1178,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "8582c3297015fd7e076c3aebd2cf265a3646a67b",
     "author": "unknown",
     "commit": {
       "date": "2026-05-21T10:33:52.000Z",
       "message": "implementacion de logica de modificacion de presenterte",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/8582c3297015fd7e076c3aebd2cf265a3646a67b"
     },
     "stats": {
       "total": 122,
@@ -1208,6 +1208,25 @@
       "total": 4,
       "additions": 2,
       "deletions": 2,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:48:17.000Z",
+      "message": "fix: correccion html final",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 1,
+      "additions": 1,
+      "deletions": 0,
       "date": "2026-05-21"
     },
     "coverage": 88.66,
