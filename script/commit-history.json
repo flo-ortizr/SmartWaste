@@ -1102,12 +1102,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "49023ed6d808ba871ee7271f6f5c9d66696de12f",
     "author": "User",
     "commit": {
       "date": "2026-05-21T03:54:56.000Z",
       "message": "fix: resolver conflictos tras pull de master",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/49023ed6d808ba871ee7271f6f5c9d66696de12f"
     },
     "stats": {
       "total": 80,
@@ -1132,6 +1132,25 @@
       "total": 40,
       "additions": 20,
       "deletions": 20,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:17:58.000Z",
+      "message": "implementacion de simulaacion de bd y actualizacionde html",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 12,
+      "deletions": 1,
       "date": "2026-05-21"
     },
     "coverage": 88.66,
