@@ -1206,7 +1206,7 @@
     "testId": 52
   },
   {
-    "commitId": "HEAD",
+    "commitId": "9c00126c80b8f0ec4eb805b993bbf8885604c360",
     "commitName": "refactor: convertir lógica de rutas en clase RutaService",
     "commitTimestamp": 1779355517483,
     "testId": 52
@@ -1216,5 +1216,11 @@
     "commitName": "refactor: reorganizar presenterEMSA usando clases de servicio",
     "commitTimestamp": 1779355772197,
     "testId": 53
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "style: mejorar interfaz de ciudadano.html",
+    "commitTimestamp": 1779356145172,
+    "testId": 54
   }
 ]
