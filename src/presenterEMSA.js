@@ -2,6 +2,11 @@ import { mostrarRutas, crearRuta, eliminarRuta } from "./rutas.js";
 import { ReporteService, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 import { ZonaService } from "./zonas.js";
 
+const _token = localStorage.getItem("jwt_token");
+const _rol   = localStorage.getItem("smartwaste_rol");
+if (!_token)         window.location.href = "./index.html";
+if (_rol !== "emsa") window.location.href = "./ciudadano.html";
+
 // ── Datos ─────────────────────────────────────────────────────────────────────
 const reportesBD = [
   { id: "1", zona: "Cala Cala",  fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina",             usuario: "Juan",  cantidadBasura: "Alta",  fotos: ["img/basura1.jpg", "img/basura2.jpg"], ubicacion: "Cala Cala Cochabamba", lat: -17.3700, lng: -66.1590, atendidoPor: "", fechaAtencion: "" },
@@ -23,7 +28,6 @@ const USUARIO_EMSA = "Personal EMSA";
 const reporteService = new ReporteService(reportesBD);
 const zonaService = new ZonaService(reportesBD);
 
-// ── DOM ───────────────────────────────────────────────────────────────────────
 const $ = id => document.querySelector(id);
 const btnVerRutas       = $("#btn-ver-rutas");
 const divListaRutas     = $("#lista-rutas-div");
@@ -44,7 +48,7 @@ const selectOrdenZonas  = $("#orden-zonas");
 const divListaZonas     = $("#lista-zonas-div");
 const divReportesZona   = $("#reportes-zona-div");
 
-// ── Utilidades de UI ──────────────────────────────────────────────────────────
+
 function mostrarMensaje(elemento, texto, tipo) {
   elemento.textContent = texto;
   elemento.className = tipo === "error" ? "msg msg-error" : "msg msg-exito";
@@ -59,7 +63,6 @@ function crearParrafo(etiqueta, valor) {
   return p;
 }
 
-// ── Validaciones de formulario ────────────────────────────────────────────────
 function validarFormRuta(nombre, zona, dias, cobertura) {
   if (!nombre || nombre.trim() === "") return "Por favor, ingrese un nombre de ruta";
   if (!zona   || zona.trim()   === "") return "Por favor, ingrese una zona";
@@ -68,7 +71,6 @@ function validarFormRuta(nombre, zona, dias, cobertura) {
   return null;
 }
 
-// ── Renderizado de Zonas ──────────────────────────────────────────────────────
 function renderizarZonasConConteo(zonasOrdenadas, contenedor) {
   contenedor.innerHTML = "";
   if (zonasOrdenadas.length === 0) {
@@ -144,7 +146,6 @@ function renderizarListaRutas(resultado, contenedor) {
   contenedor.appendChild(ul);
 }
 
-// ── Renderizado de Detalle de Reporte ─────────────────────────────────────────
 function crearVisorFoto(foto) {
   const visor = document.createElement("div");
   visor.className = "visor-foto";
@@ -254,7 +255,7 @@ function renderizarDetalleReporte(detalle) {
   divDetalleReporte.appendChild(card);
 }
 
-// ── Renderizado de Lista de Reportes ─────────────────────────────────────────
+
 function renderizarListaReportes(resumen, contenedor) {
   contenedor.innerHTML = "";
   if (resumen.length === 0) {
@@ -349,5 +350,14 @@ if (btnEliminarRuta) {
     if (resultado === "Ruta eliminada correctamente") {
       renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
     }
+  });
+}
+
+const btnCerrarSesionEMSA = document.querySelector("#btn-cerrar-sesion");
+if (btnCerrarSesionEMSA) {
+  btnCerrarSesionEMSA.addEventListener("click", () => {
+    localStorage.removeItem("jwt_token");
+    localStorage.removeItem("smartwaste_rol");
+    window.location.href = "./index.html?logout=true";
   });
 }

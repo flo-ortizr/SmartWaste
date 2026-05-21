@@ -1218,7 +1218,7 @@
     "testId": 53
   },
   {
-    "commitId": "HEAD",
+    "commitId": "d6d6ef3f5d501da7cf12902a41be952a9184b4cd",
     "commitName": "style: mejorar interfaz de ciudadano.html",
     "commitTimestamp": 1779356145172,
     "testId": 54
@@ -1244,5 +1244,11 @@
     "commitName": "feat: registrarUsuario asigna rol: ciudadano automáticamente",
     "commitTimestamp": 1779357243024,
     "testId": 55
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: proteccion de rutas para ciudadano y trabajador emsa",
+    "commitTimestamp": 1779357570834,
+    "testId": 56
   }
 ]
