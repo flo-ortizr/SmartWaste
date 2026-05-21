@@ -874,17 +874,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2d070f21db302e14ead71000dd67363b7df49124",
     "author": "User",
     "commit": {
       "date": "2026-05-21T02:20:10.000Z",
       "message": "feat: agregar boton volver en detalle de reportes",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/2d070f21db302e14ead71000dd67363b7df49124"
     },
     "stats": {
       "total": 231,
       "additions": 124,
       "deletions": 107,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T02:55:44.000Z",
+      "message": "feat: agregar boton para marcar reporte como atendido",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 31,
+      "deletions": 3,
       "date": "2026-05-21"
     },
     "coverage": 84.13,

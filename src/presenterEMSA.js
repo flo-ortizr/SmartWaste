@@ -48,9 +48,21 @@ const reportesBD = [
 ];
 
 const rutasBD = [
-  { nombreRuta: "Ruta 1", zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes", cobertura: "Cala Cala" },
-  { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados", cobertura: "La Chimba" }
+  {
+    nombreRuta: "Ruta 1",
+    zona: "Zona Norte - Cala Cala",
+    dias: "Lunes, Miércoles y Viernes",
+    cobertura: "Cala Cala"
+  },
+  {
+    nombreRuta: "Ruta 2",
+    zona: "Zona Sur - La Chimba",
+    dias: "Martes, Jueves y Sábados",
+    cobertura: "La Chimba"
+  }
 ];
+
+const usuarioAdminActual = "Personal EMSA";
 
 // VALIDACIONES
 function validarFormRuta(nombre, zona, dias, cobertura) {
@@ -118,6 +130,7 @@ function crearVisorFoto(foto) {
 
   visor.appendChild(imagenGrande);
   visor.addEventListener("click", () => visor.remove());
+
   return visor;
 }
 
@@ -141,9 +154,11 @@ function crearContenedorFotos(fotos) {
     img.width = 120;
     img.style.marginRight = "10px";
     img.style.cursor = "pointer";
+
     img.addEventListener("click", () => {
       document.body.appendChild(crearVisorFoto(foto));
     });
+
     contenedorFotos.appendChild(img);
   });
 
@@ -174,6 +189,17 @@ function crearSeccionMapa(detalle) {
   return { tituloMapa, mapa, enlaceMapa };
 }
 
+function crearBotonAtender(detalle) {
+  const btnAtender = document.createElement("button");
+  btnAtender.textContent = "Marcar como Atendido";
+
+  if (detalle.estado === "Atendido") {
+    btnAtender.disabled = true;
+  }
+
+  return btnAtender;
+}
+
 function renderizarDetalleReporte(detalle) {
   divDetalleReporte.innerHTML = "";
 
@@ -182,6 +208,7 @@ function renderizarDetalleReporte(detalle) {
   h3.textContent = "Detalle del Reporte";
 
   const { tituloMapa, mapa, enlaceMapa } = crearSeccionMapa(detalle);
+  const btnAtender = crearBotonAtender(detalle);
 
   const btnVolver = document.createElement("button");
   btnVolver.textContent = "Volver";
@@ -204,7 +231,8 @@ function renderizarDetalleReporte(detalle) {
     tituloMapa,
     mapa,
     enlaceMapa,
-    btnVolver
+    btnVolver,
+    btnAtender
   );
 }
 

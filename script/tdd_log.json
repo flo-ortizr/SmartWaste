@@ -940,9 +940,15 @@
     "testId": 45
   },
   {
-    "commitId": "HEAD",
+    "commitId": "2d070f21db302e14ead71000dd67363b7df49124",
     "commitName": "feat: agregar boton volver en detalle de reportes",
     "commitTimestamp": 1779330010795,
     "testId": 46
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar boton para marcar reporte como atendido",
+    "commitTimestamp": 1779332145621,
+    "testId": 47
   }
 ]
