@@ -958,9 +958,15 @@
     "testId": 48
   },
   {
-    "commitId": "HEAD",
+    "commitId": "a30d1a3b1dd38838462023a680d957b2d33425b7",
     "commitName": "feat: bloquear cambio de estado en reportes ya atendidos",
     "commitTimestamp": 1779332758595,
     "testId": 49
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: mostrar confirmacion visual al actualizar estado del reporte",
+    "commitTimestamp": 1779333068399,
+    "testId": 50
   }
 ]

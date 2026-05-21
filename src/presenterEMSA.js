@@ -67,6 +67,7 @@ const rutasBD = [
 ];
 
 const usuarioAdminActual = "Personal EMSA";
+let mensajeEstadoReporte = "";
 
 // VALIDACIONES
 function validarFormRuta(nombre, zona, dias, cobertura) {
@@ -197,6 +198,7 @@ function marcarReporteComoAtendido(detalle) {
   detalle.estado = "Atendido";
   detalle.atendidoPor = usuarioAdminActual;
   detalle.fechaAtencion = new Date().toLocaleString();
+  mensajeEstadoReporte = 'Estado del reporte actualizado a "Atendido" correctamente';
 }
 
 function crearBotonAtender(detalle) {
@@ -235,6 +237,13 @@ function renderizarDetalleReporte(detalle) {
 
   const { tituloMapa, mapa, enlaceMapa } = crearSeccionMapa(detalle);
   const btnAtender = crearBotonAtender(detalle);
+  const mensajeConfirmacion = document.createElement("p");
+  mensajeConfirmacion.textContent = mensajeEstadoReporte;
+  mensajeConfirmacion.className = "exito";
+
+  if (detalle.estado !== "Atendido") {
+  mensajeEstadoReporte = "";
+}
 
   const btnVolver = document.createElement("button");
   btnVolver.textContent = "Volver";
@@ -260,7 +269,8 @@ function renderizarDetalleReporte(detalle) {
     mapa,
     enlaceMapa,
     btnVolver,
-    btnAtender
+    btnAtender,
+    mensajeConfirmacion
   );
 }
 

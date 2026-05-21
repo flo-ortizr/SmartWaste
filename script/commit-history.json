@@ -931,16 +931,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a30d1a3b1dd38838462023a680d957b2d33425b7",
     "author": "User",
     "commit": {
       "date": "2026-05-21T03:05:57.000Z",
       "message": "feat: bloquear cambio de estado en reportes ya atendidos",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/a30d1a3b1dd38838462023a680d957b2d33425b7"
     },
     "stats": {
       "total": 13,
       "additions": 12,
+      "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T03:11:07.000Z",
+      "message": "feat: mostrar confirmacion visual al actualizar estado del reporte",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 11,
       "deletions": 1,
       "date": "2026-05-21"
     },
