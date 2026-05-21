@@ -946,9 +946,23 @@
     "testId": 47
   },
   {
-    "commitId": "HEAD",
+    "commitId": "1290cf254d2df957bdef2fed1b4b0c3ccc4c1675",
     "commitName": "feat: Añadiendo mensaje y validacion para no poder usar el mismo nombre de usuario si es que ya existe",
     "commitTimestamp": 1779330544210,
     "testId": 47
+  },
+  {
+    "numPassedTests": 31,
+    "failedTests": 0,
+    "numTotalTests": 31,
+    "timestamp": 1779330645280,
+    "success": true,
+    "testId": 48
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Añadiendo mensaje y validacion para que la contrasena supere los 8 caracteres",
+    "commitTimestamp": 1779330677050,
+    "testId": 48
   }
 ]

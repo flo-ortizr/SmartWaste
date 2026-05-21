@@ -9,6 +9,10 @@ export function registrarUsuario(username, password, listaDeUsuarios) {
     return "Este usuario ya se encuentra registrado";
   }
 
+  if (password.length < 8) {
+    return "La contraseña debe tener al menos 8 caracteres";
+  }
+
   listaDeUsuarios.push({
     username: username.trim(),
     password: password

@@ -20,4 +20,10 @@ describe("Registro de Usuarios", () => {
     let resultado = registrarUsuario("samuel", "newpassword123", usuariosBD);
     expect(resultado).toEqual("Este usuario ya se encuentra registrado");
   });
+
+  it("debería mostrar un mensaje de error si la contraseña tiene menos de 8 caracteres", () => {
+    let usuariosBD = [];
+    let resultado = registrarUsuario("samuel", "12345", usuariosBD);
+    expect(resultado).toEqual("La contraseña debe tener al menos 8 caracteres");
+  });
 });

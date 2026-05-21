@@ -893,12 +893,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "1290cf254d2df957bdef2fed1b4b0c3ccc4c1675",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T02:29:03.000Z",
       "message": "feat: Añadiendo mensaje y validacion para no poder usar el mismo nombre de usuario si es que ya existe",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/1290cf254d2df957bdef2fed1b4b0c3ccc4c1675"
     },
     "stats": {
       "total": 12,
@@ -908,6 +908,25 @@
     },
     "coverage": 85.92,
     "test_count": 30,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T02:31:15.000Z",
+      "message": "feat: Añadiendo mensaje y validacion para que la contrasena supere los 8 caracteres",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 10,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 86.3,
+    "test_count": 31,
     "failed_tests": 0,
     "conclusion": "success"
   }
