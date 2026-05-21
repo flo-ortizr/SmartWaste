@@ -1126,7 +1126,7 @@
     "testId": 47
   },
   {
-    "commitId": "HEAD",
+    "commitId": "d919a068e5c49ed7859e3841fb3a72e3926ccb72",
     "commitName": "implementacion de simulaacion de bd y actualizacionde html",
     "commitTimestamp": 1779358679863,
     "testId": 48
@@ -1136,5 +1136,11 @@
     "commitName": "implementacion de logica de modificacion de ruta en presenter",
     "commitTimestamp": 1779358837677,
     "testId": 49
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "implementacion de logica de modificacion de presenterte",
+    "commitTimestamp": 1779359633480,
+    "testId": 50
   }
 ]

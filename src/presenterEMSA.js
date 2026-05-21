@@ -16,6 +16,13 @@ const divDetalleReporte = document.querySelector("#detalle-reporte-div");
 const btnEliminarRuta = document.querySelector("#btn-eliminar-ruta");
 const inputZonaEliminar = document.querySelector("#zona_eliminar");
 const divResultadoEliminar = document.querySelector("#resultado-eliminar-div");
+const formularioModificarRutaEmsa = document.querySelector("#formulario-modificar-ruta");
+const entradaIdentificadorRutaModificar = document.querySelector("#identificador_ruta_modificar");
+const entradaNombreRutaModificar = document.querySelector("#nombre_ruta_modificar");
+const entradaZonaRutaModificar = document.querySelector("#zona_ruta_modificar");
+const entradaDiasRutaModificar = document.querySelector("#dias_ruta_modificar");
+const entradaCoberturaRutaModificar = document.querySelector("#cobertura_ruta_modificar");
+const contenedorResultadoModificacionRuta = document.querySelector("#resultado-modificacion-ruta-div");
 
 // DATOS
 const reportesBD = [
@@ -83,24 +90,32 @@ function crearParrafo(etiqueta, valor) {
   return p;
 }
 
-function renderizarListaRutas(resultado, contenedor) {
-  contenedor.textContent = "";
+function renderizarListaRutas(resultadoRutasObtenidas, contenedorListadoRutas) {
+  contenedorListadoRutas.textContent = "";
 
-  if (typeof resultado === "string") {
-    const p = document.createElement("p");
-    p.textContent = resultado;
-    contenedor.appendChild(p);
+  if (typeof resultadoRutasObtenidas === "string") {
+    const parrafoMensajeCadena = document.createElement("p");
+    parrafoMensajeCadena.textContent = resultadoRutasObtenidas;
+    contenedorListadoRutas.appendChild(parrafoMensajeCadena);
     return;
   }
 
-  const ul = document.createElement("ul");
-  resultado.forEach((ruta) => {
-    const li = document.createElement("li");
-    li.textContent = `Zona: ${ruta.zona} - Días: ${ruta.dias}`;
-    ul.appendChild(li);
-  });
+  const listaDesordenadaRutas = document.createElement("ul");
+  
+  resultadoRutasObtenidas.forEach((rutaIndividualRecuperada, indiceDeArregloRuta) => {
+    const elementoListaRuta = document.createElement("li");
+    elementoListaRuta.textContent = `Zona: ${rutaIndividualRecuperada.zona} - Días: ${rutaIndividualRecuperada.dias} `;
+    
+    const botonSeleccionarModificarRuta = document.createElement("button");
+    botonSeleccionarModificarRuta.textContent = "Editar";
+    botonSeleccionarModificarRuta.className = "btn-editar-ruta";
+    botonSeleccionarModificarRuta.setAttribute("data-indice-ruta", indiceDeArregloRuta);
 
-  contenedor.appendChild(ul);
+    elementoListaRuta.appendChild(botonSeleccionarModificarRuta);
+    listaDesordenadaRutas.appendChild(elementoListaRuta);
+  });
+  
+  contenedorListadoRutas.appendChild(listaDesordenadaRutas);
 }
 
 function crearVisorFoto(foto) {
@@ -354,5 +369,57 @@ if (btnEliminarRuta) {
     if (resultado === "Ruta eliminada correctamente") {
       renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
     }
+  });
+}
+if (divListaRutas) {
+  divListaRutas.addEventListener("click", (eventoInteraccionUsuarioEdicion) => {
+    if (eventoInteraccionUsuarioEdicion.target.classList.contains("btn-editar-ruta")) {
+      const indiceRutaSeleccionada = eventoInteraccionUsuarioEdicion.target.getAttribute("data-indice-ruta");
+      const rutaRecuperadaParaEdicion = rutasBD[indiceRutaSeleccionada];
+
+      entradaIdentificadorRutaModificar.value = indiceRutaSeleccionada;
+      entradaNombreRutaModificar.value = rutaRecuperadaParaEdicion.nombreRuta;
+      entradaZonaRutaModificar.value = rutaRecuperadaParaEdicion.zona;
+      entradaDiasRutaModificar.value = rutaRecuperadaParaEdicion.dias;
+      entradaCoberturaRutaModificar.value = rutaRecuperadaParaEdicion.cobertura;
+    }
+  });
+}
+
+if (formularioModificarRutaEmsa) {
+  formularioModificarRutaEmsa.addEventListener("submit", (eventoEnvioFormularioEdicion) => {
+    eventoEnvioFormularioEdicion.preventDefault();
+
+    const indiceRutaModificada = entradaIdentificadorRutaModificar.value;
+    const nombreRutaModificada = entradaNombreRutaModificar.value.trim();
+    const zonaRutaModificada = entradaZonaRutaModificar.value.trim();
+    const diasRutaModificada = entradaDiasRutaModificar.value.trim();
+    const coberturaRutaModificada = entradaCoberturaRutaModificar.value.trim();
+
+    contenedorResultadoModificacionRuta.textContent = "";
+
+    if (nombreRutaModificada === "" || zonaRutaModificada === "" || diasRutaModificada === "" || coberturaRutaModificada === "") {
+      const parrafoErrorCamposVacios = document.createElement("p");
+      parrafoErrorCamposVacios.textContent = "Por favor, complete los campos requeridos";
+      parrafoErrorCamposVacios.className = "mensaje-error";
+      contenedorResultadoModificacionRuta.appendChild(parrafoErrorCamposVacios);
+      return;
+    }
+
+    rutasBD[indiceRutaModificada].nombreRuta = nombreRutaModificada;
+    rutasBD[indiceRutaModificada].zona = zonaRutaModificada;
+    rutasBD[indiceRutaModificada].dias = diasRutaModificada;
+    rutasBD[indiceRutaModificada].cobertura = coberturaRutaModificada;
+
+    const parrafoExitoModificacion = document.createElement("p");
+    parrafoExitoModificacion.textContent = "Ruta modificada correctamente";
+    parrafoExitoModificacion.className = "mensaje-exito";
+    contenedorResultadoModificacionRuta.appendChild(parrafoExitoModificacion);
+
+    formularioModificarRutaEmsa.reset();
+    entradaIdentificadorRutaModificar.value = "";
+
+    const resultadoRutasActualizadasVisualmente = mostrarRutas(rutasBD);
+    renderizarListaRutas(resultadoRutasActualizadasVisualmente, divListaRutas);
   });
 }

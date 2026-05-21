@@ -33,8 +33,20 @@
 
       <input type="submit" value="Guardar ruta" />
     </form>
-
     <div id="resultado-ruta-div"></div>
+    <hr />
+    <div class="seccion-modificar-ruta">
+       <h3>Modificar Ruta Registrada</h3>
+        <form id="formulario-modificar-ruta">
+            <input type="hidden" id="identificador_ruta_modificar" />
+            <input type="text" id="nombre_ruta_modificar" placeholder="Nombre de la ruta" />
+            <input type="text" id="zona_ruta_modificar" placeholder="Zona" />
+            <input type="text" id="dias_ruta_modificar" placeholder="Días de recolección" />
+            <input type="text" id="cobertura_ruta_modificar" placeholder="Cobertura" />
+             <button type="submit">Guardar Cambios</button>
+             </form>
+             <div id="resultado-modificacion-ruta-div"></div>
+            </div>
 
     <hr />
     <h2>Registrar Horario de Ruta</h2>

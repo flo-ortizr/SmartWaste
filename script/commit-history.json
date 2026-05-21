@@ -1140,12 +1140,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "d919a068e5c49ed7859e3841fb3a72e3926ccb72",
     "author": "unknown",
     "commit": {
       "date": "2026-05-21T10:17:58.000Z",
       "message": "implementacion de simulaacion de bd y actualizacionde html",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d919a068e5c49ed7859e3841fb3a72e3926ccb72"
     },
     "stats": {
       "total": 13,
@@ -1170,6 +1170,25 @@
       "total": 56,
       "additions": 49,
       "deletions": 7,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:33:52.000Z",
+      "message": "implementacion de logica de modificacion de presenterte",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 122,
+      "additions": 101,
+      "deletions": 21,
       "date": "2026-05-21"
     },
     "coverage": 88.66,
