@@ -1246,7 +1246,7 @@
     "testId": 55
   },
   {
-    "commitId": "HEAD",
+    "commitId": "b3b0a9540520973773cd28d8ff0b7829b89b2f20",
     "commitName": "feat: proteccion de rutas para ciudadano y trabajador emsa",
     "commitTimestamp": 1779357570834,
     "testId": 56
@@ -1256,5 +1256,19 @@
     "commitName": "refactor: manejo de login de usuarios",
     "commitTimestamp": 1779357862422,
     "testId": 57
+  },
+  {
+    "numPassedTests": 63,
+    "failedTests": 0,
+    "numTotalTests": 63,
+    "timestamp": 1779357880946,
+    "success": true,
+    "testId": 58
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: login de usuario",
+    "commitTimestamp": 1779358128256,
+    "testId": 58
   }
 ]

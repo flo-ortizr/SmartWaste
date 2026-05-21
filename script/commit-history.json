@@ -1292,12 +1292,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "b3b0a9540520973773cd28d8ff0b7829b89b2f20",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T09:59:30.000Z",
       "message": "feat: proteccion de rutas para ciudadano y trabajador emsa",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/b3b0a9540520973773cd28d8ff0b7829b89b2f20"
     },
     "stats": {
       "total": 284,
@@ -1322,6 +1322,25 @@
       "total": 250,
       "additions": 203,
       "deletions": 47,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T10:08:47.000Z",
+      "message": "fix: login de usuario",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 0,
+      "additions": 0,
+      "deletions": 0,
       "date": "2026-05-21"
     },
     "coverage": 71.19,
