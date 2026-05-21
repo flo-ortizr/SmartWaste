@@ -1,6 +1,7 @@
 import crearReporte, { validarFoto } from "./reportes.js";
 import { buscarRutaPorZona } from "./rutas.js";
 import { mostrarHorario } from "./horarios.js";
+import { registrarUsuario } from "./usuarios.js";
 
 // DOM 
 const formReporte = document.querySelector("#reporte-form");
@@ -16,11 +17,17 @@ const divHorarios = document.querySelector("#resultado-horarios-div");
 const btnBuscarRuta = document.querySelector("#btn-buscar-ruta");
 const inputBuscarZona = document.querySelector("#buscar_zona_ruta");
 const divResultadoBusquedaRuta = document.querySelector("#resultado-busqueda-ruta-div");
+const formRegistroCiudadano = document.querySelector("#registro-ciudadano-form");
+const inputUsernameRegistro = document.querySelector("#username_registro");
+const inputPasswordRegistro = document.querySelector("#password_registro");
+const divResultadoRegistro = document.querySelector("#resultado-registro-div");
 
 const rutasBD = [
   { nombreRuta: "Ruta 1", zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes", cobertura: "Cala Cala" },
   { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados", cobertura: "La Chimba" }
 ];
+
+const usuariosBD = [];
 
 // VALIDACIONES
 function validarFormReporte(zona, mensaje, fecha, archivoFoto) {
@@ -95,5 +102,22 @@ if (btnVerHorarios) {
 if (btnBuscarRuta) {
   btnBuscarRuta.addEventListener("click", () => {
     divResultadoBusquedaRuta.textContent = buscarRutaPorZona(inputBuscarZona.value, rutasBD);
+  });
+}
+
+if (formRegistroCiudadano) {
+  formRegistroCiudadano.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const username = inputUsernameRegistro.value;
+    const password = inputPasswordRegistro.value;
+
+    const resultado = registrarUsuario(username, password, usuariosBD);
+
+    if (resultado === "Usuario registrado correctamente") {
+      mostrarExito(divResultadoRegistro, resultado);
+      formRegistroCiudadano.reset();
+    } else {
+      mostrarError(divResultadoRegistro, resultado);
+    }
   });
 }

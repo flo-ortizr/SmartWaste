@@ -912,9 +912,15 @@
     "testId": 43
   },
   {
-    "commitId": "HEAD",
+    "commitId": "41ab44ec1d3089066d008c52bec7ea972d0475bc",
     "commitName": "feat: Actualizando html para el registro de ciudadano",
     "commitTimestamp": 1779329839729,
     "testId": 44
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: actualizando presenter para el registro de ciudadano",
+    "commitTimestamp": 1779330057324,
+    "testId": 45
   }
 ]
