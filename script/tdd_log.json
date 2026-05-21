@@ -994,9 +994,15 @@
     "testId": 51
   },
   {
-    "commitId": "HEAD",
+    "commitId": "f50a3ee7fd4b125aa8ce579aa4274e7f693f662f",
     "commitName": "feat: mensaje de error si la contrasena o el usuario es incorrecto",
     "commitTimestamp": 1779331521914,
     "testId": 51
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Al tocar el boton cerrar sesion, el sistema quita el indicador de sesion activa",
+    "commitTimestamp": 1779332423318,
+    "testId": 52
   }
 ]

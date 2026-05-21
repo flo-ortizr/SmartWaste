@@ -21,6 +21,7 @@ const formRegistroCiudadano = document.querySelector("#registro-ciudadano-form")
 const inputUsernameRegistro = document.querySelector("#username_registro");
 const inputPasswordRegistro = document.querySelector("#password_registro");
 const divResultadoRegistro = document.querySelector("#resultado-registro-div");
+const btnCerrarSesion = document.querySelector("#btn-cerrar-sesion");
 
 const rutasBD = [
   { nombreRuta: "Ruta 1", zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes", cobertura: "Cala Cala" },
@@ -119,5 +120,12 @@ if (formRegistroCiudadano) {
     } else {
       mostrarError(divResultadoRegistro, resultado);
     }
+  });
+}
+
+if (btnCerrarSesion) {
+  btnCerrarSesion.addEventListener("click", () => {
+    localStorage.removeItem("jwt_token");
+    window.location.href = "./index.html";
   });
 }

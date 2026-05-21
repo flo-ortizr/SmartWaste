@@ -969,17 +969,36 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "f50a3ee7fd4b125aa8ce579aa4274e7f693f662f",
     "author": "dahbner",
     "commit": {
       "date": "2026-05-21T02:45:20.000Z",
       "message": "feat: mensaje de error si la contrasena o el usuario es incorrecto",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/f50a3ee7fd4b125aa8ce579aa4274e7f693f662f"
     },
     "stats": {
       "total": 16,
       "additions": 15,
       "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 87.5,
+    "test_count": 35,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "dahbner",
+    "commit": {
+      "date": "2026-05-21T03:00:22.000Z",
+      "message": "feat: Al tocar el boton cerrar sesion, el sistema quita el indicador de sesion activa",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 11,
+      "deletions": 0,
       "date": "2026-05-21"
     },
     "coverage": 87.5,
