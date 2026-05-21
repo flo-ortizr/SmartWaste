@@ -200,19 +200,30 @@ function marcarReporteComoAtendido(detalle) {
 }
 
 function crearBotonAtender(detalle) {
+  const contenedorEstado = document.createElement("div");
+
   const btnAtender = document.createElement("button");
   btnAtender.textContent = "Marcar como Atendido";
 
   if (detalle.estado === "Atendido") {
     btnAtender.disabled = true;
+
+    const mensajeBloqueado = document.createElement("p");
+    mensajeBloqueado.textContent = "Estado bloqueado: el reporte ya fue atendido";
+    mensajeBloqueado.className = "exito";
+
+    contenedorEstado.appendChild(btnAtender);
+    contenedorEstado.appendChild(mensajeBloqueado);
   } else {
     btnAtender.addEventListener("click", () => {
       marcarReporteComoAtendido(detalle);
       renderizarDetalleReporte(detalle);
     });
+
+    contenedorEstado.appendChild(btnAtender);
   }
 
-  return btnAtender;
+  return contenedorEstado;
 }
 
 function renderizarDetalleReporte(detalle) {

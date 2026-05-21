@@ -912,17 +912,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "96e2e82888512be4fe1fa594a7af2452adca2967",
     "author": "User",
     "commit": {
       "date": "2026-05-21T03:00:50.000Z",
       "message": "feat: guardar usuario y fecha al marcar reporte como atendido",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/96e2e82888512be4fe1fa594a7af2452adca2967"
     },
     "stats": {
       "total": 21,
       "additions": 19,
       "deletions": 2,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T03:05:57.000Z",
+      "message": "feat: bloquear cambio de estado en reportes ya atendidos",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 12,
+      "deletions": 1,
       "date": "2026-05-21"
     },
     "coverage": 84.13,

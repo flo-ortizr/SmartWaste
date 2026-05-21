@@ -952,9 +952,15 @@
     "testId": 47
   },
   {
-    "commitId": "HEAD",
+    "commitId": "96e2e82888512be4fe1fa594a7af2452adca2967",
     "commitName": "feat: guardar usuario y fecha al marcar reporte como atendido",
     "commitTimestamp": 1779332451621,
     "testId": 48
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: bloquear cambio de estado en reportes ya atendidos",
+    "commitTimestamp": 1779332758595,
+    "testId": 49
   }
 ]
