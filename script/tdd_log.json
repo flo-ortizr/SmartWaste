@@ -970,9 +970,15 @@
     "testId": 50
   },
   {
-    "commitId": "HEAD",
+    "commitId": "867ea00b514d125e76c10c0a738f7d75ff3c23ac",
     "commitName": "fix: corregir orden de reset en mensajeeStadoreporte y refactorizar presenterEmsa",
     "commitTimestamp": 1779333384028,
     "testId": 51
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor : ordenar  acciones del detalle de reportes emsa",
+    "commitTimestamp": 1779333896339,
+    "testId": 52
   }
 ]

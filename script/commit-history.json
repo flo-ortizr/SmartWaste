@@ -969,17 +969,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "867ea00b514d125e76c10c0a738f7d75ff3c23ac",
     "author": "User",
     "commit": {
       "date": "2026-05-21T03:16:23.000Z",
       "message": "fix: corregir orden de reset en mensajeeStadoreporte y refactorizar presenterEmsa",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/867ea00b514d125e76c10c0a738f7d75ff3c23ac"
     },
     "stats": {
       "total": 26,
       "additions": 6,
       "deletions": 20,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T03:24:55.000Z",
+      "message": "refactor : ordenar  acciones del detalle de reportes emsa",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 18,
+      "additions": 13,
+      "deletions": 5,
       "date": "2026-05-21"
     },
     "coverage": 84.13,

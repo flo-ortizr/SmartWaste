@@ -222,11 +222,10 @@ function renderizarDetalleReporte(detalle) {
   const h3 = document.createElement("h3");
   h3.textContent = "Detalle del Reporte";
 
-  // ✅ Se captura el mensaje ANTES de resetearlo
   const mensajeConfirmacion = document.createElement("p");
   mensajeConfirmacion.textContent = mensajeEstadoReporte;
   mensajeConfirmacion.className = "exito";
-  mensajeEstadoReporte = ""; // ✅ Se resetea después de capturarlo
+  mensajeEstadoReporte = "";
 
   const { tituloMapa, mapa, enlaceMapa } = crearSeccionMapa(detalle);
   const btnAtender = crearBotonAtender(detalle);
@@ -236,6 +235,17 @@ function renderizarDetalleReporte(detalle) {
   btnVolver.addEventListener("click", () => {
     divDetalleReporte.innerHTML = "";
   });
+
+  const accionesDetalle = document.createElement("div");
+  accionesDetalle.style.marginTop = "12px";
+
+  enlaceMapa.style.display = "inline-block";
+  enlaceMapa.style.marginRight = "10px";
+  btnVolver.style.marginRight = "10px";
+
+  accionesDetalle.appendChild(enlaceMapa);
+  accionesDetalle.appendChild(btnVolver);
+  accionesDetalle.appendChild(btnAtender);
 
   divDetalleReporte.append(
     hr,
@@ -253,9 +263,7 @@ function renderizarDetalleReporte(detalle) {
     crearContenedorFotos(detalle.fotos),
     tituloMapa,
     mapa,
-    enlaceMapa,
-    btnVolver,
-    btnAtender,
+    accionesDetalle,
     mensajeConfirmacion
   );
 }
