@@ -1,7 +1,7 @@
 import { mostrarRutas, crearRuta, eliminarRuta } from "./rutas.js";
 import { obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
 
-// DOM 
+// DOM
 const btnVerRutas = document.querySelector("#btn-ver-rutas");
 const divListaRutas = document.querySelector("#lista-rutas-div");
 const formRuta = document.querySelector("#ruta-form");
@@ -17,6 +17,7 @@ const btnEliminarRuta = document.querySelector("#btn-eliminar-ruta");
 const inputZonaEliminar = document.querySelector("#zona_eliminar");
 const divResultadoEliminar = document.querySelector("#resultado-eliminar-div");
 
+// DATOS
 const reportesBD = [
   {
     id: "1",
@@ -66,6 +67,15 @@ function mostrarMensaje(elemento, texto, claseCSS) {
   elemento.className = claseCSS;
 }
 
+function crearParrafo(etiqueta, valor) {
+  const p = document.createElement("p");
+  const strong = document.createElement("strong");
+  strong.textContent = etiqueta + ": ";
+  p.appendChild(strong);
+  p.appendChild(document.createTextNode(valor || "No disponible"));
+  return p;
+}
+
 function renderizarListaRutas(resultado, contenedor) {
   contenedor.innerHTML = "";
 
@@ -84,6 +94,118 @@ function renderizarListaRutas(resultado, contenedor) {
   });
 
   contenedor.appendChild(ul);
+}
+
+function crearVisorFoto(foto) {
+  const visor = document.createElement("div");
+  visor.style.position = "fixed";
+  visor.style.top = "0";
+  visor.style.left = "0";
+  visor.style.width = "100%";
+  visor.style.height = "100%";
+  visor.style.backgroundColor = "rgba(0,0,0,0.8)";
+  visor.style.display = "flex";
+  visor.style.justifyContent = "center";
+  visor.style.alignItems = "center";
+  visor.style.zIndex = "9999";
+
+  const imagenGrande = document.createElement("img");
+  imagenGrande.src = foto;
+  imagenGrande.alt = "Foto ampliada";
+  imagenGrande.style.maxWidth = "80%";
+  imagenGrande.style.maxHeight = "80%";
+  imagenGrande.style.border = "3px solid white";
+
+  visor.appendChild(imagenGrande);
+  visor.addEventListener("click", () => visor.remove());
+  return visor;
+}
+
+function crearContenedorFotos(fotos) {
+  const contenedorFotos = document.createElement("div");
+  const tituloFotos = document.createElement("h4");
+  tituloFotos.textContent = "Fotos adjuntas";
+  contenedorFotos.appendChild(tituloFotos);
+
+  if (!fotos || fotos.length === 0) {
+    const pSinFotos = document.createElement("p");
+    pSinFotos.textContent = "No existen fotos adjuntas";
+    contenedorFotos.appendChild(pSinFotos);
+    return contenedorFotos;
+  }
+
+  fotos.forEach((foto) => {
+    const img = document.createElement("img");
+    img.src = foto;
+    img.alt = "Foto del reporte";
+    img.width = 120;
+    img.style.marginRight = "10px";
+    img.style.cursor = "pointer";
+    img.addEventListener("click", () => {
+      document.body.appendChild(crearVisorFoto(foto));
+    });
+    contenedorFotos.appendChild(img);
+  });
+
+  return contenedorFotos;
+}
+
+function crearSeccionMapa(detalle) {
+  const urlBase = detalle.lat && detalle.lng
+    ? `https://www.google.com/maps?q=${detalle.lat},${detalle.lng}`
+    : `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}`;
+
+  const tituloMapa = document.createElement("h4");
+  tituloMapa.textContent = "Ubicación del reporte";
+
+  const mapa = document.createElement("iframe");
+  mapa.width = "400";
+  mapa.height = "250";
+  mapa.style.border = "0";
+  mapa.loading = "lazy";
+  mapa.referrerPolicy = "no-referrer-when-downgrade";
+  mapa.src = urlBase + "&z=17&output=embed";
+
+  const enlaceMapa = document.createElement("a");
+  enlaceMapa.href = urlBase;
+  enlaceMapa.target = "_blank";
+  enlaceMapa.textContent = "Abrir en Google Maps";
+
+  return { tituloMapa, mapa, enlaceMapa };
+}
+
+function renderizarDetalleReporte(detalle) {
+  divDetalleReporte.innerHTML = "";
+
+  const hr = document.createElement("hr");
+  const h3 = document.createElement("h3");
+  h3.textContent = "Detalle del Reporte";
+
+  const { tituloMapa, mapa, enlaceMapa } = crearSeccionMapa(detalle);
+
+  const btnVolver = document.createElement("button");
+  btnVolver.textContent = "Volver";
+  btnVolver.addEventListener("click", () => {
+    divDetalleReporte.innerHTML = "";
+  });
+
+  divDetalleReporte.append(
+    hr,
+    h3,
+    crearParrafo("ID", detalle.id),
+    crearParrafo("Zona", detalle.zona),
+    crearParrafo("Descripción de referencia", detalle.mensaje),
+    crearParrafo("Cantidad aproximada de basura", detalle.cantidadBasura),
+    crearParrafo("Fecha de creación", detalle.fecha),
+    crearParrafo("Estado actual", detalle.estado),
+    crearParrafo("Nombre del ciudadano", detalle.usuario),
+    crearParrafo("Ubicación", detalle.ubicacion),
+    crearContenedorFotos(detalle.fotos),
+    tituloMapa,
+    mapa,
+    enlaceMapa,
+    btnVolver
+  );
 }
 
 // EVENTOS
@@ -156,112 +278,7 @@ if (divListaReportes) {
     if (event.target.classList.contains("btn-detalle")) {
       const id = event.target.getAttribute("data-id");
       const detalle = obtenerDetalleReporte(id, reportesBD);
-
-      if (detalle && divDetalleReporte) {
-        divDetalleReporte.innerHTML = "";
-
-        const hr = document.createElement("hr");
-        const h3 = document.createElement("h3");
-        h3.textContent = "Detalle del Reporte";
-
-        const crearParrafo = (etiqueta, valor) => {
-          const p = document.createElement("p");
-          const strong = document.createElement("strong");
-          strong.textContent = etiqueta + ": ";
-          p.appendChild(strong);
-          p.appendChild(document.createTextNode(valor || "No disponible"));
-          return p;
-        };
-
-        const contenedorFotos = document.createElement("div");
-        const tituloFotos = document.createElement("h4");
-        tituloFotos.textContent = "Fotos adjuntas";
-        contenedorFotos.appendChild(tituloFotos);
-
-        if (detalle.fotos && detalle.fotos.length > 0) {
-          detalle.fotos.forEach((foto) => {
-            const img = document.createElement("img");
-            img.src = foto;
-            img.alt = "Foto del reporte";
-            img.width = 120;
-            img.style.marginRight = "10px";
-            img.style.cursor = "pointer";
-
-            img.addEventListener("click", () => {
-              const visor = document.createElement("div");
-              visor.style.position = "fixed";
-              visor.style.top = "0";
-              visor.style.left = "0";
-              visor.style.width = "100%";
-              visor.style.height = "100%";
-              visor.style.backgroundColor = "rgba(0,0,0,0.8)";
-              visor.style.display = "flex";
-              visor.style.justifyContent = "center";
-              visor.style.alignItems = "center";
-              visor.style.zIndex = "9999";
-
-              const imagenGrande = document.createElement("img");
-              imagenGrande.src = foto;
-              imagenGrande.alt = "Foto ampliada";
-              imagenGrande.style.maxWidth = "80%";
-              imagenGrande.style.maxHeight = "80%";
-              imagenGrande.style.border = "3px solid white";
-
-              visor.appendChild(imagenGrande);
-              visor.addEventListener("click", () => visor.remove());
-              document.body.appendChild(visor);
-            });
-
-            contenedorFotos.appendChild(img);
-          });
-        } else {
-          const pSinFotos = document.createElement("p");
-          pSinFotos.textContent = "No existen fotos adjuntas";
-          contenedorFotos.appendChild(pSinFotos);
-        }
-
-        const tituloMapa = document.createElement("h4");
-        tituloMapa.textContent = "Ubicación del reporte";
-
-        const mapa = document.createElement("iframe");
-        mapa.width = "400";
-        mapa.height = "250";
-        mapa.style.border = "0";
-        mapa.loading = "lazy";
-        mapa.referrerPolicy = "no-referrer-when-downgrade";
-
-        if (detalle.lat && detalle.lng) {
-          mapa.src = `https://www.google.com/maps?q=${detalle.lat},${detalle.lng}&z=17&output=embed`;
-        } else {
-          mapa.src = `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}&output=embed`;
-        }
-
-        const enlaceMapa = document.createElement("a");
-        if (detalle.lat && detalle.lng) {
-          enlaceMapa.href = `https://www.google.com/maps?q=${detalle.lat},${detalle.lng}`;
-        } else {
-          enlaceMapa.href = `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}`;
-        }
-        enlaceMapa.target = "_blank";
-        enlaceMapa.textContent = "Abrir en Google Maps";
-
-        divDetalleReporte.append(
-          hr,
-          h3,
-          crearParrafo("ID", detalle.id),
-          crearParrafo("Zona", detalle.zona),
-          crearParrafo("Descripción de referencia", detalle.mensaje),
-          crearParrafo("Cantidad aproximada de basura", detalle.cantidadBasura),
-          crearParrafo("Fecha de creación", detalle.fecha),
-          crearParrafo("Estado actual", detalle.estado),
-          crearParrafo("Nombre del ciudadano", detalle.usuario),
-          crearParrafo("Ubicación", detalle.ubicacion),
-          contenedorFotos,
-          tituloMapa,
-          mapa,
-          enlaceMapa
-        );
-      }
+      if (detalle) renderizarDetalleReporte(detalle);
     }
   });
 }

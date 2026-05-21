@@ -855,17 +855,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "840c22c095010dbe030da9c1eb6aa6da1dda9082",
     "author": "User",
     "commit": {
       "date": "2026-05-21T02:04:52.000Z",
       "message": "feat: agregar mapa interactivo",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/840c22c095010dbe030da9c1eb6aa6da1dda9082"
     },
     "stats": {
       "total": 98,
       "additions": 67,
       "deletions": 31,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T02:20:10.000Z",
+      "message": "feat: agregar boton volver en detalle de reportes",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 231,
+      "additions": 124,
+      "deletions": 107,
       "date": "2026-05-21"
     },
     "coverage": 84.13,

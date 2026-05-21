@@ -934,9 +934,15 @@
     "testId": 44
   },
   {
-    "commitId": "HEAD",
+    "commitId": "840c22c095010dbe030da9c1eb6aa6da1dda9082",
     "commitName": "feat: agregar mapa interactivo",
     "commitTimestamp": 1779329092656,
     "testId": 45
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: agregar boton volver en detalle de reportes",
+    "commitTimestamp": 1779330010795,
+    "testId": 46
   }
 ]
