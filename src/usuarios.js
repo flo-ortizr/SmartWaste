@@ -4,7 +4,7 @@ export function registrarUsuario(username, password, listaDeUsuarios) {
   }
 
   const usuarioExiste = listaDeUsuarios.some(u => u.username === username.trim());
-  
+
   if (usuarioExiste) {
     return "Este usuario ya se encuentra registrado";
   }
@@ -15,7 +15,8 @@ export function registrarUsuario(username, password, listaDeUsuarios) {
 
   listaDeUsuarios.push({
     username: username.trim(),
-    password: password
+    password,
+    rol: "ciudadano"
   });
 
   return "Usuario registrado correctamente";
@@ -23,7 +24,7 @@ export function registrarUsuario(username, password, listaDeUsuarios) {
 
 export function iniciarSesion(username, password, listaDeUsuarios) {
   if (!username || username.trim() === "" || !password || password.trim() === "") {
-    return "Por favor, complete los campos requeridos";
+    return { exito: false, mensaje: "Por favor, complete los campos requeridos" };
   }
 
   const usuarioEncontrado = listaDeUsuarios.find(
@@ -31,8 +32,8 @@ export function iniciarSesion(username, password, listaDeUsuarios) {
   );
 
   if (usuarioEncontrado) {
-    return "Inicio de sesión exitoso";
+    return { exito: true, mensaje: "Inicio de sesión exitoso", rol: usuarioEncontrado.rol };
   }
 
-  return "Usuario o contraseña incorrectos";
+  return { exito: false, mensaje: "Usuario o contraseña incorrectos" };
 }

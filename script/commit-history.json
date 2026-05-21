@@ -1235,12 +1235,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "91db8b053d188de5f81beef558bc4b99d9f4a6ae",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T09:29:31.000Z",
       "message": "refactor: reorganizar presenterEMSA usando clases de servicio",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/91db8b053d188de5f81beef558bc4b99d9f4a6ae"
     },
     "stats": {
       "total": 513,
@@ -1269,6 +1269,25 @@
     },
     "coverage": 71.19,
     "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T09:54:02.000Z",
+      "message": "feat: registrarUsuario asigna rol: ciudadano automáticamente",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 54,
+      "additions": 38,
+      "deletions": 16,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
     "failed_tests": 0,
     "conclusion": "success"
   }
