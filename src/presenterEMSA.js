@@ -52,18 +52,8 @@ const reportesBD = [
 ];
 
 const rutasBD = [
-  {
-    nombreRuta: "Ruta 1",
-    zona: "Zona Norte - Cala Cala",
-    dias: "Lunes, Miércoles y Viernes",
-    cobertura: "Cala Cala"
-  },
-  {
-    nombreRuta: "Ruta 2",
-    zona: "Zona Sur - La Chimba",
-    dias: "Martes, Jueves y Sábados",
-    cobertura: "La Chimba"
-  }
+  { nombreRuta: "Ruta 1", zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes", cobertura: "Cala Cala" },
+  { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados", cobertura: "La Chimba" }
 ];
 
 const usuarioAdminActual = "Personal EMSA";
@@ -159,11 +149,9 @@ function crearContenedorFotos(fotos) {
     img.width = 120;
     img.style.marginRight = "10px";
     img.style.cursor = "pointer";
-
     img.addEventListener("click", () => {
       document.body.appendChild(crearVisorFoto(foto));
     });
-
     contenedorFotos.appendChild(img);
   });
 
@@ -203,7 +191,6 @@ function marcarReporteComoAtendido(detalle) {
 
 function crearBotonAtender(detalle) {
   const contenedorEstado = document.createElement("div");
-
   const btnAtender = document.createElement("button");
   btnAtender.textContent = "Marcar como Atendido";
 
@@ -235,15 +222,14 @@ function renderizarDetalleReporte(detalle) {
   const h3 = document.createElement("h3");
   h3.textContent = "Detalle del Reporte";
 
-  const { tituloMapa, mapa, enlaceMapa } = crearSeccionMapa(detalle);
-  const btnAtender = crearBotonAtender(detalle);
+  // ✅ Se captura el mensaje ANTES de resetearlo
   const mensajeConfirmacion = document.createElement("p");
   mensajeConfirmacion.textContent = mensajeEstadoReporte;
   mensajeConfirmacion.className = "exito";
+  mensajeEstadoReporte = ""; // ✅ Se resetea después de capturarlo
 
-  if (detalle.estado !== "Atendido") {
-  mensajeEstadoReporte = "";
-}
+  const { tituloMapa, mapa, enlaceMapa } = crearSeccionMapa(detalle);
+  const btnAtender = crearBotonAtender(detalle);
 
   const btnVolver = document.createElement("button");
   btnVolver.textContent = "Volver";
