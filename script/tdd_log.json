@@ -1192,7 +1192,7 @@
     "testId": 51
   },
   {
-    "commitId": "HEAD",
+    "commitId": "f1443003cbc58e26affa69394ddf7ed62f38db73",
     "commitName": "refactor: convertir lógica de reportes en clase ReporteService",
     "commitTimestamp": 1779355407245,
     "testId": 51
@@ -1210,5 +1210,11 @@
     "commitName": "refactor: convertir lógica de rutas en clase RutaService",
     "commitTimestamp": 1779355517483,
     "testId": 52
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor: reorganizar presenterEMSA usando clases de servicio",
+    "commitTimestamp": 1779355772197,
+    "testId": 53
   }
 ]

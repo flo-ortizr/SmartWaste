@@ -1,82 +1,53 @@
 import { mostrarRutas, crearRuta, eliminarRuta } from "./rutas.js";
-import { obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
-import { obtenerZonasConConteo, ordenarZonasPorReportes, filtrarReportesPorZona } from "./zonas.js";
+import { ReporteService, obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
+import { ZonaService } from "./zonas.js";
 
-// DOM
-const btnVerRutas = document.querySelector("#btn-ver-rutas");
-const divListaRutas = document.querySelector("#lista-rutas-div");
-const formRuta = document.querySelector("#ruta-form");
-const divRuta = document.querySelector("#resultado-ruta-div");
-const inputNombreRuta = document.querySelector("#nombre_ruta");
-const inputZonaRuta = document.querySelector("#zona_ruta");
-const inputDiasRuta = document.querySelector("#dias_ruta");
-const inputCoberturaRuta = document.querySelector("#cobertura_ruta");
-const btnVerReportes = document.querySelector("#btn-ver-reportes");
-const divListaReportes = document.querySelector("#lista-reportes-div");
-const divDetalleReporte = document.querySelector("#detalle-reporte-div");
-const btnEliminarRuta = document.querySelector("#btn-eliminar-ruta");
-const inputZonaEliminar = document.querySelector("#zona_eliminar");
-const divResultadoEliminar = document.querySelector("#resultado-eliminar-div");
-const btnVerZonas = document.querySelector("#btn-ver-zonas");
-const selectOrdenZonas = document.querySelector("#orden-zonas");
-const divListaZonas = document.querySelector("#lista-zonas-div");
-const divReportesZona = document.querySelector("#reportes-zona-div");
-
-// DATOS
+// ── Datos ─────────────────────────────────────────────────────────────────────
 const reportesBD = [
-  {
-    id: "1",
-    zona: "Cala Cala",
-    fecha: "2026-04-18",
-    estado: "Pendiente",
-    mensaje: "Basura en la esquina",
-    usuario: "Juan",
-    cantidadBasura: "Alta",
-    fotos: ["img/basura1.jpg", "img/basura2.jpg"],
-    ubicacion: "Cala Cala Cochabamba Bolivia",
-    lat: -17.3700,
-    lng: -66.1590,
-    atendidoPor: "",
-    fechaAtencion: ""
-  },
-  {
-    id: "2",
-    zona: "Muyurina",
-    fecha: "2026-04-19",
-    estado: "Atendido",
-    mensaje: "Contenedor lleno",
-    usuario: "Ana",
-    cantidadBasura: "Media",
-    fotos: ["img/basura3.jpg"],
-    ubicacion: "Muyurina Cochabamba Bolivia",
-    lat: -17.3795,
-    lng: -66.1430,
-    atendidoPor: "Personal EMSA",
-    fechaAtencion: "2026-04-19 14:30"
-  }
+  { id: "1", zona: "Cala Cala",  fecha: "2026-04-18", estado: "Pendiente", mensaje: "Basura en la esquina",             usuario: "Juan",  cantidadBasura: "Alta",  fotos: ["img/basura1.jpg", "img/basura2.jpg"], ubicacion: "Cala Cala Cochabamba", lat: -17.3700, lng: -66.1590, atendidoPor: "", fechaAtencion: "" },
+  { id: "2", zona: "Muyurina",   fecha: "2026-04-19", estado: "Atendido",  mensaje: "Contenedor lleno",                 usuario: "Ana",   cantidadBasura: "Media", fotos: ["img/basura3.jpg"],                    ubicacion: "Muyurina Cochabamba",   lat: -17.3795, lng: -66.1430, atendidoPor: "Personal EMSA", fechaAtencion: "2026-04-19 14:30" },
+  { id: "3", zona: "Cala Cala",  fecha: "2026-04-20", estado: "Pendiente", mensaje: "Acumulación frente al mercado",    usuario: "Luis",  cantidadBasura: "Alta",  fotos: [],                                     ubicacion: "Cala Cala Cochabamba", lat: -17.3710, lng: -66.1600, atendidoPor: "", fechaAtencion: "" },
+  { id: "4", zona: "Cala Cala",  fecha: "2026-04-21", estado: "Pendiente", mensaje: "Desmonte sin recoger",             usuario: "María", cantidadBasura: "Baja",  fotos: [],                                     ubicacion: "Cala Cala Cochabamba", lat: -17.3720, lng: -66.1580, atendidoPor: "", fechaAtencion: "" },
+  { id: "5", zona: "Tupuraya",   fecha: "2026-04-22", estado: "Pendiente", mensaje: "Basura en la calle principal",     usuario: "Pedro", cantidadBasura: "Alta",  fotos: [],                                     ubicacion: "Tupuraya Cochabamba",   lat: -17.3800, lng: -66.1700, atendidoPor: "", fechaAtencion: "" },
+  { id: "6", zona: "Tupuraya",   fecha: "2026-04-23", estado: "Pendiente", mensaje: "Contenedor desbordado",            usuario: "Sofía", cantidadBasura: "Media", fotos: [],                                     ubicacion: "Tupuraya Cochabamba",   lat: -17.3810, lng: -66.1710, atendidoPor: "", fechaAtencion: "" },
+  { id: "7", zona: "Tupuraya",   fecha: "2026-04-24", estado: "Pendiente", mensaje: "Sin recolección hace 3 días",      usuario: "Carlos",cantidadBasura: "Alta",  fotos: [],                                     ubicacion: "Tupuraya Cochabamba",   lat: -17.3820, lng: -66.1720, atendidoPor: "", fechaAtencion: "" },
+  { id: "8", zona: "Muyurina",   fecha: "2026-04-25", estado: "Pendiente", mensaje: "Bolsas en la vereda",              usuario: "Elena", cantidadBasura: "Baja",  fotos: [],                                     ubicacion: "Muyurina Cochabamba",   lat: -17.3790, lng: -66.1440, atendidoPor: "", fechaAtencion: "" }
 ];
 
 const rutasBD = [
   { nombreRuta: "Ruta 1", zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes", cobertura: "Cala Cala" },
-  { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados", cobertura: "La Chimba" }
+  { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba",   dias: "Martes, Jueves y Sábados",   cobertura: "La Chimba" }
 ];
 
-const usuarioAdminActual = "Personal EMSA";
-let mensajeEstadoReporte = "";
+const USUARIO_EMSA = "Personal EMSA";
+const reporteService = new ReporteService(reportesBD);
+const zonaService = new ZonaService(reportesBD);
 
-// VALIDACIONES
-function validarFormRuta(nombre, zona, dias, cobertura) {
-  if (!nombre || nombre.trim() === "") return "Por favor, ingrese un nombre de ruta";
-  if (!zona || zona.trim() === "") return "Por favor, ingrese una zona";
-  if (!dias || dias.trim() === "") return "Por favor, ingrese los días";
-  if (!cobertura || cobertura.trim() === "") return "Por favor, ingrese la cobertura";
-  return null;
-}
+// ── DOM ───────────────────────────────────────────────────────────────────────
+const $ = id => document.querySelector(id);
+const btnVerRutas       = $("#btn-ver-rutas");
+const divListaRutas     = $("#lista-rutas-div");
+const formRuta          = $("#ruta-form");
+const divRuta           = $("#resultado-ruta-div");
+const inputNombreRuta   = $("#nombre_ruta");
+const inputZonaRuta     = $("#zona_ruta");
+const inputDiasRuta     = $("#dias_ruta");
+const inputCoberturaRuta = $("#cobertura_ruta");
+const btnVerReportes    = $("#btn-ver-reportes");
+const divListaReportes  = $("#lista-reportes-div");
+const divDetalleReporte = $("#detalle-reporte-div");
+const btnEliminarRuta   = $("#btn-eliminar-ruta");
+const inputZonaEliminar = $("#zona_eliminar");
+const divResultadoEliminar = $("#resultado-eliminar-div");
+const btnVerZonas       = $("#btn-ver-zonas");
+const selectOrdenZonas  = $("#orden-zonas");
+const divListaZonas     = $("#lista-zonas-div");
+const divReportesZona   = $("#reportes-zona-div");
 
-// RENDERIZADO
-function mostrarMensaje(elemento, texto, claseCSS) {
+// ── Utilidades de UI ──────────────────────────────────────────────────────────
+function mostrarMensaje(elemento, texto, tipo) {
   elemento.textContent = texto;
-  elemento.className = claseCSS;
+  elemento.className = tipo === "error" ? "msg msg-error" : "msg msg-exito";
 }
 
 function crearParrafo(etiqueta, valor) {
@@ -88,310 +59,265 @@ function crearParrafo(etiqueta, valor) {
   return p;
 }
 
-function renderizarListaRutas(resultado, contenedor) {
-  contenedor.innerHTML = "";
-
-  if (typeof resultado === "string") {
-    const p = document.createElement("p");
-    p.textContent = resultado;
-    contenedor.appendChild(p);
-    return;
-  }
-
-  const ul = document.createElement("ul");
-  resultado.forEach((ruta) => {
-    const li = document.createElement("li");
-    li.textContent = `Zona: ${ruta.zona} - Días: ${ruta.dias}`;
-    ul.appendChild(li);
-  });
-
-  contenedor.appendChild(ul);
+// ── Validaciones de formulario ────────────────────────────────────────────────
+function validarFormRuta(nombre, zona, dias, cobertura) {
+  if (!nombre || nombre.trim() === "") return "Por favor, ingrese un nombre de ruta";
+  if (!zona   || zona.trim()   === "") return "Por favor, ingrese una zona";
+  if (!dias   || dias.trim()   === "") return "Por favor, ingrese los días";
+  if (!cobertura || cobertura.trim() === "") return "Por favor, ingrese la cobertura";
+  return null;
 }
 
-
+// ── Renderizado de Zonas ──────────────────────────────────────────────────────
 function renderizarZonasConConteo(zonasOrdenadas, contenedor) {
   contenedor.innerHTML = "";
-
   if (zonasOrdenadas.length === 0) {
-    const p = document.createElement("p");
-    p.textContent = "No hay zonas con reportes pendientes";
-    contenedor.appendChild(p);
+    contenedor.innerHTML = "<p class='msg'>No hay zonas con reportes pendientes.</p>";
     return;
   }
-
   const ul = document.createElement("ul");
+  ul.className = "lista-zonas";
   zonasOrdenadas.forEach(zona => {
     const li = document.createElement("li");
-    li.className = zona.critica ? "zona-critica" : "zona-normal";
-
-    const etiqueta = zona.critica ? " ⚠ CRÍTICA" : "";
-    li.textContent = `${zona.zona}: ${zona.cantidad} reporte(s) pendiente(s)${etiqueta}`;
-
+    li.className = zona.critica ? "zona-card zona-critica" : "zona-card zona-normal";
+    const etiqueta = zona.critica ? `<span class="badge-critica">⚠ CRÍTICA</span>` : "";
+    li.innerHTML = `
+      <div class="zona-info">
+        <span class="zona-nombre">${zona.zona}</span>
+        ${etiqueta}
+        <span class="zona-cantidad">${zona.cantidad} reporte(s) pendiente(s)</span>
+      </div>`;
     const btn = document.createElement("button");
     btn.textContent = "Ver reportes";
-    btn.className = "btn-detalle";
+    btn.className = "btn btn-secundario";
     btn.setAttribute("data-zona", zona.zona);
-
     li.appendChild(btn);
     ul.appendChild(li);
   });
-
   contenedor.appendChild(ul);
 }
 
+function mostrarZonasOrdenadas() {
+  const orden = selectOrdenZonas ? selectOrdenZonas.value : "descendente";
+  const zonasConConteo = zonaService.obtenerZonasConConteo();
+  const zonasOrdenadas = zonaService.ordenarZonas(zonasConConteo, orden);
+  renderizarZonasConConteo(zonasOrdenadas, divListaZonas);
+  if (divReportesZona) divReportesZona.innerHTML = "";
+}
 
+function renderizarReportesDeZona(zona, contenedor) {
+  contenedor.innerHTML = "";
+  const reportes = zonaService.filtrarReportesPorZona(zona);
+  const h3 = document.createElement("h3");
+  h3.textContent = `Reportes de ${zona}`;
+  contenedor.appendChild(h3);
+  if (reportes.length === 0) {
+    contenedor.innerHTML += "<p class='msg'>No hay reportes para esta zona.</p>";
+    return;
+  }
+  const ul = document.createElement("ul");
+  ul.className = "lista-reportes-zona";
+  reportes.forEach(r => {
+    const li = document.createElement("li");
+    li.className = `reporte-item estado-${r.estado.toLowerCase()}`;
+    li.innerHTML = `<span class="estado-tag">${r.estado}</span> ${r.fecha} — ${r.mensaje} <em>(${r.usuario})</em>`;
+    ul.appendChild(li);
+  });
+  contenedor.appendChild(ul);
+}
+
+// ── Renderizado de Rutas ──────────────────────────────────────────────────────
+function renderizarListaRutas(resultado, contenedor) {
+  contenedor.innerHTML = "";
+  if (typeof resultado === "string") {
+    contenedor.innerHTML = `<p class="msg">${resultado}</p>`;
+    return;
+  }
+  const ul = document.createElement("ul");
+  ul.className = "lista-rutas";
+  resultado.forEach(ruta => {
+    const li = document.createElement("li");
+    li.className = "ruta-item";
+    li.innerHTML = `<strong>${ruta.nombreRuta}</strong> — Zona: ${ruta.zona} | Días: ${ruta.dias}`;
+    ul.appendChild(li);
+  });
+  contenedor.appendChild(ul);
+}
+
+// ── Renderizado de Detalle de Reporte ─────────────────────────────────────────
 function crearVisorFoto(foto) {
   const visor = document.createElement("div");
-  visor.style.position = "fixed";
-  visor.style.top = "0";
-  visor.style.left = "0";
-  visor.style.width = "100%";
-  visor.style.height = "100%";
-  visor.style.backgroundColor = "rgba(0,0,0,0.8)";
-  visor.style.display = "flex";
-  visor.style.justifyContent = "center";
-  visor.style.alignItems = "center";
-  visor.style.zIndex = "9999";
-
-  const imagenGrande = document.createElement("img");
-  imagenGrande.src = foto;
-  imagenGrande.alt = "Foto ampliada";
-  imagenGrande.style.maxWidth = "80%";
-  imagenGrande.style.maxHeight = "80%";
-  imagenGrande.style.border = "3px solid white";
-
-  visor.appendChild(imagenGrande);
+  visor.className = "visor-foto";
+  const img = document.createElement("img");
+  img.src = foto;
+  img.alt = "Foto ampliada";
+  visor.appendChild(img);
   visor.addEventListener("click", () => visor.remove());
-
   return visor;
 }
 
 function crearContenedorFotos(fotos) {
-  const contenedorFotos = document.createElement("div");
-  const tituloFotos = document.createElement("h4");
-  tituloFotos.textContent = "Fotos adjuntas";
-  contenedorFotos.appendChild(tituloFotos);
-
+  const contenedor = document.createElement("div");
+  contenedor.className = "fotos-adjuntas";
+  const titulo = document.createElement("h4");
+  titulo.textContent = "Fotos adjuntas";
+  contenedor.appendChild(titulo);
   if (!fotos || fotos.length === 0) {
-    const pSinFotos = document.createElement("p");
-    pSinFotos.textContent = "No existen fotos adjuntas";
-    contenedorFotos.appendChild(pSinFotos);
-    return contenedorFotos;
+    contenedor.innerHTML += "<p>No existen fotos adjuntas.</p>";
+    return contenedor;
   }
-
-  fotos.forEach((foto) => {
+  fotos.forEach(foto => {
     const img = document.createElement("img");
     img.src = foto;
     img.alt = "Foto del reporte";
-    img.width = 120;
-    img.style.marginRight = "10px";
-    img.style.cursor = "pointer";
-    img.addEventListener("click", () => {
-      document.body.appendChild(crearVisorFoto(foto));
-    });
-    contenedorFotos.appendChild(img);
+    img.className = "foto-miniatura";
+    img.addEventListener("click", () => document.body.appendChild(crearVisorFoto(foto)));
+    contenedor.appendChild(img);
   });
-
-  return contenedorFotos;
+  return contenedor;
 }
 
 function crearSeccionMapa(detalle) {
   const urlBase = detalle.lat && detalle.lng
     ? `https://www.google.com/maps?q=${detalle.lat},${detalle.lng}`
     : `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}`;
-
-  const tituloMapa = document.createElement("h4");
-  tituloMapa.textContent = "Ubicación del reporte";
-
+  const titulo = document.createElement("h4");
+  titulo.textContent = "Ubicación del reporte";
   const mapa = document.createElement("iframe");
-  mapa.width = "400";
+  mapa.width = "100%";
   mapa.height = "250";
   mapa.style.border = "0";
   mapa.loading = "lazy";
   mapa.referrerPolicy = "no-referrer-when-downgrade";
   mapa.src = urlBase + "&z=17&output=embed";
-
-  const enlaceMapa = document.createElement("a");
-  enlaceMapa.href = urlBase;
-  enlaceMapa.target = "_blank";
-  enlaceMapa.textContent = "Abrir en Google Maps";
-
-  return { tituloMapa, mapa, enlaceMapa };
-}
-
-function marcarReporteComoAtendido(detalle) {
-  detalle.estado = "Atendido";
-  detalle.atendidoPor = usuarioAdminActual;
-  detalle.fechaAtencion = new Date().toLocaleString();
-  mensajeEstadoReporte = 'Estado del reporte actualizado a "Atendido" correctamente';
+  const enlace = document.createElement("a");
+  enlace.href = urlBase;
+  enlace.target = "_blank";
+  enlace.textContent = "Abrir en Google Maps →";
+  enlace.className = "enlace-mapa";
+  return { titulo, mapa, enlace };
 }
 
 function crearBotonAtender(detalle) {
-  const contenedorEstado = document.createElement("div");
-  const btnAtender = document.createElement("button");
-  btnAtender.textContent = "Marcar como Atendido";
-
+  const contenedor = document.createElement("div");
+  contenedor.className = "acciones-estado";
+  const btn = document.createElement("button");
+  btn.textContent = "Marcar como Atendido";
+  btn.className = "btn btn-atender";
   if (detalle.estado === "Atendido") {
-    btnAtender.disabled = true;
-
-    const mensajeBloqueado = document.createElement("p");
-    mensajeBloqueado.textContent = "Estado bloqueado: el reporte ya fue atendido";
-    mensajeBloqueado.className = "exito";
-
-    contenedorEstado.appendChild(btnAtender);
-    contenedorEstado.appendChild(mensajeBloqueado);
+    btn.disabled = true;
+    btn.classList.add("btn-deshabilitado");
+    const msg = document.createElement("p");
+    msg.textContent = "Este reporte ya fue atendido.";
+    msg.className = "msg msg-exito";
+    contenedor.append(btn, msg);
   } else {
-    btnAtender.addEventListener("click", () => {
-      marcarReporteComoAtendido(detalle);
+    btn.addEventListener("click", () => {
+      reporteService.marcarAtendido(detalle.id, USUARIO_EMSA);
       renderizarDetalleReporte(detalle);
     });
-
-    contenedorEstado.appendChild(btnAtender);
+    contenedor.appendChild(btn);
   }
-
-  return contenedorEstado;
+  return contenedor;
 }
-
-function renderizarReportesDeZona(zona, contenedor) {
-  contenedor.innerHTML = "";
-
-  const reportes = filtrarReportesPorZona(zona, reportesBD);
-
-  const h3 = document.createElement("h3");
-  h3.textContent = `Reportes de ${zona}`;
-  contenedor.appendChild(h3);
-
-  if (reportes.length === 0) {
-    const p = document.createElement("p");
-    p.textContent = "No hay reportes para esta zona";
-    contenedor.appendChild(p);
-    return;
-  }
-
-  const ul = document.createElement("ul");
-  reportes.forEach(r => {
-    const li = document.createElement("li");
-    li.textContent = `[${r.estado}] ${r.fecha} - ${r.mensaje} (${r.usuario})`;
-    ul.appendChild(li);
-  });
-
-  contenedor.appendChild(ul);
-}
-
-function mostrarZonasOrdenadas() {
-  const orden = selectOrdenZonas ? selectOrdenZonas.value : "descendente";
-  const zonasConConteo = obtenerZonasConConteo(reportesBD);
-  const zonasOrdenadas = ordenarZonasPorReportes(zonasConConteo, orden);
-  renderizarZonasConConteo(zonasOrdenadas, divListaZonas);
-  if (divReportesZona) divReportesZona.innerHTML = "";
-}
-
 
 function renderizarDetalleReporte(detalle) {
   divDetalleReporte.innerHTML = "";
-
-  const hr = document.createElement("hr");
+  const card = document.createElement("div");
+  card.className = "detalle-card";
   const h3 = document.createElement("h3");
   h3.textContent = "Detalle del Reporte";
-
-  const mensajeConfirmacion = document.createElement("p");
-  mensajeConfirmacion.textContent = mensajeEstadoReporte;
-  mensajeConfirmacion.className = "exito";
-  mensajeEstadoReporte = "";
-
-  const { tituloMapa, mapa, enlaceMapa } = crearSeccionMapa(detalle);
-  const btnAtender = crearBotonAtender(detalle);
-
+  const { titulo: tituloMapa, mapa, enlace } = crearSeccionMapa(detalle);
   const btnVolver = document.createElement("button");
-  btnVolver.textContent = "Volver";
-  btnVolver.addEventListener("click", () => {
-    divDetalleReporte.innerHTML = "";
-  });
-
-  const accionesDetalle = document.createElement("div");
-  accionesDetalle.style.marginTop = "12px";
-
-  enlaceMapa.style.display = "inline-block";
-  enlaceMapa.style.marginRight = "10px";
-  btnVolver.style.marginRight = "10px";
-
-  accionesDetalle.appendChild(enlaceMapa);
-  accionesDetalle.appendChild(btnVolver);
-  accionesDetalle.appendChild(btnAtender);
-
-  divDetalleReporte.append(
-    hr,
+  btnVolver.textContent = "← Volver";
+  btnVolver.className = "btn btn-secundario";
+  btnVolver.addEventListener("click", () => { divDetalleReporte.innerHTML = ""; });
+  card.append(
     h3,
     crearParrafo("ID", detalle.id),
     crearParrafo("Zona", detalle.zona),
-    crearParrafo("Descripción de referencia", detalle.mensaje),
-    crearParrafo("Cantidad aproximada de basura", detalle.cantidadBasura),
-    crearParrafo("Fecha de creación", detalle.fecha),
-    crearParrafo("Estado actual", detalle.estado),
-    crearParrafo("Nombre del ciudadano", detalle.usuario),
+    crearParrafo("Descripción", detalle.mensaje),
+    crearParrafo("Cantidad de basura", detalle.cantidadBasura),
+    crearParrafo("Fecha", detalle.fecha),
+    crearParrafo("Estado", detalle.estado),
+    crearParrafo("Ciudadano", detalle.usuario),
     crearParrafo("Ubicación", detalle.ubicacion),
     crearParrafo("Atendido por", detalle.atendidoPor),
-    crearParrafo("Fecha y hora de atención", detalle.fechaAtencion),
+    crearParrafo("Fecha de atención", detalle.fechaAtencion),
     crearContenedorFotos(detalle.fotos),
     tituloMapa,
     mapa,
-    accionesDetalle,
-    mensajeConfirmacion
+    enlace,
+    crearBotonAtender(detalle),
+    btnVolver
   );
+  divDetalleReporte.appendChild(card);
 }
 
-// EVENTOS
+// ── Renderizado de Lista de Reportes ─────────────────────────────────────────
+function renderizarListaReportes(resumen, contenedor) {
+  contenedor.innerHTML = "";
+  if (resumen.length === 0) {
+    contenedor.innerHTML = "<p class='msg'>No existen reportes registrados.</p>";
+    return;
+  }
+  const ul = document.createElement("ul");
+  ul.className = "lista-reportes";
+  resumen.forEach(reporte => {
+    const li = document.createElement("li");
+    li.className = `reporte-item estado-${reporte.estado.toLowerCase()}`;
+    li.innerHTML = `<span class="estado-tag">${reporte.estado}</span> Zona: <strong>${reporte.zona}</strong> | Fecha: ${reporte.fecha}`;
+    const btn = document.createElement("button");
+    btn.className = "btn btn-secundario btn-detalle";
+    btn.setAttribute("data-id", reporte.id);
+    btn.textContent = "Ver Detalle";
+    li.appendChild(btn);
+    ul.appendChild(li);
+  });
+  contenedor.appendChild(ul);
+}
+
+// ── Eventos ───────────────────────────────────────────────────────────────────
 if (btnVerZonas) {
   btnVerZonas.addEventListener("click", mostrarZonasOrdenadas);
 }
 
 if (selectOrdenZonas) {
   selectOrdenZonas.addEventListener("change", () => {
-    if (divListaZonas && divListaZonas.innerHTML !== "") {
-      mostrarZonasOrdenadas();
-    }
+    if (divListaZonas && divListaZonas.innerHTML !== "") mostrarZonasOrdenadas();
   });
 }
 
 if (divListaZonas) {
-  divListaZonas.addEventListener("click", (event) => {
-    if (event.target.classList.contains("btn-detalle")) {
-      const zona = event.target.getAttribute("data-zona");
-      renderizarReportesDeZona(zona, divReportesZona);
-    }
+  divListaZonas.addEventListener("click", event => {
+    const btn = event.target.closest("[data-zona]");
+    if (btn) renderizarReportesDeZona(btn.getAttribute("data-zona"), divReportesZona);
   });
 }
 
-
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
-    const resultado = mostrarRutas(rutasBD);
-    renderizarListaRutas(resultado, divListaRutas);
+    renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
   });
 }
 
 if (formRuta) {
-  formRuta.addEventListener("submit", (event) => {
+  formRuta.addEventListener("submit", event => {
     event.preventDefault();
-    const nombre = inputNombreRuta.value;
-    const zona = inputZonaRuta.value;
-    const dias = inputDiasRuta.value;
+    const nombre    = inputNombreRuta.value;
+    const zona      = inputZonaRuta.value;
+    const dias      = inputDiasRuta.value;
     const cobertura = inputCoberturaRuta.value;
-
-    const errorVista = validarFormRuta(nombre, zona, dias, cobertura);
-    if (errorVista) {
-      mostrarMensaje(divRuta, errorVista, "error");
-      return;
-    }
-
+    const error = validarFormRuta(nombre, zona, dias, cobertura);
+    if (error) { mostrarMensaje(divRuta, error, "error"); return; }
     try {
-      const nuevaRuta = crearRuta(nombre, zona, dias, cobertura);
-      rutasBD.push(nuevaRuta);
+      const nueva = crearRuta(nombre, zona, dias, cobertura);
+      rutasBD.push(nueva);
       mostrarMensaje(divRuta, "Ruta registrada correctamente", "exito");
       formRuta.reset();
       renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
-    } catch (error) {
-      mostrarMensaje(divRuta, error.message, "error");
+    } catch (e) {
+      mostrarMensaje(divRuta, e.message, "error");
     }
   });
 }
@@ -399,39 +325,16 @@ if (formRuta) {
 if (btnVerReportes) {
   btnVerReportes.addEventListener("click", () => {
     const resumen = obtenerResumenReportes(reportesBD);
-    divListaReportes.innerHTML = "";
-
-    if (resumen.length === 0) {
-      const p = document.createElement("p");
-      p.textContent = "No existen reportes registrados";
-      divListaReportes.appendChild(p);
-      return;
-    }
-
-    const ul = document.createElement("ul");
-    resumen.forEach((reporte) => {
-      const li = document.createElement("li");
-      li.textContent = `Zona: ${reporte.zona} | Fecha: ${reporte.fecha} | Estado: ${reporte.estado} `;
-
-      const btn = document.createElement("button");
-      btn.className = "btn-detalle";
-      btn.setAttribute("data-id", reporte.id);
-      btn.textContent = "Ver Detalle";
-
-      li.appendChild(btn);
-      ul.appendChild(li);
-    });
-
-    divListaReportes.appendChild(ul);
+    renderizarListaReportes(resumen, divListaReportes);
     if (divDetalleReporte) divDetalleReporte.innerHTML = "";
   });
 }
 
 if (divListaReportes) {
-  divListaReportes.addEventListener("click", (event) => {
-    if (event.target.classList.contains("btn-detalle")) {
-      const id = event.target.getAttribute("data-id");
-      const detalle = obtenerDetalleReporte(id, reportesBD);
+  divListaReportes.addEventListener("click", event => {
+    const btn = event.target.closest("[data-id]");
+    if (btn) {
+      const detalle = obtenerDetalleReporte(btn.getAttribute("data-id"), reportesBD);
       if (detalle) renderizarDetalleReporte(detalle);
     }
   });
@@ -442,9 +345,7 @@ if (btnEliminarRuta) {
     const zona = inputZonaEliminar.value;
     const confirmacion = confirm("¿Está seguro de eliminar esta ruta?");
     const resultado = eliminarRuta(zona, rutasBD, confirmacion);
-
     divResultadoEliminar.textContent = resultado;
-
     if (resultado === "Ruta eliminada correctamente") {
       renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
     }
