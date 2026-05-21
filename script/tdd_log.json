@@ -1132,7 +1132,7 @@
     "testId": 48
   },
   {
-    "commitId": "HEAD",
+    "commitId": "4f0a6fe96be5228b47219e68e5dfa9b083250bf8",
     "commitName": "implementacion de logica de modificacion de ruta en presenter",
     "commitTimestamp": 1779358837677,
     "testId": 49
@@ -1142,5 +1142,11 @@
     "commitName": "implementacion de logica de modificacion de presenterte",
     "commitTimestamp": 1779359633480,
     "testId": 50
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: correccion login",
+    "commitTimestamp": 1779360272954,
+    "testId": 51
   }
 ]

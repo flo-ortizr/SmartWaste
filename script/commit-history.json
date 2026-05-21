@@ -1159,12 +1159,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4f0a6fe96be5228b47219e68e5dfa9b083250bf8",
     "author": "unknown",
     "commit": {
       "date": "2026-05-21T10:20:35.000Z",
       "message": "implementacion de logica de modificacion de ruta en presenter",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/4f0a6fe96be5228b47219e68e5dfa9b083250bf8"
     },
     "stats": {
       "total": 56,
@@ -1189,6 +1189,25 @@
       "total": 122,
       "additions": 101,
       "deletions": 21,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:44:31.000Z",
+      "message": "fix: correccion login",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
       "date": "2026-05-21"
     },
     "coverage": 88.66,
