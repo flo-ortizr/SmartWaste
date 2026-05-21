@@ -1114,7 +1114,7 @@
     "testId": 45
   },
   {
-    "commitId": "HEAD",
+    "commitId": "da36613dfbfb2ab499b8d3193124b446fc41defb",
     "commitName": "fix: resolver conflictos tras pull de master",
     "commitTimestamp": 1779335700702,
     "testId": 46
@@ -1148,5 +1148,11 @@
     "commitName": "feat: implementar lógica de detección de zonas críticas y ordenamiento",
     "commitTimestamp": 1779337409344,
     "testId": 47
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: integrar zonas críticas y ordenamiento en la interfaz EMSA",
+    "commitTimestamp": 1779337889215,
+    "testId": 48
   }
 ]

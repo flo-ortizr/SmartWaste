@@ -1,5 +1,6 @@
 import { mostrarRutas, crearRuta, eliminarRuta } from "./rutas.js";
 import { obtenerResumenReportes, obtenerDetalleReporte } from "./reportes.js";
+import { obtenerZonasConConteo, ordenarZonasPorReportes, filtrarReportesPorZona } from "./zonas.js";
 
 // DOM
 const btnVerRutas = document.querySelector("#btn-ver-rutas");
@@ -16,6 +17,10 @@ const divDetalleReporte = document.querySelector("#detalle-reporte-div");
 const btnEliminarRuta = document.querySelector("#btn-eliminar-ruta");
 const inputZonaEliminar = document.querySelector("#zona_eliminar");
 const divResultadoEliminar = document.querySelector("#resultado-eliminar-div");
+const btnVerZonas = document.querySelector("#btn-ver-zonas");
+const selectOrdenZonas = document.querySelector("#orden-zonas");
+const divListaZonas = document.querySelector("#lista-zonas-div");
+const divReportesZona = document.querySelector("#reportes-zona-div");
 
 // DATOS
 const reportesBD = [
@@ -102,6 +107,38 @@ function renderizarListaRutas(resultado, contenedor) {
 
   contenedor.appendChild(ul);
 }
+
+
+function renderizarZonasConConteo(zonasOrdenadas, contenedor) {
+  contenedor.innerHTML = "";
+
+  if (zonasOrdenadas.length === 0) {
+    const p = document.createElement("p");
+    p.textContent = "No hay zonas con reportes pendientes";
+    contenedor.appendChild(p);
+    return;
+  }
+
+  const ul = document.createElement("ul");
+  zonasOrdenadas.forEach(zona => {
+    const li = document.createElement("li");
+    li.className = zona.critica ? "zona-critica" : "zona-normal";
+
+    const etiqueta = zona.critica ? " ⚠ CRÍTICA" : "";
+    li.textContent = `${zona.zona}: ${zona.cantidad} reporte(s) pendiente(s)${etiqueta}`;
+
+    const btn = document.createElement("button");
+    btn.textContent = "Ver reportes";
+    btn.className = "btn-detalle";
+    btn.setAttribute("data-zona", zona.zona);
+
+    li.appendChild(btn);
+    ul.appendChild(li);
+  });
+
+  contenedor.appendChild(ul);
+}
+
 
 function crearVisorFoto(foto) {
   const visor = document.createElement("div");
@@ -215,6 +252,41 @@ function crearBotonAtender(detalle) {
   return contenedorEstado;
 }
 
+function renderizarReportesDeZona(zona, contenedor) {
+  contenedor.innerHTML = "";
+
+  const reportes = filtrarReportesPorZona(zona, reportesBD);
+
+  const h3 = document.createElement("h3");
+  h3.textContent = `Reportes de ${zona}`;
+  contenedor.appendChild(h3);
+
+  if (reportes.length === 0) {
+    const p = document.createElement("p");
+    p.textContent = "No hay reportes para esta zona";
+    contenedor.appendChild(p);
+    return;
+  }
+
+  const ul = document.createElement("ul");
+  reportes.forEach(r => {
+    const li = document.createElement("li");
+    li.textContent = `[${r.estado}] ${r.fecha} - ${r.mensaje} (${r.usuario})`;
+    ul.appendChild(li);
+  });
+
+  contenedor.appendChild(ul);
+}
+
+function mostrarZonasOrdenadas() {
+  const orden = selectOrdenZonas ? selectOrdenZonas.value : "descendente";
+  const zonasConConteo = obtenerZonasConConteo(reportesBD);
+  const zonasOrdenadas = ordenarZonasPorReportes(zonasConConteo, orden);
+  renderizarZonasConConteo(zonasOrdenadas, divListaZonas);
+  if (divReportesZona) divReportesZona.innerHTML = "";
+}
+
+
 function renderizarDetalleReporte(detalle) {
   divDetalleReporte.innerHTML = "";
 
@@ -269,6 +341,28 @@ function renderizarDetalleReporte(detalle) {
 }
 
 // EVENTOS
+if (btnVerZonas) {
+  btnVerZonas.addEventListener("click", mostrarZonasOrdenadas);
+}
+
+if (selectOrdenZonas) {
+  selectOrdenZonas.addEventListener("change", () => {
+    if (divListaZonas && divListaZonas.innerHTML !== "") {
+      mostrarZonasOrdenadas();
+    }
+  });
+}
+
+if (divListaZonas) {
+  divListaZonas.addEventListener("click", (event) => {
+    if (event.target.classList.contains("btn-detalle")) {
+      const zona = event.target.getAttribute("data-zona");
+      renderizarReportesDeZona(zona, divReportesZona);
+    }
+  });
+}
+
+
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
     const resultado = mostrarRutas(rutasBD);

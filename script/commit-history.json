@@ -1102,12 +1102,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "da36613dfbfb2ab499b8d3193124b446fc41defb",
     "author": "User",
     "commit": {
       "date": "2026-05-21T03:54:56.000Z",
       "message": "fix: resolver conflictos tras pull de master",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/da36613dfbfb2ab499b8d3193124b446fc41defb"
     },
     "stats": {
       "total": 80,
@@ -1132,6 +1132,25 @@
       "total": 180,
       "additions": 180,
       "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 91.27,
+    "test_count": 60,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T04:31:28.000Z",
+      "message": "feat: integrar zonas críticas y ordenamiento en la interfaz EMSA",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 111,
+      "additions": 109,
+      "deletions": 2,
       "date": "2026-05-21"
     },
     "coverage": 91.27,

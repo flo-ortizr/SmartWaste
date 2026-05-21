@@ -2,9 +2,22 @@
 <html lang="es">
   <head>
     <title>SmartWaste</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <hr />
+    <h2>Zonas Críticas de Acumulación</h2>
+    <div id="controles-zonas">
+      <button id="btn-ver-zonas">Ver Zonas con Reportes</button>
+      <label for="orden-zonas">Ordenar:</label>
+      <select id="orden-zonas">
+        <option value="descendente">Mayor cantidad primero</option>
+        <option value="ascendente">Menor cantidad primero</option>
+      </select>
+    </div>
+    <div id="lista-zonas-div"></div>
+    <div id="reportes-zona-div"></div>
+
     <hr />
     <h2>Rutas de Recolección EMSA</h2>
     <button id="btn-ver-rutas">Ver Rutas Registradas</button>
