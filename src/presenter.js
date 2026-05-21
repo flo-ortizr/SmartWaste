@@ -69,7 +69,7 @@ function mostrarMensaje(elemento, texto, claseCSS) {
 }
 
 function renderizarListaRutas(resultado, contenedor) {
-  contenedor.innerHTML = "";
+  contenedor.textContent = "";
 
   if (typeof resultado === "string") {
     const p = document.createElement("p");
@@ -125,7 +125,7 @@ if (formReporte) {
       img.alt = "Vista previa";
       img.className = "img-vista-previa";
       
-      divVistaPreviaFoto.innerHTML = ""; 
+      divVistaPreviaFoto.textContent = ""; 
       divVistaPreviaFoto.appendChild(img);
 
       mostrarMensaje(divReporte, "Reporte enviado correctamente", "mensaje-exito");
@@ -182,10 +182,10 @@ if (btnRegistrarHorario) {
         inputHorario.value
       );
       
-      divResultadoHorario.innerHTML = `<span style='color:green'>Horario registrado correctamente</span>`;
+      divResultadoHorario.textContent = `<span style='color:green'>Horario registrado correctamente</span>`;
       
     } catch (error) {
-      divResultadoHorario.innerHTML = `<span style='color:red'>${error.message}</span>`;
+      divResultadoHorario.textContent = `<span style='color:red'>${error.message}</span>`;
     }
   });
 }
@@ -199,7 +199,7 @@ if (btnBuscarRuta) {
 if (btnVerReportes) {
   btnVerReportes.addEventListener("click", () => {
     const resumen = obtenerResumenReportes(reportesBD);
-    divListaReportes.innerHTML = "";
+    divListaReportes.textContent = "";
 
     if (resumen.length === 0) {
       const p = document.createElement("p");
@@ -223,7 +223,7 @@ if (btnVerReportes) {
     });
 
     divListaReportes.appendChild(ul);
-    if (divDetalleReporte) divDetalleReporte.innerHTML = "";
+    if (divDetalleReporte) divDetalleReporte.textContent = "";
   });
 }
 
@@ -234,7 +234,7 @@ if (divListaReportes) {
       const detalle = obtenerDetalleReporte(id, reportesBD);
       
       if (detalle && divDetalleReporte) {
-        divDetalleReporte.innerHTML = ""; 
+        divDetalleReporte.textContent = ""; 
 
         const hr = document.createElement("hr");
         const h3 = document.createElement("h3");

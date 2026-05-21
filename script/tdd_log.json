@@ -1114,12 +1114,17 @@
     "testId": 45
   },
   {
+<<<<<<< HEAD
     "commitId": "da36613dfbfb2ab499b8d3193124b446fc41defb",
+=======
+    "commitId": "49023ed6d808ba871ee7271f6f5c9d66696de12f",
+>>>>>>> Andres-andrade2
     "commitName": "fix: resolver conflictos tras pull de master",
     "commitTimestamp": 1779335700702,
     "testId": 46
   },
   {
+<<<<<<< HEAD
     "numPassedTests": 41,
     "failedTests": 0,
     "numTotalTests": 41,
@@ -1270,5 +1275,41 @@
     "commitName": "fix: login de usuario",
     "commitTimestamp": 1779358128256,
     "testId": 58
+=======
+    "commitId": "e8e773cecdaedac2b93e55cebce6f498a064a0b6",
+    "commitName": "refactor correcciones de vulnerabilidad xss",
+    "commitTimestamp": 1779357901534,
+    "testId": 47
+  },
+  {
+    "commitId": "d919a068e5c49ed7859e3841fb3a72e3926ccb72",
+    "commitName": "implementacion de simulaacion de bd y actualizacionde html",
+    "commitTimestamp": 1779358679863,
+    "testId": 48
+  },
+  {
+    "commitId": "4f0a6fe96be5228b47219e68e5dfa9b083250bf8",
+    "commitName": "implementacion de logica de modificacion de ruta en presenter",
+    "commitTimestamp": 1779358837677,
+    "testId": 49
+  },
+  {
+    "commitId": "8582c3297015fd7e076c3aebd2cf265a3646a67b",
+    "commitName": "implementacion de logica de modificacion de presenterte",
+    "commitTimestamp": 1779359633480,
+    "testId": 50
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: correccion login",
+    "commitTimestamp": 1779360272954,
+    "testId": 51
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: correccion html final",
+    "commitTimestamp": 1779360498820,
+    "testId": 52
+>>>>>>> Andres-andrade2
   }
 ]

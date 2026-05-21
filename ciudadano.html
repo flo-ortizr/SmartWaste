@@ -18,7 +18,6 @@
     </header>
 
     <main class="main-content">
-      <!-- Buscar ruta -->
       <section class="seccion">
         <h2>Buscar Ruta de Recolección</h2>
         <div class="form-grid" style="max-width: 500px">
@@ -37,7 +36,6 @@
         <div id="resultado-busqueda-ruta-div" style="margin-top: 12px"></div>
       </section>
 
-      <!-- Horarios -->
       <section class="seccion">
         <h2>Horarios de Recolección</h2>
         <div class="form-grid" style="max-width: 500px">
@@ -56,7 +54,6 @@
         <div id="resultado-horarios-div" style="margin-top: 12px"></div>
       </section>
 
-      <!-- Crear reporte -->
       <section class="seccion">
         <h2>Crear Reporte de Basura</h2>
         <form id="reporte-form">
@@ -112,7 +109,6 @@
         <div id="resultado-div" style="margin-top: 10px"></div>
       </section>
 
-      <!-- Reportes cercanos -->
       <section class="seccion">
         <h2>Focos de Contaminación Cercanos</h2>
         <p style="font-size: 0.9rem; color: #546e7a; margin-bottom: 12px">
@@ -126,6 +122,36 @@
           id="resultado-reportes-cercanos-div"
           style="margin-top: 12px"
         ></div>
+      </section>
+
+      <section class="seccion">
+        <h2>Registro de Ciudadano</h2>
+        <form id="registro-ciudadano-form">
+          <div class="form-grid" style="max-width: 500px">
+            <div class="form-group">
+              <label for="username_registro">Usuario</label>
+              <input type="text" id="username_registro" />
+            </div>
+            <div class="form-group">
+              <label for="password_registro">Contraseña</label>
+              <input type="password" id="password_registro" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primario">Registrarme</button>
+        </form>
+        <div id="resultado-registro-div" style="margin-top: 12px"></div>
+      </section>
+
+      <section class="seccion">
+        <h2>Próxima Ruta de Recolección</h2>
+        <div class="form-grid" style="max-width: 500px">
+          <div class="form-group">
+            <label for="zona_proxima_ruta">Ubicación</label>
+            <input type="text" id="zona_proxima_ruta" placeholder="Ingrese su zona o ubicación" />
+          </div>
+        </div>
+        <button id="btn-proxima-ruta" class="btn btn-primario">Consultar Próxima Ruta</button>
+        <div id="resultado-proxima-ruta-div" style="margin-top: 12px"></div>
       </section>
     </main>
 

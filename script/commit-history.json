@@ -1102,12 +1102,20 @@
     "conclusion": "success"
   },
   {
+<<<<<<< HEAD
     "sha": "da36613dfbfb2ab499b8d3193124b446fc41defb",
+=======
+    "sha": "49023ed6d808ba871ee7271f6f5c9d66696de12f",
+>>>>>>> Andres-andrade2
     "author": "User",
     "commit": {
       "date": "2026-05-21T03:54:56.000Z",
       "message": "fix: resolver conflictos tras pull de master",
+<<<<<<< HEAD
       "url": "https://github.com/flo-ortizr/SmartWaste/commit/da36613dfbfb2ab499b8d3193124b446fc41defb"
+=======
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/49023ed6d808ba871ee7271f6f5c9d66696de12f"
+>>>>>>> Andres-andrade2
     },
     "stats": {
       "total": 80,
@@ -1121,6 +1129,7 @@
     "conclusion": "success"
   },
   {
+<<<<<<< HEAD
     "sha": "9ecd8d78602eb209ee8487786ecd2a095fdab4cc",
     "author": "ArianaPita-0102",
     "commit": {
@@ -1136,10 +1145,28 @@
     },
     "coverage": 91.27,
     "test_count": 60,
+=======
+    "sha": "e8e773cecdaedac2b93e55cebce6f498a064a0b6",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:05:00.000Z",
+      "message": "refactor correcciones de vulnerabilidad xss",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/e8e773cecdaedac2b93e55cebce6f498a064a0b6"
+    },
+    "stats": {
+      "total": 40,
+      "additions": 20,
+      "deletions": 20,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+>>>>>>> Andres-andrade2
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
+<<<<<<< HEAD
     "sha": "d315d5cfbeba6854c541efdcf3cc5f6132cd3d6e",
     "author": "ArianaPita-0102",
     "commit": {
@@ -1307,11 +1334,86 @@
     },
     "coverage": 71.19,
     "test_count": 63,
+=======
+    "sha": "d919a068e5c49ed7859e3841fb3a72e3926ccb72",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:17:58.000Z",
+      "message": "implementacion de simulaacion de bd y actualizacionde html",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d919a068e5c49ed7859e3841fb3a72e3926ccb72"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 12,
+      "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "4f0a6fe96be5228b47219e68e5dfa9b083250bf8",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:20:35.000Z",
+      "message": "implementacion de logica de modificacion de ruta en presenter",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/4f0a6fe96be5228b47219e68e5dfa9b083250bf8"
+    },
+    "stats": {
+      "total": 56,
+      "additions": 49,
+      "deletions": 7,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "8582c3297015fd7e076c3aebd2cf265a3646a67b",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:33:52.000Z",
+      "message": "implementacion de logica de modificacion de presenterte",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/8582c3297015fd7e076c3aebd2cf265a3646a67b"
+    },
+    "stats": {
+      "total": 122,
+      "additions": 101,
+      "deletions": 21,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
     "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:44:31.000Z",
+      "message": "fix: correccion login",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+>>>>>>> Andres-andrade2
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+<<<<<<< HEAD
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T10:04:22.000Z",
@@ -1345,6 +1447,22 @@
     },
     "coverage": 71.19,
     "test_count": 63,
+=======
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:48:17.000Z",
+      "message": "fix: correccion html final",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 1,
+      "additions": 1,
+      "deletions": 0,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+>>>>>>> Andres-andrade2
     "failed_tests": 0,
     "conclusion": "success"
   }
