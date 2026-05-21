@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  NPM_FLAGS    = "--legacy-peer-deps"
 
 # Redirige rutas directas a los HTML compilados
 [[redirects]]
@@ -14,4 +15,10 @@
 [[redirects]]
   from   = "/ciudadano"
   to     = "/ciudadano.html"
+  status = 200
+
+# Fallback: cualquier ruta no encontrada vuelve al login
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
   status = 200

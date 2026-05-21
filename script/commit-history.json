@@ -1349,12 +1349,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a2c6f7a99e64c08ac0933dd9a91228f56b41d6f6",
     "author": "ArianaPita-0102",
     "commit": {
       "date": "2026-05-21T10:13:17.000Z",
       "message": "Merge master into main aceptando master",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/a2c6f7a99e64c08ac0933dd9a91228f56b41d6f6"
     },
     "stats": {
       "total": 2399,
@@ -1379,6 +1379,25 @@
       "total": 31,
       "additions": 27,
       "deletions": 4,
+      "date": "2026-05-21"
+    },
+    "coverage": 71.19,
+    "test_count": 63,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "ArianaPita-0102",
+    "commit": {
+      "date": "2026-05-21T10:58:32.000Z",
+      "message": "feat: agregar configuración de deploy para Netlify",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 29188,
+      "additions": 13,
+      "deletions": 29175,
       "date": "2026-05-21"
     },
     "coverage": 71.19,
