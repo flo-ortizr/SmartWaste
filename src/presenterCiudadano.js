@@ -70,7 +70,7 @@ function mostrarVistaPreviaFoto(archivo) {
   img.alt = "Vista previa";
   img.className = "img-vista-previa";
   
-  divVistaPreviaFoto.innerHTML = "";
+  divVistaPreviaFoto.textContent = "";
   divVistaPreviaFoto.appendChild(img);
 }
 
@@ -145,11 +145,11 @@ if (btnCerrarSesion) {
 if (btnReportesCercanos) {
   btnReportesCercanos.addEventListener("click", () => {
     if (!navigator.geolocation) {
-      divReportesCercanos.innerHTML = "<p style='color:red'>Tu navegador no soporta geolocalización.</p>";
+      divReportesCercanos.textContent = "<p style='color:red'>Tu navegador no soporta geolocalización.</p>";
       return;
     }
 
-    divReportesCercanos.innerHTML = "<p>Identificando su ubicación...</p>";
+    divReportesCercanos.textContent = "<p>Identificando su ubicación...</p>";
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -161,7 +161,7 @@ if (btnReportesCercanos) {
         const cercanos = obtenerReportesCercanos(ubicacionUsuario, reportesGlobalesBD, 2.0);
 
         if (cercanos.length === 0) {
-          divReportesCercanos.innerHTML = "<p><strong>No existen reportes de basura acumulada cercanos a su ubicación.</strong></p>";
+          divReportesCercanos.textContent = "<p><strong>No existen reportes de basura acumulada cercanos a su ubicación.</strong></p>";
           return;
         }
 
@@ -176,10 +176,10 @@ if (btnReportesCercanos) {
             </li>`;
         });
         html += "</ul>";
-        divReportesCercanos.innerHTML = html;
+        divReportesCercanos.textContent = html;
       },
       () => {
-        divReportesCercanos.innerHTML = "<p style='color:red'>No se pudo acceder a tu ubicación actual.</p>";
+        divReportesCercanos.textContent = "<p style='color:red'>No se pudo acceder a tu ubicación actual.</p>";
       }
     );
   });
@@ -189,8 +189,8 @@ if (inputFotoReporte) {
   inputFotoReporte.addEventListener("change", () => {
     const archivo = inputFotoReporte.files[0];
 
-    divVistaPreviaFoto.innerHTML = "";
-    divReporte.innerHTML = "";
+    divVistaPreviaFoto.textContent = "";
+    divReporte.textContent = "";
 
     if (!archivo) return;
 

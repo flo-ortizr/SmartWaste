@@ -84,7 +84,7 @@ function crearParrafo(etiqueta, valor) {
 }
 
 function renderizarListaRutas(resultado, contenedor) {
-  contenedor.innerHTML = "";
+  contenedor.textContent = "";
 
   if (typeof resultado === "string") {
     const p = document.createElement("p");
@@ -216,7 +216,7 @@ function crearBotonAtender(detalle) {
 }
 
 function renderizarDetalleReporte(detalle) {
-  divDetalleReporte.innerHTML = "";
+  divDetalleReporte.textContent = "";
 
   const hr = document.createElement("hr");
   const h3 = document.createElement("h3");
@@ -233,7 +233,7 @@ function renderizarDetalleReporte(detalle) {
   const btnVolver = document.createElement("button");
   btnVolver.textContent = "Volver";
   btnVolver.addEventListener("click", () => {
-    divDetalleReporte.innerHTML = "";
+    divDetalleReporte.textContent = "";
   });
 
   const accionesDetalle = document.createElement("div");
@@ -305,7 +305,7 @@ if (formRuta) {
 if (btnVerReportes) {
   btnVerReportes.addEventListener("click", () => {
     const resumen = obtenerResumenReportes(reportesBD);
-    divListaReportes.innerHTML = "";
+    divListaReportes.textContent = "";
 
     if (resumen.length === 0) {
       const p = document.createElement("p");
@@ -329,7 +329,7 @@ if (btnVerReportes) {
     });
 
     divListaReportes.appendChild(ul);
-    if (divDetalleReporte) divDetalleReporte.innerHTML = "";
+    if (divDetalleReporte) divDetalleReporte.textContent = "";
   });
 }
 

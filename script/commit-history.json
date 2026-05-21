@@ -1064,12 +1064,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "15ae4b750cae51688d6bd7e795b7905bc4fadda3",
     "author": "Flora",
     "commit": {
       "date": "2026-05-21T03:50:38.000Z",
       "message": "feat: importar foto",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/15ae4b750cae51688d6bd7e795b7905bc4fadda3"
     },
     "stats": {
       "total": 80,
@@ -1113,6 +1113,25 @@
       "total": 80,
       "additions": 66,
       "deletions": 14,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:05:00.000Z",
+      "message": "refactor correcciones de vulnerabilidad xss",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 40,
+      "additions": 20,
+      "deletions": 20,
       "date": "2026-05-21"
     },
     "coverage": 88.66,

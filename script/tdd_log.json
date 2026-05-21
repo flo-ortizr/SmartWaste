@@ -1108,7 +1108,7 @@
     "testId": 45
   },
   {
-    "commitId": "HEAD",
+    "commitId": "15ae4b750cae51688d6bd7e795b7905bc4fadda3",
     "commitName": "feat: importar foto",
     "commitTimestamp": 1779335440484,
     "testId": 45
@@ -1118,5 +1118,11 @@
     "commitName": "fix: resolver conflictos tras pull de master",
     "commitTimestamp": 1779335700702,
     "testId": 46
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor correcciones de vulnerabilidad xss",
+    "commitTimestamp": 1779357901534,
+    "testId": 47
   }
 ]
