@@ -28,6 +28,9 @@ const divResultadoRegistro = document.querySelector("#resultado-registro-div");
 const btnCerrarSesion = document.querySelector("#btn-cerrar-sesion");
 const btnReportesCercanos = document.querySelector("#btn-reportes-cercanos");
 const divReportesCercanos = document.querySelector("#resultado-reportes-cercanos-div");
+const botonConsultarProximaRuta = document.querySelector("#btn-proxima-ruta");
+const entradaZonaProximaRuta = document.querySelector("#zona_proxima_ruta");
+const contenedorResultadoProximaRuta = document.querySelector("#resultado-proxima-ruta-div");
 
 const reportesGlobalesBD = [
   { id: "1", zona: "Las Cuadras", fecha: "2026-05-20", estado: "Pendiente", lat: -17.3950, lng: -66.1500 }, // Cerca de la plaza
@@ -36,8 +39,8 @@ const reportesGlobalesBD = [
 ];
 
 const rutasBD = [
-  { nombreRuta: "Ruta 1", zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes", cobertura: "Cala Cala" },
-  { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados", cobertura: "La Chimba" }
+  { nombreRuta: "Ruta 1", zona: "Zona Norte - Cala Cala", dias: "Lunes, Miércoles y Viernes", cobertura: "Cala Cala", horaEstimada: "08:30" },
+  { nombreRuta: "Ruta 2", zona: "Zona Sur - La Chimba", dias: "Martes, Jueves y Sábados", cobertura: "La Chimba", horaEstimada: "15:15" }
 ];
 
 const usuariosBD = [];
@@ -203,5 +206,48 @@ if (inputFotoReporte) {
     }
 
     mostrarVistaPreviaFoto(archivo);
+  });
+}
+if (botonConsultarProximaRuta) {
+  botonConsultarProximaRuta.addEventListener("click", () => {
+    const zonaIngresadaPorUsuario = entradaZonaProximaRuta.value.trim();
+
+    contenedorResultadoProximaRuta.textContent = "";
+
+    if (zonaIngresadaPorUsuario === "") {
+      const parrafoErrorCampoVacio = document.createElement("p");
+      parrafoErrorCampoVacio.textContent = "Por favor, seleccione una zona para ver la próxima ruta";
+      parrafoErrorCampoVacio.className = "mensaje-error";
+      contenedorResultadoProximaRuta.appendChild(parrafoErrorCampoVacio);
+      return;
+    }
+
+    let rutaProgramadaEncontrada = null;
+    const zonaIngresadaEnMinusculas = zonaIngresadaPorUsuario.toLowerCase();
+
+    for (let indiceRuta = 0; indiceRuta < rutasBD.length; indiceRuta++) {
+      const zonaBaseDatosEnMinusculas = rutasBD[indiceRuta].zona.toLowerCase();
+      if (zonaBaseDatosEnMinusculas.includes(zonaIngresadaEnMinusculas)) {
+        rutaProgramadaEncontrada = rutasBD[indiceRuta];
+        break;
+      }
+    }
+
+    if (rutaProgramadaEncontrada) {
+      const parrafoInformacionRuta = document.createElement("p");
+      const etiquetaDiaHora = document.createElement("strong");
+      etiquetaDiaHora.textContent = "Próximo recorrido: ";
+      
+      const textoDetalleRuta = `Día: ${rutaProgramadaEncontrada.dias} | Hora estimada de llegada: ${rutaProgramadaEncontrada.horaEstimada}`;
+      
+      parrafoInformacionRuta.appendChild(etiquetaDiaHora);
+      parrafoInformacionRuta.appendChild(document.createTextNode(textoDetalleRuta));
+      contenedorResultadoProximaRuta.appendChild(parrafoInformacionRuta);
+    } else {
+      const parrafoRutaNoEncontrada = document.createElement("p");
+      parrafoRutaNoEncontrada.textContent = "No hay próximas rutas programadas para esta zona";
+      parrafoRutaNoEncontrada.className = "mensaje-error";
+      contenedorResultadoProximaRuta.appendChild(parrafoRutaNoEncontrada);
+    }
   });
 }

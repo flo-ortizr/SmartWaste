@@ -1121,12 +1121,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e8e773cecdaedac2b93e55cebce6f498a064a0b6",
     "author": "unknown",
     "commit": {
       "date": "2026-05-21T10:05:00.000Z",
       "message": "refactor correcciones de vulnerabilidad xss",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/e8e773cecdaedac2b93e55cebce6f498a064a0b6"
     },
     "stats": {
       "total": 40,
@@ -1151,6 +1151,25 @@
       "total": 13,
       "additions": 12,
       "deletions": 1,
+      "date": "2026-05-21"
+    },
+    "coverage": 88.66,
+    "test_count": 41,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "unknown",
+    "commit": {
+      "date": "2026-05-21T10:20:35.000Z",
+      "message": "implementacion de logica de modificacion de ruta en presenter",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 56,
+      "additions": 49,
+      "deletions": 7,
       "date": "2026-05-21"
     },
     "coverage": 88.66,
