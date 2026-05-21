@@ -30,7 +30,9 @@ const reportesBD = [
     fotos: ["img/basura1.jpg", "img/basura2.jpg"],
     ubicacion: "Cala Cala Cochabamba Bolivia",
     lat: -17.3700,
-    lng: -66.1590
+    lng: -66.1590,
+    atendidoPor: "",
+    fechaAtencion: ""
   },
   {
     id: "2",
@@ -43,7 +45,9 @@ const reportesBD = [
     fotos: ["img/basura3.jpg"],
     ubicacion: "Muyurina Cochabamba Bolivia",
     lat: -17.3795,
-    lng: -66.1430
+    lng: -66.1430,
+    atendidoPor: "Personal EMSA",
+    fechaAtencion: "2026-04-19 14:30"
   }
 ];
 
@@ -189,12 +193,23 @@ function crearSeccionMapa(detalle) {
   return { tituloMapa, mapa, enlaceMapa };
 }
 
+function marcarReporteComoAtendido(detalle) {
+  detalle.estado = "Atendido";
+  detalle.atendidoPor = usuarioAdminActual;
+  detalle.fechaAtencion = new Date().toLocaleString();
+}
+
 function crearBotonAtender(detalle) {
   const btnAtender = document.createElement("button");
   btnAtender.textContent = "Marcar como Atendido";
 
   if (detalle.estado === "Atendido") {
     btnAtender.disabled = true;
+  } else {
+    btnAtender.addEventListener("click", () => {
+      marcarReporteComoAtendido(detalle);
+      renderizarDetalleReporte(detalle);
+    });
   }
 
   return btnAtender;
@@ -227,6 +242,8 @@ function renderizarDetalleReporte(detalle) {
     crearParrafo("Estado actual", detalle.estado),
     crearParrafo("Nombre del ciudadano", detalle.usuario),
     crearParrafo("Ubicación", detalle.ubicacion),
+    crearParrafo("Atendido por", detalle.atendidoPor),
+    crearParrafo("Fecha y hora de atención", detalle.fechaAtencion),
     crearContenedorFotos(detalle.fotos),
     tituloMapa,
     mapa,

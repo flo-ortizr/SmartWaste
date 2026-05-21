@@ -946,9 +946,15 @@
     "testId": 46
   },
   {
-    "commitId": "HEAD",
+    "commitId": "d24b10178ee5b955820ea7b0fa4bce9fa1e14122",
     "commitName": "feat: agregar boton para marcar reporte como atendido",
     "commitTimestamp": 1779332145621,
     "testId": 47
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: guardar usuario y fecha al marcar reporte como atendido",
+    "commitTimestamp": 1779332451621,
+    "testId": 48
   }
 ]

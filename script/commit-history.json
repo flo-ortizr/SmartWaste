@@ -893,17 +893,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "d24b10178ee5b955820ea7b0fa4bce9fa1e14122",
     "author": "User",
     "commit": {
       "date": "2026-05-21T02:55:44.000Z",
       "message": "feat: agregar boton para marcar reporte como atendido",
-      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/d24b10178ee5b955820ea7b0fa4bce9fa1e14122"
     },
     "stats": {
       "total": 34,
       "additions": 31,
       "deletions": 3,
+      "date": "2026-05-21"
+    },
+    "coverage": 84.13,
+    "test_count": 27,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "User",
+    "commit": {
+      "date": "2026-05-21T03:00:50.000Z",
+      "message": "feat: guardar usuario y fecha al marcar reporte como atendido",
+      "url": "https://github.com/flo-ortizr/SmartWaste/commit/HEAD"
+    },
+    "stats": {
+      "total": 21,
+      "additions": 19,
+      "deletions": 2,
       "date": "2026-05-21"
     },
     "coverage": 84.13,
