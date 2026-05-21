@@ -1108,7 +1108,7 @@
     "testId": 45
   },
   {
-    "commitId": "HEAD",
+    "commitId": "15ae4b750cae51688d6bd7e795b7905bc4fadda3",
     "commitName": "feat: importar foto",
     "commitTimestamp": 1779335440484,
     "testId": 45
@@ -1118,5 +1118,35 @@
     "commitName": "fix: resolver conflictos tras pull de master",
     "commitTimestamp": 1779335700702,
     "testId": 46
+  },
+  {
+    "numPassedTests": 41,
+    "failedTests": 0,
+    "numTotalTests": 41,
+    "timestamp": 1779337320445,
+    "success": false,
+    "testId": 47
+  },
+  {
+    "numPassedTests": 41,
+    "failedTests": 19,
+    "numTotalTests": 60,
+    "timestamp": 1779337366984,
+    "success": false,
+    "testId": 47
+  },
+  {
+    "numPassedTests": 60,
+    "failedTests": 0,
+    "numTotalTests": 60,
+    "timestamp": 1779337379980,
+    "success": true,
+    "testId": 47
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: implementar lógica de detección de zonas críticas y ordenamiento",
+    "commitTimestamp": 1779337409344,
+    "testId": 47
   }
 ]
