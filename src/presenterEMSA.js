@@ -141,10 +141,17 @@ function renderizarReportesDeZona(zona, contenedor) {
 // Renderizar Rutas
 function renderizarListaRutas(resultado, contenedor) {
   contenedor.innerHTML = "";
+  
   if (typeof resultado === "string") {
     contenedor.innerHTML = `<p class="msg">${resultado}</p>`;
     return;
   }
+  
+  if (resultado.length === 0) {
+    contenedor.innerHTML = `<p class="msg">No hay rutas registradas.</p>`;
+    return;
+  }
+
   const ul = document.createElement("ul");
   ul.className = "lista-rutas";
   resultado.forEach((ruta, indiceDeArregloRuta) => {
@@ -198,8 +205,8 @@ function crearContenedorFotos(fotos) {
 
 function crearSeccionMapa(detalle) {
   const urlBase = detalle.lat && detalle.lng
-    ? `https://www.google.com/maps?q=${detalle.lat},${detalle.lng}`
-    : `https://www.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}`;
+    ? `https://maps.google.com/maps?q=${detalle.lat},${detalle.lng}`
+    : `https://maps.google.com/maps?q=${encodeURIComponent(detalle.ubicacion)}`;
   const titulo = document.createElement("h4");
   titulo.textContent = "Ubicación del reporte";
   const mapa = document.createElement("iframe");
@@ -315,7 +322,7 @@ if (divListaZonas) {
 
 if (btnVerRutas) {
   btnVerRutas.addEventListener("click", () => {
-    renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
+    renderizarListaRutas(rutasBD, divListaRutas);
   });
 }
 
@@ -333,7 +340,7 @@ if (formRuta) {
       rutasBD.push(nueva);
       mostrarMensaje(divRuta, "Ruta registrada correctamente", "exito");
       formRuta.reset();
-      renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
+      renderizarListaRutas(rutasBD, divListaRutas);
     } catch (e) {
       mostrarMensaje(divRuta, e.message, "error");
     }
@@ -365,7 +372,7 @@ if (btnEliminarRuta) {
     const resultado = eliminarRuta(zona, rutasBD, confirmacion);
     divResultadoEliminar.textContent = resultado;
     if (resultado === "Ruta eliminada correctamente") {
-      renderizarListaRutas(mostrarRutas(rutasBD), divListaRutas);
+      renderizarListaRutas(rutasBD, divListaRutas);
     }
   });
 }
@@ -389,6 +396,10 @@ if (divListaRutas) {
       entradaZonaRutaModificar.value = rutaRecuperadaParaEdicion.zona;
       entradaDiasRutaModificar.value = rutaRecuperadaParaEdicion.dias;
       entradaCoberturaRutaModificar.value = rutaRecuperadaParaEdicion.cobertura;
+
+      if (formularioModificarRutaEmsa) {
+        formularioModificarRutaEmsa.scrollIntoView({ behavior: "smooth" });
+      }
     }
   });
 }
@@ -405,6 +416,11 @@ if (formularioModificarRutaEmsa) {
 
     contenedorResultadoModificacionRuta.innerHTML = "";
 
+    if (indiceRutaModificada === "") {
+      mostrarMensaje(contenedorResultadoModificacionRuta, "Primero seleccione una ruta haciendo clic en 'Editar'", "error");
+      return;
+    }
+
     if (nombreRutaModificada === "" || zonaRutaModificada === "" || diasRutaModificada === "" || coberturaRutaModificada === "") {
       mostrarMensaje(contenedorResultadoModificacionRuta, "Por favor, complete los campos requeridos", "error");
       return;
@@ -420,7 +436,6 @@ if (formularioModificarRutaEmsa) {
     formularioModificarRutaEmsa.reset();
     entradaIdentificadorRutaModificar.value = "";
 
-    const resultadoRutasActualizadasVisualmente = mostrarRutas(rutasBD);
-    renderizarListaRutas(resultadoRutasActualizadasVisualmente, divListaRutas);
+    renderizarListaRutas(rutasBD, divListaRutas);
   });
 }
